@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="Good_Lookz.View.ShopPages.ChoseShopPage"
+             Title="Choose shops"
+             BackgroundColor="White">
+  <StackLayout Padding="5">
+    <Label Text=" Care " FontAttributes="Bold" BackgroundColor="#ffaa01" TextColor="White" FontSize="25"/>
+    <forms:CarouselView x:Name="carouselViewCare" ItemSelected="CarouselViewCare_Selected">
+      <forms:CarouselView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+              <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+          </Grid>
+        </DataTemplate>
+      </forms:CarouselView.ItemTemplate>
+    </forms:CarouselView>
+    <Label Text=" Fashion " FontAttributes="Bold" BackgroundColor="#ab7197" TextColor="White" FontSize="25"/>
+    <forms:CarouselView x:Name="carouselViewFashion" ItemSelected="CarouselViewFashion_Selected">
+      <forms:CarouselView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+              <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+          </Grid>
+        </DataTemplate>
+      </forms:CarouselView.ItemTemplate>
+    </forms:CarouselView>
+    <Label Text=" Accessories " FontAttributes="Bold" BackgroundColor="#2b8cad" TextColor="White" FontSize="25"/>
+    <forms:CarouselView x:Name="carouselViewAccessories" ItemSelected="CarouselViewAccessories_Selected">
+      <forms:CarouselView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+              <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+          </Grid>
+        </DataTemplate>
+      </forms:CarouselView.ItemTemplate>
+    </forms:CarouselView>
+    <Button HorizontalOptions="Center" Text="Save shops" TextColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="SaveShop_Clicked"/>
+  </StackLayout>
+  
+  <!--<ContentPage>
+    <ListView x:Name="listViewCare" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="5">
+              <Image Source="{Binding picture}"/>
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="15" Text="{Binding name}" />
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage>
+  <ContentPage>
+    <ListView x:Name="listViewFashion" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="5">
+              <Image Source="{Binding picture}"/>
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="15" Text="{Binding name}" />
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage>
+  <ContentPage>
+    <ListView x:Name="listViewAccessories" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="5">
+              <Image Source="{Binding picture}"/>
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="15" Text="{Binding name}" />
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage>-->
+</ContentPage>

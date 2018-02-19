@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeChoose"
+             Title="Option">
+  <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="10">
+    <Label Text="How do you want to see your friends clothes?" FontSize="20" HorizontalTextAlignment="Center" />
+    <Button TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="All clothes" Clicked="AllClothes_Clicked" />
+    <Button TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Specific" Clicked="Specific_Clicked" />
+  </StackLayout>
+</ContentPage>

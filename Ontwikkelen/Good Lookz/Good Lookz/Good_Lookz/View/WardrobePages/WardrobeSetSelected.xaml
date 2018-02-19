@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeSetSelected"
+             Title="Selected set">
+  <Grid ColumnSpacing="5" Padding="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <ActivityIndicator x:Name="loadingHead" Color="Red" Grid.Row="0" />
+    <Image Grid.Row="0" x:Name="imageHead" />
+    <ActivityIndicator x:Name="loadingTop" Color="Red" Grid.Row="1" />
+    <Image Grid.Row="1" x:Name="imageTop" />
+    <ActivityIndicator x:Name="loadingBottom" Color="Red" Grid.Row="2" />
+    <Image Grid.Row="2" x:Name="imageBottom" />
+    <ActivityIndicator x:Name="loadingFeet" Color="Red" Grid.Row="3" />
+    <Image Grid.Row="3" x:Name="imageFeet" />
+    <Label Grid.Row="4" x:Name="labelName" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+  </Grid>
+</ContentPage>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.SettingsPage"
+             Title="Settings"
+             BackgroundColor="White">
+  
+  <ContentPage.Content>
+    <TableView Intent="Settings">
+      <TableRoot>
+        <TableSection Title="Basic Settings">
+          <SwitchCell x:Name="friendSwitch" Text="New friend request" OnChanged="OnChange1"/>
+          <SwitchCell x:Name="sellSwitch" Text="For sell notify" OnChanged="OnChange2"/>
+          <SwitchCell x:Name="requestSwitch" Text="Request" OnChanged="OnChange3"/>
+          <SwitchCell x:Name="vibrationSwitch" Text="Vibration" OnChanged="OnChange4"/>
+        </TableSection>
+        <TableSection Title="Change">
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Loyalty brands" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Body size" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="For sell distance" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+        </TableSection>
+        <TableSection Title="Help">
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Problem" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Helpdesk" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+        </TableSection>
+        <TableSection Title="Privacy">
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Privacy policy" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Terms and Conditions" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+        </TableSection>
+        <TableSection Title="The app">
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Cooperate" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Feed back" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Share this app" VerticalOptions="Center" />
+              <Label Text=">" FontSize="30" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <Slider ValueChanged="Handle_ValueChanged" x:Name="slider" />
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+              <Label x:Name="lblDistance" />
+            </StackLayout>
+          </ViewCell>
+        </TableSection>
+        <TableSection Title="The app">
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Username:" VerticalOptions="Center" />
+              <Entry x:Name="UsrOrMail" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Password:" VerticalOptions="Center" />
+              <Entry x:Name="Password" IsPassword="True" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+          </ViewCell>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+              <Button x:Name="btnLogout" Text="LOGOUT" TextColor="Red" HeightRequest="40" VerticalOptions="Center" Clicked="Logout_Clicked" />
+            </StackLayout>
+          </ViewCell>
+        </TableSection>
+      </TableRoot>
+    </TableView>
+  </ContentPage.Content>
+</ContentPage>

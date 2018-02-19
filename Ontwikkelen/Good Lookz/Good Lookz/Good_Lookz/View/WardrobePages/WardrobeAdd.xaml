@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeAdd"
+             Title="Add cloths">
+  <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="10">
+    <Button Text="Pick Photo"
+            TextColor="Red" 
+            BorderWidth="1" 
+            BorderRadius="4" 
+            BorderColor="Red" 
+            BackgroundColor="White" 
+            HeightRequest="40"
+            FontSize="20"
+            Clicked="PickPhoto_Clicked" />
+
+    <Button Text="Take Photo"
+            TextColor="Red" 
+            BorderWidth="1" 
+            BorderRadius="4" 
+            BorderColor="Red" 
+            BackgroundColor="White" 
+            HeightRequest="40"
+            FontSize="20"
+            Clicked="TakePhoto_Clicked" />
+
+    <StackLayout Orientation="Horizontal" >
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Picker Grid.Row="0" Grid.Column="0" x:Name="wardorbeItem" Title="Choose type" SelectedIndex="{Binding typeCloth}" SelectedIndexChanged="WardrobeItem_Changed" >
+          <Picker.Items>
+            <x:String>Head</x:String>
+            <x:String>Top</x:String>
+            <x:String>Bottom</x:String>
+            <x:String>Feet</x:String>
+          </Picker.Items>
+        </Picker>
+        <Picker Grid.Row="0" Grid.Column="1" x:Name="colorItem" Title="Choose color" SelectedIndex="{Binding colorItem}" SelectedIndexChanged="ColorItem_Changed" >
+          <Picker.Items>
+            <x:String>Red</x:String>
+            <x:String>Green</x:String>
+            <x:String>Blue</x:String>
+            <x:String>Black</x:String>
+            <x:String>Gray</x:String>
+          </Picker.Items>
+        </Picker>
+        <BoxView Grid.Row="0" Grid.Column="2" x:Name="colorSelected" />
+      </Grid>
+
+    </StackLayout>
+
+    <Picker x:Name="topSize" Title="Choose size" SelectedIndex="{Binding sizeTop}" >
+      <Picker.Items>
+        <x:String>S</x:String>
+        <x:String>M</x:String>
+        <x:String>L</x:String>
+        <x:String>XL</x:String>
+      </Picker.Items>
+    </Picker>
+
+    <Entry x:Name="bottomSize" Placeholder="Insert size" />
+    <Entry x:Name="feetSize" Placeholder="Insert size" />
+
+    <ActivityIndicator x:Name="loadingPic" />
+    <Image x:Name="FileImage"
+           WidthRequest="400"
+           HeightRequest="220" />
+
+    <Button Text="Upload Photo"
+            TextColor="Red" 
+            BorderWidth="1" 
+            BorderRadius="4" 
+            BorderColor="Red" 
+            BackgroundColor="White" 
+            HeightRequest="40"
+            FontSize="20"
+            Clicked="UploadFile_Clicked" />
+  </StackLayout>
+</ContentPage>

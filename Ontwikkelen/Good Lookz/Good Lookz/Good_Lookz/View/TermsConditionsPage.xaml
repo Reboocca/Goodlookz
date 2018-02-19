@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.TermsConditionsPage"
+             Title="Terms and Conditions">
+  <StackLayout>
+    <WebView
+      x:Name="webViewTest"
+      HorizontalOptions="Fill"
+      VerticalOptions="FillAndExpand" />
+    <Button Text="Understood" Clicked="Understood_Clicked" TextColor="Red" BackgroundColor="White" HeightRequest="40" />
+  </StackLayout>
+</ContentPage>

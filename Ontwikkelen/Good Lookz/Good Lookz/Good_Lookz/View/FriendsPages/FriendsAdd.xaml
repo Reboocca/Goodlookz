@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.FriendsPages.FriendsAdd"
+             Title="Add friends">
+  <StackLayout>
+    <Entry TextChanged="Username_TextChanged" />
+    <StackLayout>
+      <ActivityIndicator IsVisible="False" x:Name="loadingFriends" Color="Red" />
+      <ListView x:Name="users" ItemTapped="Users_Tapped">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" Padding="10">
+                <Image Source="friends.png" />
+                <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                  <Label FontAttributes="Bold" FontSize="15" Text="{Binding username}" />
+                  <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+                </StackLayout>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePageWinPhone"
+             BackgroundColor="White">
+  
+  <Label Text="You have to be different again wont you" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

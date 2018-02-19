@@ -1,0 +1,152 @@
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojResolveAssemblyReference.cache
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.MainPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.App.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Http.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Primitives.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Http.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Primitives.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.config
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\ModernHttpClient.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.CarouselView.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.MenuPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingsPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.MirrorPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePageWinPhone.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsAdd.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSets.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSaveSet.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSetSelected.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPages.LoginPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPages.CreatePage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.ChoseShopPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsRequest.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeAdd.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeFriends.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeFriendSelected.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendRequests.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendingListPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedItem.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.ShopForSellPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelling.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.SelectedSaleItemPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSaleRequests.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedSaleRequests.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeChoose.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeAllClothes.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobePreview.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.TermsConditionsPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.UsedClothesPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.config
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\ModernHttpClient.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Http.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.CarouselView.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Primitives.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Http.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Net.Primitives.xml
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojResolveAssemblyReference.cache
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.MainPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.App.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPages.LoginPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPages.CreatePage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.MenuPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingsPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.MirrorPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePageWinPhone.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSets.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSaveSet.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSetSelected.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.ChoseShopPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsAdd.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsRequest.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeAdd.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeFriends.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeFriendSelected.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendRequests.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendingListPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedItem.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.ShopForSellPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelling.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.SelectedSaleItemPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSaleRequests.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedSaleRequests.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeChoose.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeAllClothes.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobePreview.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.TermsConditionsPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.UsedClothesPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb

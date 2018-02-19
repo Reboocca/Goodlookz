@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeSets"
+             Title="Sets"
+             BackgroundColor="White">
+  <StackLayout Padding="5">
+    <ActivityIndicator IsVisible="False" x:Name="loadingList" Color="Red" />
+    <ListView x:Name="postsListView" ItemTapped="Sets_Tapped">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.ContextActions>
+              <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding wardrobe_id}" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Orientation="Horizontal" Padding="10">
+              <Label FontAttributes="Bold" FontSize="15" Text="{Binding name}" />
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="15" Text="{Binding allId}" />
+                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

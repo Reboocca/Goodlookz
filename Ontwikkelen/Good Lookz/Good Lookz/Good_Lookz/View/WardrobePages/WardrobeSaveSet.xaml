@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeSaveSet"
+             Title="Save set">
+  <Grid ColumnSpacing="5" Padding="10" >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <ActivityIndicator IsRunning="{Binding Source={x:Reference ImageHead}, Path=IsLoading }" Color="Red" Grid.Row="0" Grid.Column="0" />
+    <Image Grid.Row="0"
+           Grid.Column="0"
+           x:Name="ImageHead"/>
+    <ActivityIndicator IsRunning="{Binding Source={x:Reference ImageTop}, Path=IsLoading }" Color="Red" Grid.Row="0" Grid.Column="1" />
+    <Image Grid.Row="0"
+           Grid.Column="1"
+          x:Name="ImageTop" />
+    <ActivityIndicator IsRunning="{Binding Source={x:Reference ImageBottom}, Path=IsLoading }" Color="Red" Grid.Row="1" Grid.Column="0" />
+    <Image Grid.Row="1"
+           Grid.Column="0"
+           x:Name="ImageBottom" />
+    <ActivityIndicator IsRunning="{Binding Source={x:Reference ImageFeet}, Path=IsLoading }" Color="Red" Grid.Row="1" Grid.Column="1" />
+    <Image Grid.Row="1"
+           Grid.Column="1"
+           x:Name="ImageFeet" />
+      <Entry Grid.Row="2" Grid.ColumnSpan="2"  x:Name="setName" Placeholder="Set name"/>
+      <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Save" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="Save_Clicked" />
+  </Grid>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.ShopPages.ShopForSellPage"
+             Title="Sell items">
+  <StackLayout Padding="10" >
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+      <Label x:Name="lblSale" FontSize="30" FontAttributes="Bold" />
+    </StackLayout>
+    <ListView x:Name="sales" ItemTapped="Sales_Tapped" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="10">
+              <Image Source="{Binding picture}" />
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
+                <Label FontSize="15" Text="{Binding fullPrice}" />
+                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
