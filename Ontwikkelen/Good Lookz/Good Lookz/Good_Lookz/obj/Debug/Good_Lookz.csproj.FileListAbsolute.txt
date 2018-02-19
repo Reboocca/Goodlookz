@@ -150,3 +150,7 @@ C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Loo
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
