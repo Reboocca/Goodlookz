@@ -4,11 +4,6 @@
 		<Qualifiers/>
 		<ResourceMapSubtree name="Files">
 			<ResourceMapSubtree name="Xamarin.Forms.Platform.WinRT">
-				<NamedResource name="PageControl.xbf" uri="ms-resource://Xamarin.Forms.Platform.WinRT/Files/Xamarin.Forms.Platform.WinRT/PageControl.xbf">
-					<Candidate type="Path">
-						<Value>Xamarin.Forms.Platform.WinRT\PageControl.xbf</Value>
-					</Candidate>
-				</NamedResource>
 				<NamedResource name="StepperControl.xbf" uri="ms-resource://Xamarin.Forms.Platform.WinRT/Files/Xamarin.Forms.Platform.WinRT/StepperControl.xbf">
 					<Candidate type="Path">
 						<Value>Xamarin.Forms.Platform.WinRT\StepperControl.xbf</Value>

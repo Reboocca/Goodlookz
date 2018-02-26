@@ -35,7 +35,7 @@ namespace Good_Lookz.View.WardrobePages
         {
             InitializeComponent();
 
-            //loadingPic.IsVisible = false;
+            loadingPic.IsVisible = false;
             topSize.IsVisible = false;
             bottomSize.IsVisible = false;
             feetSize.IsVisible = false;
@@ -109,7 +109,12 @@ namespace Good_Lookz.View.WardrobePages
 
             switch (selected)
             {
-                case 1:
+				case 0:
+					feetSize.IsVisible = false;
+					bottomSize.IsVisible = false;
+					topSize.IsVisible = false;
+					break;
+				case 1:
                     feetSize.IsVisible = false;
                     bottomSize.IsVisible = false;
 
@@ -293,9 +298,16 @@ namespace Good_Lookz.View.WardrobePages
             }
             catch
             {
+				//Zorg ervoor dat de Activity Indicator uitstaat
+				loadingPic.IsRunning = false;
+				loadingPic.IsVisible = false;
+
 				//await DisplayAlert("Error", "Please take or chose picture!", "OK");
 				await DisplayAlert("Error", "Please take or choose a picture!", "OK");
 			}
 		}
-    }
+
+		
+
+	}
 }

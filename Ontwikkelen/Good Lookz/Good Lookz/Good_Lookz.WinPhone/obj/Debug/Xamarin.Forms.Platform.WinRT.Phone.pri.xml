@@ -4,6 +4,11 @@
 		<Qualifiers/>
 		<ResourceMapSubtree name="Files">
 			<ResourceMapSubtree name="Xamarin.Forms.Platform.WinRT.Phone">
+				<NamedResource name="FormsProgressBarStyle.xbf" uri="ms-resource://Xamarin.Forms.Platform.WinRT.Phone/Files/Xamarin.Forms.Platform.WinRT.Phone/FormsProgressBarStyle.xbf">
+					<Candidate type="Path">
+						<Value>Xamarin.Forms.Platform.WinRT.Phone\FormsProgressBarStyle.xbf</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="FormsTextBoxStyle.xbf" uri="ms-resource://Xamarin.Forms.Platform.WinRT.Phone/Files/Xamarin.Forms.Platform.WinRT.Phone/FormsTextBoxStyle.xbf">
 					<Candidate type="Path">
 						<Value>Xamarin.Forms.Platform.WinRT.Phone\FormsTextBoxStyle.xbf</Value>

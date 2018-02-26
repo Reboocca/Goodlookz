@@ -5,17 +5,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace Good_Lookz.View
 {
-    /// <summary>
-    /// JSON response word opgevangen en in een list met variables gestopt.
-    /// </summary>
-    class Deleted
+	/// <summary>
+	/// JSON response word opgevangen en in een list met variables gestopt.
+	/// </summary>
+	class Deleted
     {
         public bool friends_delete { get; set; }
     }

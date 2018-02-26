@@ -165,7 +165,6 @@ C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Loo
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.pdb
-C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.pdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\ModernHttpClient.dll.mdb
@@ -223,8 +222,8 @@ C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Loo
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\arrow_right.png
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\R.cs.flag
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\uploadflags.txt
-C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.dll.mdb
+C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Java.Interop.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Microsoft.CSharp.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Mono.Android.dll.mdb
@@ -241,7 +240,6 @@ C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Loo
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Xml.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Xml.Linq.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good_Lookz.Droid.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
@@ -270,4 +268,138 @@ C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Loo
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\Good_Lookz.Droid.dll.mdb
-C:\Users\4PEOPLE-3\Desktop\Good-Lookz - R. Broens\Good-Lookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.dll.config
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.apk
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid-Signed.apk
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\ModernHttpClient.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Newtonsoft.Json.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\OkHttp.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.CurrentActivity.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.Abstractions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.Abstractions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.CarouselView.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Core.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\ModernHttpClient.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Newtonsoft.Json.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.CurrentActivity.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.Abstractions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.Abstractions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.Abstractions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.Abstractions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.Abstractions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.Abstractions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Core.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Core.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Core.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Xaml.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\Good_Lookz.Droid.csprojResolveAssemblyReference.cache
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\Good_Lookz.Droid.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\Good_Lookz.Droid.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\bin\Good_Lookz.Droid.apk
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\old.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable-hdpi\old.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable-xhdpi\old.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable-xxhdpi\old.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\layout\tabbar.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\layout\toolbar.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\values\styles.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\goodlookz.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\icon.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable-hdpi\icon.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\mirror.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\settings.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\wardrobe.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\shop.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\friends.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\fashion.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\arrow_left.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\arrow_right.png
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\R.cs.flag
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\uploadflags.txt
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Java.Interop.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Microsoft.CSharp.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Mono.Android.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\mscorlib.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Core.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.IO.Compression.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Net.Http.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Xml.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Numerics.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Mono.CSharp.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good_Lookz.Droid.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\ModernHttpClient.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Geolocator.Abstractions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Geolocator.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Media.Abstractions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Media.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Permissions.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good_Lookz.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.IO.Compression.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Numerics.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\obj\Debug\Good_Lookz.Droid.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.Droid.dll.mdb

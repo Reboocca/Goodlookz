@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.SignPages.CreatePage"
              Title="Create account"
              BackgroundColor="White">
@@ -10,14 +11,18 @@
     <Label Text="Create account"
            TextColor="#bd0926"
            FontSize="30"
-           FontAttributes="Bold"
+           FontAttributes="Bold"  
            HorizontalOptions="Center" />
 
     <Entry x:Name="username" Placeholder="Username" Text="" />
     <Entry x:Name="password" Placeholder="Password" Text="" IsPassword="True" />
     <Entry x:Name="first_name" Placeholder="First name" Text="" />
     <Entry x:Name="last_name" Placeholder="Last name" Text="" />
-    <Entry x:Name="email" Placeholder="Email" Text="" />
+    <Entry x:Name="email" Placeholder="Email" Text="">
+      <Entry.Behaviors>
+        <behavior:EmailEntry/>
+      </Entry.Behaviors>
+    </Entry>
     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
       <Label Text="I agree to the Terms and Conditions and the Privacy Policy" />
       <Button x:Name="btnTerms" Text="Documents" Clicked="Documents_Clicked" TextColor="Red" HeightRequest="40" />

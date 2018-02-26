@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.WardrobePages.WardrobeAdd"
              Title="Add cloths">
   <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="10">
@@ -62,10 +63,19 @@
       </Picker.Items>
     </Picker>
 
-    <Entry x:Name="bottomSize" Placeholder="Insert size" />
-    <Entry x:Name="feetSize" Placeholder="Insert size" />
+    <Entry x:Name="bottomSize" Keyboard="Numeric" Placeholder="Insert size">
+      <Entry.Behaviors>
+        <behavior:NumberEntry/>
+      </Entry.Behaviors>
+    </Entry>
+    
+    <Entry x:Name="feetSize" Keyboard="Numeric" Placeholder="Insert size">
+      <Entry.Behaviors>
+        <behavior:NumberEntry/>
+      </Entry.Behaviors>      
+    </Entry>
 
-    <ActivityIndicator x:Name="loadingPic" />
+    <ActivityIndicator x:Name="loadingPic"/>
     <Image x:Name="FileImage"
            WidthRequest="400"
            HeightRequest="220" />

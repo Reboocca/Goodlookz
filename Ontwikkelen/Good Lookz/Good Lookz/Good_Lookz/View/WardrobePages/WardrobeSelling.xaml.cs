@@ -51,7 +51,7 @@ namespace Good_Lookz.View.WardrobePages
             }
             catch
             {
-                await DisplayAlert("Message", "First time here? \nTry setting items for sale in your wardrobe page to get started.", "OK");
+                await DisplayAlert("Message", "First time here? \nTry setting items for sale from your wardrobe to get started.", "OK");
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
         }
@@ -64,30 +64,36 @@ namespace Good_Lookz.View.WardrobePages
         async void Delete_Clicked(object sender, EventArgs e)
         {
             var item = ((MenuItem)sender);
-            var sale_id = item.CommandParameter.ToString();
+			var sale_id = item.CommandParameter.ToString();
 
-            var url_delete = "http://www.good-lookz.com/API/sale/saleDelete.php";
+			try
+			{
+				string webadres = "http://www.good-lookz.com/API/sale/saleDelete.php?sale_id=" + sale_id;
+				HttpClient connect = new HttpClient();
+				HttpResponseMessage deleteItemSale = await connect.GetAsync(webadres);
+				deleteItemSale.EnsureSuccessStatusCode();
 
-            var values = new Dictionary<string, string>
-            {
-                { "sale_id", sale_id }
-            };
-
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync(url_delete, content);
-            var responseString = await response.Content.ReadAsStringAsync();
-            var postMethod = JsonConvert.DeserializeObject<List<saleDelete>>(responseString);
-
-            // Delete item van ObserveAbleCollection
-            foreach (var items in _gets.ToList())
-            {
-                if (items.sale_id == sale_id)
-                {
-                    _gets.Remove(items);
-                }
-            }
-
-            await DisplayAlert("Message", "Deleted: " + postMethod[0].sale_delete.ToString(), "OK");
+				string result = await deleteItemSale.Content.ReadAsStringAsync();
+				if (result == "Delete function success.")
+				{
+					// Delete item van ObserveAbleCollection
+					foreach (var items in _gets.ToList())
+					{
+						if (items.sale_id == sale_id)
+						{
+							_gets.Remove(items);
+						}
+					}
+				}
+				else if (result == "Delete function failed.")
+				{
+					await DisplayAlert("Error", "Unable delete the item from sale, please try again later.", "OK");
+				}
+			}
+			catch (Exception)
+			{
+				await DisplayAlert("Error", "Unable to connect with our servers.", "OK");
+			}			
         }
 
         async void SaleRequests_Clicked(object sender, EventArgs e)

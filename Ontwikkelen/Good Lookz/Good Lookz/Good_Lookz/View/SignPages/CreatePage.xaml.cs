@@ -46,6 +46,14 @@ namespace Good_Lookz.View.SignPages
 
                 await DisplayAlert("Not Filled", "Don't leave empty!", "OK");
             }
+			else if (email.TextColor == Color.Red)
+			{
+				loadingCreate.IsRunning = false;
+				loadingCreate.IsVisible = false;
+				btnCreate.IsVisible = true;
+
+				await DisplayAlert("Error", "Invalid email address", "OK");
+			}
             else
             {
                 if (!acceptedTerms)
@@ -84,8 +92,9 @@ namespace Good_Lookz.View.SignPages
                     }
                     else
                     {
-                        await DisplayAlert("Worked", "Account created.", "OK");
-                    }
+                        await DisplayAlert("Success", "Account created.", "OK");
+						await Navigation.PushAsync(new View.SignPage(), true);
+					}
                 }
             }
         }
