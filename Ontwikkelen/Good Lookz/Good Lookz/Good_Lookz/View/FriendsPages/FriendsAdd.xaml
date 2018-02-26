@@ -4,8 +4,8 @@
              x:Class="Good_Lookz.View.FriendsPages.FriendsAdd"
              Title="Add friends">
   <StackLayout>
-    <Entry TextChanged="Username_TextChanged" />
-    <StackLayout>
+    <Entry x:Name="ent_Username" TextChanged="Username_TextChanged" />
+    <StackLayout VerticalOptions="FillAndExpand">
       <ActivityIndicator IsVisible="False" x:Name="loadingFriends" Color="Red" />
       <ListView x:Name="users" ItemTapped="Users_Tapped">
         <ListView.ItemTemplate>

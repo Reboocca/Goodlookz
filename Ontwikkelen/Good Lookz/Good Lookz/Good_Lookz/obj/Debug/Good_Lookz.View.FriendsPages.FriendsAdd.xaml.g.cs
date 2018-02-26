@@ -17,6 +17,9 @@ namespace Good_Lookz.View.FriendsPages {
     public partial class FriendsAdd : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry ent_Username;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator loadingFriends;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -25,6 +28,7 @@ namespace Good_Lookz.View.FriendsPages {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(FriendsAdd));
+            ent_Username = this.FindByName<global::Xamarin.Forms.Entry>("ent_Username");
             loadingFriends = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loadingFriends");
             users = this.FindByName<global::Xamarin.Forms.ListView>("users");
         }

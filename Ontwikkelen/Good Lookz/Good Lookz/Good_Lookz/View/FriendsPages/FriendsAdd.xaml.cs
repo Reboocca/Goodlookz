@@ -54,21 +54,25 @@ namespace Good_Lookz.View.FriendsPages
 
         async void Username_TextChanged(object sender, TextChangedEventArgs e)
         {
-            loadingFriends.IsVisible = true;
-            loadingFriends.IsRunning = true;
+			//Check of het invulveld leeg is, zo niet -> ga verder met de code
+			if (!string.IsNullOrEmpty(ent_Username.Text))
+			{
+				loadingFriends.IsVisible = true;
+				loadingFriends.IsRunning = true;
 
-            string url = "http://www.good-lookz.com/API/account/CheckUser.php?username={0}";
-            string username = e.NewTextValue;
-            string url_Full = string.Format(url, username);
+				string url = "http://www.good-lookz.com/API/account/CheckUser.php?username={0}";
+				string username = e.NewTextValue;
+				string url_Full = string.Format(url, username);
 
-            var content = await client.GetStringAsync(url_Full);
-            response = JsonConvert.DeserializeObject<List<checkuser>>(content);
+				var content = await client.GetStringAsync(url_Full);
+				response = JsonConvert.DeserializeObject<List<checkuser>>(content);
 
-            _gets = new ObservableCollection<checkuser>(response);
+				_gets = new ObservableCollection<checkuser>(response);
 
-            loadingFriends.IsRunning = false;
-            loadingFriends.IsVisible = false;
-            users.ItemsSource = _gets;
+				loadingFriends.IsRunning = false;
+				loadingFriends.IsVisible = false;
+				users.ItemsSource = _gets;
+			}
         }
 
         async void Users_Tapped(object sender, ItemTappedEventArgs e)
