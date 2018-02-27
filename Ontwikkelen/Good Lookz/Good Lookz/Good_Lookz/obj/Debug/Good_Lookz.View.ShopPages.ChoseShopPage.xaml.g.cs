@@ -9,28 +9,27 @@
 //------------------------------------------------------------------------------
 
 namespace Good_Lookz.View.ShopPages {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\ShopPages\\ChoseShopPage.xaml")]
     public partial class ChoseShopPage : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.CarouselView carouselViewCare;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.CarouselView carouselViewFashion;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.CarouselView carouselViewAccessories;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(ChoseShopPage));
-            carouselViewCare = this.FindByName<global::Xamarin.Forms.CarouselView>("carouselViewCare");
-            carouselViewFashion = this.FindByName<global::Xamarin.Forms.CarouselView>("carouselViewFashion");
-            carouselViewAccessories = this.FindByName<global::Xamarin.Forms.CarouselView>("carouselViewAccessories");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ChoseShopPage));
+            carouselViewCare = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CarouselView>(this, "carouselViewCare");
+            carouselViewFashion = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CarouselView>(this, "carouselViewFashion");
+            carouselViewAccessories = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CarouselView>(this, "carouselViewAccessories");
         }
     }
 }

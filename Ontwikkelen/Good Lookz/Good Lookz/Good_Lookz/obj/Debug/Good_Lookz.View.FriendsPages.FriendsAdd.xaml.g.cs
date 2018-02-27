@@ -9,28 +9,27 @@
 //------------------------------------------------------------------------------
 
 namespace Good_Lookz.View.FriendsPages {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\FriendsPages\\FriendsAdd.xaml")]
     public partial class FriendsAdd : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry ent_Username;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator loadingFriends;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView users;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(FriendsAdd));
-            ent_Username = this.FindByName<global::Xamarin.Forms.Entry>("ent_Username");
-            loadingFriends = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loadingFriends");
-            users = this.FindByName<global::Xamarin.Forms.ListView>("users");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FriendsAdd));
+            ent_Username = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "ent_Username");
+            loadingFriends = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "loadingFriends");
+            users = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "users");
         }
     }
 }

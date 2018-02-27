@@ -9,20 +9,19 @@
 //------------------------------------------------------------------------------
 
 namespace Good_Lookz.View {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\TermsConditionsPage.xaml")]
     public partial class TermsConditionsPage : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.WebView webViewTest;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(TermsConditionsPage));
-            webViewTest = this.FindByName<global::Xamarin.Forms.WebView>("webViewTest");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TermsConditionsPage));
+            webViewTest = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.WebView>(this, "webViewTest");
         }
     }
 }

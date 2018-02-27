@@ -19,7 +19,10 @@ namespace Good_Lookz.View
         protected override void OnAppearing()
         {
             NavigationPage.SetHasNavigationBar(this, false);
-        }
+
+			//weghalen
+			App.Current.MainPage = new NavigationPage(new SaveSizePage());
+		}
 
             async void LoginClicked(object sender, EventArgs e)
         {

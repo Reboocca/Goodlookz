@@ -56,6 +56,7 @@
 
     <Picker x:Name="topSize" Title="Choose size" SelectedIndex="{Binding sizeTop}" >
       <Picker.Items>
+        <x:String>XS</x:String>
         <x:String>S</x:String>
         <x:String>M</x:String>
         <x:String>L</x:String>

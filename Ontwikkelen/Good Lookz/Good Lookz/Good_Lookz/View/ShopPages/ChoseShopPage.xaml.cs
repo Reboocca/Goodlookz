@@ -136,7 +136,7 @@ namespace Good_Lookz.View.ShopPages
 
             var _id = 1;
             fromPage.id = _id;
-            App.Current.MainPage = new NavigationPage(new TermsConditionsPage());
-        }
+			App.Current.MainPage = new SaveSizePage();
+		}
     }
 }

@@ -9,36 +9,35 @@
 //------------------------------------------------------------------------------
 
 namespace Good_Lookz.View.WardrobePages {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\WardrobePages\\WardrobeSaveSet.xaml")]
     public partial class WardrobeSaveSet : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image ImageHead;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image ImageTop;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image ImageBottom;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image ImageFeet;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry setName;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(WardrobeSaveSet));
-            ImageHead = this.FindByName<global::Xamarin.Forms.Image>("ImageHead");
-            ImageTop = this.FindByName<global::Xamarin.Forms.Image>("ImageTop");
-            ImageBottom = this.FindByName<global::Xamarin.Forms.Image>("ImageBottom");
-            ImageFeet = this.FindByName<global::Xamarin.Forms.Image>("ImageFeet");
-            setName = this.FindByName<global::Xamarin.Forms.Entry>("setName");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WardrobeSaveSet));
+            ImageHead = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "ImageHead");
+            ImageTop = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "ImageTop");
+            ImageBottom = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "ImageBottom");
+            ImageFeet = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "ImageFeet");
+            setName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "setName");
         }
     }
 }

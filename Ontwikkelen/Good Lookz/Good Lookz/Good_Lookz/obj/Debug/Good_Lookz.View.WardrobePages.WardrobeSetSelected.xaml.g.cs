@@ -9,52 +9,51 @@
 //------------------------------------------------------------------------------
 
 namespace Good_Lookz.View.WardrobePages {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\WardrobePages\\WardrobeSetSelected.xaml")]
     public partial class WardrobeSetSelected : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator loadingHead;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image imageHead;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator loadingTop;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image imageTop;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator loadingBottom;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image imageBottom;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator loadingFeet;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image imageFeet;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label labelName;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(WardrobeSetSelected));
-            loadingHead = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loadingHead");
-            imageHead = this.FindByName<global::Xamarin.Forms.Image>("imageHead");
-            loadingTop = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loadingTop");
-            imageTop = this.FindByName<global::Xamarin.Forms.Image>("imageTop");
-            loadingBottom = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loadingBottom");
-            imageBottom = this.FindByName<global::Xamarin.Forms.Image>("imageBottom");
-            loadingFeet = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loadingFeet");
-            imageFeet = this.FindByName<global::Xamarin.Forms.Image>("imageFeet");
-            labelName = this.FindByName<global::Xamarin.Forms.Label>("labelName");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WardrobeSetSelected));
+            loadingHead = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "loadingHead");
+            imageHead = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imageHead");
+            loadingTop = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "loadingTop");
+            imageTop = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imageTop");
+            loadingBottom = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "loadingBottom");
+            imageBottom = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imageBottom");
+            loadingFeet = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "loadingFeet");
+            imageFeet = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imageFeet");
+            labelName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "labelName");
         }
     }
 }

@@ -9,52 +9,51 @@
 //------------------------------------------------------------------------------
 
 namespace Good_Lookz.View {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\SettingsPage.xaml")]
     public partial class SettingsPage : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.SwitchCell friendSwitch;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.SwitchCell sellSwitch;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.SwitchCell requestSwitch;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.SwitchCell vibrationSwitch;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Slider slider;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label lblDistance;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry UsrOrMail;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry Password;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button btnLogout;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(SettingsPage));
-            friendSwitch = this.FindByName<global::Xamarin.Forms.SwitchCell>("friendSwitch");
-            sellSwitch = this.FindByName<global::Xamarin.Forms.SwitchCell>("sellSwitch");
-            requestSwitch = this.FindByName<global::Xamarin.Forms.SwitchCell>("requestSwitch");
-            vibrationSwitch = this.FindByName<global::Xamarin.Forms.SwitchCell>("vibrationSwitch");
-            slider = this.FindByName<global::Xamarin.Forms.Slider>("slider");
-            lblDistance = this.FindByName<global::Xamarin.Forms.Label>("lblDistance");
-            UsrOrMail = this.FindByName<global::Xamarin.Forms.Entry>("UsrOrMail");
-            Password = this.FindByName<global::Xamarin.Forms.Entry>("Password");
-            btnLogout = this.FindByName<global::Xamarin.Forms.Button>("btnLogout");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SettingsPage));
+            friendSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SwitchCell>(this, "friendSwitch");
+            sellSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SwitchCell>(this, "sellSwitch");
+            requestSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SwitchCell>(this, "requestSwitch");
+            vibrationSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SwitchCell>(this, "vibrationSwitch");
+            slider = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Slider>(this, "slider");
+            lblDistance = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblDistance");
+            UsrOrMail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "UsrOrMail");
+            Password = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Password");
+            btnLogout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnLogout");
         }
     }
 }

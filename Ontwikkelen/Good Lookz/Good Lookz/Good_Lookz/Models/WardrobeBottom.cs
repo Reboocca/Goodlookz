@@ -16,7 +16,7 @@ namespace Good_Lookz.Models
         public string picture { get; set; }
         public string color { get; set; }
         public string date { get; set; }
-        public int size { get; set; }
+        public string size { get; set; }
     }
 
     public class WardrobeBottomAll
@@ -25,7 +25,7 @@ namespace Good_Lookz.Models
         public int users_id { get; set; }
         public string picture { get; set; }
         public string date { get; set; }
-        public int size { get; set; }
+        public string size { get; set; }
         public int friends_id { get; set; }
         public string username { get; set; }
         //public string usrAndSize { get { return username + " - Size: " + size; } }
@@ -60,7 +60,7 @@ namespace Good_Lookz.Models
         private static string _picture;
         private static string _color;
         private static string _date;
-        private static int _size;
+        private static string _size;
 
         public static int bottom_id
         {
@@ -92,7 +92,7 @@ namespace Good_Lookz.Models
             set { _date = value; }
         }
 
-        public static int size
+        public static string size
         {
             get { return _size; }
             set { _size = value; }

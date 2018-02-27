@@ -1,18 +1,17 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\4people-3\documents\github\good-lookz\good lookz\good lookz\good_lookz.windows\obj\debug\intermediatexaml\good_lookz.windows.exe" HashGuid="c25159c5-726a-a4d7-67b6-ae44ac462d88" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\good lookz\good_lookz\bin\debug\good_lookz.dll" HashGuid="41304a6a-afd4-5855-7c87-1adf9111e2c5" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\modernhttpclient.2.4.2\lib\portable-net45+winrt45+wp8+wpa81\modernhttpclient.dll" HashGuid="06558e2e-bf09-53c9-5fa3-375082b5eae2" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\newtonsoft.json.11.0.1\lib\portable-net45+win8+wp8+wpa81\newtonsoft.json.dll" HashGuid="b2e7d232-5c7f-51de-b2a2-9871f523ecdf" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xam.plugin.geolocator.5.0.0.187-beta\lib\netstandard1.0\plugin.geolocator.abstractions.dll" HashGuid="2cc25e54-b572-89e9-86bc-4c81786cea11" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xam.plugin.geolocator.5.0.0.187-beta\lib\netstandard1.0\plugin.geolocator.dll" HashGuid="46666665-f9f6-7440-8bac-50a89deda74a" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xam.plugin.media.3.1.3.222-beta\lib\netstandard1.0\plugin.media.abstractions.dll" HashGuid="f8da6631-c3ac-0cc8-f361-9cc485519810" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xam.plugin.media.3.1.3.222-beta\lib\netstandard1.0\plugin.media.dll" HashGuid="9e86fed7-8ff6-69f1-cf39-43e14e0fd55c" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xamarin.forms.carouselview.2.3.0-pre2\lib\win81\xamarin.forms.carouselview.dll" HashGuid="3ded6057-9f01-8bb8-dfdd-4c480fc82f51" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xamarin.forms.2.5.0.280555\lib\win81\xamarin.forms.core.dll" HashGuid="7de1a3ea-4d2e-ff64-3193-a9b753df67bc" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xamarin.forms.2.5.0.280555\lib\win81\xamarin.forms.platform.dll" HashGuid="6b938cd4-44c0-2618-7eb6-4caa3f482076" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xamarin.forms.2.5.0.280555\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="2ee8dec8-800d-7228-8f05-e345d4abab23" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xamarin.forms.2.5.0.280555\lib\win81\xamarin.forms.platform.winrt.tablet.dll" HashGuid="0b22c881-f200-c8fb-aa3a-d47a58a7251c" />
-    <ReferenceAssembly PathName="k:\stage_voorjaar_2018\programma\packages\xamarin.forms.2.5.0.280555\lib\win81\xamarin.forms.xaml.dll" HashGuid="858a0e54-3cdf-2414-10f1-9d41fdc66704" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\good lookz\good_lookz\bin\debug\good_lookz.dll" HashGuid="2bdeaa9c-9cca-8f64-48cb-58339b877541" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\modernhttpclient.2.4.2\lib\portable-net45+winrt45+wp8+wpa81\modernhttpclient.dll" HashGuid="06558e2e-bf09-53c9-5fa3-375082b5eae2" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\newtonsoft.json.11.0.1\lib\portable-net45+win8+wp8+wpa81\newtonsoft.json.dll" HashGuid="b2e7d232-5c7f-51de-b2a2-9871f523ecdf" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xam.plugin.geolocator.5.0.0.187-beta\lib\netstandard1.0\plugin.geolocator.abstractions.dll" HashGuid="2cc25e54-b572-89e9-86bc-4c81786cea11" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xam.plugin.geolocator.5.0.0.187-beta\lib\netstandard1.0\plugin.geolocator.dll" HashGuid="46666665-f9f6-7440-8bac-50a89deda74a" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xam.plugin.media.3.1.3.222-beta\lib\netstandard1.0\plugin.media.abstractions.dll" HashGuid="f8da6631-c3ac-0cc8-f361-9cc485519810" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xam.plugin.media.3.1.3.222-beta\lib\netstandard1.0\plugin.media.dll" HashGuid="9e86fed7-8ff6-69f1-cf39-43e14e0fd55c" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xamarin.forms.carouselview.2.3.0-pre2\lib\win81\xamarin.forms.carouselview.dll" HashGuid="3ded6057-9f01-8bb8-dfdd-4c480fc82f51" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xamarin.forms.2.3.4.192-pre2\lib\win81\xamarin.forms.core.dll" HashGuid="aaabd8c8-a3f6-9715-b4a7-45dd08da2af6" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xamarin.forms.2.3.4.192-pre2\lib\win81\xamarin.forms.platform.dll" HashGuid="6b938cd4-44c0-2618-7eb6-4caa3f482076" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xamarin.forms.2.3.4.192-pre2\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="f7a5e2a4-330c-1071-85d4-364602fa0878" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xamarin.forms.2.3.4.192-pre2\lib\win81\xamarin.forms.platform.winrt.tablet.dll" HashGuid="ef385dc7-95ee-4eb7-143e-7726fbe419c2" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xamarin.forms.2.3.4.192-pre2\lib\win81\xamarin.forms.xaml.dll" HashGuid="d02ccf2b-8fa0-fb9b-4df1-b85a97365ca2" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

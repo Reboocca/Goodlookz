@@ -10,6 +10,7 @@
     <ResolvedResourceDirectory>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Xamarin.Forms.CarouselView\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Plugin.Media\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\assets</ResolvedAssetDirectory>
@@ -20,6 +21,7 @@
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.CarouselView\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Media\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
@@ -31,5 +33,6 @@
     <ResolvedResourceDirectoryStamp>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Xamarin.Forms.CarouselView.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\__library_projects__\Plugin.Media.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

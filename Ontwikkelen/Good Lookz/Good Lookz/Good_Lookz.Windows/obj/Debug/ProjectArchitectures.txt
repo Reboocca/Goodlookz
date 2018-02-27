@@ -1,2 +1,0 @@
-K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz.Windows\Good_Lookz.Windows.csproj;neutral
-K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\Good_Lookz.csproj;neutral

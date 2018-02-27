@@ -88,7 +88,6 @@ namespace Good_Lookz.View.SignPages
                     loadingLogin.IsVisible = false;
                     btnLogin.IsVisible = true;
 
-					//await DisplayAlert("Failed", "No account found.", "OK"); <- deze melding is aangepast aangezien deze ook te zien was bij het invoeren van een onjuist wachtwoord
 					await DisplayAlert("Failed", "The given login credentials are incorrect", "OK");
 				}
 				else
@@ -108,10 +107,6 @@ namespace Good_Lookz.View.SignPages
 
                     if (_hasChosen == 0)
                     {
-                        //MenuPage.hasChosen = _hasChosen;
-
-                        //await DisplayAlert("Succesful", "Account found", "OK"); <- deze melding is weggehaald aangezien het onnodig is
-
                         App.Current.MainPage = new ShopPages.ChoseShopPage();
                     }
                     else
@@ -128,9 +123,8 @@ namespace Good_Lookz.View.SignPages
                         Application.Current.Properties["shops2_id"] = _shops2_id;
                         Application.Current.Properties["shops3_id"] = _shops3_id;
 
-                        await DisplayAlert("Succesful", "Account found", "OK");
-                        App.Current.MainPage = new NavigationPage(new MenuPage());
-                    }
+						App.Current.MainPage = new NavigationPage(new MenuPage());
+					}
                 }
             }
         }
