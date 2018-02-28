@@ -44,9 +44,6 @@
       </Picker>
 
       <Picker x:Name="feetSize" Title="Choose your feet size" SelectedIndex="{Binding feetSize}" >
-        <Picker.ItemsSource>
-          
-        </Picker.ItemsSource>
       </Picker>
     </StackLayout>
     <StackLayout Grid.Row="5" Grid.Column="1" HorizontalOptions="Center">
