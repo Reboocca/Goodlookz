@@ -310,8 +310,7 @@ namespace Good_Lookz.View.WardrobePages
 
 						var sometext_head = await ResponseMessage_head.Content.ReadAsStringAsync();
 						var response_head = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_head);
-
-						await DisplayAlert("Message", "Image upload: " + response_head[0].img_upload, "OK");
+						
 						await Application.Current.MainPage.Navigation.PopAsync();
 
 						break;
@@ -334,13 +333,15 @@ namespace Good_Lookz.View.WardrobePages
 								}
 							}
 
-							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(top.sNr))), "size");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(top.sSize))), "size");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(top.sRegion))), "region");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(top.sGender))), "gender");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(top.sNr))), "nr");
 
 							var ResponseMessage_top = await client.PostAsync(URL, content);
 							var sometext_top = await ResponseMessage_top.Content.ReadAsStringAsync();
 							var response_top = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_top);
-
-							await DisplayAlert("Message", "Image upload: " + response_top[0].img_upload, "OK");
+							
 							await Application.Current.MainPage.Navigation.PopAsync();
 						}
 						break;
@@ -357,19 +358,21 @@ namespace Good_Lookz.View.WardrobePages
 
 							foreach (Models.Sizes.AllSizes i in lstSizes)
 							{
-								if (i.sSize == topSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "bottom")
+								if (i.sSize == bottomSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "bottom")
 								{
 									bot = i;
 								}
 							}
 
-							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sNr))), "size");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sSize))), "size");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sRegion))), "region");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sGender))), "gender");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sNr))), "nr");
 
 							var ResponseMessage_bottom = await client.PostAsync(URL, content);
 							var sometext_bottom = await ResponseMessage_bottom.Content.ReadAsStringAsync();
 							var response_bottom = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_bottom);
-
-							await DisplayAlert("Message", "Image upload: " + response_bottom[0].img_upload, "OK");
+							
 							await Application.Current.MainPage.Navigation.PopAsync();
 						}
 						break;
@@ -386,19 +389,21 @@ namespace Good_Lookz.View.WardrobePages
 
 							foreach (Models.Sizes.AllSizes i in lstSizes)
 							{
-								if (i.sSize == topSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "feet")
+								if (i.sSize == feetSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "feet")
 								{
 									feet = i;
 								}
 							}
-
-							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sNr))), "size");
+							
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sSize))), "size");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sRegion))), "region");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sGender))), "gender");
+							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sNr))), "nr");
 
 							var ResponseMessage_feet = await client.PostAsync(URL, content);
 							var sometext_feet = await ResponseMessage_feet.Content.ReadAsStringAsync();
 							var response_feet = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_feet);
-
-							//await DisplayAlert("Message", "Image upload: " + response_feet[0].img_upload, "OK"); -> overbodig
+							
 							await Application.Current.MainPage.Navigation.PopAsync();
 						}
 						break;
@@ -413,8 +418,7 @@ namespace Good_Lookz.View.WardrobePages
 				//Zorg ervoor dat de Activity Indicator uitstaat
 				loadingPic.IsRunning = false;
 				loadingPic.IsVisible = false;
-
-				//await DisplayAlert("Error", "Please take or chose picture!", "OK");
+				
 				await DisplayAlert("Error", "Please take or choose a picture!", "OK");
 			}
 		}
