@@ -69,16 +69,6 @@ namespace Good_Lookz.View.WardrobePages
             await Navigation.PushAsync(new WardrobeFriendSelected(), true);
         }
 
-        async void LendRequests_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LendRequests(), true);
-        }
-
-        async void Lending_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LendingListPage(), true);
-        }
-
         protected override void OnDisappearing()
         {
             /// Tijdens het afsluiten van de pagina wordt dit uitgevoerd. 

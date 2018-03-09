@@ -18,7 +18,7 @@
     <Entry x:Name="password" Placeholder="Password" Text="" IsPassword="True" />
     <Entry x:Name="first_name" Placeholder="First name" Text="" />
     <Entry x:Name="last_name" Placeholder="Last name" Text="" />
-    <Entry x:Name="email" Placeholder="Email" Text="">
+    <Entry x:Name="email" Placeholder="Email" Text="" Keyboard="Email">
       <Entry.Behaviors>
         <behavior:EmailEntry/>
       </Entry.Behaviors>

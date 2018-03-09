@@ -26,7 +26,9 @@ namespace Good_Lookz.Models
         public string picture { get; set; }
         public string date { get; set; }
         public string size { get; set; }
-        public int friends_id { get; set; }
+		public string region { get; set; }
+		public string gender { get; set; }
+		public int friends_id { get; set; }
         public string username { get; set; }
         //public string usrAndSize { get { return username + " - Size: " + size; } }
     }
@@ -60,9 +62,11 @@ namespace Good_Lookz.Models
         private static string _picture;
         private static string _color;
         private static string _date;
-        private static string _size;
+		private static string _size;
+		private static string _gender;
+		private static string _region;
 
-        public static int feet_id
+		public static int feet_id
         {
             get { return _feet_id; }
             set { _feet_id = value; }
@@ -97,7 +101,19 @@ namespace Good_Lookz.Models
             get { return _size; }
             set { _size = value; }
         }
-    }
+
+		public static string gender
+		{
+			get { return _gender; }
+			set { _gender = value; }
+		}
+
+		public static string region
+		{
+			get { return _region; }
+			set { _region = value; }
+		}
+	}
 
     class feetSaleSelected
     {

@@ -100,53 +100,70 @@ namespace Good_Lookz.View.WardrobePages
         int id = 0;
         string picture = "";
         string date = "";
-        string size = "";
+		string size = "";
+		string region = "";
+		string gender = "";
 
-        public WardrobePreview()
+		public WardrobePreview()
         {
             InitializeComponent();
         }
 
         protected override void OnAppearing()
-        {
-            var typeCloth = selectedTypeLend.typeCloth;
+		{
+			//Geef een min en max datum aan de date picker
+			dpDate.MinimumDate = DateTime.Now.AddHours(24);
+			dpDate.MaximumDate = DateTime.Now.AddYears(5);
+
+			var typeCloth = selectedTypeLend.typeCloth;
 
 
             switch (typeCloth)
             {
                 case 1:
-                    id = Models.SelectedHead.head_id;
-                    picture = Models.SelectedHead.picture;
-                    date = Models.SelectedHead.date;
+                    id					= Models.SelectedHead.head_id;
+                    picture				= Models.SelectedHead.picture;
+                    date				= Models.SelectedHead.date;
+					stckInfo.IsVisible	= false;
+					break;
 
-                    break;
                 case 2:
-                    id = Models.SelectedTop.top_id;
+                    id		= Models.SelectedTop.top_id;
                     picture = Models.SelectedTop.picture;
-                    date = Models.SelectedTop.date;
-                    size = Models.SelectedTop.size;
-
+                    date	= Models.SelectedTop.date;
+                    size	= Models.SelectedTop.size;
+					region	= Models.SelectedTop.region;
+					gender	= Models.SelectedTop.gender;
                     break;
+
                 case 3:
-                    id = Models.SelectedBottom.bottom_id;
+                    id		= Models.SelectedBottom.bottom_id;
                     picture = Models.SelectedBottom.picture;
-                    date = Models.SelectedBottom.date;
-                    size = Models.SelectedBottom.size.ToString();
+                    date	= Models.SelectedBottom.date;
+                    size	= Models.SelectedBottom.size;
+					region	= Models.SelectedBottom.region;
+					gender	= Models.SelectedBottom.gender;
+					break;
 
-                    break;
                 case 4:
-                    id = Models.SelectedFeet.feet_id;
+                    id		= Models.SelectedFeet.feet_id;
                     picture = Models.SelectedFeet.picture;
-                    date = Models.SelectedFeet.date;
-                    size = Models.SelectedFeet.size.ToString();
+                    date	= Models.SelectedFeet.date;
+                    size	= Models.SelectedFeet.size;
+					region	= Models.SelectedFeet.region;
+					gender	= Models.SelectedFeet.gender;
+					break;
 
-                    break;
                 default:
                     break;
             }
 
             selectedCloth.Source = picture;
-            lblSize.Text = size;
+
+			//Vul de labels
+			lblSize.Text	= size;
+			lbGender.Text	= gender;
+			lbRegion.Text	= region;
 
             base.OnAppearing();
         }
@@ -213,30 +230,30 @@ namespace Good_Lookz.View.WardrobePages
 
             if (alreadyLend == false)
             {
-                var lendAccept = await DisplayAlert("Lend", "Ask for borrowing?", "Yes", "No");
-                var Url = "http://www.good-lookz.com/API/lend/lendUpload.php";
+                //var lendAccept = await DisplayAlert("Lend", "Ask for borrowing?", "Yes", "No");
+                //var Url = "http://www.good-lookz.com/API/lend/lendUpload.php";
 
-                if (lendAccept)
-                {
+                //if (lendAccept)
+                //{
 
-                var values = new Dictionary<string, string>
-                {
-                    { "id" , id },
-                    { "friends_id", friends_id },
-                    { "users_id", users_id },
-                    { "head_id", head_id },
-                    { "top_id", top_id },
-                    { "bottom_id", bottom_id },
-                    { "feet_id", feet_id }
-                };
+                //var values = new Dictionary<string, string>
+                //{
+                //    { "id" , id },
+                //    { "friends_id", friends_id },
+                //    { "users_id", users_id },
+                //    { "head_id", head_id },
+                //    { "top_id", top_id },
+                //    { "bottom_id", bottom_id },
+                //    { "feet_id", feet_id }
+                //};
 
-                    var content_upload = new FormUrlEncodedContent(values);
-                    var response_upload = await _client.PostAsync(Url, content_upload);
-                    var responseString = await response_upload.Content.ReadAsStringAsync();
-                    var postMethod = JsonConvert.DeserializeObject<List<lendUpload>>(responseString);
+                //    var content_upload = new FormUrlEncodedContent(values);
+                //    var response_upload = await _client.PostAsync(Url, content_upload);
+                //    var responseString = await response_upload.Content.ReadAsStringAsync();
+                //    var postMethod = JsonConvert.DeserializeObject<List<lendUpload>>(responseString);
 
-                    await DisplayAlert("Message", "Worked!", "OK");
-                }
+                //    await DisplayAlert("Message", "Worked!", "OK");
+                //}
             }
             else
             {

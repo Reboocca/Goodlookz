@@ -350,7 +350,12 @@ namespace Good_Lookz.View
             await Navigation.PushAsync(new WardrobePages.WardrobeSelling(), true);
         }
 
-        protected override void OnDisappearing()
+		async void Lending_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new WardrobePages.LendingListPage(), true);
+		}
+
+		protected override void OnDisappearing()
         {
             /// Tijdens het afsluiten van de pagina wordt dit uitgevoerd. 
             /// Clear alle opgeslagen data in het List.

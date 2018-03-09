@@ -2,20 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.WardrobePages.WardrobePreview"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"             
+             xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
              Title="Selected item">
   <Grid ColumnSpacing="5" Padding="10" >
     <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
+      <RowDefinition Height="50*" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
+      <RowDefinition Height="5*" />
+      <RowDefinition Height="10*" />
     </Grid.RowDefinitions>
     <Image Grid.Row="0" x:Name="selectedCloth" />
-    <StackLayout Grid.Row="2" HorizontalOptions="Center" >
-      <Label Text="Size:" FontSize="20" FontAttributes="Bold" />
+    <StackLayout x:Name="stckInfo" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+      <Label Text="Size:" FontSize="15" FontAttributes="Bold" />
       <Label x:Name="lblSize" FontSize="15" />
+      <Label Text="Region:" FontSize="15" FontAttributes="Bold" />
+      <Label x:Name="lbRegion" FontSize="15" />
+      <Label Text="Gender:" FontSize="15" FontAttributes="Bold" />
+      <Label x:Name="lbGender" FontSize="15" />
     </StackLayout>
-    <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" >
+    <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+      <Label Text="When do you want to borrow this item?" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" />
+      <DatePicker x:Name="dpDate" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+        <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+      </DatePicker>
+    </StackLayout>
+    <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+      <Label Text="How many days will you be borrowing this for?" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" />
+      <Entry x:Name="enDays" Keyboard="Numeric">
+        <Entry.Behaviors>
+          <behavior:NumberEntry/>
+        </Entry.Behaviors>
+      </Entry>
+      <Label Text="days" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" />
+    </StackLayout>
+    <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="End" >
+      
+    </StackLayout>
+    <StackLayout Grid.Row="5" Orientation="Horizontal" HorizontalOptions="Center" >
       <Button x:Name="askForLend" Text="Ask for lend" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="AskForLend_Clicked" />
     </StackLayout>
   </Grid>

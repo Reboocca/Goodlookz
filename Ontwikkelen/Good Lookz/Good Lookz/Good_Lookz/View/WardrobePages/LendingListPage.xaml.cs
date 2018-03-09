@@ -95,7 +95,12 @@ namespace Good_Lookz.View.WardrobePages
             }
         }
 
-        protected override void OnDisappearing()
+		async void LendRequests_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new LendRequests(), true);
+		}
+
+		protected override void OnDisappearing()
         {
             /// Tijdens het afsluiten van de pagina wordt dit uitgevoerd. 
             /// Clear alle opgeslagen data in het List.

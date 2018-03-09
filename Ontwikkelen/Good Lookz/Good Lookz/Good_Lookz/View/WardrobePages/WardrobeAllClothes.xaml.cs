@@ -230,17 +230,6 @@ namespace Good_Lookz.View.WardrobePages
 
             if (ownClothSwitch)
             {
-               // gets_Head.Clear();
-                //gets_Top.Clear();
-                //gets_Bottom.Clear();
-                //gets_Feet.Clear();
-
-				//if(_obsrv_head.)
-    //            _obsrv_head.Clear();
-    //            _obsrv_top.Clear();
-    //            _obsrv_bottom.Clear();
-    //            _obsrv_feet.Clear();
-
                 loadingHead.IsRunning = true;
                 loadingTop.IsRunning = true;
                 loadingBottom.IsRunning = true;
@@ -428,21 +417,15 @@ namespace Good_Lookz.View.WardrobePages
             {
                 Models.WardrobeTopAll SelectedTop = (Models.WardrobeTopAll)e.SelectedItem;
 
-                var _top_id = SelectedTop.top_id;
-                var _users_id = SelectedTop.users_id;
-                var _picture = SelectedTop.picture;
-                var _date = SelectedTop.date;
-                var _size = SelectedTop.size;
-                var _id = SelectedTop.users_id;
-                var _friends_id = SelectedTop.friends_id;
-
-                Models.SelectedTop.top_id = _top_id;
-                Models.SelectedTop.users_id = _users_id;
-                Models.SelectedTop.picture = _picture;
-                Models.SelectedTop.date = _date;
-                Models.SelectedTop.size = _size;
-                selectedUsersIdTop.id = _id;
-                selectedUsersIdTop.friends_id = _friends_id;
+                Models.SelectedTop.top_id		= SelectedTop.top_id;
+                Models.SelectedTop.users_id		= SelectedTop.users_id;
+                Models.SelectedTop.picture		= SelectedTop.picture;
+				Models.SelectedTop.date			= SelectedTop.date;
+				Models.SelectedTop.size			= SelectedTop.size;
+				Models.SelectedTop.region		= SelectedTop.region;
+				Models.SelectedTop.gender		= SelectedTop.gender;
+				selectedUsersIdTop.id			= SelectedTop.users_id;
+                selectedUsersIdTop.friends_id	= SelectedTop.friends_id;
             }
             catch
             {
@@ -455,22 +438,16 @@ namespace Good_Lookz.View.WardrobePages
             {
                 Models.WardrobeBottomAll SelectedBottom = (Models.WardrobeBottomAll)e.SelectedItem;
 
-                var _bottom_id = SelectedBottom.bottom_id;
-                var _users_id = SelectedBottom.users_id;
-                var _picture = SelectedBottom.picture;
-                var _date = SelectedBottom.date;
-                var _size = SelectedBottom.size;
-                var _id = SelectedBottom.users_id;
-                var _friends_id = SelectedBottom.friends_id;
-
-                Models.SelectedBottom.bottom_id = _bottom_id;
-                Models.SelectedBottom.users_id = _users_id;
-                Models.SelectedBottom.picture = _picture;
-                Models.SelectedBottom.date = _date;
-                Models.SelectedBottom.size = _size;
-                selectedUsersIdBottom.id = _id;
-                selectedUsersIdBottom.friends_id = _friends_id;
-            }
+				Models.SelectedBottom.bottom_id = SelectedBottom.bottom_id;
+				Models.SelectedBottom.users_id	= SelectedBottom.users_id;
+				Models.SelectedBottom.picture	= SelectedBottom.picture;
+				Models.SelectedBottom.date		= SelectedBottom.date;
+				Models.SelectedBottom.size		= SelectedBottom.size;
+				Models.SelectedBottom.region	= SelectedBottom.region;
+				Models.SelectedBottom.gender	= SelectedBottom.gender;
+				selectedUsersIdTop.id			= SelectedBottom.users_id;
+				selectedUsersIdTop.friends_id	= SelectedBottom.friends_id;
+			}
             catch
             {
 
@@ -482,22 +459,16 @@ namespace Good_Lookz.View.WardrobePages
             {
                 Models.WardrobeFeetAll SelectedFeet = (Models.WardrobeFeetAll)e.SelectedItem;
 
-                var _feet_id = SelectedFeet.feet_id;
-                var _users_id = SelectedFeet.users_id;
-                var _picture = SelectedFeet.picture;
-                var _date = SelectedFeet.date;
-                var _size = SelectedFeet.size;
-                var _id = SelectedFeet.users_id;
-                var _friends_id = SelectedFeet.friends_id;
-
-                Models.SelectedFeet.feet_id = _feet_id;
-                Models.SelectedFeet.users_id = _users_id;
-                Models.SelectedFeet.picture = _picture;
-                Models.SelectedFeet.date = _date;
-                Models.SelectedFeet.size = _size;
-                selectedUsersIdFeet.id = _id;
-                selectedUsersIdFeet.friends_id = _friends_id;
-            }
+				Models.SelectedFeet.feet_id		= SelectedFeet.feet_id;
+				Models.SelectedFeet.users_id	= SelectedFeet.users_id;
+				Models.SelectedFeet.picture		= SelectedFeet.picture;
+				Models.SelectedFeet.date		= SelectedFeet.date;
+				Models.SelectedFeet.size		= SelectedFeet.size;
+				Models.SelectedFeet.region		= SelectedFeet.region;
+				Models.SelectedFeet.gender		= SelectedFeet.gender;
+				selectedUsersIdTop.id			= SelectedFeet.users_id;
+				selectedUsersIdTop.friends_id	= SelectedFeet.friends_id;
+			}
             catch
             {
 
