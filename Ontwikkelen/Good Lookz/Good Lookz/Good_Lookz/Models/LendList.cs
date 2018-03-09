@@ -12,9 +12,14 @@ namespace Good_Lookz.Models
     class LendList
     {
         public string lend_id { get; set; }
-        public string id { get; set; }
-        public string picture { get; set; }
-        public string active { get; set; }
-        public string username { get; set; }
-    }
+		public string borrow_users_id { get; set; }
+		public string borrow_username { get; set; }
+		public string owner_users_id { get; set; }
+        public string type { get; set; }
+        public string item_id { get; set; }
+		public string days { get; set; }
+		public string date { get; set; }
+		public string active { get; set; }
+		public string picture { get; set; }
+	}
 }

@@ -17,7 +17,7 @@ namespace Good_Lookz.Models
         public string color { get; set; }
         public string date { get; set; }
         public string size { get; set; }
-    }
+	}
 
     public class WardrobeTopAll
     {

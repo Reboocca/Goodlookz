@@ -15,8 +15,7 @@
               <Image Source="{Binding picture}" />
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
                 <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
-                <!--<Label FontAttributes="Bold" FontSize="20" Text="{Binding date}" />
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding days}" />-->
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding date}" />
                 <Label FontAttributes="Bold" FontSize="10" Text="Lending" />
               </StackLayout>
             </StackLayout>

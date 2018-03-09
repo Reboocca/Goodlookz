@@ -12,15 +12,22 @@ using Xamarin.Forms;
 namespace Good_Lookz.View.WardrobePages
 {
     class selectedTypeLend
-    {
-        private static int _typeCloth;
+	{
+		private static int _typeCloth;
+		private static string _previousPage;
 
-        public static int typeCloth
+		public static int typeCloth
         {
             get { return _typeCloth; }
             set { _typeCloth = value; }
         }
-    }
+
+		public static string previous
+		{
+			get { return _previousPage; }
+			set { _previousPage = value; }
+		}
+	}
 
     class selectedUsersIdHead
     {
@@ -98,11 +105,12 @@ namespace Good_Lookz.View.WardrobePages
     {
         private HttpClient _client = new HttpClient(new NativeMessageHandler());
         int id = 0;
-        string picture = "";
-        string date = "";
-		string size = "";
-		string region = "";
-		string gender = "";
+        string picture	= "";
+        string date		= "";
+		string size		= "";
+		string region	= "";
+		string gender	= "";
+		string previous = "";
 
 		public WardrobePreview()
         {
@@ -116,8 +124,6 @@ namespace Good_Lookz.View.WardrobePages
 			dpDate.MaximumDate = DateTime.Now.AddYears(5);
 
 			var typeCloth = selectedTypeLend.typeCloth;
-
-
             switch (typeCloth)
             {
                 case 1:
@@ -170,98 +176,72 @@ namespace Good_Lookz.View.WardrobePages
 
         async void AskForLend_Clicked(object sender, EventArgs e)
         {
-            var typeCloth = selectedTypeLend.typeCloth;
-            var users_id = Models.LoginCredentials.loginId;
-            var alreadyLend = false;
-            var url_check = "";
-            var head_id = "";
-            var top_id = "";
-            var bottom_id = "";
-            var feet_id = "";
-            var id = "";
-            var friends_id = "";
-            var url_full = "";
+			if (string.IsNullOrWhiteSpace(enDays.Text))
+			{
+				await DisplayAlert("Error", "Make sure to give us a number of days you want to borrow the item for.", "OK");
+			}
+			else
+			{
+				var typeCloth	= selectedTypeLend.typeCloth;
+				string type		= null;
+				string owner_id = null;
+				string item_id	= null;
 
-            switch (typeCloth)
-            {
-                case 1:
-                    url_check = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&head_id={1}";
-                    head_id = Models.SelectedHead.head_id.ToString();
-                    id = selectedUsersIdHead.id.ToString(); ;
-                    friends_id = selectedUsersIdHead.friends_id.ToString();
-                    url_full = string.Format(url_check, users_id, head_id);
-                    break;
-                case 2:
-                    url_check = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&top_id={1}";
-                    top_id = Models.SelectedTop.top_id.ToString();
-                    id = selectedUsersIdTop.id.ToString(); ;
-                    friends_id = selectedUsersIdTop.friends_id.ToString();
-                    url_full = string.Format(url_check, users_id, top_id);
-                    break;
-                case 3:
-                    url_check = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&bottom_id={1}";
-                    bottom_id = Models.SelectedBottom.bottom_id.ToString();
-                    id = selectedUsersIdBottom.id.ToString(); ;
-                    friends_id = selectedUsersIdBottom.friends_id.ToString();
-                    url_full = string.Format(url_check, users_id, bottom_id);
-                    break;
-                case 4:
-                    url_check = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&feet_id={1}";
-                    feet_id = Models.SelectedFeet.feet_id.ToString();
-                    id = selectedUsersIdFeet.id.ToString(); ;
-                    friends_id = selectedUsersIdFeet.friends_id.ToString();
-                    url_full = string.Format(url_check, users_id, feet_id);
-                    break;
-                default:
-                    break;
-            }
+				switch (typeCloth)
+				{
+					case 1:
+						type		= "head";
+						owner_id	= Models.SelectedHead.users_id.ToString();
+						item_id		= Models.SelectedHead.head_id.ToString();
+						break;
+					case 2:
+						type		= "top";
+						owner_id	= Models.SelectedTop.users_id.ToString();
+						item_id		= Models.SelectedTop.top_id.ToString();
+						break;
+					case 3:
+						type		= "bottom";
+						owner_id	= Models.SelectedBottom.users_id.ToString();
+						item_id		= Models.SelectedBottom.bottom_id.ToString();
+						break;
+					case 4:
+						type		= "feet";
+						owner_id	= Models.SelectedFeet.users_id.ToString();
+						item_id		= Models.SelectedFeet.feet_id.ToString();
+						break;
+				}
 
-            if (users_id == id)
-            {
-                await DisplayAlert("Error", "Cant lend own clothes!", "OK");
-                return;
-            }
+				string webadres		= "http://good-lookz.com/API/lend/lendUpload.php?";
+				string parameters	= "users_id=" + id + "&owner_id=" + owner_id + "&type=" + type + "&item_id=" + item_id + "&date=" + dpDate.Date.ToString("yyyy-MM-dd") + "&days=" + enDays.Text;
 
-            var content = await _client.GetStringAsync(url_full);
-            var response = JsonConvert.DeserializeObject<List<Models.LendList>>(content);
+				HttpClient connect = new HttpClient();
+				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+				insert.EnsureSuccessStatusCode();
 
-            if (response.Count != 0)
-                alreadyLend = true;
+				string result = await insert.Content.ReadAsStringAsync();
 
-            if (alreadyLend == false)
-            {
-                //var lendAccept = await DisplayAlert("Lend", "Ask for borrowing?", "Yes", "No");
-                //var Url = "http://www.good-lookz.com/API/lend/lendUpload.php";
+				if (result == "Success")
+				{
+					await DisplayAlert("Success", "Your lend request has been sent!", "OK");
 
-                //if (lendAccept)
-                //{
+					//Navigeer naar de vorige pagina
+					if (selectedTypeLend.previous == "all")
+					{
+						await this.Navigation.PopAsync();
+					}
+					else if(selectedTypeLend.previous == "specifiek")
+					{
+						await this.Navigation.PopAsync();
+					}
+				}
+				else if (result == "Failed")
+				{
+					await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+				}
+			}
+		}
 
-                //var values = new Dictionary<string, string>
-                //{
-                //    { "id" , id },
-                //    { "friends_id", friends_id },
-                //    { "users_id", users_id },
-                //    { "head_id", head_id },
-                //    { "top_id", top_id },
-                //    { "bottom_id", bottom_id },
-                //    { "feet_id", feet_id }
-                //};
-
-                //    var content_upload = new FormUrlEncodedContent(values);
-                //    var response_upload = await _client.PostAsync(Url, content_upload);
-                //    var responseString = await response_upload.Content.ReadAsStringAsync();
-                //    var postMethod = JsonConvert.DeserializeObject<List<lendUpload>>(responseString);
-
-                //    await DisplayAlert("Message", "Worked!", "OK");
-                //}
-            }
-            else
-            {
-                await DisplayAlert("Error", "Already on lend or pending!", "OK");
-            }
-        }
-
-        protected override void OnDisappearing()
+		protected override void OnDisappearing()
         {
             /// Tijdens het afsluiten van de pagina wordt dit uitgevoerd. 
             /// Clear alle opgeslagen data in het pagina.

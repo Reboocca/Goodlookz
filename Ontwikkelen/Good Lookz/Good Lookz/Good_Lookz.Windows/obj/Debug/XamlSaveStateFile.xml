@@ -1,7 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\good lookz\good_lookz.windows\obj\debug\intermediatexaml\good_lookz.windows.exe" HashGuid="6de51a3f-1642-13aa-58ae-6bea16f9a29e" />
-    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\good lookz\good_lookz\bin\debug\good_lookz.dll" HashGuid="e25b7b35-eaa2-0657-b2da-0aae1fcc5066" />
+    <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\good lookz\good_lookz\bin\debug\good_lookz.dll" HashGuid="89057e25-4821-d4f3-1bc7-09ee4199f4ff" />
     <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\modernhttpclient.2.4.2\lib\portable-net45+winrt45+wp8+wpa81\modernhttpclient.dll" HashGuid="06558e2e-bf09-53c9-5fa3-375082b5eae2" />
     <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\newtonsoft.json.11.0.1\lib\portable-net45+win8+wp8+wpa81\newtonsoft.json.dll" HashGuid="b2e7d232-5c7f-51de-b2a2-9871f523ecdf" />
     <ReferenceAssembly PathName="c:\users\4people-3\documents\github\good-lookz\goodlookz\ontwikkelen\good lookz\packages\xam.plugin.geolocator.5.0.0.187-beta\lib\netstandard1.0\plugin.geolocator.abstractions.dll" HashGuid="2cc25e54-b572-89e9-86bc-4c81786cea11" />

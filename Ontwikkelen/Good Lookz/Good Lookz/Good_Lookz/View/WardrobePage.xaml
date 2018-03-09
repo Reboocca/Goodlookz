@@ -9,7 +9,7 @@
     <StackLayout VerticalOptions="FillAndExpand">
       <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5">
         <Button BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Friends" Clicked="Friends_Clicked" />
-        <Button BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Borrow" Clicked="Lending_Clicked" />
+        <Button BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Lend" Clicked="Lending_Clicked" />
         <Button BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Sell" Clicked="Selling_Clicked" />
       </StackLayout>
       <Grid VerticalOptions="FillAndExpand" Padding="10">

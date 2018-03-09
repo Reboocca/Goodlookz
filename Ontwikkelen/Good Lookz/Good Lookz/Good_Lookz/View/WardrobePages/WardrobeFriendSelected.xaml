@@ -17,21 +17,5 @@
     <Button Grid.Row="1" Grid.Column="1" x:Name="btnTop" Text="Top" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="Top_Clicked" />
     <Button Grid.Row="2" Grid.Column="0" x:Name="btnBottom" Text="Bottom" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="Bottom_Clicked" />
     <Button Grid.Row="2" Grid.Column="1" x:Name="btnFeet" Text="Feet" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="Feet_Clicked" />
-  </Grid>
-  
-  <!-- <StackLayout VerticalOptions="Center">
-    <StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Center">
-      <Label x:Name="fullnameLbl" />
-    </StackLayout>
-    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
-      <Button Text="Head" />
-      <Button Text="Top" />
-      <Button Text="Bottom" />
-      <Button Text="Feet" />
-    </StackLayout>
-    <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
-      <Button Text="For sale" />
-    </StackLayout>
-  </StackLayout> -->
-  
+  </Grid> 
 </ContentPage>

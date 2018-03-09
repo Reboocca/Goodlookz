@@ -12,14 +12,6 @@ using Xamarin.Forms;
 namespace Good_Lookz.View.WardrobePages
 {
     /// <summary>
-    /// JSON response word opgevangen en in een list met variables gestopt.
-    /// </summary>
-    class lendUpload
-    {
-        public bool set_update { get; set; }
-    }
-
-    /// <summary>
     /// Values dat opgeslagen moet worden in een class.
     /// </summary>
     class clothType
@@ -43,10 +35,10 @@ namespace Good_Lookz.View.WardrobePages
         /// List maken voor de 4 type clothes en later pas invullen met data.
         /// Dit moet op deze manier zodat er dan de Clear functie uitgevoerd kan worden.
         /// </summary>
-        List<Models.WardrobeHead> gets_Head = new List<Models.WardrobeHead>();
-        List<Models.WardrobeTop> gets_Top = new List<Models.WardrobeTop>();
-        List<Models.WardrobeBottom> gets_Bottom = new List<Models.WardrobeBottom>();
-        List<Models.WardrobeFeet> gets_Feet = new List<Models.WardrobeFeet>();
+        List<Models.WardrobeHeadAll>	gets_Head	= new List<Models.WardrobeHeadAll>();
+        List<Models.WardrobeTopAll>		gets_Top	= new List<Models.WardrobeTopAll>();
+        List<Models.WardrobeBottomAll>	gets_Bottom = new List<Models.WardrobeBottomAll>();
+        List<Models.WardrobeFeetAll>	gets_Feet	= new List<Models.WardrobeFeetAll>();
 
         public LendPage()
         {
@@ -61,55 +53,56 @@ namespace Good_Lookz.View.WardrobePages
             switch (clothName)
             {
                 case "Head":
-                    string Url_Head = "http://good-lookz.com/API/wardrobe/head/headDownload.php?users_id={0}";
-
+                    string Url_Head = "http://good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=1";
                     string data_Head = Models.SelectedFriendsCredentials.id;
-
                     string urlFilled_Head = string.Format(Url_Head, data_Head);
 
                     var content_Head = await _client.GetStringAsync(urlFilled_Head);
-                    gets_Head = JsonConvert.DeserializeObject<List<Models.WardrobeHead>>(content_Head);
 
-                    Cloths.ItemsSource = gets_Head;
+					if (content_Head != "[]0 results")
+					{
+						gets_Head = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
+						Cloths.ItemsSource = gets_Head;
+					}
                     break;
                 case "Top":
-                    string Url_Top = "http://good-lookz.com/API/wardrobe/top/topDownload.php?users_id={0}&size={1}";
-
+                    string Url_Top = "http://good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=1";
                     string data_Top = Models.SelectedFriendsCredentials.id;
-                    string size_Top = "";
-
-                    string urlFilled_Top = string.Format(Url_Top, data_Top, size_Top);
+                    string urlFilled_Top = string.Format(Url_Top, data_Top);
 
                     var content_Top = await _client.GetStringAsync(urlFilled_Top);
-                    gets_Top = JsonConvert.DeserializeObject<List<Models.WardrobeTop>>(content_Top);
 
-                    Cloths.ItemsSource = gets_Top;
-                    break;
+					if (content_Top != "[]0 results")
+					{
+						gets_Top = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
+						Cloths.ItemsSource = gets_Top;
+					}
+					break;
                 case "Bottom":
-                    string Url_Bottom = "http://good-lookz.com/API/wardrobe/bottom/bottomDownload.php?users_id={0}&size={1}";
-
+                    string Url_Bottom = "http://good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=1";
                     string data_Bottom = Models.SelectedFriendsCredentials.id;
-                    string size_Bottom = "";
-
-                    string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom, size_Bottom);
+                    string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom);
 
                     var content_Bottom = await _client.GetStringAsync(urlFilled_Bottom);
-                    gets_Bottom = JsonConvert.DeserializeObject<List<Models.WardrobeBottom>>(content_Bottom);
 
-                    Cloths.ItemsSource = gets_Bottom;
+					if (content_Bottom != "[]0 results")
+					{
+						gets_Bottom = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
+						Cloths.ItemsSource = gets_Bottom;
+					}
                     break;
                 case "Feet":
-                    string Url_Feet = "http://good-lookz.com/API/wardrobe/feet/feetDownload.php?users_id={0}&size={1}";
-
+                    string Url_Feet = "http://good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=1";
                     string data_Feet = Models.SelectedFriendsCredentials.id;
-                    string size_Feet = "";
-
-                    string urlFilled_Feet = string.Format(Url_Feet, data_Feet, size_Feet);
+                    string urlFilled_Feet = string.Format(Url_Feet, data_Feet);
 
                     var content_Feet = await _client.GetStringAsync(urlFilled_Feet);
-                    gets_Feet = JsonConvert.DeserializeObject<List<Models.WardrobeFeet>>(content_Feet);
 
-                    Cloths.ItemsSource = gets_Feet;
+					if (content_Feet != "[]0 results")
+					{
+						gets_Feet = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
+						Cloths.ItemsSource = gets_Feet;
+					}
                     break;
                 default:
                     break;
@@ -120,113 +113,81 @@ namespace Good_Lookz.View.WardrobePages
 
         async void Cloths_Tapped(object sender, ItemTappedEventArgs e)
         {
-            var clothName = clothType.clothName;
-            var head_id = "";
-            var top_id = "";
-            var bottom_id = "";
-            var feet_id = "";
-            var users_id = Models.LoginCredentials.loginId;
-            var alreadyLend = false;
 
-            switch (clothName)
-            {
-                case "Head":
-                    Models.WardrobeHead item_head = (Models.WardrobeHead)e.Item;
-                    head_id = item_head.head_id.ToString();
+			switch (clothType.clothName)
+			{
+				case "Head":
+					Models.WardrobeHeadAll SelectedHead = (Models.WardrobeHeadAll)e.Item;
 
-                    var url_check_head = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&head_id={1}";
-                    var url_full_head = string.Format(url_check_head, users_id, head_id);
+					Models.SelectedHead.head_id		= SelectedHead.head_id;
+					Models.SelectedHead.users_id	= SelectedHead.users_id;
+					Models.SelectedHead.picture		= SelectedHead.picture;
+					Models.SelectedHead.date		= SelectedHead.date;
+					selectedUsersIdHead.id			= SelectedHead.users_id;
+					selectedUsersIdHead.friends_id	= SelectedHead.friends_id;
+					selectedTypeLend.typeCloth		= 1;
+					selectedTypeLend.previous		= "specifiek";
 
-                    var content_head = await _client.GetStringAsync(url_full_head);
-                    var response_head = JsonConvert.DeserializeObject<List<Models.LendList>>(content_head);
+					await Navigation.PushAsync(new WardrobePreview(), true);
+					break;
 
-                    if (response_head.Count != 0)
-                        alreadyLend = true;
+				case "Top":
+					Models.WardrobeTopAll SelectedTop = (Models.WardrobeTopAll)e.Item;
 
-                    break;
-                case "Top":
-                    Models.WardrobeTop item_top = (Models.WardrobeTop)e.Item;
-                    top_id = item_top.top_id.ToString();
+					Models.SelectedTop.top_id		= SelectedTop.top_id;
+					Models.SelectedTop.users_id		= SelectedTop.users_id;
+					Models.SelectedTop.picture		= SelectedTop.picture;
+					Models.SelectedTop.date			= SelectedTop.date;
+					Models.SelectedTop.size			= SelectedTop.size;
+					Models.SelectedTop.region		= SelectedTop.region;
+					Models.SelectedTop.gender		= SelectedTop.gender;
+					selectedUsersIdTop.id			= SelectedTop.users_id;
+					selectedUsersIdTop.friends_id	= SelectedTop.friends_id;
+					selectedTypeLend.typeCloth		= 2;
+					selectedTypeLend.previous		= "specifiek";
 
-                    var url_check_top = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&top_id={1}";
-                    var url_full_top = string.Format(url_check_top, users_id, top_id);
+					await Navigation.PushAsync(new WardrobePreview(), true);
+					break;
 
-                    var content_top = await _client.GetStringAsync(url_full_top);
-                    var response_top = JsonConvert.DeserializeObject<List<Models.LendList>>(content_top);
+				case "Bottom":
+					Models.WardrobeBottomAll SelectedBottom = (Models.WardrobeBottomAll)e.Item;
 
-                    if (response_top.Count != 0)
-                        alreadyLend = true;
+					Models.SelectedBottom.bottom_id = SelectedBottom.bottom_id;
+					Models.SelectedBottom.users_id	= SelectedBottom.users_id;
+					Models.SelectedBottom.picture	= SelectedBottom.picture;
+					Models.SelectedBottom.date		= SelectedBottom.date;
+					Models.SelectedBottom.size		= SelectedBottom.size;
+					Models.SelectedBottom.region	= SelectedBottom.region;
+					Models.SelectedBottom.gender	= SelectedBottom.gender;
+					selectedUsersIdTop.id			= SelectedBottom.users_id;
+					selectedUsersIdTop.friends_id	= SelectedBottom.friends_id;
+					selectedTypeLend.typeCloth		= 3;
+					selectedTypeLend.previous		= "specifiek";
 
-                    break;
-                case "Bottom":
-                    Models.WardrobeBottom item_bottom = (Models.WardrobeBottom)e.Item;
-                    bottom_id = item_bottom.bottom_id.ToString();
+					await Navigation.PushAsync(new WardrobePreview(), true);
+					break;
 
-                    var url_check_bottom = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&bottom_id={1}";
-                    var url_full_bottom = string.Format(url_check_bottom, users_id, bottom_id);
+				case "Feet":
+					Models.WardrobeFeetAll SelectedFeet = (Models.WardrobeFeetAll)e.Item;
 
-                    var content_bottom = await _client.GetStringAsync(url_full_bottom);
-                    var response_bottom = JsonConvert.DeserializeObject<List<Models.LendList>>(content_bottom);
+					Models.SelectedFeet.feet_id		= SelectedFeet.feet_id;
+					Models.SelectedFeet.users_id	= SelectedFeet.users_id;
+					Models.SelectedFeet.picture		= SelectedFeet.picture;
+					Models.SelectedFeet.date		= SelectedFeet.date;
+					Models.SelectedFeet.size		= SelectedFeet.size;
+					Models.SelectedFeet.region		= SelectedFeet.region;
+					Models.SelectedFeet.gender		= SelectedFeet.gender;
+					selectedUsersIdTop.id			= SelectedFeet.users_id;
+					selectedUsersIdTop.friends_id	= SelectedFeet.friends_id;
+					selectedTypeLend.typeCloth		= 4;
+					selectedTypeLend.previous		= "specifiek";
 
-                    if (response_bottom.Count != 0)
-                        alreadyLend = true;
+					await Navigation.PushAsync(new WardrobePreview(), true);
+					break;
+			}
+		}
 
-                    break;
-                case "Feet":
-                    Models.WardrobeFeet item_feet = (Models.WardrobeFeet)e.Item;
-                    feet_id = item_feet.feet_id.ToString();
-
-                    var url_check_feet = "http://www.good-lookz.com/API/lend/lendDownload.php?id={0}&feet_id={1}";
-                    var url_full_feet = string.Format(url_check_feet, users_id, feet_id);
-
-                    var content_feet = await _client.GetStringAsync(url_full_feet);
-                    var response_feet = JsonConvert.DeserializeObject<List<Models.LendList>>(content_feet);
-
-                    if (response_feet.Count != 0)
-                        alreadyLend = true;
-
-                    break;
-                default:
-                    break;
-            }
-
-            if (alreadyLend == false)
-            {
-                var id = Models.SelectedFriendsCredentials.id;
-                var friends_id = Models.SelectedFriendsCredentials.friends_id;
-
-
-                var lendAccept = await DisplayAlert("Lend", "Ask for borrowing?", "Yes", "No");
-                var Url = "http://www.good-lookz.com/API/lend/lendUpload.php";
-
-                if (lendAccept)
-                {
-                    var values = new Dictionary<string, string>
-                {
-                    { "id" , id },
-                    { "friends_id", friends_id },
-                    { "users_id", users_id },
-                    { "head_id", head_id },
-                    { "top_id", top_id },
-                    { "bottom_id", bottom_id },
-                    { "feet_id", feet_id }
-                };
-
-                    var content = new FormUrlEncodedContent(values);
-                    var response = await _client.PostAsync(Url, content);
-                    var responseString = await response.Content.ReadAsStringAsync();
-                    var postMethod = JsonConvert.DeserializeObject<List<lendUpload>>(responseString);
-
-                    await DisplayAlert("Message", "Worked!", "OK");
-                }
-            }
-            else
-            {
-                await DisplayAlert("Error", "Already on lend or pending!", "OK");
-            }
-        }
-
-        protected override void OnDisappearing()
+		protected override void OnDisappearing()
         {
             /// Tijdens het afsluiten van de pagina wordt dit uitgevoerd. 
             /// Clear alle opgeslagen data in het List.

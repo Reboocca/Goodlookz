@@ -12,31 +12,31 @@
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="5*" />
-      <RowDefinition Height="10*" />
+      <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
     <Image Grid.Row="0" x:Name="selectedCloth" />
     <StackLayout x:Name="stckInfo" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
-      <Label Text="Size:" FontSize="15" FontAttributes="Bold" />
-      <Label x:Name="lblSize" FontSize="15" />
-      <Label Text="Region:" FontSize="15" FontAttributes="Bold" />
-      <Label x:Name="lbRegion" FontSize="15" />
-      <Label Text="Gender:" FontSize="15" FontAttributes="Bold" />
-      <Label x:Name="lbGender" FontSize="15" />
+      <Label Text="Size:" FontSize="14" FontAttributes="Bold" />
+      <Label x:Name="lblSize" FontSize="14" />
+      <Label Text="Region:" FontSize="14" FontAttributes="Bold" />
+      <Label x:Name="lbRegion" FontSize="14" />
+      <Label Text="Gender:" FontSize="14" FontAttributes="Bold" />
+      <Label x:Name="lbGender" FontSize="14" />
     </StackLayout>
     <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
-      <Label Text="When do you want to borrow this item?" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" />
+      <Label Text="When do you want to borrow this item?" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" />
       <DatePicker x:Name="dpDate" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
-        <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+        <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
       </DatePicker>
     </StackLayout>
     <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
-      <Label Text="How many days will you be borrowing this for?" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" />
-      <Entry x:Name="enDays" Keyboard="Numeric">
+      <Label Text="How many days will you be borrowing this for?" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" />
+      <Entry x:Name="enDays" Keyboard="Numeric" FontSize="14">
         <Entry.Behaviors>
           <behavior:NumberEntry/>
         </Entry.Behaviors>
       </Entry>
-      <Label Text="days" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" />
+      <Label Text="days" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" />
     </StackLayout>
     <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="End" >
       
