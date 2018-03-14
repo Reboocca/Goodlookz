@@ -126,7 +126,7 @@ namespace Good_Lookz.View.WardrobePages
 					selectedUsersIdHead.id			= SelectedHead.users_id;
 					selectedUsersIdHead.friends_id	= SelectedHead.friends_id;
 					selectedTypeLend.typeCloth		= 1;
-					selectedTypeLend.previous		= "specifiek";
+					Models.PreviousPage.page		= "LendPage";
 
 					await Navigation.PushAsync(new WardrobePreview(), true);
 					break;
@@ -144,7 +144,7 @@ namespace Good_Lookz.View.WardrobePages
 					selectedUsersIdTop.id			= SelectedTop.users_id;
 					selectedUsersIdTop.friends_id	= SelectedTop.friends_id;
 					selectedTypeLend.typeCloth		= 2;
-					selectedTypeLend.previous		= "specifiek";
+					Models.PreviousPage.page		= "LendPage";
 
 					await Navigation.PushAsync(new WardrobePreview(), true);
 					break;
@@ -162,7 +162,7 @@ namespace Good_Lookz.View.WardrobePages
 					selectedUsersIdTop.id			= SelectedBottom.users_id;
 					selectedUsersIdTop.friends_id	= SelectedBottom.friends_id;
 					selectedTypeLend.typeCloth		= 3;
-					selectedTypeLend.previous		= "specifiek";
+					Models.PreviousPage.page		= "LendPage";
 
 					await Navigation.PushAsync(new WardrobePreview(), true);
 					break;
@@ -180,7 +180,7 @@ namespace Good_Lookz.View.WardrobePages
 					selectedUsersIdTop.id			= SelectedFeet.users_id;
 					selectedUsersIdTop.friends_id	= SelectedFeet.friends_id;
 					selectedTypeLend.typeCloth		= 4;
-					selectedTypeLend.previous		= "specifiek";
+					Models.PreviousPage.page		= "LendPage";
 
 					await Navigation.PushAsync(new WardrobePreview(), true);
 					break;

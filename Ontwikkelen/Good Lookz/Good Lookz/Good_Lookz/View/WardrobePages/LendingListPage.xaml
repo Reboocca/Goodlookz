@@ -11,12 +11,20 @@
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
+            <ViewCell.ContextActions>
+              <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding lend_id}" IsDestructive="True" />
+            </ViewCell.ContextActions>
             <StackLayout Orientation="Horizontal" Padding="10">
               <Image Source="{Binding picture}" />
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding date}" />
-                <Label FontAttributes="Bold" FontSize="10" Text="Lending" />
+                <StackLayout Orientation="Horizontal">
+                  <Label FontSize="15" Text="Lending to" HorizontalTextAlignment="End"/>
+                  <Label FontSize="15" FontAttributes="Bold" Text="{Binding username}" HorizontalTextAlignment="End"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                  <Label FontSize="12" Text="On" HorizontalTextAlignment="End"/>
+                  <Label FontSize="12" FontAttributes="Bold" Text="{Binding date}" HorizontalTextAlignment="End"/>
+                </StackLayout>
               </StackLayout>
             </StackLayout>
           </ViewCell>

@@ -63,37 +63,85 @@ namespace Good_Lookz.View.WardrobePages
 
         async void Lend_Tapped(object sender, ItemTappedEventArgs e)
         {
-            Models.LendList item = (Models.LendList)e.Item;
-            var lend_id = item.lend_id;
+			#region old
+			//Models.LendList item = (Models.LendList)e.Item;
+			//var lend_id = item.lend_id;
 
-            var requestResponse = await DisplayAlert("Delete?", "Delete lending?", "Yes", "No");
+			//var requestResponse = await DisplayAlert("Delete?", "Delete lending?", "Yes", "No");
 
-            if (requestResponse)
-            {
-                var url = "http://www.good-lookz.com/API/lend/lendDelete.php";
+			//if (requestResponse)
+			//{
+			//    var url = "http://www.good-lookz.com/API/lend/lendDelete.php";
 
-                var values = new Dictionary<string, string>
-                {
-                    { "lend_id", lend_id }
-                };
+			//    var values = new Dictionary<string, string>
+			//    {
+			//        { "lend_id", lend_id }
+			//    };
 
-                var content = new FormUrlEncodedContent(values);
-                var response = await _client.PostAsync(url, content);
-                var responseString = await response.Content.ReadAsStringAsync();
-                var postMethod = JsonConvert.DeserializeObject<List<lendDelete>>(responseString);
+			//    var content = new FormUrlEncodedContent(values);
+			//    var response = await _client.PostAsync(url, content);
+			//    var responseString = await response.Content.ReadAsStringAsync();
+			//    var postMethod = JsonConvert.DeserializeObject<List<lendDelete>>(responseString);
 
-                await DisplayAlert("Message", "Succesfully deleted!", "OK");
-                
-                // Delete item van ObservableCollection
-                foreach (var items in _gets.ToList())
-                {
-                    if (items.lend_id == lend_id)
-                    {
-                        _gets.Remove(items);
-                    }
-                }
-            }
-        }
+			//    await DisplayAlert("Message", "Succesfully deleted!", "OK");
+
+			//    // Delete item van ObservableCollection
+			//    foreach (var items in _gets.ToList())
+			//    {
+			//        if (items.lend_id == lend_id)
+			//        {
+			//            _gets.Remove(items);
+			//        }
+			//    }
+			//}
+			#endregion
+			Models.LendList items = (Models.LendList)e.Item;
+
+			Models.SelectedLend.lend_id			= items.lend_id;
+			Models.SelectedLend.borrow_users_id	= items.borrow_users_id;
+			Models.SelectedLend.owner_users_id	= items.owner_users_id;
+			Models.SelectedLend.type			= items.type;
+			Models.SelectedLend.item_id			= items.item_id;
+			Models.SelectedLend.date			= items.date;
+			Models.SelectedLend.days			= items.days;
+			Models.SelectedLend.username		= items.username;
+			Models.SelectedLend.lending			= items.lending;
+			Models.SelectedLend.name			= items.name;
+			Models.SelectedLend.picture			= items.picture;
+
+			await Navigation.PushAsync(new SelectedLend(), true);
+		}
+
+		async void Delete_Clicked(object sender, EventArgs e)
+		{
+			var item = ((MenuItem)sender);
+			var lend_id = item.CommandParameter.ToString();
+
+			var requestResponse = await DisplayAlert("Warning", "Do you really want to delete the lend request?", "Yes", "No");
+			if (requestResponse)
+			{
+				string webadres = "http://good-lookz.com/API/lend/lendAccept.php?";
+				string parameters = "lend_id=" + lend_id + "&accepted=false";
+
+				HttpClient connect = new HttpClient();
+				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+				insert.EnsureSuccessStatusCode();
+
+				string result = await insert.Content.ReadAsStringAsync();
+
+				if (result == "Success")
+				{
+					await DisplayAlert("Success", "Lend request has been deleted.", "OK");
+
+					//Navigeer naar vorige pagina
+					await Navigation.PushAsync(new LendRequests(), true);
+				}
+				else if (result == "Failed")
+				{
+					await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+				}
+			}
+		}
 
 		async void LendRequests_Clicked(object sender, EventArgs e)
 		{

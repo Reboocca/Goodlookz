@@ -1,3 +1,4 @@
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Core.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.config
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.pdb
@@ -7,6 +8,8 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.Abstractions.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_green.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_v2.dll
@@ -17,7 +20,6 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.dll
-C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Core.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Xml.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.pdb
@@ -28,6 +30,10 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.Abstractions.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.Abstractions.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.xml
@@ -73,6 +79,8 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.TermsConditionsPage.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.UsedClothesPage.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SaveSizePage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.SelectedLend.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeContact.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojResolveAssemblyReference.cache

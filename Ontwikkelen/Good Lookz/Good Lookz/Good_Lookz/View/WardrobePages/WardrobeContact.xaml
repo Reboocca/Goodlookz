@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeContact"
+             xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
+             Title="Send your contact info">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="5*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="5*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="5*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="3*"/>
+      <ColumnDefinition Width="15*"/>
+      <ColumnDefinition Width="3*"/>
+    </Grid.ColumnDefinitions>
+    <StackLayout Grid.Row="1" Grid.Column="1">
+      <Label x:Name="lbText" HorizontalTextAlignment="Center" FontSize="15" />
+    </StackLayout>
+    
+    <StackLayout Grid.Row="3" Grid.Column="1">
+      <Entry x:Name="enName" Placeholder="Enter your name" Text="" />
+      <Entry x:Name="enPhone" Placeholder="Enter your phone number" Keyboard="Telephone" />
+      <Entry x:Name="enMail" Placeholder="Enter your e-mail" Keyboard="Email">
+        <Entry.Behaviors>
+          <behavior:EmailEntry/>
+        </Entry.Behaviors>
+      </Entry>
+     
+    </StackLayout>
+    <StackLayout Grid.Row="5" Grid.Column="1">
+      <Picker x:Name="pPrefference" Title="What's your prefference?" SelectedIndex="{Binding pPreffer}" >
+        <Picker.Items>
+          <x:String>Contact me on my phone</x:String>
+          <x:String>Contact me by mail</x:String>
+        </Picker.Items>
+      </Picker>
+    </StackLayout>
+    
+    <Button x:Name="btnSend" Grid.Row="7" Grid.Column="1" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Send your contact info" Clicked="btnSend_Clicked"/>
+    
+  </Grid>
+</ContentPage>

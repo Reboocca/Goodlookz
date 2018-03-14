@@ -91,8 +91,8 @@ namespace Good_Lookz.View
 
         async void MirrorClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MirrorPage(), true);
-        }
+			await Navigation.PushAsync(new MirrorPage(), true);
+		}
 
         void WardrobeClicked(object sender, EventArgs e)
         {

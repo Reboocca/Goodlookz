@@ -14,19 +14,12 @@ namespace Good_Lookz.View.WardrobePages
     class selectedTypeLend
 	{
 		private static int _typeCloth;
-		private static string _previousPage;
 
 		public static int typeCloth
         {
             get { return _typeCloth; }
             set { _typeCloth = value; }
         }
-
-		public static string previous
-		{
-			get { return _previousPage; }
-			set { _previousPage = value; }
-		}
 	}
 
     class selectedUsersIdHead
@@ -110,7 +103,6 @@ namespace Good_Lookz.View.WardrobePages
 		string size		= "";
 		string region	= "";
 		string gender	= "";
-		string previous = "";
 
 		public WardrobePreview()
         {
@@ -212,7 +204,7 @@ namespace Good_Lookz.View.WardrobePages
 				}
 
 				string webadres		= "http://good-lookz.com/API/lend/lendUpload.php?";
-				string parameters	= "users_id=" + id + "&owner_id=" + owner_id + "&type=" + type + "&item_id=" + item_id + "&date=" + dpDate.Date.ToString("yyyy-MM-dd") + "&days=" + enDays.Text;
+				string parameters	= "users_id=" + Models.LoginCredentials.loginId + "&owner_id=" + owner_id + "&type=" + type + "&item_id=" + item_id + "&date=" + dpDate.Date.ToString("yyyy-MM-dd") + "&days=" + enDays.Text;
 
 				HttpClient connect = new HttpClient();
 				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
@@ -225,11 +217,11 @@ namespace Good_Lookz.View.WardrobePages
 					await DisplayAlert("Success", "Your lend request has been sent!", "OK");
 
 					//Navigeer naar de vorige pagina
-					if (selectedTypeLend.previous == "all")
+					if (Models.PreviousPage.page == "WardrobeAllClothes")
 					{
 						await this.Navigation.PopAsync();
 					}
-					else if(selectedTypeLend.previous == "specifiek")
+					else if(Models.PreviousPage.page == "LendPage")
 					{
 						await this.Navigation.PopAsync();
 					}

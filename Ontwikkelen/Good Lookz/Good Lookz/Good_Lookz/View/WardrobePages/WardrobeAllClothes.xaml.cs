@@ -552,7 +552,7 @@ namespace Good_Lookz.View.WardrobePages
 
 		async void SetSave_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new WardrobeSaveSet(), true);
+            await Navigation.PushAsync(new WardrobeSaveSet(), true);
         }
 
         async void headTapped(object sender, EventArgs e)
@@ -561,7 +561,7 @@ namespace Good_Lookz.View.WardrobePages
 			{
 				var _typeCloth = 1;
 				selectedTypeLend.typeCloth = _typeCloth;
-				selectedTypeLend.previous = "all";
+				Models.PreviousPage.page = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}            
@@ -573,7 +573,7 @@ namespace Good_Lookz.View.WardrobePages
 			{
 				var _typeCloth = 2;
 				selectedTypeLend.typeCloth = _typeCloth;
-				selectedTypeLend.previous = "all";
+				Models.PreviousPage.page = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}
@@ -585,7 +585,7 @@ namespace Good_Lookz.View.WardrobePages
 			{
 				var _typeCloth = 3;
 				selectedTypeLend.typeCloth = _typeCloth;
-				selectedTypeLend.previous = "all";
+				Models.PreviousPage.page = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}
@@ -597,7 +597,7 @@ namespace Good_Lookz.View.WardrobePages
 			{
 				var _typeCloth = 4;
 				selectedTypeLend.typeCloth = _typeCloth;
-				selectedTypeLend.previous = "all";
+				Models.PreviousPage.page = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}

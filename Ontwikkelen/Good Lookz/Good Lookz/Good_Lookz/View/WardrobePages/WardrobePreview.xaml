@@ -38,9 +38,6 @@
       </Entry>
       <Label Text="days" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" />
     </StackLayout>
-    <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="End" >
-      
-    </StackLayout>
     <StackLayout Grid.Row="5" Orientation="Horizontal" HorizontalOptions="Center" >
       <Button x:Name="askForLend" Text="Ask for lend" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="AskForLend_Clicked" />
     </StackLayout>

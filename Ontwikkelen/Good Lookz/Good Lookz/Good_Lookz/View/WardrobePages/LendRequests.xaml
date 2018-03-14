@@ -17,9 +17,14 @@
             <StackLayout Orientation="Horizontal" Padding="10">
               <Image Source="{Binding picture}" />
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
-                <Label FontAttributes="Bold" FontSize="10" Text="want's to borrow" />
-                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                  <Label FontSize="15" FontAttributes="Bold" Text="{Binding username}" HorizontalTextAlignment="End" />
+                  <Label FontSize="15" Text="wants to borrow" HorizontalTextAlignment="End" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                  <Label FontSize="12" Text="On" HorizontalTextAlignment="End" />
+                  <Label FontSize="12" FontAttributes="Bold" Text="{Binding date}" HorizontalTextAlignment="End"/>
+                </StackLayout>
               </StackLayout>
             </StackLayout>
           </ViewCell>

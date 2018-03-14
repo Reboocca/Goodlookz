@@ -46,8 +46,6 @@
       <Picker x:Name="feetSize" Title="Choose your feet size" SelectedIndex="{Binding feetSize}" >
       </Picker>
     </StackLayout>
-    <StackLayout Grid.Row="5" Grid.Column="1" HorizontalOptions="Center">
-      <Button x:Name="btnSaveSize" Text="Save" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnSaveSize_Clicked"/>
-    </StackLayout>
+    <Button x:Name="btnSaveSize" Grid.Row="5" Grid.Column="1" Text="Save" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnSaveSize_Clicked"/>
   </Grid>
 </ContentPage>

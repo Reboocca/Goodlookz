@@ -13,6 +13,8 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Geolocator.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.Abstractions.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.Abstractions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
@@ -46,6 +48,12 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Media.Abstractions.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.Abstractions.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.Abstractions.xml
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Messaging.Abstractions.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Plugin.Permissions.dll.mdb
@@ -116,6 +124,8 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Geolocator.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Media.Abstractions.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Media.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Messaging.Abstractions.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Messaging.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Permissions.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb

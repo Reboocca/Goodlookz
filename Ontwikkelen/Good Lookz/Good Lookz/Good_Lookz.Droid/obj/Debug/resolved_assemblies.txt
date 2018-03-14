@@ -8,6 +8,8 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Geolocator.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Media.Abstractions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Media.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Messaging.Abstractions.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Messaging.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Plugin.Permissions.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
