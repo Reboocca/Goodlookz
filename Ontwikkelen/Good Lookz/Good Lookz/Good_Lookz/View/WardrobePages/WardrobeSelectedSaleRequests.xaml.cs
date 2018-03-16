@@ -11,19 +11,11 @@ using Xamarin.Forms;
 
 namespace Good_Lookz.View.WardrobePages
 {
-    class emailSend
-    {
-        public bool send { get; set; }
-    }
-
     /// <summary>
     /// Code behind voor deze page (backend)
     /// </summary>
     public partial class WardrobeSelectedSaleRequests : ContentPage
     {
-        private const string url = "http://www.good-lookz.com/API/email/emailSend.php";
-        HttpClient client = new HttpClient(new NativeMessageHandler());
-
         public WardrobeSelectedSaleRequests()
         {
             InitializeComponent();
@@ -31,35 +23,19 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override void OnAppearing()
         {
-            lblUsrname.Text = Models.LoginCredentials.loginUsername;
-            imageItem.Source = Models.SelectedSaleRequests.picture;
-            lblPrice.Text = Models.SelectedSaleRequests.price;
-            lblBidding.Text = Models.SelectedSaleRequests.bidding;
-            lblUsrname_buyer.Text = Models.SelectedSaleRequests.username;
+			lbBidderUsername.Text	= Models.SelectedSaleRequests.username;
+            imageItem.Source		= Models.SelectedSaleRequests.picture;
+            lblPrice.Text			= Models.SelectedSaleRequests.price;
+            lblBidding.Text			= Models.SelectedSaleRequests.bidding;
+            lblUsrname_buyer.Text	= Models.SelectedSaleRequests.name;
+			btnContact.Text			= "Start communicating with " + Models.SelectedSaleRequests.username;
         }
 
-        async void SendRequest_Clicked(object sender, EventArgs e)
+        async void btnContact_Clicked(object sender, EventArgs e)
         {
-            var id = Models.SelectedSaleRequests.users_id1;
-            var users_id = Models.LoginCredentials.loginId;
-            var username = Models.LoginCredentials.loginUsername;
-            var email = Models.LoginCredentials.loginEmail;
-
-            var values = new Dictionary<string, string>
-            {
-                { "id", id },
-                { "users_id", users_id },
-                { "username", username },
-                { "email", email }
-            };
-
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync(url, content);
-            var responseString = await response.Content.ReadAsStringAsync();
-            var postMethod = JsonConvert.DeserializeObject<List<emailSend>>(responseString);
-
-            await DisplayAlert("Message", "Mail has been sent!", "OK");
-        }
+			Models.PreviousPage.page = "WardrobeSelectedSaleRequests";
+			await Navigation.PushAsync(new WardrobeContact(), true);
+		}
 
         protected override void OnDisappearing()
         {
@@ -67,7 +43,9 @@ namespace Good_Lookz.View.WardrobePages
             /// Clear alle opgeslagen data in het List.
             /// Dit zorgt ervoor dat er geen java error tevoorschijn komt.
             base.OnDisappearing();
-            Content = null;
+
+			///Content = null momenteel weggehaald om terug navigatie te kunnen gebruiken bij het contactformulier
+            //Content = null;
             GC.Collect();
         }
     }

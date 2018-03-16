@@ -50,31 +50,18 @@ namespace Good_Lookz.View.ShopPages
         {
             Models.SaleList item = (Models.SaleList)e.Item;
 
-            var _sale_id = item.sale_id;
-            var _users_id = item.users_id;
-            var _head_id = item.head_id;
-            var _top_id = item.top_id;
-            var _bottom_id = item.bottom_id;
-            var _feet_id = item.feet_id;
-            var _size = item.size;
-            var _username = item.username;
-            var _picture = item.picture;
-            var _price = item.price;
-            var _desc = item.desc;
-            var _fullPrice = item.fullPrice;
-
-            Models.SelectedSaleList.sale_id = _sale_id;
-            Models.SelectedSaleList.users_id = _users_id;
-            Models.SelectedSaleList.head_id = _head_id;
-            Models.SelectedSaleList.top_id = _top_id;
-            Models.SelectedSaleList.bottom_id = _bottom_id;
-            Models.SelectedSaleList.feet_id = _feet_id;
-            Models.SelectedSaleList.size = _size;
-            Models.SelectedSaleList.username = _username;
-            Models.SelectedSaleList.picture = _picture;
-            Models.SelectedSaleList.price = _price;
-            Models.SelectedSaleList.desc = _desc;
-            Models.SelectedSaleList.fullPrice = _fullPrice;
+            Models.SelectedSaleList.sale_id		= item.sale_id;
+            Models.SelectedSaleList.users_id	= item.users_id;
+            Models.SelectedSaleList.head_id		= item.head_id;
+			Models.SelectedSaleList.top_id		= item.top_id;
+            Models.SelectedSaleList.bottom_id	= item.bottom_id;
+			Models.SelectedSaleList.feet_id		= item.feet_id;
+			Models.SelectedSaleList.size		= item.size;
+			Models.SelectedSaleList.username	= item.username;
+			Models.SelectedSaleList.picture		= item.picture;
+			Models.SelectedSaleList.price		= item.price;
+            Models.SelectedSaleList.desc		= item.desc;
+            Models.SelectedSaleList.fullPrice	= item.fullPrice;
 
             await Navigation.PushAsync(new SelectedSaleItemPage(), true);
         }

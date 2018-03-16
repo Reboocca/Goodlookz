@@ -58,8 +58,38 @@ namespace Good_Lookz.View.WardrobePages
 
         async void Sales_Tapped(object sender, ItemTappedEventArgs e)
         {
-            await DisplayAlert("Info", "Some extra info", "OK");
-        }
+			Models.SaleList select = (Models.SaleList)e.Item;
+
+			//Check welk type het is en vul het id en clothid in
+			if (!string.IsNullOrEmpty(select.head_id))
+			{
+				Models.SelectedSaleList.clothID	= "1";
+				Models.SelectedSaleList.item_id	= select.head_id;
+			}
+			else if(!string.IsNullOrEmpty(select.top_id))
+			{
+				Models.SelectedSaleList.clothID	= "2";
+				Models.SelectedSaleList.item_id	= select.top_id;
+			}
+			else if (!string.IsNullOrEmpty(select.bottom_id))
+			{
+				Models.SelectedSaleList.clothID	= "3";
+				Models.SelectedSaleList.item_id = select.bottom_id;
+			}
+			else if (!string.IsNullOrEmpty(select.feet_id))
+			{
+				Models.SelectedSaleList.clothID	= "4";
+				Models.SelectedSaleList.item_id	= select.feet_id;
+			}
+
+			//Vul de overige gegevens in die nodig zijn op de volgende pagina
+			Models.SelectedSaleList.picture			= select.picture;
+			Models.SelectedSaleList.sale_id			= select.sale_id;
+			Models.SelectedSaleList.desc			= select.desc;
+			Models.SelectedSaleList.price			= select.price;
+
+			await Navigation.PushAsync(new WardrobeSelectedSaleItem(), true);
+		}
 
         async void Delete_Clicked(object sender, EventArgs e)
         {

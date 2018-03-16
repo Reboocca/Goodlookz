@@ -35,6 +35,6 @@
     </StackLayout>
     <Button x:Name="btnAccept" Grid.Row="4" Grid.Column="1"  FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Accept" Clicked="btnAccept_Clicked"/>
     <Button x:Name="btnDecline" Grid.Row="4" Grid.Column="2"  FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Decline" Clicked="btnDecline_Clicked"/> 
-    <Button x:Name="btnContact" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Contact" Clicked="btnContact_Clicked"/>
+    <Button x:Name="btnContact" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="" Clicked="btnContact_Clicked"/>
   </Grid>
 </ContentPage>

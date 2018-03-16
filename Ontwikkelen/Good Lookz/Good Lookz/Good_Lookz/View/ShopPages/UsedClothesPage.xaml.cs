@@ -69,9 +69,6 @@ namespace Good_Lookz.View.ShopPages
                 latitude_full = latitude.Replace(",", ".");
                 longitude_full = longitude.Replace(",", ".");
 
-                latitude_full = "51.584128";
-                longitude_full = "4.764138";
-
                 loadingPage.IsRunning = false;
                 loadingPage.IsEnabled = false;
                 CarouselviewGrid.IsVisible = true;

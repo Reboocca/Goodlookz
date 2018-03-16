@@ -36,7 +36,7 @@ namespace Good_Lookz.View.WardrobePages
 					}
 					else
 					{
-						
+						//Sla akoordverklaring op en maak een mail
 					}
 				}
 				else
@@ -56,11 +56,12 @@ namespace Good_Lookz.View.WardrobePages
 					name = Models.SelectedLend.name;
 					id	 = Models.SelectedLend.borrow_users_id;
 					break;
-				case "WardrobeSelectedSaleRequest":
+				case "WardrobeSelectedSaleRequests":
+					id   = Models.SelectedSaleRequests.users_id1;
+					name = Models.SelectedSaleRequests.name;
 					break;
 			}
-
-			lbText.Text = "Make sure you atleast provide your phone number or email-address so " + name + " is contact you.";
+			lbText.Text = "Make sure you atleast provide your phone number or email-address so " + name + " can contact you.";
 		}
 	}
 }

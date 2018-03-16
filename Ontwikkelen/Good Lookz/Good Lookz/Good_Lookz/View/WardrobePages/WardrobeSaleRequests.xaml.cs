@@ -58,29 +58,18 @@ namespace Good_Lookz.View.WardrobePages
         {
             Models.SaleRequests items = (Models.SaleRequests)e.Item;
 
-            var _requests_id = items.requests_id;
-            var _sale_id = items.sale_id;
-            var _users_id1 = items.users_id1;
-            var _users_id2 = items.users_id2;
-            var _username = items.username;
-            var _bidding = items.bidding;
-            var _picture = items.picture;
-            var _price = items.price;
-            var _desc = items.desc;
-            var _fullPrice = items.fullPrice;
-
-            Models.SelectedSaleRequests.requests_id = _requests_id;
-            Models.SelectedSaleRequests.sale_id = _sale_id;
-            Models.SelectedSaleRequests.users_id1 = _users_id1;
-            Models.SelectedSaleRequests.users_id2 = _users_id2;
-            Models.SelectedSaleRequests.username = _username;
-            Models.SelectedSaleRequests.bidding = _bidding;
-            Models.SelectedSaleRequests.picture = _picture;
-            Models.SelectedSaleRequests.price = _price;
-            Models.SelectedSaleRequests.desc = _desc;
-            Models.SelectedSaleRequests.fullPrice = _fullPrice;
-
-            await Navigation.PushAsync(new WardrobeSelectedSaleRequests(), true);
+            Models.SelectedSaleRequests.requests_id = items.requests_id;
+			Models.SelectedSaleRequests.sale_id		= items.sale_id;
+			Models.SelectedSaleRequests.users_id1	= items.users_id1;
+			Models.SelectedSaleRequests.users_id2	= items.users_id2;
+			Models.SelectedSaleRequests.username	= items.username;
+			Models.SelectedSaleRequests.bidding		= items.bidding;
+			Models.SelectedSaleRequests.picture		= items.picture;
+			Models.SelectedSaleRequests.price		= items.price;
+			Models.SelectedSaleRequests.desc		= items.desc;
+			Models.SelectedSaleRequests.fullPrice	= items.fullPrice;
+			Models.SelectedSaleRequests.name		= items.name;
+			await Navigation.PushAsync(new WardrobeSelectedSaleRequests(), true);
         }
 
         async void Delete_Clicked(object sender, EventArgs e)

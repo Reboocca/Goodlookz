@@ -40,7 +40,7 @@ namespace Good_Lookz.View.WardrobePages
 			}
 			else
 			{
-				btnContact.Text			= "Contact " + Models.SelectedLend.username;
+				btnContact.Text			= "Start communicating with " + Models.SelectedLend.username;
 				btnAccept.IsVisible		= false;
 				btnDecline.IsVisible	= false;
 				lbTitle.Text			= "is borrowing this item";

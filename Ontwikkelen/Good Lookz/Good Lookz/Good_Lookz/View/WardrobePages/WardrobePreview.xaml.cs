@@ -112,8 +112,8 @@ namespace Good_Lookz.View.WardrobePages
         protected override void OnAppearing()
 		{
 			//Geef een min en max datum aan de date picker
-			dpDate.MinimumDate = DateTime.Now.AddHours(24);
-			dpDate.MaximumDate = DateTime.Now.AddYears(5);
+			dpDate.MinimumDate = DateTime.Now;
+			dpDate.MaximumDate = DateTime.Now.AddMonths(6);
 
 			var typeCloth = selectedTypeLend.typeCloth;
             switch (typeCloth)
