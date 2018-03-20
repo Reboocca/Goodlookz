@@ -117,7 +117,7 @@ namespace Good_Lookz.View.WardrobePages
 			var item = ((MenuItem)sender);
 			var lend_id = item.CommandParameter.ToString();
 
-			var requestResponse = await DisplayAlert("Warning", "Do you really want to delete the lend request?", "Yes", "No");
+			var requestResponse = await DisplayAlert("Warning", "Do you really want to delete this lend?", "Yes", "No");
 			if (requestResponse)
 			{
 				string webadres = "http://good-lookz.com/API/lend/lendAccept.php?";
@@ -131,10 +131,15 @@ namespace Good_Lookz.View.WardrobePages
 
 				if (result == "Success")
 				{
-					await DisplayAlert("Success", "Lend request has been deleted.", "OK");
-
-					//Navigeer naar vorige pagina
-					await Navigation.PushAsync(new LendRequests(), true);
+					await DisplayAlert("Success", "The lend has been deleted.", "OK");
+					// Delete item van ObserveAbleCollection
+					foreach (var items in _gets.ToList())
+					{
+						if (items.lend_id == lend_id)
+						{
+							_gets.Remove(items);
+						}
+					}
 				}
 				else if (result == "Failed")
 				{

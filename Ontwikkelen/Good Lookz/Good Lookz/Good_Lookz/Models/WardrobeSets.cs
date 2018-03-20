@@ -11,13 +11,16 @@ namespace Good_Lookz.Models
     /// </summary>
     public class WardrobeSets
     {
-        public string wardrobe_id { get; set; }
-        public string users_id { get; set; }
-        public string name { get; set; }
-        public string head_id { get; set; }
-        public string top_id { get; set; }
-        public string bottom_id { get; set; }
-        public string feet_id { get; set; }
-        public string allId { get { return head_id + " - " + top_id + " - " + bottom_id + " - " + feet_id; }}
-    }
+		public string wardrobe_id { get; set; }
+		public string users_id { get; set; }
+		public string name { get; set; }
+		public string head_id { get; set; }
+		public string top_id { get; set; }
+		public string bottom_id { get; set; }
+		public string feet_id { get; set; }
+		public string head_picture { get; set; }
+		public string top_picture { get; set; }
+		public string bottom_picture { get; set; }
+		public string feet_picture { get; set; }
+	}
 }

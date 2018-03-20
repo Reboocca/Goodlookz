@@ -58,6 +58,8 @@ namespace Good_Lookz.View
 
         protected override async void OnAppearing()
         {
+			emptySelectedClothing();
+
             loadingHead.IsRunning = true;
             loadingTop.IsRunning = true;
             loadingBottom.IsRunning = true;
@@ -179,7 +181,16 @@ namespace Good_Lookz.View
 			}
         }
 
-        void CarouselViewHead_Selected(object sender, SelectedItemChangedEventArgs e)
+		//Cleared alle selecteditems, zodat het outfit opslaan goed gaat
+		private void emptySelectedClothing()
+		{
+			Models.SelectedHead.Clear();
+			Models.SelectedTop.Clear();
+			Models.SelectedBottom.Clear();
+			Models.SelectedFeet.Clear();
+		}
+
+		void CarouselViewHead_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.WardrobeHead SelectedHead = (Models.WardrobeHead)e.SelectedItem;
 
@@ -189,11 +200,11 @@ namespace Good_Lookz.View
             var _color = SelectedHead.color;
             var _date = SelectedHead.date;
 
-            Models.SelectedHead.head_id = _head_id;
-            Models.SelectedHead.users_id = _users_id;
-            Models.SelectedHead.picture = _picture;
-            Models.SelectedHead.color = _color;
-            Models.SelectedHead.date = _date;
+            Models.SelectedHead.head_id		= _head_id.ToString();
+            Models.SelectedHead.users_id	= _users_id.ToString();
+            Models.SelectedHead.picture		= _picture;
+            Models.SelectedHead.color		= _color;
+            Models.SelectedHead.date		= _date;
         }
         void CarouselViewTop_Selected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -206,12 +217,12 @@ namespace Good_Lookz.View
             var _date = SelectedTop.date;
             var _size = SelectedTop.size;
 
-            Models.SelectedTop.top_id = _top_id;
-            Models.SelectedTop.users_id = _users_id;
-            Models.SelectedTop.picture = _picture;
-            Models.SelectedTop.color = _color;
-            Models.SelectedTop.date = _date;
-            Models.SelectedTop.size = _size;
+            Models.SelectedTop.top_id		= _top_id.ToString();
+            Models.SelectedTop.users_id		= _users_id.ToString();
+            Models.SelectedTop.picture		= _picture;
+            Models.SelectedTop.color		= _color;
+            Models.SelectedTop.date			= _date;
+            Models.SelectedTop.size			= _size;
         }
         void CarouselViewBottom_Selected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -224,12 +235,12 @@ namespace Good_Lookz.View
             var _date = SelectedBottom.date;
             var _size = SelectedBottom.size;
 
-            Models.SelectedBottom.bottom_id = _bottom_id;
-            Models.SelectedBottom.users_id = _users_id;
-            Models.SelectedBottom.picture = _picture;
-            Models.SelectedBottom.color = _color;
-            Models.SelectedBottom.date = _date;
-            Models.SelectedBottom.size = _size;
+            Models.SelectedBottom.bottom_id = _bottom_id.ToString();
+            Models.SelectedBottom.users_id	= _users_id.ToString();
+            Models.SelectedBottom.picture	= _picture;
+            Models.SelectedBottom.color		= _color;
+            Models.SelectedBottom.date		= _date;
+            Models.SelectedBottom.size		= _size;
         }
         void CarouselViewFeet_Selected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -242,12 +253,12 @@ namespace Good_Lookz.View
             var _date = SelectedFeet.date;
             var _size = SelectedFeet.size;
 
-            Models.SelectedFeet.feet_id = _feet_id;
-            Models.SelectedFeet.users_id = _users_id;
-            Models.SelectedFeet.picture = _picture;
-            Models.SelectedFeet.color = _color;
-            Models.SelectedFeet.date = _date;
-            Models.SelectedFeet.size = _size;
+            Models.SelectedFeet.feet_id		= _feet_id.ToString();
+            Models.SelectedFeet.users_id	= _users_id.ToString();
+            Models.SelectedFeet.picture		= _picture;
+            Models.SelectedFeet.color		= _color;
+            Models.SelectedFeet.date		= _date;
+            Models.SelectedFeet.size		= _size;
         }
 
         async void Add_Clicked(object sender, EventArgs e)

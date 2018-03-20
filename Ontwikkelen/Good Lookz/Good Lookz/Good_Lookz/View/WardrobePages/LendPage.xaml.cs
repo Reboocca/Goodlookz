@@ -119,8 +119,8 @@ namespace Good_Lookz.View.WardrobePages
 				case "Head":
 					Models.WardrobeHeadAll SelectedHead = (Models.WardrobeHeadAll)e.Item;
 
-					Models.SelectedHead.head_id		= SelectedHead.head_id;
-					Models.SelectedHead.users_id	= SelectedHead.users_id;
+					Models.SelectedHead.head_id		= SelectedHead.head_id.ToString();
+					Models.SelectedHead.users_id	= SelectedHead.users_id.ToString();
 					Models.SelectedHead.picture		= SelectedHead.picture;
 					Models.SelectedHead.date		= SelectedHead.date;
 					selectedUsersIdHead.id			= SelectedHead.users_id;
@@ -134,8 +134,8 @@ namespace Good_Lookz.View.WardrobePages
 				case "Top":
 					Models.WardrobeTopAll SelectedTop = (Models.WardrobeTopAll)e.Item;
 
-					Models.SelectedTop.top_id		= SelectedTop.top_id;
-					Models.SelectedTop.users_id		= SelectedTop.users_id;
+					Models.SelectedTop.top_id		= SelectedTop.top_id.ToString();
+					Models.SelectedTop.users_id		= SelectedTop.users_id.ToString();
 					Models.SelectedTop.picture		= SelectedTop.picture;
 					Models.SelectedTop.date			= SelectedTop.date;
 					Models.SelectedTop.size			= SelectedTop.size;
@@ -152,8 +152,8 @@ namespace Good_Lookz.View.WardrobePages
 				case "Bottom":
 					Models.WardrobeBottomAll SelectedBottom = (Models.WardrobeBottomAll)e.Item;
 
-					Models.SelectedBottom.bottom_id = SelectedBottom.bottom_id;
-					Models.SelectedBottom.users_id	= SelectedBottom.users_id;
+					Models.SelectedBottom.bottom_id = SelectedBottom.bottom_id.ToString();
+					Models.SelectedBottom.users_id	= SelectedBottom.users_id.ToString();
 					Models.SelectedBottom.picture	= SelectedBottom.picture;
 					Models.SelectedBottom.date		= SelectedBottom.date;
 					Models.SelectedBottom.size		= SelectedBottom.size;
@@ -170,8 +170,8 @@ namespace Good_Lookz.View.WardrobePages
 				case "Feet":
 					Models.WardrobeFeetAll SelectedFeet = (Models.WardrobeFeetAll)e.Item;
 
-					Models.SelectedFeet.feet_id		= SelectedFeet.feet_id;
-					Models.SelectedFeet.users_id	= SelectedFeet.users_id;
+					Models.SelectedFeet.feet_id		= SelectedFeet.feet_id.ToString();
+					Models.SelectedFeet.users_id	= SelectedFeet.users_id.ToString();
 					Models.SelectedFeet.picture		= SelectedFeet.picture;
 					Models.SelectedFeet.date		= SelectedFeet.date;
 					Models.SelectedFeet.size		= SelectedFeet.size;

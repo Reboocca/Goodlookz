@@ -232,7 +232,7 @@ namespace Good_Lookz.View.ShopPages
             }
             if ((gets_Head.Count == 0) && (gets_Top.Count == 0) && (gets_Bottom.Count == 0) && (gets_Feet.Count == 0))
             {
-                await DisplayAlert("Message", "Seems like the users within your chosen range has no items for sale.", "OK");
+                await DisplayAlert("Message", "Seems like the users within your chosen range have no items for sale.", "OK");
                 App.Current.MainPage = new NavigationPage(new MenuPage());
                 return;
             }

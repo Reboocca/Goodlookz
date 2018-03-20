@@ -14,5 +14,22 @@ namespace Good_Lookz.View
         {
             InitializeComponent();
         }
+
+		protected override void OnAppearing()
+		{
+			btnAdjust.BackgroundColor = Color.Transparent;
+			changeLightIntensitivity(Models.LoginCredentials.adjust_lighting);
+		}
+
+		//Verander de achtergrondkleur a.d.v.d. gekozen value
+		private void changeLightIntensitivity(double val)
+		{
+			bvLight.Opacity = val;
+		}
+
+		private async void btnAdjust_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new View.AdjustLighting(), true);
+		}
     }
 }

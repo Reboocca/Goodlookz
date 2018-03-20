@@ -85,6 +85,99 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojResolveAssemblyReference.cache
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedSaleItem.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.config
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\ModernHttpClient.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.Abstractions.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_green.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\SQLitePCLRaw.core.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.Net.Http.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.CarouselView.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.Core.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.Xml.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Newtonsoft.Json.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Geolocator.Abstractions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Media.Abstractions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.Abstractions.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Plugin.Messaging.Abstractions.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\SQLite-net.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Core.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Platform.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Xamarin.Forms.Xaml.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.Core.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\System.Xml.xml
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojResolveAssemblyReference.cache
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.MainPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.App.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPages.LoginPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SignPages.CreatePage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.MenuPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingsPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.MirrorPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePageWinPhone.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSets.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSaveSet.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSetSelected.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.ChoseShopPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsAdd.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsRequest.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeAdd.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeFriends.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeFriendSelected.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendRequests.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.LendingListPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedItem.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.ShopForSellPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelling.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.SelectedSaleItemPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSaleRequests.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedSaleRequests.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeChoose.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeAllClothes.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobePreview.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.TermsConditionsPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.ShopPages.UsedClothesPage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SaveSizePage.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.SelectedLend.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeContact.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.WardrobePages.WardrobeSelectedSaleItem.xaml.g.cs
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
+K:\Stage_voorjaar_2018\Programma\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.AdjustLighting.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.RangeSlider.Common.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Xamarin.RangeSlider.Forms.dll
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Windows.winmd
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb

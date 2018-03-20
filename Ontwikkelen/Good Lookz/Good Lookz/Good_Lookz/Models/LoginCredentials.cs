@@ -22,6 +22,8 @@ namespace Good_Lookz.Models
         private static string _loginOffline;
         private static string _loginActive;
 
+		public static double adjust_lighting = 1;
+
         public static string loginId
         {
             get { return _loginId; }

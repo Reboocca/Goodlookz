@@ -6,20 +6,27 @@
              BackgroundColor="White">
   <StackLayout Padding="5">
     <ActivityIndicator IsVisible="False" x:Name="loadingList" Color="Red" />
-    <ListView x:Name="postsListView" ItemTapped="Sets_Tapped">
+    <ListView x:Name="postsListView" ItemTapped="Sets_Tapped" RowHeight="100">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
             <ViewCell.ContextActions>
               <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding wardrobe_id}" IsDestructive="True" />
             </ViewCell.ContextActions>
-            <StackLayout Orientation="Horizontal" Padding="10">
-              <Label FontAttributes="Bold" FontSize="15" Text="{Binding name}" />
-              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="15" Text="{Binding allId}" />
-                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
-              </StackLayout>
-            </StackLayout>
+            <Grid Padding="5">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+              </Grid.ColumnDefinitions>
+              <Label Grid.Column="0" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="Center" Text="{Binding name}" />
+              <Image Grid.Column="1" Source="{Binding head_picture}" Aspect="AspectFit"/>
+              <Image Grid.Column="2" Source="{Binding top_picture}" Aspect="AspectFit"/>
+              <Image Grid.Column="3" Source="{Binding bottom_picture}" Aspect="AspectFit"/>
+              <Image Grid.Column="4" Source="{Binding feet_picture}" Aspect="AspectFit"/>
+            </Grid>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>

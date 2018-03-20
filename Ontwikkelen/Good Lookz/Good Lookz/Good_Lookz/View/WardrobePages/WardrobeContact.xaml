@@ -36,10 +36,11 @@
      
     </StackLayout>
     <StackLayout Grid.Row="5" Grid.Column="1">
-      <Picker x:Name="pPrefference" Title="What's your prefference?" SelectedIndex="{Binding pPreffer}" >
+      <Picker x:Name="pPreference" Title="What's your preference?" SelectedIndex="{Binding pPrefer}" >
         <Picker.Items>
           <x:String>Contact me on my phone</x:String>
           <x:String>Contact me by mail</x:String>
+          <x:String>I have no preference</x:String>
         </Picker.Items>
       </Picker>
     </StackLayout>

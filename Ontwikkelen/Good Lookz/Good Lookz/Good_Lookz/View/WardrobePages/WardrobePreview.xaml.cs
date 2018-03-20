@@ -119,14 +119,14 @@ namespace Good_Lookz.View.WardrobePages
             switch (typeCloth)
             {
                 case 1:
-                    id					= Models.SelectedHead.head_id;
+                    id					= Int32.Parse(Models.SelectedHead.head_id);
                     picture				= Models.SelectedHead.picture;
                     date				= Models.SelectedHead.date;
 					stckInfo.IsVisible	= false;
 					break;
 
                 case 2:
-                    id		= Models.SelectedTop.top_id;
+                    id		= Int32.Parse(Models.SelectedTop.top_id);
                     picture = Models.SelectedTop.picture;
                     date	= Models.SelectedTop.date;
                     size	= Models.SelectedTop.size;
@@ -135,7 +135,7 @@ namespace Good_Lookz.View.WardrobePages
                     break;
 
                 case 3:
-                    id		= Models.SelectedBottom.bottom_id;
+                    id		= Int32.Parse(Models.SelectedBottom.bottom_id);
                     picture = Models.SelectedBottom.picture;
                     date	= Models.SelectedBottom.date;
                     size	= Models.SelectedBottom.size;
@@ -144,7 +144,7 @@ namespace Good_Lookz.View.WardrobePages
 					break;
 
                 case 4:
-                    id		= Models.SelectedFeet.feet_id;
+                    id		= Int32.Parse(Models.SelectedFeet.feet_id);
                     picture = Models.SelectedFeet.picture;
                     date	= Models.SelectedFeet.date;
                     size	= Models.SelectedFeet.size;
@@ -184,22 +184,22 @@ namespace Good_Lookz.View.WardrobePages
 					case 1:
 						type		= "head";
 						owner_id	= Models.SelectedHead.users_id.ToString();
-						item_id		= Models.SelectedHead.head_id.ToString();
+						item_id		= Models.SelectedHead.head_id;
 						break;
 					case 2:
 						type		= "top";
 						owner_id	= Models.SelectedTop.users_id.ToString();
-						item_id		= Models.SelectedTop.top_id.ToString();
+						item_id		= Models.SelectedTop.top_id;
 						break;
 					case 3:
 						type		= "bottom";
 						owner_id	= Models.SelectedBottom.users_id.ToString();
-						item_id		= Models.SelectedBottom.bottom_id.ToString();
+						item_id		= Models.SelectedBottom.bottom_id;
 						break;
 					case 4:
 						type		= "feet";
 						owner_id	= Models.SelectedFeet.users_id.ToString();
-						item_id		= Models.SelectedFeet.feet_id.ToString();
+						item_id		= Models.SelectedFeet.feet_id;
 						break;
 				}
 
@@ -215,16 +215,8 @@ namespace Good_Lookz.View.WardrobePages
 				if (result == "Success")
 				{
 					await DisplayAlert("Success", "Your lend request has been sent!", "OK");
-
-					//Navigeer naar de vorige pagina
-					if (Models.PreviousPage.page == "WardrobeAllClothes")
-					{
-						await this.Navigation.PopAsync();
-					}
-					else if(Models.PreviousPage.page == "LendPage")
-					{
-						await this.Navigation.PopAsync();
-					}
+					await this.Navigation.PopAsync();
+					
 				}
 				else if (result == "Failed")
 				{

@@ -57,8 +57,8 @@ namespace Good_Lookz.Models
     /// </summary>
     class SelectedTop
     {
-        private static int _top_id;
-        private static int _users_id;
+        private static string _top_id;
+        private static string _users_id;
         private static string _picture;
         private static string _color;
         private static string _date;
@@ -66,13 +66,13 @@ namespace Good_Lookz.Models
 		private static string _region;
 		private static string _gender;
 
-		public static int top_id
+		public static string top_id
         {
             get { return _top_id; }
             set { _top_id = value; }
         }
 
-        public static int users_id
+        public static string users_id
         {
             get { return _users_id; }
             set { _users_id = value; }
@@ -112,6 +112,17 @@ namespace Good_Lookz.Models
 		{
 			get { return _gender; }
 			set { _gender = value; }
+		}
+
+		public static void Clear()
+		{
+			_top_id		= string.Empty;
+			_users_id	= string.Empty;
+			_picture	= string.Empty;
+			_color		= string.Empty;
+			_size		= string.Empty;
+			_gender		= string.Empty;
+			_region		= string.Empty;
 		}
 	}
 

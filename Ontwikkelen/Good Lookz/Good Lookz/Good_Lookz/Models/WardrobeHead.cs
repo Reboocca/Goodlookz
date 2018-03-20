@@ -51,19 +51,19 @@ namespace Good_Lookz.Models
     /// </summary>
     class SelectedHead
     {
-        private static int _head_id;
-        private static int _users_id;
+        private static string _head_id;
+        private static string _users_id;
         private static string _picture;
         private static string _color;
         private static string _date;
 
-        public static int head_id
+        public static string head_id
         {
             get { return _head_id; }
             set { _head_id = value; }
         }
 
-        public static int users_id
+        public static string users_id
         {
             get { return _users_id; }
             set { _users_id = value; }
@@ -86,7 +86,16 @@ namespace Good_Lookz.Models
             get { return _date; }
             set { _date = value; }
         }
-    }
+
+		public static void Clear()
+		{
+			_head_id	= string.Empty;
+			_users_id	= string.Empty;
+			_picture	= string.Empty;
+			_color		= string.Empty;
+			_date		= string.Empty;
+		}
+	}
 
     class headSaleSelected
     {

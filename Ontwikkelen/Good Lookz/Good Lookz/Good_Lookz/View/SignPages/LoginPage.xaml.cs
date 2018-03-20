@@ -78,11 +78,10 @@ namespace Good_Lookz.View.SignPages
                 Application.Current.Properties["loginOffline"] = _loginOffline;
                 Application.Current.Properties["loginActive"] = _loginActive;
 
+				//loginInfo.loginName = _loginName;
+				//loginInfo.loginPassword = _loginPassword;
 
-                //loginInfo.loginName = _loginName;
-                //loginInfo.loginPassword = _loginPassword;
-
-                if (postMethod[0].username == null)
+				if (postMethod[0].username == null)
                 {
                     loadingLogin.IsRunning = false;
                     loadingLogin.IsVisible = false;
