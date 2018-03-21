@@ -13,14 +13,26 @@ namespace Good_Lookz.View
 		public AdjustLighting()
 		{
 			InitializeComponent();
+		}
 
-			mySlider.Value = Models.LoginCredentials.adjust_lighting;
+		protected override void OnAppearing()
+		{
+			mySlider.Value			= Models.LoginCredentials.adjust_lighting;
+			bvLight.Opacity			= Models.LoginCredentials.adjust_lighting;
 			btnSave.BackgroundColor = Color.Transparent;
+
+			if (Models.LoginCredentials.adjust_lighting >= 0.8)
+			{
+				lblText.TextColor = Color.SlateGray;
+			}
+			else
+			{
+				lblText.TextColor = Color.White;
+			}
 		}
 
 		private async void mySlider_ValueChanged(object sender, EventArgs e)
 		{
-			//bvLight.Opacity = mySlider.Value;
 			await bvLight.FadeTo(mySlider.Value, 300);
 
 			if (mySlider.Value >= 0.8)

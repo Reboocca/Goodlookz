@@ -93,6 +93,6 @@
         <Button x:Name="btnSave" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Save Set" Clicked="SetSave_Clicked"/>
         <Button x:Name="btnSets" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Sets" Clicked="Sets_Clicked"/>
       </StackLayout>
+        <Button x:Name="btnFilter" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Filter wardrobe" Clicked="btnFilter_Clicked"/>
     </StackLayout>
-  
 </ContentPage>

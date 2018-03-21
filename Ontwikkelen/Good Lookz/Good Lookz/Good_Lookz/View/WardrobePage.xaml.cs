@@ -46,14 +46,15 @@ namespace Good_Lookz.View
         {
             InitializeComponent();
 
-            btnAdd.HeightRequest = 20;
+            btnAdd.HeightRequest		= 20;
             btnAdd.MinimumHeightRequest = 20;
-            btnSave.HeightRequest = 45.0;
-            btnSets.HeightRequest = 45.0;
+            btnSave.HeightRequest		= 45.0;
+            btnSets.HeightRequest		= 45.0;
 
-            btnAdd.BackgroundColor = Color.Transparent;
-            btnSave.BackgroundColor = Color.Transparent;
-            btnSets.BackgroundColor = Color.Transparent;
+            btnAdd.BackgroundColor		= Color.Transparent;
+            btnSave.BackgroundColor		= Color.Transparent;
+            btnSets.BackgroundColor		= Color.Transparent;
+			btnFilter.BackgroundColor	= Color.Transparent;
         }
 
         protected override async void OnAppearing()
@@ -275,39 +276,15 @@ namespace Good_Lookz.View
             else
             {
                 await Navigation.PushAsync(new WardrobePages.WardrobeSets(), true);
-
-                //var head = Models.SelectedHead.head_id.ToString();
-                //var top = Models.SelectedTop.top_id.ToString();
-                //var bottom = Models.SelectedBottom.bottom_id.ToString();
-                //var feet = Models.SelectedFeet.feet_id.ToString();
-                //var users_id = Models.LoginCredentials.loginId;
-
-                ////var headString = head.ToString();
-
-                //var itemsid = "Would you like to save the clothes as a set? \nitems: {0} - {1} - {2} - {3}";
-                //var fullString = string.Format(itemsid, head, top, bottom, feet);
-
-                //var answer = await DisplayAlert("Save?", itemsid, "Yes", "No");
-
-                //var values = new Dictionary<string, string>
-                //    {
-                //        { "users_id", users_id },
-                //        { "name",  },
-                //        { "head_id", head },
-                //        { "top_id", top },
-                //        { "bottom_id", bottom },
-                //        { "feet_id", feet }
-                //    };
-
-                //if (answer)
-                //{
-                //    var content = new FormUrlEncodedContent(values);
-                //    var response = await _client.PostAsync
-                //}
             }
         }
 
-        async void SetSave_Clicked(object sender, EventArgs e)
+		private async void btnFilter_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new WardrobePages.FilterWardrobe(), true);
+		}
+		
+		async void SetSave_Clicked(object sender, EventArgs e)
         {
             if (wardrobeItems.noItems == true)
             {

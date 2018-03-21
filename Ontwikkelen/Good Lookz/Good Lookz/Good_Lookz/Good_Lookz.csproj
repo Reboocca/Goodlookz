@@ -118,6 +118,9 @@
     <Compile Include="View\WardrobePage.xaml.cs">
       <DependentUpon>WardrobePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WardrobePages\FilterWardrobe.xaml.cs">
+      <DependentUpon>FilterWardrobe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WardrobePages\LendingListPage.xaml.cs">
       <DependentUpon>LendingListPage.xaml</DependentUpon>
     </Compile>
@@ -500,6 +503,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\AdjustLighting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\WardrobePages\FilterWardrobe.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
