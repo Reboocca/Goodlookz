@@ -17,11 +17,11 @@ namespace Good_Lookz.View
 
 		protected override void OnAppearing()
 		{
-			mySlider.Value			= Models.LoginCredentials.adjust_lighting;
-			bvLight.Opacity			= Models.LoginCredentials.adjust_lighting;
+			mySlider.Value			= Models.Settings.Mirror.adjust_lighting;
+			bvLight.Opacity			= Models.Settings.Mirror.adjust_lighting;
 			btnSave.BackgroundColor = Color.Transparent;
 
-			if (Models.LoginCredentials.adjust_lighting >= 0.8)
+			if (Models.Settings.Mirror.adjust_lighting >= 0.8)
 			{
 				lblText.TextColor = Color.SlateGray;
 			}
@@ -47,7 +47,7 @@ namespace Good_Lookz.View
 
 		private async void btnSave_Clicked(object sender, EventArgs e)
 		{
-			Models.LoginCredentials.adjust_lighting = mySlider.Value;
+			Models.Settings.Mirror.adjust_lighting = mySlider.Value;
 			await this.Navigation.PopAsync();
 		}
 	}

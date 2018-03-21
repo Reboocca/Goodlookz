@@ -18,7 +18,6 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.pdb
-C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\ModernHttpClient.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Newtonsoft.Json.xml
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Ontwikkelen\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Plugin.Geolocator.pdb

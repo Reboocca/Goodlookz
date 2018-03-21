@@ -50,7 +50,7 @@ namespace Good_Lookz.View.ShopPages
         protected override async void OnAppearing()
         {
             CarouselviewGrid.IsVisible = false;
-            btnSpecific.IsVisible = false;
+            //btnSpecific.IsVisible = false;
             loadingPage.IsEnabled = true;
             loadingPage.IsRunning = true;
 
@@ -72,7 +72,7 @@ namespace Good_Lookz.View.ShopPages
                 loadingPage.IsRunning = false;
                 loadingPage.IsEnabled = false;
                 CarouselviewGrid.IsVisible = true;
-                btnSpecific.IsVisible = true;
+                //btnSpecific.IsVisible = true;
             }
             catch
             {

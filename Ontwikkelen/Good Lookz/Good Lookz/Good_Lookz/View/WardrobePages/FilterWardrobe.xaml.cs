@@ -99,5 +99,50 @@ namespace Good_Lookz.View.WardrobePages
 			//Roep de functie aan om items aan de colour picker toe te voegen
 			getColours(pType.Items[pType.SelectedIndex], Models.LoginCredentials.loginId);
 		}
+
+		private async void btnFilter_Clicked(object sender, EventArgs e)
+		{
+			if(pType.SelectedIndex == -1 || pColour.SelectedIndex == -1)
+			{
+				await DisplayAlert("Warning", "Please select a type and colour before you continue.", "OK");
+			}
+			else
+			{
+				switch (pType.Items[pType.SelectedIndex])
+				{
+					case "Head":
+						Models.Settings.Filter.filterHead.filteron	 = true;
+						Models.Settings.Filter.filterHead.colour	 = pColour.Items[pColour.SelectedIndex];
+						break;
+
+					case "Top":
+						Models.Settings.Filter.filterTop.filteron	 = true;
+						Models.Settings.Filter.filterTop.colour		 = pColour.Items[pColour.SelectedIndex];
+						break;
+
+					case "Bottom":
+						Models.Settings.Filter.filterBottom.filteron = true;
+						Models.Settings.Filter.filterBottom.colour	 = pColour.Items[pColour.SelectedIndex];
+						break;
+
+					case "Feet":
+						Models.Settings.Filter.filterFeet.filteron	 = true;
+						Models.Settings.Filter.filterFeet.colour	 = pColour.Items[pColour.SelectedIndex];
+						break;
+				}
+				await this.Navigation.PopAsync();
+			}
+			
+		}
+
+		private async void btnReset_CLicked(object sender, EventArgs e)
+		{
+			Models.Settings.Filter.filterHead.filteron		= false;
+			Models.Settings.Filter.filterTop.filteron		= false;
+			Models.Settings.Filter.filterBottom.filteron	= false;
+			Models.Settings.Filter.filterFeet.filteron		= false;
+
+			await this.Navigation.PopAsync();
+		}
 	}
 }

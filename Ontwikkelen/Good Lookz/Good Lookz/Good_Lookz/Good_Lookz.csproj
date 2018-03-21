@@ -49,6 +49,7 @@
     <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\PreviousPage.cs" />
     <Compile Include="Models\SaleList.cs" />
+    <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\ShopsChosen.cs" />
     <Compile Include="Models\Sizes.cs" />
     <Compile Include="Models\UserSizes.cs" />

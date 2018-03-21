@@ -11,8 +11,8 @@
 namespace Good_Lookz.View.WardrobePages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("K:\\Stage_voorjaar_2018\\Programma\\Good Lookz\\Good_Lookz\\View\\WardrobePages\\Wardrob" +
-        "eSets.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Ontwikkelen\\Good Lookz\\G" +
+        "ood Lookz\\Good_Lookz\\View\\WardrobePages\\WardrobeSets.xaml")]
     public partial class WardrobeSets : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

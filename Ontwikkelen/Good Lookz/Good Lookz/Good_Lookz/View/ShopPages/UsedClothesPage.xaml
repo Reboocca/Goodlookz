@@ -118,8 +118,8 @@
       <Image Grid.Row="3" Grid.Column="2" Source="arrow_right.png" WidthRequest="50" />
     </Grid>
 
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5">
+    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5">
       <Button x:Name="btnSpecific" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Specific" />
-    </StackLayout>
+    </StackLayout>-->
   </StackLayout>
 </ContentPage>

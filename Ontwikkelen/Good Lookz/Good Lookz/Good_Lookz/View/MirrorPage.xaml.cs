@@ -18,7 +18,7 @@ namespace Good_Lookz.View
 		protected override void OnAppearing()
 		{
 			btnAdjust.BackgroundColor = Color.Transparent;
-			changeLightIntensitivity(Models.LoginCredentials.adjust_lighting);
+			changeLightIntensitivity(Models.Settings.Mirror.adjust_lighting);
 		}
 
 		//Verander de achtergrondkleur a.d.v.d. gekozen value

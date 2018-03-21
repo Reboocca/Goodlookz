@@ -9,8 +9,6 @@ namespace Good_Lookz
 {
     public partial class MainPage : ContentPage
     {
-        
-
         public MainPage()
         {
             InitializeComponent();
