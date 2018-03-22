@@ -22,6 +22,7 @@ namespace Good_Lookz.Models
 		public string lending { get; set; }
 		public string name { get; set; }
 		public string picture { get; set; }
+		public string comments { get; set; }
 	}
 
 	class SelectedLend
@@ -36,6 +37,7 @@ namespace Good_Lookz.Models
 		public static string username { get; set; }
 		public static string lending { get; set; }
 		public static string name { get; set; }
-		public static string picture { get; set; }		
+		public static string picture { get; set; }
+		public static string comments { get; set; }
 	}
 }

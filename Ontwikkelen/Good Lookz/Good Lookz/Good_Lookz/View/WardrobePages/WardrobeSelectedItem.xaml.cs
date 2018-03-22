@@ -111,9 +111,9 @@ namespace Good_Lookz.View.WardrobePages
             var price = entryPrice.Text;
             var desc = editorDesc.Text;
 
-            if (((price == null) || (price == "")) || ((desc == null) || (desc == "")))
+            if (((price == null) || (price == "")) || ((desc == null) || (desc == "")) || ((entryCity.Text == null) || (entryCity.Text == "")))
             {
-                await DisplayAlert("Error", "Please fill in the price and description!", "OK");
+                await DisplayAlert("Error", "Please fill in the pric, city and description!", "OK");
             }
             else
             {
@@ -126,7 +126,7 @@ namespace Good_Lookz.View.WardrobePages
 					var username = Models.LoginCredentials.loginUsername;
 
 					try {
-						string webadres = "http://good-lookz.com/API/sale/saleUpload.php?user_id=" + users_id + "&item_id=" + id + "&type=" + type + "&size=" + size + "&price=" + price + "&desc=" + desc;
+						string webadres = "http://good-lookz.com/API/sale/saleUpload.php?user_id=" + users_id + "&item_id=" + id + "&type=" + type + "&size=" + size + "&price=" + price + "&desc=" + desc + "&city=" + entryCity.Text;
 						HttpClient connect = new HttpClient();
 						HttpResponseMessage uploadToSale = await connect.GetAsync(webadres);
 						uploadToSale.EnsureSuccessStatusCode();
@@ -343,7 +343,6 @@ namespace Good_Lookz.View.WardrobePages
             /// Clear alle opgeslagen data in het List.
             /// Dit zorgt ervoor dat er geen java error tevoorschijn komt.
             base.OnDisappearing();
-            Content = null;
             GC.Collect();
         }
     }

@@ -44,6 +44,7 @@ namespace Good_Lookz.Models
         public string username { get; set; }
         public string price { get; set; }
         public string desc { get; set; }
+		public string sale_city { get; set; }
         public string fullPrice { get { return price + "€"; } }
     }
 
@@ -138,6 +139,7 @@ namespace Good_Lookz.Models
         private static string _price;
         private static string _desc;
         private static string _fullPrice;
+		public static string sale_city;
 
         public static string feet_sale_id
         {

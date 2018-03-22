@@ -87,6 +87,7 @@ namespace Good_Lookz.View.WardrobePages
 			Models.SelectedSaleList.sale_id			= select.sale_id;
 			Models.SelectedSaleList.desc			= select.desc;
 			Models.SelectedSaleList.price			= select.price;
+			Models.SelectedSaleList.sale_city		= select.sale_city;
 
 			await Navigation.PushAsync(new WardrobeSelectedSaleItem(), true);
 		}

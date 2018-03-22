@@ -43,8 +43,9 @@ namespace Good_Lookz.Models
 		public string size { get; set; }
 		public string username { get; set; }
         public string price { get; set; }
-        public string desc { get; set; }
-        public string fullPrice { get { return price + "€"; } }
+		public string desc { get; set; }
+		public string sale_city { get; set; }
+		public string fullPrice { get { return price + "€"; } }
     }
 
     public class topDelete
@@ -137,9 +138,10 @@ namespace Good_Lookz.Models
         private static string _username;
         private static string _price;
         private static string _desc;
-        private static string _fullPrice;
+		private static string _fullPrice;
+		public static string sale_city;
 
-        public static string top_sale_id
+		public static string top_sale_id
         {
             get { return _top_sale_id; }
             set { _top_sale_id = value; }

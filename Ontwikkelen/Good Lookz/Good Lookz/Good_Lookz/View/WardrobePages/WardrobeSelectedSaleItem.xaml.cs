@@ -18,6 +18,7 @@ namespace Good_Lookz.View.WardrobePages
 
 		protected override void OnAppearing()
 		{
+			entryCity.Text		= Models.SelectedSaleList.sale_city;
 			entryPrice.Text		= Models.SelectedSaleList.price;
 			editorDesc.Text		= Models.SelectedSaleList.desc;
 			imageItem.Source	= Models.SelectedSaleList.picture;
@@ -26,7 +27,7 @@ namespace Good_Lookz.View.WardrobePages
 		private async void btnEdit_Clicked(object sender, EventArgs e)
 		{
 			string webadres = "http://good-lookz.com/API/sale/saleEdit.php?";
-			string parameters = "item_id=" + Models.SelectedSaleList.item_id + "&cloth_id=" + Models.SelectedSaleList.clothID + "&price=" + entryPrice.Text + "&desc=" + editorDesc.Text;
+			string parameters = "item_id=" + Models.SelectedSaleList.item_id + "&cloth_id=" + Models.SelectedSaleList.clothID + "&price=" + entryPrice.Text + "&desc=" + editorDesc.Text + "&city=" + entryCity.Text;
 
 			HttpClient connect			= new HttpClient();
 			HttpResponseMessage update	= await connect.GetAsync(webadres + parameters);

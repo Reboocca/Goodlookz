@@ -42,16 +42,23 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override async void OnAppearing()
         {
-            string data = Models.LoginCredentials.loginId;
+			try
+			{
+				string data = Models.LoginCredentials.loginId;
 
-            string URL = string.Format(url, data);
+				string URL = string.Format(url, data);
 
-            var content = await client.GetStringAsync(URL);
-            response = JsonConvert.DeserializeObject<List<Models.SaleRequests>>(content);
+				var content = await client.GetStringAsync(URL);
+				response = JsonConvert.DeserializeObject<List<Models.SaleRequests>>(content);
 
-            _gets = new ObservableCollection<Models.SaleRequests>(response);
+				_gets = new ObservableCollection<Models.SaleRequests>(response);
 
-            saleRequests.ItemsSource = _gets;
+				saleRequests.ItemsSource = _gets;
+			}
+			catch
+			{
+				lblRequests.Text = "No requests";
+			}			
         }
 
         async void SaleRequests_Tapped(object sender, ItemTappedEventArgs e)
@@ -69,6 +76,8 @@ namespace Good_Lookz.View.WardrobePages
 			Models.SelectedSaleRequests.desc		= items.desc;
 			Models.SelectedSaleRequests.fullPrice	= items.fullPrice;
 			Models.SelectedSaleRequests.name		= items.name;
+			Models.SelectedSaleRequests.comments	= items.comments;
+
 			await Navigation.PushAsync(new WardrobeSelectedSaleRequests(), true);
         }
 

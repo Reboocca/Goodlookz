@@ -17,9 +17,8 @@
             <StackLayout Orientation="Horizontal" Padding="10">
               <Image Source="{Binding picture}" />
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding fullPrice}" />
-                <Label FontSize="10" Text="{Binding desc}" />
-                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding fullPrice}" HorizontalTextAlignment="End"/>
+                <Label FontSize="10" Text="{Binding desc}" HorizontalTextAlignment="End"/>
               </StackLayout>
             </StackLayout>
           </ViewCell>

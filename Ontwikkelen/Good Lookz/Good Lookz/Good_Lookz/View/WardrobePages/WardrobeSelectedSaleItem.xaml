@@ -11,13 +11,15 @@
       <RowDefinition Height="Auto" />
       <RowDefinition Height="1*" />
       <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
       <RowDefinition Height="2*" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="3"/>
       <ColumnDefinition Width="2*"/>
       <ColumnDefinition Width="10*"/>
-      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="3"/>
     </Grid.ColumnDefinitions>
     <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="imageItem" />
     <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center">
@@ -26,9 +28,15 @@
     <StackLayout Grid.Row="1" Grid.Column="2">
       <Entry x:Name="entryPrice" Keyboard="Numeric" FontSize="15" />
     </StackLayout>
-    <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+    <StackLayout Grid.Row="3" Grid.Column="1" VerticalOptions="Center">
+      <Label Text="City:" FontSize="15" />
+    </StackLayout>
+    <StackLayout Grid.Row="3" Grid.Column="2">
+      <Entry x:Name="entryCity" FontSize="15" />
+    </StackLayout>
+    <StackLayout Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
       <Editor x:Name="editorDesc" HeightRequest="150" />
     </StackLayout>
-    <Button x:Name="btnEdit" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Red" Text="Edit" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnEdit_Clicked" />
+    <Button x:Name="btnEdit" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Red" Text="Edit" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnEdit_Clicked" />
   </Grid>
 </ContentPage>

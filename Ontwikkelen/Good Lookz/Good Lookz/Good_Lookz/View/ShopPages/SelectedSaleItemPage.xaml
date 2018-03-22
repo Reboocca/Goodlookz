@@ -3,31 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.ShopPages.SelectedSaleItemPage"
              Title="Item">
-  <Grid ColumnSpacing="5" Padding="10" >
+  <Grid Padding="5">
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
       <RowDefinition Height="*" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
+      <RowDefinition Height="10" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
-    <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center" >
-      <Label x:Name="lblUsrname" FontSize="15" />
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="3"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="3"/>
+    </Grid.ColumnDefinitions>
+    <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center" >
+      <Label Text="Owner of the item:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblUsrname" FontSize="15"/>
     </StackLayout>
-    <Image Grid.Row="1" Grid.ColumnSpan="2" x:Name="imageItem" />
-    <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center" >
-      <Label x:Name="lblPrice" FontSize="30" FontAttributes="Bold" />
+    <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="imageItem" Aspect="AspectFill"/>
+    <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+      <Label Text="Price:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblPrice" FontSize="15"/>
     </StackLayout>
-    <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" >
-      <Label Text="Size: " FontSize="15" />
-      <Label x:Name="lblSize" FontSize="30" FontAttributes="Bold" />
+    <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+      <Label Text="Size:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblSize" FontSize="15"/>
     </StackLayout>
-    <StackLayout Grid.Row="3" Grid.ColumnSpan="2" >
-      <Label x:Name="lblDesc" FontSize="15" />
+    <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+      <Label Text="City:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblCity" FontSize="15"/>
     </StackLayout>
-    <StackLayout Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center" >
-      <Entry x:Name="entryBidding" Keyboard="Numeric" Placeholder="Bidding"  />
-      <Button Text="Send request" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="SendRequest_Clicked" />
+    <StackLayout Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Vertical">
+      <Label Text="Description:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblDesc" FontSize="14" />
     </StackLayout>
+    <StackLayout Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Vertical" >
+      <Label Text="Bid on item:" FontSize="15" HorizontalOptions="Fill" FontAttributes="Bold"/>
+      <Entry x:Name="entryBidding" Keyboard="Numeric" Placeholder="(Optional) What are you willing to pay for the item?" FontSize="15" HorizontalOptions="Fill"/>
+    </StackLayout>
+    <StackLayout Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Vertical">
+      <Label Text="(Optional) Add a message:" FontSize="15" HorizontalOptions="Fill"/>
+      <Editor x:Name="editorComments" FontSize="15" HeightRequest="70" HorizontalOptions="Fill"/>
+    </StackLayout>
+    <Button Text="Send request" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="SendRequest_Clicked" />
   </Grid>
 </ContentPage>

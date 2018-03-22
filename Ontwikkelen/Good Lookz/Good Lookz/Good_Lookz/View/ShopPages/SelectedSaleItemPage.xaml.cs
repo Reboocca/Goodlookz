@@ -49,32 +49,37 @@ namespace Good_Lookz.View.ShopPages
             switch (typeCloth)
             {
                 case 1:
-                    imageItem.Source = Models.headSaleSelected.picture;
-                    lblPrice.Text = Models.headSaleSelected.fullPrice;
-                    lblUsrname.Text = Models.headSaleSelected.username;
-                    lblDesc.Text = Models.headSaleSelected.desc;
-                    break;
+                    imageItem.Source	= Models.headSaleSelected.picture;
+                    lblPrice.Text		= Models.headSaleSelected.fullPrice;
+                    lblUsrname.Text		= Models.headSaleSelected.username;
+                    lblDesc.Text		= Models.headSaleSelected.desc;
+					lblSize.IsVisible	= false;
+					lblCity.Text		= Models.headSaleSelected.sale_city;
+					break;
                 case 2:
-                    imageItem.Source = Models.topSaleSelected.picture;
-                    lblPrice.Text = Models.topSaleSelected.fullPrice;
-                    lblUsrname.Text = Models.topSaleSelected.username;
-                    lblDesc.Text = Models.topSaleSelected.desc;
-                    lblSize.Text = Models.topSaleSelected.size;
+                    imageItem.Source	= Models.topSaleSelected.picture;
+                    lblPrice.Text		= Models.topSaleSelected.fullPrice;
+                    lblUsrname.Text		= Models.topSaleSelected.username;
+                    lblDesc.Text		= Models.topSaleSelected.desc;
+                    lblSize.Text		= Models.topSaleSelected.size;
+					lblCity.Text		= Models.topSaleSelected.sale_city;
                     break;
                 case 3:
-                    imageItem.Source = Models.bottomSaleSelected.picture;
-                    lblPrice.Text = Models.bottomSaleSelected.fullPrice;
-                    lblUsrname.Text = Models.bottomSaleSelected.username;
-                    lblDesc.Text = Models.bottomSaleSelected.desc;
-                    lblSize.Text = Models.bottomSaleSelected.size;
-                    break;
+                    imageItem.Source	= Models.bottomSaleSelected.picture;
+                    lblPrice.Text		= Models.bottomSaleSelected.fullPrice;
+                    lblUsrname.Text		= Models.bottomSaleSelected.username;
+                    lblDesc.Text		= Models.bottomSaleSelected.desc;
+                    lblSize.Text		= Models.bottomSaleSelected.size;
+					lblCity.Text		= Models.bottomSaleSelected.sale_city;
+					break;
                 case 4:
-                    imageItem.Source = Models.feetSaleSelected.picture;
-                    lblPrice.Text = Models.feetSaleSelected.fullPrice;
-                    lblUsrname.Text = Models.feetSaleSelected.username;
-                    lblDesc.Text = Models.feetSaleSelected.desc;
-                    lblSize.Text = Models.feetSaleSelected.size;
-                    break;
+                    imageItem.Source	= Models.feetSaleSelected.picture;
+                    lblPrice.Text		= Models.feetSaleSelected.fullPrice;
+                    lblUsrname.Text		= Models.feetSaleSelected.username;
+                    lblDesc.Text		= Models.feetSaleSelected.desc;
+                    lblSize.Text		= Models.feetSaleSelected.size;
+					lblCity.Text		= Models.feetSaleSelected.sale_city;
+					break;
                 default:
                     break;
             }           
@@ -110,27 +115,41 @@ namespace Good_Lookz.View.ShopPages
                 default:
                     break;
             }
- 
-            var username = Models.LoginCredentials.loginUsername;
-            var bidding = entryBidding.Text;
 
-            var values = new Dictionary<string, string>
+			var username	= Models.LoginCredentials.loginUsername;
+            var bidding		= entryBidding.Text;
+			var comments	= editorComments.Text;
+
+			if (string.IsNullOrEmpty(editorComments.Text))
+			{
+				comments = "No message added.";
+			}
+
+			var values = new Dictionary<string, string>
             {
                 { "sale_id", sale_id },
                 { "users_id1", users_id1 },
                 { "users_id2", users_id2 },
                 { "username", username },
                 { "typeCloth", typeCloth.ToString() },
-                { "bidding", bidding }
-            };
+				{ "bidding", bidding },
+				{ "comments", comments }
+			};
 
             var content = new FormUrlEncodedContent(values);
             var response = await _client.PostAsync(url, content);
             var responseString = await response.Content.ReadAsStringAsync();
             var postMethod = JsonConvert.DeserializeObject<List<saleRequestUpload>>(responseString);
 
-            await DisplayAlert("Message", "Upload: " + postMethod[0].sale_request, "OK");
-            await Application.Current.MainPage.Navigation.PopAsync();
+			if (postMethod[0].sale_request)
+			{
+				await DisplayAlert("Succes", "Your request has been sent.", "OK");
+				await Application.Current.MainPage.Navigation.PopAsync();
+			}
+			else
+			{
+				await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+			}
         }
 
         protected override void OnDisappearing()

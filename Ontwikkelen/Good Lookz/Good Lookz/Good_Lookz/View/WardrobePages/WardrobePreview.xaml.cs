@@ -203,8 +203,15 @@ namespace Good_Lookz.View.WardrobePages
 						break;
 				}
 
+				string message = editorComments.Text;
+
+				if (string.IsNullOrEmpty(message))
+				{
+					message = "No message added.";
+				}
+
 				string webadres		= "http://good-lookz.com/API/lend/lendUpload.php?";
-				string parameters	= "users_id=" + Models.LoginCredentials.loginId + "&owner_id=" + owner_id + "&type=" + type + "&item_id=" + item_id + "&date=" + dpDate.Date.ToString("yyyy-MM-dd") + "&days=" + enDays.Text;
+				string parameters	= "users_id=" + Models.LoginCredentials.loginId + "&owner_id=" + owner_id + "&type=" + type + "&item_id=" + item_id + "&date=" + dpDate.Date.ToString("yyyy-MM-dd") + "&days=" + enDays.Text + "&message=" + message;
 
 				HttpClient connect = new HttpClient();
 				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);

@@ -76,6 +76,7 @@ namespace Good_Lookz.View.WardrobePages
 			Models.SelectedLend.lending			= items.lending;
 			Models.SelectedLend.name			= items.name;
 			Models.SelectedLend.picture			= items.picture;
+			Models.SelectedLend.comments		= items.comments;
 
 			await Navigation.PushAsync(new SelectedLend(), true);
 		}

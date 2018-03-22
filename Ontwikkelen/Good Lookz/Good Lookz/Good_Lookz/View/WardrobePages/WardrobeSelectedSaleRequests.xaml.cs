@@ -26,7 +26,12 @@ namespace Good_Lookz.View.WardrobePages
 			lbBidderUsername.Text	= Models.SelectedSaleRequests.username;
             imageItem.Source		= Models.SelectedSaleRequests.picture;
             lblPrice.Text			= Models.SelectedSaleRequests.price;
-            lblBidding.Text			= Models.SelectedSaleRequests.bidding;
+			lblBidding.Text			= Models.SelectedSaleRequests.bidding;
+			lblComments.Text		= Models.SelectedSaleRequests.comments;
+			if (string.IsNullOrEmpty(lblBidding.Text))
+			{
+				lblBidding.Text = "No bid";
+			}
             lblUsrname_buyer.Text	= Models.SelectedSaleRequests.name;
 			btnContact.Text			= "Start communicating with " + Models.SelectedSaleRequests.username;
         }

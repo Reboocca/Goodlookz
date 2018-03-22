@@ -3,23 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.WardrobePages.WardrobeSaleRequests"
              Title="Sale requests">
-  <ListView x:Name="saleRequests" ItemTapped="SaleRequests_Tapped" RowHeight="100">
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <ViewCell.ContextActions>
-            <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding requests_id}" IsDestructive="True" />
-          </ViewCell.ContextActions>
-          <StackLayout Orientation="Horizontal" Padding="10">
-            <Image Source="{Binding picture}" />
-            <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-              <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
-              <Label FontSize="10" Text="{Binding fullPrice}" />
-              <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+  <StackLayout Padding="10" >
+    <StackLayout Padding="0, 5, 0, 0" Orientation="Horizontal" HorizontalOptions="Center" >
+      <Label x:Name="lblRequests" FontSize="15" FontAttributes="Bold" />
+    </StackLayout>
+    <ListView x:Name="saleRequests" ItemTapped="SaleRequests_Tapped" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.ContextActions>
+              <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding requests_id}" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Orientation="Horizontal" Padding="10">
+              <Image Source="{Binding picture}" />
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
+                <Label FontSize="10" Text="{Binding fullPrice}" />
+                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+              </StackLayout>
             </StackLayout>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
 </ContentPage>

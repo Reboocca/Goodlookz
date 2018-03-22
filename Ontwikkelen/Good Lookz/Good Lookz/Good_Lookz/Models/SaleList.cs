@@ -21,8 +21,9 @@ namespace Good_Lookz.Models
         public string username { get; set; }
         public string picture { get; set; }
         public string price { get; set; }
-        public string desc { get; set; }
-        public string fullPrice { get { return price + "€"; } }
+		public string desc { get; set; }
+		public string sale_city { get; set; }
+		public string fullPrice { get { return price + "€"; } }
     }
 
     class SaleRequests
@@ -37,7 +38,8 @@ namespace Good_Lookz.Models
         public string price { get; set; }
         public string desc { get; set; }
 		public string name { get; set; }
-        public string fullPrice { get { return price + "€"; } }
+		public string comments { get; set; }
+		public string fullPrice { get { return price + "€"; } }
     }
 
     /// <summary>
@@ -58,6 +60,7 @@ namespace Good_Lookz.Models
 		public static string fullPrice;
 		public static string price;
 		public static string desc;
+		public static string sale_city;
 		public static string clothID;
     }
 
@@ -74,8 +77,9 @@ namespace Good_Lookz.Models
         private static string _desc;
         private static string _fullPrice;
 		public static string name;
+		public static string comments;
 
-        public static string requests_id
+		public static string requests_id
         {
             get { return _requests_id; }
             set { _requests_id = value; }

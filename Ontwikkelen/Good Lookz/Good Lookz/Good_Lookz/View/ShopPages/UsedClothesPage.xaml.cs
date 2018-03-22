@@ -242,107 +242,68 @@ namespace Good_Lookz.View.ShopPages
         {
             Models.HeadSale item = (Models.HeadSale)e.SelectedItem;
 
-            var _head_sale_id = item.head_sale_id;
-            var _users_id = item.users_id;
-            var _head_id = item.head_id;
-            var _picture = item.picture;
-            var _date = item.date;
-            var _username = item.username;
-            var _price = item.price;
-            var _desc = item.desc;
-            var _fullPrice = item.fullPrice;
-
-            Models.headSaleSelected.head_sale_id = _head_sale_id;
-            Models.headSaleSelected.users_id = _users_id;
-            Models.headSaleSelected.head_id = _head_id;
-            Models.headSaleSelected.picture = _picture;
-            Models.headSaleSelected.date = _date;
-            Models.headSaleSelected.username = _username;
-            Models.headSaleSelected.price = _price;
-            Models.headSaleSelected.desc = _desc;
-            Models.headSaleSelected.fullPrice = _fullPrice;
-        }
+            Models.headSaleSelected.head_sale_id = item.head_sale_id;
+			Models.headSaleSelected.users_id	 = item.users_id;
+			Models.headSaleSelected.head_id		 = item.head_id;
+			Models.headSaleSelected.picture		 = item.picture;
+			Models.headSaleSelected.date		 = item.date;
+			Models.headSaleSelected.username	 = item.username;
+			Models.headSaleSelected.price		 = item.price;
+			Models.headSaleSelected.desc		 = item.desc;
+			Models.headSaleSelected.fullPrice	 = item.fullPrice;
+			Models.headSaleSelected.sale_city	 = item.sale_city;
+		}
 
         void CarouselViewTop_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.TopSale item = (Models.TopSale)e.SelectedItem;
 
-            var _top_sale_id = item.top_sale_id;
-            var _users_id = item.users_id;
-            var _top_id = item.top_id;
-            var _picture = item.picture;
-            var _date = item.date;
-            var _size = item.size;
-            var _username = item.username;
-            var _price = item.price;
-            var _desc = item.desc;
-            var _fullPrice = item.fullPrice;
-
-            Models.topSaleSelected.top_sale_id = _top_sale_id;
-            Models.topSaleSelected.users_id = _users_id;
-            Models.topSaleSelected.top_id = _top_id;
-            Models.topSaleSelected.picture = _picture;
-            Models.topSaleSelected.date = _date;
-            Models.topSaleSelected.size = _size;
-            Models.topSaleSelected.username = _username;
-            Models.topSaleSelected.price = _price;
-            Models.topSaleSelected.desc = _desc;
-            Models.topSaleSelected.fullPrice = _fullPrice;
+            Models.topSaleSelected.top_sale_id	= item.top_sale_id;
+            Models.topSaleSelected.users_id		= item.users_id;
+            Models.topSaleSelected.top_id		= item.top_id;
+            Models.topSaleSelected.picture		= item.picture;
+            Models.topSaleSelected.date			= item.date;
+            Models.topSaleSelected.size			= item.size;
+            Models.topSaleSelected.username		= item.username;
+            Models.topSaleSelected.price		= item.price;
+            Models.topSaleSelected.desc			= item.desc;
+            Models.topSaleSelected.fullPrice	= item.fullPrice;
+			Models.topSaleSelected.sale_city	= item.sale_city;
         }
 
         void CarouselViewBottom_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.BottomSale item = (Models.BottomSale)e.SelectedItem;
 
-            var _bottom_sale_id = item.bottom_sale_id;
-            var _users_id = item.users_id;
-            var _bottom_id = item.bottom_id;
-            var _picture = item.picture;
-            var _date = item.date;
-            var _size = item.size;
-            var _username = item.username;
-            var _price = item.price;
-            var _desc = item.desc;
-            var _fullPrice = item.fullPrice;
-
-            Models.bottomSaleSelected.bottom_sale_id = _bottom_sale_id;
-            Models.bottomSaleSelected.users_id = _users_id;
-            Models.bottomSaleSelected.bottom_id = _bottom_id;
-            Models.bottomSaleSelected.picture = _picture;
-            Models.bottomSaleSelected.date = _date;
-            Models.bottomSaleSelected.size = _size;
-            Models.bottomSaleSelected.username = _username;
-            Models.bottomSaleSelected.price = _price;
-            Models.bottomSaleSelected.desc = _desc;
-            Models.bottomSaleSelected.fullPrice = _fullPrice;
-        }
+            Models.bottomSaleSelected.bottom_sale_id	= item.bottom_sale_id;
+            Models.bottomSaleSelected.users_id			= item.users_id;
+            Models.bottomSaleSelected.bottom_id			= item.bottom_id;
+            Models.bottomSaleSelected.picture			= item.picture;
+            Models.bottomSaleSelected.date				= item.date;
+            Models.bottomSaleSelected.size				= item.size;
+            Models.bottomSaleSelected.username			= item.username;
+            Models.bottomSaleSelected.price				= item.price;
+            Models.bottomSaleSelected.desc				= item.desc;
+            Models.bottomSaleSelected.fullPrice			= item.fullPrice;
+			Models.bottomSaleSelected.sale_city			= item.sale_city;
+		}
 
         void CarouselViewFeet_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.FeetSale item = (Models.FeetSale)e.SelectedItem;
 
-            var _feet_sale_id = item.feet_sale_id;
-            var _users_id = item.users_id;
-            var _feet_id = item.feet_id;
-            var _picture = item.picture;
-            var _date = item.date;
-            var _size = item.size;
-            var _username = item.username;
-            var _price = item.price;
-            var _desc = item.desc;
-            var _fullPrice = item.fullPrice;
-
-            Models.feetSaleSelected.feet_sale_id = _feet_sale_id;
-            Models.feetSaleSelected.users_id = _users_id;
-            Models.feetSaleSelected.feet_id = _feet_id;
-            Models.feetSaleSelected.picture = _picture;
-            Models.feetSaleSelected.date = _date;
-            Models.feetSaleSelected.size = _size;
-            Models.feetSaleSelected.username = _username;
-            Models.feetSaleSelected.price = _price;
-            Models.feetSaleSelected.desc = _desc;
-            Models.feetSaleSelected.fullPrice = _fullPrice;
-        }
+            Models.feetSaleSelected.feet_sale_id	= item.feet_sale_id;
+            Models.feetSaleSelected.users_id		= item.users_id;
+            Models.feetSaleSelected.feet_id			= item.feet_id;
+            Models.feetSaleSelected.picture			= item.picture;
+            Models.feetSaleSelected.date			= item.date;
+            Models.feetSaleSelected.size			= item.size;
+            Models.feetSaleSelected.username		= item.username;
+            Models.feetSaleSelected.price			= item.price;
+            Models.feetSaleSelected.desc			= item.desc;
+			Models.feetSaleSelected.fullPrice		= item.fullPrice;
+			Models.feetSaleSelected.sale_city		= item.sale_city;
+		}
 
         async void headTapped(object sender, EventArgs e)
         {

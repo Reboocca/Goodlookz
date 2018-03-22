@@ -35,6 +35,7 @@ namespace Good_Lookz.View.WardrobePages
 			if(Models.SelectedLend.lending == "0")
 			{
 				btnContact.IsVisible	= false;
+				lblComments.Text		= Models.SelectedLend.comments;
 				lbTitle.Text			= "wants to borrow this item";
 				lbText.Text				= "Is interested in borrowing this item. Make sure to tell us wether you've accepted to borrow this item to " + Models.SelectedLend.name + " with the button below.";
 			}
@@ -43,6 +44,7 @@ namespace Good_Lookz.View.WardrobePages
 				btnContact.Text			= "Start communicating with " + Models.SelectedLend.username;
 				btnAccept.IsVisible		= false;
 				btnDecline.IsVisible	= false;
+				lblComments.Text		= Models.SelectedLend.comments;
 				lbTitle.Text			= "is borrowing this item";
 				lbText.Text				= "Is borrowing this item from you. If " + Models.SelectedLend.name + " contacted yet, then click the button below to see to send a reminder";
 			}
@@ -91,6 +93,9 @@ namespace Good_Lookz.View.WardrobePages
 				{
 					await DisplayAlert("Success", "Lend request has been deleted.", "OK");
 
+					//Haal de pagina uit de navigatie stack
+					this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
+					
 					//Navigeer naar vorige pagina
 					await Navigation.PushAsync(new LendRequests(), true);
 				}

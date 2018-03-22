@@ -447,7 +447,8 @@ namespace Good_Lookz.View
             gets_Top.Clear();
             gets_Bottom.Clear();
             gets_Feet.Clear();
-            GC.Collect();
-        }
+			
+			GC.Collect();
+		}
     }
 } 
