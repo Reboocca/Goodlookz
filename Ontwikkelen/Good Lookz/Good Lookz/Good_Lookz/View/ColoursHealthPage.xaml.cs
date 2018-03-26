@@ -55,7 +55,7 @@ namespace Good_Lookz.View
 		private void OnItemTapped(object sender, ItemTappedEventArgs e)
 		{
 			//Animatie voor achtergrondkleur wijzigen
-			this.ColorTo(this.BackgroundColor, ((Feeling)(lvFeelings.SelectedItem)).feelingColour, c => BackgroundColor = c, 500);
+			this.ColorTo(this.BackgroundColor, ((Feeling)(lvFeelings.SelectedItem)).feelingColour, c => BackgroundColor = c, 700, Easing.CubicInOut);
 			
 			//Verander de label colours naar wit
 			foreach (Feeling f in lstFeeling)
