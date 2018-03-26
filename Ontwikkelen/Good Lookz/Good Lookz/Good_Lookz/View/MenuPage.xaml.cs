@@ -122,5 +122,10 @@ namespace Good_Lookz.View
 		{
 			await Navigation.PushAsync(new View.ColoursHealthPage(), true);
 		}
+
+		async void NotificationClicked(object sender, EventArgs e)
+		{
+			await DisplayAlert("Message", "Notification has been clicked", "ok");
+		}
 	}
 }

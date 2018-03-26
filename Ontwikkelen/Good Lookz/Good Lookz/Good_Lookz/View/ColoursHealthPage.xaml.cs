@@ -16,6 +16,10 @@ namespace Good_Lookz.View
 		public ColoursHealthPage()
 		{
 			InitializeComponent();
+
+
+			lvFeelings.IsRefreshing = true;
+			getFeelings();
 		}
 
 		class Feeling
@@ -31,7 +35,6 @@ namespace Good_Lookz.View
 
 		protected override void OnAppearing()
 		{
-			getFeelings();
 		}
 
 		private async void getFeelings()
@@ -49,19 +52,24 @@ namespace Good_Lookz.View
 				lstFeeling.Add(new Feeling { feelingName = f.colourTitle, feelingColour = Color.FromHex(f.colourHex), labelColour = Color.SlateGray });
 			}
 
+			lvFeelings.IsRefreshing = false;
 			lvFeelings.ItemsSource = lstFeeling;
 		}
 
 		private void OnItemTapped(object sender, ItemTappedEventArgs e)
 		{
 			//Animatie voor achtergrondkleur wijzigen
-			this.ColorTo(this.BackgroundColor, ((Feeling)(lvFeelings.SelectedItem)).feelingColour, c => BackgroundColor = c, 700, Easing.CubicInOut);
+			this.ColorTo(this.BackgroundColor, ((Feeling)(lvFeelings.SelectedItem)).feelingColour, c => BackgroundColor = c, 750);
 			
 			//Verander de label colours naar wit
 			foreach (Feeling f in lstFeeling)
 			{
 				f.labelColour = Color.White;
 			}
+
+			lblTitle.TextColor = Color.White;
+			lblWeb.TextColor = Color.White;
+
 			lvFeelings.ItemsSource = null;
 			lvFeelings.ItemsSource = lstFeeling;
 
@@ -70,5 +78,12 @@ namespace Good_Lookz.View
 			if (e == null) return;
 			((ListView)sender).SelectedItem = null;
 		}
+
+		private async void lblClicked(object sender, EventArgs e)
+		{
+			//Open de pagina met de webview van colourshealth.com
+			await Navigation.PushAsync(new View.ColoursHealthWebview(), true);
+		}
+
 	}
 }

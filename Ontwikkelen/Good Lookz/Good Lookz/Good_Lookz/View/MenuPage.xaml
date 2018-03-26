@@ -5,6 +5,9 @@
              x:Class="Good_Lookz.View.MenuPage"
              Title="Good Lookz"
              BackgroundColor="White">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="notification.png" Text="Notificatons" Clicked="NotificationClicked"/>
+  </ContentPage.ToolbarItems>
     <Grid>
       <Button Grid.Row="0"
               Grid.Column="0"

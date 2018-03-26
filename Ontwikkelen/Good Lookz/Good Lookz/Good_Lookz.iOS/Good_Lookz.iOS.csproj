@@ -212,6 +212,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\fashion.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\notification.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

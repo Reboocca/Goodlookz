@@ -67,6 +67,9 @@
     <Compile Include="View\ColoursHealthPage.xaml.cs">
       <DependentUpon>ColoursHealthPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ColoursHealthWebview.xaml.cs">
+      <DependentUpon>ColoursHealthWebview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FriendsPages\FriendsRequest.xaml.cs">
       <DependentUpon>FriendsRequest.xaml</DependentUpon>
     </Compile>
@@ -520,6 +523,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\ColoursHealthPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\ColoursHealthWebview.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

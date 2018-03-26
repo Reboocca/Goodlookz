@@ -2565,11 +2565,12 @@ containing a value of this type.
         public static final int mr_ic_pause_light=0x7f0200a4;
         public static final int mr_ic_play_dark=0x7f0200a5;
         public static final int mr_ic_play_light=0x7f0200a6;
-        public static final int notification_template_icon_bg=0x7f0200ab;
-        public static final int old=0x7f0200a7;
-        public static final int settings=0x7f0200a8;
-        public static final int shop=0x7f0200a9;
-        public static final int wardrobe=0x7f0200aa;
+        public static final int notification=0x7f0200a7;
+        public static final int notification_template_icon_bg=0x7f0200ac;
+        public static final int old=0x7f0200a8;
+        public static final int settings=0x7f0200a9;
+        public static final int shop=0x7f0200aa;
+        public static final int wardrobe=0x7f0200ab;
     }
     public static final class id {
         public static final int action0=0x7f07008b;
