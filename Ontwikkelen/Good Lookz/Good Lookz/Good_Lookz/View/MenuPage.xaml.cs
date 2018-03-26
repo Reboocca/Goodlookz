@@ -117,5 +117,10 @@ namespace Good_Lookz.View
         {
             await Navigation.PushAsync(new View.FriendsPage(), true);
         }
-    }
+
+		async void ColoursClicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new View.ColoursHealthPage(), true);
+		}
+	}
 }

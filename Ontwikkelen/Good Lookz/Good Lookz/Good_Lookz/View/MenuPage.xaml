@@ -36,10 +36,9 @@
              Grid.Column="0"
              Source="wardrobe.png"/>
       
-      <Button x:Name="coloursClicked"
-              Grid.Row="2"
+      <Button Grid.Row="2"
               Grid.Column="0"
-              Clicked="FriendsClicked"
+              Clicked="ColoursClicked"
               Text="Colours Health"
               TextColor="Red"
               BorderWidth="1"

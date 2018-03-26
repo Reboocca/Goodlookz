@@ -16,9 +16,9 @@
       <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="3"/>
-      <ColumnDefinition Width="10*"/>
-      <ColumnDefinition Width="3"/>
+      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="25*"/>
+      <ColumnDefinition Width="1*"/>
     </Grid.ColumnDefinitions>
     <Image Grid.Row="0" Grid.Column="1" Aspect="AspectFill" x:Name="selectedCloth"/>
     <StackLayout x:Name="stckInfo" Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
