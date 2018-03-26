@@ -125,7 +125,7 @@ namespace Good_Lookz.View
 
 		async void NotificationClicked(object sender, EventArgs e)
 		{
-			await DisplayAlert("Message", "Notification has been clicked", "ok");
+			await Navigation.PushAsync(new View.NotificationPage(), true);
 		}
 	}
 }

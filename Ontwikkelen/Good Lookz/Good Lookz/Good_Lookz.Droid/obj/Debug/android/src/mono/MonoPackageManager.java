@@ -97,8 +97,8 @@ public class MonoPackageManager {
 
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
-		/* We need to ensure that "Good_Lookz.Droid.dll" comes first in this list. */
-		"Good_Lookz.Droid.dll",
+		/* We need to ensure that "Good Lookz.dll" comes first in this list. */
+		"Good Lookz.dll",
 		"FormsViewGroup.dll",
 		"ModernHttpClient.dll",
 		"Newtonsoft.Json.dll",

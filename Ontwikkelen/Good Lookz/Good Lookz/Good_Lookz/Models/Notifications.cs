@@ -13,4 +13,13 @@ namespace Good_Lookz.Models
     {
         public int count { get; set; }
     }
+
+	class Notification
+	{
+		public string notif_id { get; set; }
+		public int type { get; set; }
+		public string username { get; set; }
+		public string message { get; set; }
+		public string picture { get; set; }
+	}
 }

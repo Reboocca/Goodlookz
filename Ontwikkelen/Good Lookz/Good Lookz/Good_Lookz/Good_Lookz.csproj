@@ -73,6 +73,9 @@
     <Compile Include="View\FriendsPages\FriendsRequest.xaml.cs">
       <DependentUpon>FriendsRequest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NotificationPage.xaml.cs">
+      <DependentUpon>NotificationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SaveSizePage.xaml.cs">
       <DependentUpon>SaveSizePage.xaml</DependentUpon>
     </Compile>
@@ -529,6 +532,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\ColoursHealthWebview.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\NotificationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

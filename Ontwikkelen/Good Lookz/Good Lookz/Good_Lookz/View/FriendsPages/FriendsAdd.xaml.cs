@@ -122,7 +122,14 @@ namespace Good_Lookz.View.FriendsPages
 
                     if (sendRequest)
                     {
-                        var content = new FormUrlEncodedContent(values);
+						var valuesrequest = new Dictionary<string, string>
+						{
+							{ "users_id", users_id },
+							{ "usrOrMail", username },
+							{ "postusername", Models.LoginCredentials.loginUsername }
+						};
+
+						var content = new FormUrlEncodedContent(valuesrequest);
                         var response = await client.PostAsync(url_friendSend, content);
                         var responseString = await response.Content.ReadAsStringAsync();
                         var postMethod = JsonConvert.DeserializeObject<List<friendSend>>(responseString);

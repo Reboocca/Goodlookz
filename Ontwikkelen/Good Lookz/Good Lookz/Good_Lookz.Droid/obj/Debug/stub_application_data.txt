@@ -1,2 +1,2 @@
 android.app.Application
-Good_Lookz.Droid
+Good_Lookz.Good_Lookz
