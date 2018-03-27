@@ -507,8 +507,8 @@ namespace Good_Lookz.View.WardrobePages
             }
         }
         void CarouselViewFeet_Selected(object sender, SelectedItemChangedEventArgs e)
-        {
-            try
+		{
+			try
             {
                 Models.WardrobeFeetAll SelectedFeet = (Models.WardrobeFeetAll)e.SelectedItem;
 

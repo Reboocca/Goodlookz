@@ -1,2 +1,0 @@
-android.app.Application
-Good_Lookz.Good_Lookz
