@@ -98,14 +98,14 @@ namespace Good_Lookz.View
 			try
 			{
 				string webadres = "http://good-lookz.com/API/notifications/getNotifCount.php?";
-				string parameters = "users_id=" + Models.LoginCredentials.loginId + "&notif_friends=1&notif_lend=1&notif_bid=1";
+				string parameters = "users_id=" + Models.LoginCredentials.loginId + "&notif_friends=" + Models.Settings.NotifySettings.notifyfriend + "&notif_lend=" + Models.Settings.NotifySettings.notifyborrow + "&notif_bid=" + Models.Settings.NotifySettings.notifybid;
 				HttpClient connect = new HttpClient();
 				HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
 				get.EnsureSuccessStatusCode();
 
 				string result = await get.Content.ReadAsStringAsync();
 				
-				if(!(result == "0"))
+				if(!(result == "0" | result == "Notifications off"))
 				{
 					lblNotif.Text = "(" + result + ")";
 				}

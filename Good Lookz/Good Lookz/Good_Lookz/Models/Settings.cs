@@ -39,5 +39,12 @@ namespace Good_Lookz.Models
 				public static string colour { get; set; }
 			}
 		}
+
+		public class NotifySettings
+		{
+			public static bool notifyfriend { get; set; }
+			public static bool notifyborrow { get; set; }
+			public static bool notifybid { get; set; }
+		}
 	}
 }

@@ -79,6 +79,9 @@
     <Compile Include="View\SaveSizePage.xaml.cs">
       <DependentUpon>SaveSizePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SettingPages\EditNotifications.xaml.cs">
+      <DependentUpon>EditNotifications.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ShopPages\ChoseShopPage.xaml.cs">
       <DependentUpon>ChoseShopPage.xaml</DependentUpon>
     </Compile>
@@ -538,6 +541,13 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\NotificationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\EditNotifications.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.SettingPages.EditNotifications"
+             Title="Notification settings">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="60*"/>
+      <RowDefinition Height="1*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="30*"/>
+      <ColumnDefinition Width="1*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Column="1" Grid.Row="1" Text="Turn your notifications on or off with the switches below." FontSize="15"/>
+    <TableView Grid.Column="1" Grid.Row="2" Intent="Settings">
+      <TableRoot>
+        <TableSection Title="Notify me for:">
+          <SwitchCell x:Name="scFriend" Text="New friend requests"  OnChanged="Toggled"/>
+          <SwitchCell x:Name="scLend"   Text="New borrow requests"  OnChanged="Toggled"/>
+          <SwitchCell x:Name="scSale"   Text="New sale requests"    OnChanged="Toggled"/>
+        </TableSection>
+      </TableRoot>
+    </TableView>
+  </Grid>
+</ContentPage>

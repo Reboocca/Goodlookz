@@ -34,7 +34,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="20*"/>
               </Grid.ColumnDefinitions>
-              <Button Grid.Column="0" BackgroundColor="{Binding feelingColour}" HorizontalOptions="Center" VerticalOptions="Center" BorderWidth="1" BorderColor="White" WidthRequest="20" HeightRequest="20" BorderRadius="10"/>
+              <StackLayout Grid.Column="0" HorizontalOptions="Center">
+                <Button BackgroundColor="{Binding feelingColour}" HorizontalOptions="Center" VerticalOptions="Center" BorderWidth="1" BorderColor="White" WidthRequest="20" HeightRequest="20" BorderRadius="10"/>
+              </StackLayout>
               <Label x:Name="lbFeelingName" Grid.Column="2" VerticalOptions="Center" Text="{Binding feelingName}" TextColor="{Binding labelColour}" FontSize="15"/>
             </Grid>
           </ViewCell>

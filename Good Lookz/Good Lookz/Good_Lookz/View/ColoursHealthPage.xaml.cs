@@ -17,8 +17,6 @@ namespace Good_Lookz.View
 		{
 			InitializeComponent();
 
-
-			lvFeelings.IsRefreshing = true;
 			getFeelings();
 		}
 
@@ -33,10 +31,8 @@ namespace Good_Lookz.View
 
 		List<Feeling> lstFeeling = new List<Feeling>();
 
-		protected override void OnAppearing()
-		{
-		}
 
+		//Haal de gevoelens op vanuit de database en stop deze in de lijst en listview
 		private async void getFeelings()
 		{
 			string webadres = "http://good-lookz.com/API/colourshealth/getcolours.php";
@@ -51,8 +47,7 @@ namespace Good_Lookz.View
 			{
 				lstFeeling.Add(new Feeling { feelingName = f.colourTitle, feelingColour = Color.FromHex(f.colourHex), labelColour = Color.SlateGray });
 			}
-
-			lvFeelings.IsRefreshing = false;
+			
 			lvFeelings.ItemsSource = lstFeeling;
 		}
 

@@ -28,20 +28,29 @@ namespace Good_Lookz.View
 			try
 			{
 				string webadres			= "http://good-lookz.com/API/notifications/getNotifications.php?";
-				string parameters		= "users_id=" + Models.LoginCredentials.loginId + "&notif_friends=1&notif_lend=1&notif_bid=1";
+				string parameters		= "users_id=" + Models.LoginCredentials.loginId + "&notif_friends=" + Models.Settings.NotifySettings.notifyfriend + "&notif_lend=" + Models.Settings.NotifySettings.notifyborrow + "&notif_bid=" + Models.Settings.NotifySettings.notifybid;
 				HttpClient connect		= new HttpClient();
 				HttpResponseMessage get = await connect.GetAsync(webadres+parameters);
 				get.EnsureSuccessStatusCode();
 
 				string result = await get.Content.ReadAsStringAsync();
-				var jsonresult = JsonConvert.DeserializeObject<List<Models.Notification>>(result);
 
-				foreach (Models.Notification n in jsonresult)
+				if(result == "Notifications off")
 				{
-					lstNotifs.Add(n);
+					lblNotifications.Text = "No new notifications";
 				}
+				else
+				{
+					var jsonresult = JsonConvert.DeserializeObject<List<Models.Notification>>(result);
 
-				lvNotifications.ItemsSource = lstNotifs;
+					foreach (Models.Notification n in jsonresult)
+					{
+						lstNotifs.Add(n);
+					}
+
+					lvNotifications.ItemsSource = lstNotifs;
+				}
+				
 			}
 			catch (Exception)
 			{
@@ -64,13 +73,6 @@ namespace Good_Lookz.View
 					await Navigation.PushAsync(new View.FriendsPages.FriendsRequest(), true);
 					break;
 			}
-
-
-			//Code van: https://forums.xamarin.com/discussion/30328/listview-item-selected-disable
-			//Zorg ervoor dat een item niet geselecteerd kan worden
-			if (e == null) return;
-			((ListView)sender).SelectedItem = null;
-
 		}
 		
 		private async void Delete_Clicked(object sender, EventArgs e)

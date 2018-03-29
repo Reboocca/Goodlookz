@@ -14,102 +14,90 @@ namespace Good_Lookz.View
     /// </summary>
     public partial class SettingsPage : ContentPage
     {
-        async void Logout_Clicked(object sender, EventArgs e)
-        {
-            var answer = await DisplayAlert("Logout?", "Are you sure?", "Yes", "No");
-
-            if (answer == true)
-            {
-                if (Application.Current.Properties.ContainsKey("loginId"))
-                    Application.Current.Properties.Remove("loginId");
-                if (Application.Current.Properties.ContainsKey("loginUsername"))
-                    Application.Current.Properties.Remove("loginUsername");
-                if (Application.Current.Properties.ContainsKey("loginPassword"))
-                    Application.Current.Properties.Remove("loginPassword");
-                if (Application.Current.Properties.ContainsKey("loginFirstname"))
-                    Application.Current.Properties.Remove("loginFirstname");
-                if (Application.Current.Properties.ContainsKey("loginLastname"))
-                    Application.Current.Properties.Remove("loginLastname");
-                if (Application.Current.Properties.ContainsKey("loginEmail"))
-                    Application.Current.Properties.Remove("loginEmail");
-                if (Application.Current.Properties.ContainsKey("loginDate"))
-                    Application.Current.Properties.Remove("loginDate");
-                if (Application.Current.Properties.ContainsKey("loginGender"))
-                    Application.Current.Properties.Remove("loginGender");
-                if (Application.Current.Properties.ContainsKey("loginOffline"))
-                    Application.Current.Properties.Remove("loginOffline");
-                if (Application.Current.Properties.ContainsKey("loginActive"))
-                    Application.Current.Properties.Remove("loginActive");
-
-                wardrobeItems.noItems = false;
-                App.Current.MainPage = new NavigationPage(new SignPage());
-            }
-        }
-
-        /// <summary>
-        /// Instellingen worden opgeslagen in Application properties. 
-        /// </summary>
-        void OnChange1(object sender, System.EventArgs e)
-        {
-            Application.Current.Properties["friendSwitch"] = friendSwitch.On;
-        }
-        void OnChange2(object sender, System.EventArgs e)
-        {
-            Application.Current.Properties["sellSwitch"] = sellSwitch.On;
-        }
-        void OnChange3(object sender, System.EventArgs e)
-        {
-            Application.Current.Properties["requestSwitch"] = requestSwitch.On;
-        }
-        void OnChange4(object sender, System.EventArgs e)
-        {
-            Application.Current.Properties["vibrationSwitch"] = vibrationSwitch.On;
-        }
-
         public SettingsPage()
         {
             InitializeComponent();
-            btnLogout.BackgroundColor = Color.Transparent;
 
-            if (Application.Current.Properties.ContainsKey("friendSwitch"))
-                friendSwitch.On = (bool) Application.Current.Properties["friendSwitch"];
-
-            if (Application.Current.Properties.ContainsKey("sellSwitch"))
-                sellSwitch.On = (bool)Application.Current.Properties["sellSwitch"];
-
-            if (Application.Current.Properties.ContainsKey("requestSwitch"))
-                requestSwitch.On = (bool)Application.Current.Properties["requestSwitch"];
-
-            if (Application.Current.Properties.ContainsKey("vibrationSwitch"))
-                vibrationSwitch.On = (bool)Application.Current.Properties["vibrationSwitch"];
-
-            var loginName = Models.LoginCredentials.loginUsername;
-            var loginPassword = Models.LoginCredentials.loginPassword;
-
-            UsrOrMail.Text = loginName;
-            Password.Text = loginPassword;
-
-            slider.Maximum = 400;
-            slider.Minimum = 0;
-            string distance = "30";
-
-            if (Application.Current.Properties.ContainsKey("distance"))
-                distance = (string)Application.Current.Properties["distance"];
-
-            slider.Value = Double.Parse(distance);
+			getSettings();
         }
 
-        void Handle_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            var distance = slider.Value.ToString();
+		#region Global
+		public class Setting
+		{
+			public string title { get; set; }
+		}
+		new List<Setting> lstSetting = new List<Setting>();
+		#endregion
 
-            int index = distance.IndexOf(".");
-            if (index > 0)
-                distance = distance.Substring(0, index);
+		//Vul de listview met settings
+		private void getSettings()
+		{
+			lstSetting.Add(new Setting { title = "My Account" });
+			lstSetting.Add(new Setting { title = "Notifications" });
+			lstSetting.Add(new Setting { title = "Help" });
+			lstSetting.Add(new Setting { title = "Privacy" });
+			lstSetting.Add(new Setting { title = "Log out" });
 
-            lblDistance.Text = distance;
+			lvSettings.ItemsSource = lstSetting;
+		}
 
-            Application.Current.Properties["distance"] = distance;
-        }
-    }
+		//Wanneer iemand op een setting klikt
+		private void OnItemTapped(object sender, ItemTappedEventArgs e)
+		{
+			//Check waar de gebruiker op heeft geklikt en voer de juiste actie uit
+			switch (((Setting)(lvSettings.SelectedItem)).title)
+			{
+				case "Notifications":
+					Notifications();
+					break;
+				case "Log out":
+					LogOut();
+					break;
+			}
+
+			//Code van: https://forums.xamarin.com/discussion/30328/listview-item-selected-disable
+			//Zorg ervoor dat een item niet geselecteerd kan worden
+			if (e == null) return;
+			((ListView)sender).SelectedItem = null;
+		}
+		
+		private async void Notifications()
+		{
+			//Stuur de gebruiker door naar de notificatie setting pagina
+			await Navigation.PushAsync(new View.SettingPages.EditNotifications(), true);
+		}
+
+		private async void LogOut()
+		{
+			//Logout functie overgenomen van oude versie
+			var answer = await DisplayAlert("Logout?", "Are you sure?", "Yes", "No");
+
+			if (answer == true)
+			{
+				if (Application.Current.Properties.ContainsKey("loginId"))
+					Application.Current.Properties.Remove("loginId");
+				if (Application.Current.Properties.ContainsKey("loginUsername"))
+					Application.Current.Properties.Remove("loginUsername");
+				if (Application.Current.Properties.ContainsKey("loginPassword"))
+					Application.Current.Properties.Remove("loginPassword");
+				if (Application.Current.Properties.ContainsKey("loginFirstname"))
+					Application.Current.Properties.Remove("loginFirstname");
+				if (Application.Current.Properties.ContainsKey("loginLastname"))
+					Application.Current.Properties.Remove("loginLastname");
+				if (Application.Current.Properties.ContainsKey("loginEmail"))
+					Application.Current.Properties.Remove("loginEmail");
+				if (Application.Current.Properties.ContainsKey("loginDate"))
+					Application.Current.Properties.Remove("loginDate");
+				if (Application.Current.Properties.ContainsKey("loginGender"))
+					Application.Current.Properties.Remove("loginGender");
+				if (Application.Current.Properties.ContainsKey("loginOffline"))
+					Application.Current.Properties.Remove("loginOffline");
+				if (Application.Current.Properties.ContainsKey("loginActive"))
+					Application.Current.Properties.Remove("loginActive");
+
+				wardrobeItems.noItems = false;
+				App.Current.MainPage = new NavigationPage(new SignPage());
+			}
+		}
+	}
 }

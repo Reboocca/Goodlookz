@@ -16,7 +16,7 @@
             </ViewCell.ContextActions>
             <StackLayout Orientation="Horizontal" Padding="10">
               <Image Source="{Binding picture}" />
-              <StackLayout HorizontalOptions="StartAndExpand" Padding="10">
+              <StackLayout HorizontalOptions="Center" Padding="10">
                 <StackLayout Orientation="Horizontal">
                   <Label FontSize="15" FontAttributes="Bold" Text="{Binding username}" HorizontalTextAlignment="Start"/>
                   <Label FontSize="15" Text="{Binding message}" HorizontalTextAlignment="Start"/>
