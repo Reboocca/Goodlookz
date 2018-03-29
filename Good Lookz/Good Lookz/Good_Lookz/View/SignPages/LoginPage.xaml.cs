@@ -24,6 +24,10 @@ namespace Good_Lookz.View.SignPages
         public LoginPage()
         {
             InitializeComponent();
+
+			//REMOVE LATER
+			usrOrMail.Text = "rebecca";
+			password.Text = "123";
         }
 
         async void LoginClicked(object sender, EventArgs e)
@@ -110,7 +114,7 @@ namespace Good_Lookz.View.SignPages
                     }
                     else
                     {
-                        var _shops1_id = gets_shopsChosen[0].shops_id;
+						var _shops1_id = gets_shopsChosen[0].shops_id;
                         var _shops2_id = gets_shopsChosen[1].shops_id;
                         var _shops3_id = gets_shopsChosen[2].shops_id;
 
@@ -127,5 +131,6 @@ namespace Good_Lookz.View.SignPages
                 }
             }
         }
+
     }
 }

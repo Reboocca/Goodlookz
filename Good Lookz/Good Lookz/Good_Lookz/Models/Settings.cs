@@ -42,9 +42,9 @@ namespace Good_Lookz.Models
 
 		public class NotifySettings
 		{
-			public static bool notifyfriend { get; set; }
-			public static bool notifyborrow { get; set; }
-			public static bool notifybid { get; set; }
+			public static int notifyfriend { get; set; }
+			public static int notifyborrow { get; set; }
+			public static int notifybid { get; set; }
 		}
 	}
 }

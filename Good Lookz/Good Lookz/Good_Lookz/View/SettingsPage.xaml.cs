@@ -25,6 +25,7 @@ namespace Good_Lookz.View
 		public class Setting
 		{
 			public string title { get; set; }
+			public int id { get; set; }
 		}
 		new List<Setting> lstSetting = new List<Setting>();
 		#endregion
@@ -32,11 +33,11 @@ namespace Good_Lookz.View
 		//Vul de listview met settings
 		private void getSettings()
 		{
-			lstSetting.Add(new Setting { title = "My Account" });
-			lstSetting.Add(new Setting { title = "Notifications" });
-			lstSetting.Add(new Setting { title = "Help" });
-			lstSetting.Add(new Setting { title = "Privacy" });
-			lstSetting.Add(new Setting { title = "Log out" });
+			lstSetting.Add(new Setting { title = "My account",		id = 1 });
+			lstSetting.Add(new Setting { title = "Notifications",	id = 2 });
+			lstSetting.Add(new Setting { title = "Help",			id = 3 });
+			lstSetting.Add(new Setting { title = "Privacy",			id = 4 });
+			lstSetting.Add(new Setting { title = "Log out",			id = 5 });
 
 			lvSettings.ItemsSource = lstSetting;
 		}
@@ -45,12 +46,15 @@ namespace Good_Lookz.View
 		private void OnItemTapped(object sender, ItemTappedEventArgs e)
 		{
 			//Check waar de gebruiker op heeft geklikt en voer de juiste actie uit
-			switch (((Setting)(lvSettings.SelectedItem)).title)
+			switch (((Setting)(lvSettings.SelectedItem)).id)
 			{
-				case "Notifications":
+				case 1:
+					MyAccount();
+					break;
+				case 2:
 					Notifications();
 					break;
-				case "Log out":
+				case 5:
 					LogOut();
 					break;
 			}
@@ -60,7 +64,13 @@ namespace Good_Lookz.View
 			if (e == null) return;
 			((ListView)sender).SelectedItem = null;
 		}
-		
+
+		private async void MyAccount()
+		{
+			//Stuur de gebruiker door naar de notificatie setting pagina
+			await Navigation.PushAsync(new View.SettingPages.EditAccount(), true);
+		}
+
 		private async void Notifications()
 		{
 			//Stuur de gebruiker door naar de notificatie setting pagina

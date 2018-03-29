@@ -41,6 +41,9 @@ namespace Good_Lookz.View
 
         protected override async void OnAppearing()
         {
+			//Get notification settings van de gebruiker
+			getNotifySettings();
+
 			//Check of de user notitifcaties heeft
 			getNotifCount();
 
@@ -91,6 +94,40 @@ namespace Good_Lookz.View
                 await DisplayAlert("Message", "Unable to get location", "OK");
             }
         }
+
+		class jsonResultNotification
+		{
+			public int notifyfriend { get; set; }
+			public int notifyborrow { get; set; }
+			public int notifybid { get; set; }
+		}
+
+		private async void getNotifySettings()
+		{
+
+			try
+			{
+				//Stuur verzoek naar web API om de json op te halen
+				string webadres = "http://good-lookz.com/API/account/getNotifySettings.php?";
+				string parameters = "users_id=" + Models.LoginCredentials.loginId;
+				HttpClient connect = new HttpClient();
+				HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+				get.EnsureSuccessStatusCode();
+
+				//Sla het resultaat van de JSON op
+				string result = await get.Content.ReadAsStringAsync();
+				var jsonresult = JsonConvert.DeserializeObject<List<jsonResultNotification>>(result);
+
+				//Stop JSON resultaat in de class met static variabelen
+				Models.Settings.NotifySettings.notifyfriend = jsonresult[0].notifyfriend;
+				Models.Settings.NotifySettings.notifyborrow = jsonresult[0].notifyborrow;
+				Models.Settings.NotifySettings.notifybid = jsonresult[0].notifybid;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 
 		private async void getNotifCount()
 		{
