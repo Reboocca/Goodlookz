@@ -35,7 +35,7 @@ namespace Good_Lookz.View
 
 				string result = await get.Content.ReadAsStringAsync();
 
-				if(result == "Notifications off")
+				if(result == "Notifications off" || result == "[]")
 				{
 					lblNotifications.Text = "No new notifications";
 				}

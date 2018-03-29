@@ -32,25 +32,25 @@
       <ColumnDefinition Width="1*"/>
     </Grid.ColumnDefinitions>
 
-    <Label Grid.Row="1" Grid.Column="1" FontSize="17" Text="Your personal information is listed below:" HorizontalTextAlignment="Center"/>
+    <Label Grid.Row="1" Grid.Column="1" FontSize="17" Text="Your personal information is listed below, don't forget to save your changes!"/>
     
-    <Label Grid.Row="3" Grid.Column="1" FontSize="15" Text="First name"/>
-    <Entry x:Name="fName" Grid.Row="4" Grid.Column="1" FontSize="17" Placeholder="Insert your first name here"/>
+    <Label Grid.Row="3" Grid.Column="1" FontSize="15" Text="Change your first name here:" FontAttributes="Bold"/>
+    <Entry x:Name="fName" Grid.Row="4" Grid.Column="1" FontSize="17" Placeholder="First name"/>
 
 
-    <Label Grid.Row="6" Grid.Column="1" FontSize="15" Text="Last name"/>
-    <Entry x:Name="lName" Grid.Row="7" Grid.Column="1" FontSize="17" Placeholder="Insert your last name here"/>
+    <Label Grid.Row="6" Grid.Column="1" FontSize="15" Text="Change your last name here:" FontAttributes="Bold"/>
+    <Entry x:Name="lName" Grid.Row="7" Grid.Column="1" FontSize="17" Placeholder="Last name"/>
 
-    <Label Grid.Row="9" Grid.Column="1" FontSize="15" Text="Your gender"/>
-    <Picker x:Name="cbGender" Grid.Row="10" Grid.Column="1" Title="Select your gender" SelectedIndexChanged="cbGender_SelectedIndexChanged">
+    <Label Grid.Row="9" Grid.Column="1" FontSize="15" Text="Select your gender:" FontAttributes="Bold"/>
+    <Picker x:Name="cbGender" Grid.Row="10" Grid.Column="1" Title="Your gender" SelectedIndexChanged="cbGender_SelectedIndexChanged">
       <Picker.Items>
         <x:String>Female</x:String>
         <x:String>Male</x:String>
       </Picker.Items>
     </Picker>
 
-    <Label Grid.Row="12" Grid.Column="1" FontSize="15" Text="Your region"/>
-    <Picker x:Name="cbRegion" Grid.Row="13" Grid.Column="1" Title="Select your region" SelectedIndexChanged="cbRegion_SelectedIndexChanged">
+    <Label Grid.Row="12" Grid.Column="1" FontSize="15" Text="Select your region:" FontAttributes="Bold"/>
+    <Picker x:Name="cbRegion" Grid.Row="13" Grid.Column="1" Title="Your region" SelectedIndexChanged="cbRegion_SelectedIndexChanged">
       <Picker.Items>
         <x:String>EU</x:String>
         <x:String>US</x:String>
@@ -58,7 +58,7 @@
       </Picker.Items>
     </Picker>
 
-    <Label Grid.Row="15" Grid.Column="1" FontSize="15" Text="Your top, bottom and feet sizes"/>
+    <Label Grid.Row="15" Grid.Column="1" FontSize="15" Text="Your sizes are listed down below:" FontAttributes="Bold"/>
     <Grid Grid.Row="16" Grid.Column="1">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="1*"/>

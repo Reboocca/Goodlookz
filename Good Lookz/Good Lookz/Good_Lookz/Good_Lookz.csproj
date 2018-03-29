@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Behavior\CompareValidationBehavior.cs" />
     <Compile Include="Behavior\EmailEntry.cs" />
     <Compile Include="Behavior\NumberEntry.cs" />
     <Compile Include="Models\CreateAccount.cs" />
@@ -81,6 +82,9 @@
     </Compile>
     <Compile Include="View\SettingPages\ChangeInfo.xaml.cs">
       <DependentUpon>ChangeInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPages\ChangePassword.xaml.cs">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SettingPages\EditAccount.xaml.cs">
       <DependentUpon>EditAccount.xaml</DependentUpon>
@@ -565,6 +569,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\SettingPages\ChangeInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\ChangePassword.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
