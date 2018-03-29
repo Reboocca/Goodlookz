@@ -44,9 +44,6 @@ namespace Good_Lookz.View
 			//Get notification settings van de gebruiker
 			getNotifySettings();
 
-			//Check of de user notitifcaties heeft
-			getNotifCount();
-
 			// Request checker
 			var data = Models.LoginCredentials.loginId;
             string URL = string.Format(url, data);
@@ -122,6 +119,9 @@ namespace Good_Lookz.View
 				Models.Settings.NotifySettings.notifyfriend = jsonresult[0].notifyfriend;
 				Models.Settings.NotifySettings.notifyborrow = jsonresult[0].notifyborrow;
 				Models.Settings.NotifySettings.notifybid = jsonresult[0].notifybid;
+
+				//Check of de user notitifcaties heeft
+				getNotifCount();
 			}
 			catch (Exception)
 			{

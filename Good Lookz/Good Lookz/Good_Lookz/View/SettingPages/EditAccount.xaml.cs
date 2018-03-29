@@ -30,9 +30,8 @@ namespace Good_Lookz.View.SettingPages
 		private void getSettings()
 		{
 			lstSetting.Add(new AccountSetting { title = "Personal information", id = 1 });
-			lstSetting.Add(new AccountSetting { title = "My size",				id = 2 });
-			lstSetting.Add(new AccountSetting { title = "Change password",		id = 3 });
-			lstSetting.Add(new AccountSetting { title = "Change e-mail",		id = 4 });
+			lstSetting.Add(new AccountSetting { title = "Change password",		id = 2 });
+			lstSetting.Add(new AccountSetting { title = "Change e-mail",		id = 3 });
 
 			lvAccSettings.ItemsSource = lstSetting;
 		}
@@ -49,8 +48,6 @@ namespace Good_Lookz.View.SettingPages
 				case 2:
 					break;
 				case 3:
-					break;
-				case 4:
 					break;
 			}
 

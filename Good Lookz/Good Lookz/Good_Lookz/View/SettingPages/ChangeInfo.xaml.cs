@@ -175,69 +175,75 @@ namespace Good_Lookz.View.SettingPages
 
 		private async void UpdateUserInfo(object sender, EventArgs e)
 		{
-
-			if (topSize.SelectedIndex == -1 || bottomSize.SelectedIndex == -1 || feetSize.SelectedIndex == -1)
+			if(string.IsNullOrEmpty(fName.Text) | string.IsNullOrEmpty(lName.Text))
 			{
-				await DisplayAlert("Error", "Please tell us your size before proceeding.", "OK");
+				await DisplayAlert("Warning", "Don't leave the first or last name box empty", "OK");
 			}
 			else
 			{
-				//Sla de gegevens op in de dbs
-				try
+				if (topSize.SelectedIndex == -1 || bottomSize.SelectedIndex == -1 || feetSize.SelectedIndex == -1)
 				{
-					//Haal vereisten gegevens op
-					var users_id = Models.LoginCredentials.loginId;
-					Models.Sizes.AllSizes top = new Models.Sizes.AllSizes();
-					Models.Sizes.AllSizes bot = new Models.Sizes.AllSizes();
-					Models.Sizes.AllSizes feet = new Models.Sizes.AllSizes();
-
-					foreach (Models.Sizes.AllSizes i in lstSizes)
-					{
-						if (i.sSize == topSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "top")
-						{
-							top = i;
-						}
-					}
-					foreach (Models.Sizes.AllSizes i in lstSizes)
-					{
-						if (i.sSize == bottomSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "bottom")
-						{
-							bot = i;
-						}
-					}
-					foreach (Models.Sizes.AllSizes i in lstSizes)
-					{
-						if (i.sSize == feetSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "feet")
-						{
-							feet = i;
-						}
-					}
-
-					string webadres = "http://good-lookz.com/API/account/updateUserInfo.php?";
-					string parameters = "users_id=" + Models.LoginCredentials.loginId + "&fname=" + fName.Text + "&lname=" + lName.Text + "&region=" + feet.sRegion + "&gender=" + feet.sGender + "&topsize=" + top.sNr + "&botsize=" + bot.sNr + "&feetsize=" + feet.sNr;
-
-					HttpClient connect = new HttpClient();
-					HttpResponseMessage update = await connect.GetAsync(webadres + parameters);
-					update.EnsureSuccessStatusCode();
-					string result = await update.Content.ReadAsStringAsync();
-
-					if (result == "Success")
-					{
-						await DisplayAlert("Success", "Changes have been saved!", "OK");
-
-						Models.LoginCredentials.loginFirstname	= fName.Text;
-						Models.LoginCredentials.loginLastname	= lName.Text;
-
-						await this.Navigation.PopAsync();
-					}
-					else if (result == "Failed")
-					{
-						await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
-					}
+					await DisplayAlert("Warning", "Please fill in your size before proceeding.", "OK");
 				}
-				catch
+				else
 				{
-					throw;
+					//Sla de gegevens op in de dbs
+					try
+					{
+						//Haal vereisten gegevens op
+						var users_id = Models.LoginCredentials.loginId;
+						Models.Sizes.AllSizes top = new Models.Sizes.AllSizes();
+						Models.Sizes.AllSizes bot = new Models.Sizes.AllSizes();
+						Models.Sizes.AllSizes feet = new Models.Sizes.AllSizes();
+
+						foreach (Models.Sizes.AllSizes i in lstSizes)
+						{
+							if (i.sSize == topSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "top")
+							{
+								top = i;
+							}
+						}
+						foreach (Models.Sizes.AllSizes i in lstSizes)
+						{
+							if (i.sSize == bottomSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "bottom")
+							{
+								bot = i;
+							}
+						}
+						foreach (Models.Sizes.AllSizes i in lstSizes)
+						{
+							if (i.sSize == feetSize.SelectedItem.ToString() && i.sRegion == _Region && i.sGender == _Gender && i.sType == "feet")
+							{
+								feet = i;
+							}
+						}
+
+						string webadres = "http://good-lookz.com/API/account/updateUserInfo.php?";
+						string parameters = "users_id=" + Models.LoginCredentials.loginId + "&fname=" + fName.Text + "&lname=" + lName.Text + "&region=" + feet.sRegion + "&gender=" + feet.sGender + "&topsize=" + top.sNr + "&botsize=" + bot.sNr + "&feetsize=" + feet.sNr;
+
+						HttpClient connect = new HttpClient();
+						HttpResponseMessage update = await connect.GetAsync(webadres + parameters);
+						update.EnsureSuccessStatusCode();
+						string result = await update.Content.ReadAsStringAsync();
+
+						if (result == "Success")
+						{
+							await DisplayAlert("Success", "Changes have been saved!", "OK");
+
+							Models.LoginCredentials.loginFirstname = fName.Text;
+							Models.LoginCredentials.loginLastname = lName.Text;
+
+							await this.Navigation.PopAsync();
+						}
+						else if (result == "Failed")
+						{
+							await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+						}
+					}
+					catch
+					{
+						throw;
+					}
 				}
 			}
 		}
