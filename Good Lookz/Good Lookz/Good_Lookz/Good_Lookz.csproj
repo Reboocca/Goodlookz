@@ -74,6 +74,12 @@
     <Compile Include="View\FriendsPages\FriendsRequest.xaml.cs">
       <DependentUpon>FriendsRequest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\InYourColourPage.xaml.cs">
+      <DependentUpon>InYourColourPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InYourColourWebview.xaml.cs">
+      <DependentUpon>InYourColourWebview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NotificationPage.xaml.cs">
       <DependentUpon>NotificationPage.xaml</DependentUpon>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="View\SettingPages\ChangeInfo.xaml.cs">
       <DependentUpon>ChangeInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SettingPages\ChangeMail.xaml.cs">
+      <DependentUpon>ChangeMail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SettingPages\ChangePassword.xaml.cs">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
     </Compile>
@@ -91,6 +100,18 @@
     </Compile>
     <Compile Include="View\SettingPages\EditNotifications.xaml.cs">
       <DependentUpon>EditNotifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPages\Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPages\PP.xaml.cs">
+      <DependentUpon>PP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPages\Privacy.xaml.cs">
+      <DependentUpon>Privacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPages\TOC.xaml.cs">
+      <DependentUpon>TOC.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ShopPages\ChoseShopPage.xaml.cs">
       <DependentUpon>ChoseShopPage.xaml</DependentUpon>
@@ -575,6 +596,48 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\SettingPages\ChangePassword.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\ChangeMail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\Help.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\Privacy.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\TOC.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\PP.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\InYourColourPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\InYourColourWebview.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

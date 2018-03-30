@@ -49,6 +49,7 @@ namespace Good_Lookz.View.SettingPages
 					editPwd();
 					break;
 				case 3:
+					editMail();
 					break;
 			}
 
@@ -68,6 +69,12 @@ namespace Good_Lookz.View.SettingPages
 		{
 			//Stuur de gebruiker door naar de persoonlijke gegevens pagina
 			await Navigation.PushAsync(new View.SettingPages.ChangePassword(), true);
+		}
+
+		private async void editMail()
+		{
+			//Stuur de gebruiker door naar de persoonlijke gegevens pagina
+			await Navigation.PushAsync(new View.SettingPages.ChangeMail(), true);
 		}
 	}
 }

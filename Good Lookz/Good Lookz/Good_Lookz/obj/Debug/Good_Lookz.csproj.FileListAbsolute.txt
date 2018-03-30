@@ -283,5 +283,12 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\G
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.EditAccount.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.ChangeInfo.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.ChangePassword.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.ChangeMail.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.Help.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.Privacy.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.TOC.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.PP.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.InYourColourPage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.InYourColourWebview.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb

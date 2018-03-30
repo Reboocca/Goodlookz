@@ -189,7 +189,7 @@ namespace Good_Lookz.View
 
 		async void ColoursClicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new View.ColoursHealthPage(), true);
+			await Navigation.PushAsync(new View.InYourColourPage(), true);
 		}
 
 		async void NotificationClicked(object sender, EventArgs e)

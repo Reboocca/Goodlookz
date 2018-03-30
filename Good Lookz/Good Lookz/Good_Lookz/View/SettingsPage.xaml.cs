@@ -54,6 +54,12 @@ namespace Good_Lookz.View
 				case 2:
 					Notifications();
 					break;
+				case 3:
+					Help();
+					break;
+				case 4:
+					Pricacy();
+					break;
 				case 5:
 					LogOut();
 					break;
@@ -75,6 +81,18 @@ namespace Good_Lookz.View
 		{
 			//Stuur de gebruiker door naar de notificatie setting pagina
 			await Navigation.PushAsync(new View.SettingPages.EditNotifications(), true);
+		}
+
+		private async void Help()
+		{
+			//Stuur de gebruiker door naar de help pagina
+			await Navigation.PushAsync(new View.SettingPages.Help(), true);
+		}
+
+		private async void Pricacy()
+		{
+			//Stuur de gebruiker door naar de privacy pagina
+			await Navigation.PushAsync(new View.SettingPages.Privacy(), true);
 		}
 
 		private async void LogOut()
