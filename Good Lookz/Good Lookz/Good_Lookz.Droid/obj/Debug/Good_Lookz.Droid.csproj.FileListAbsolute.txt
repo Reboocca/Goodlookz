@@ -435,5 +435,7 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\G
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\iyc_logo.png
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\iyc_logo_white.png
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\Good Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll.mdb

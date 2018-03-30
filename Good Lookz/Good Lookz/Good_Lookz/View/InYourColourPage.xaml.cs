@@ -16,6 +16,7 @@ namespace Good_Lookz.View
 		public InYourColourPage()
 		{
 			InitializeComponent();
+			
 			getFeelings();
 		}
 
@@ -47,7 +48,9 @@ namespace Good_Lookz.View
 				lstFeeling.Add(new Feeling { feelingName = f.colourTitle, feelingColour = Color.FromHex(f.colourHex), labelColour = Color.SlateGray });
 			}
 
+			await lvFeelings.FadeTo(0, 1);
 			lvFeelings.ItemsSource = lstFeeling;
+			lvFeelings.FadeTo(1, 500);
 		}
 
 		private void OnItemTapped(object sender, ItemTappedEventArgs e)
@@ -61,11 +64,28 @@ namespace Good_Lookz.View
 				f.labelColour = Color.White;
 			}
 
-			lblTitle.TextColor = Color.White;
-			lblWeb.TextColor = Color.White;
+			//Check of de het logo gewijzigd is, zo niet verander de image source
+			var source = imgLogo.Source as FileImageSource;
+			if (source != null)
+			{
+				var filename = source.File;
 
+				if(source.File == "iyc_logo.png")
+				{
+					imgLogo.FadeTo(0, 500);
+					imgLogo.Source = "iyc_logo_white.png";
+					imgLogo.FadeTo(1, 500);
+				}
+			}
+
+			lblTitle.TextColor = Color.White;
+
+			lblTitle.FadeTo(0, 500);
+			lvFeelings.FadeTo(0, 500);
 			lvFeelings.ItemsSource = null;
 			lvFeelings.ItemsSource = lstFeeling;
+			lvFeelings.FadeTo(1, 500);
+			lblTitle.FadeTo(1, 500);
 
 			//Code van: https://forums.xamarin.com/discussion/30328/listview-item-selected-disable
 			//Zorg ervoor dat een item niet geselecteerd kan worden
@@ -73,7 +93,7 @@ namespace Good_Lookz.View
 			((ListView)sender).SelectedItem = null;
 		}
 
-		private async void lblClicked(object sender, EventArgs e)
+		private async void logoClicked(object sender, EventArgs e)
 		{
 			//Open de pagina met de webview van inyourcolour.com
 			await Navigation.PushAsync(new View.InYourColourWebview(), true);

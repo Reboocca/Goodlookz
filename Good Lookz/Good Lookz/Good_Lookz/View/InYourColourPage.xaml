@@ -8,9 +8,9 @@
       <RowDefinition Height="1*"/>
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="1*"/>
-      <RowDefinition Height="30*"/>
-      <RowDefinition Height="1*"/>
       <RowDefinition Height="Auto"/>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="10*"/>
       <RowDefinition Height="1*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
@@ -18,7 +18,7 @@
       <ColumnDefinition Width="25*"/>
       <ColumnDefinition Width="1*"/>
     </Grid.ColumnDefinitions>
-    <Label x:Name="lblTitle" Text="In Your Colour stands for clear and accessible way to display the effect of colours. The right colour can make people feel better, click on a feeling below!"
+    <Label x:Name="lblTitle" Text="In Your Colour stands for a clear and accessible way to display the effect of colours. The right colour can make people feel better, click on a feeling below!"
            Grid.Column="1" Grid.Row="1" FontSize="15" HorizontalTextAlignment="Center"/>
 
     <ListView x:Name="lvFeelings" Grid.Column="1" Grid.Row="3" ItemTapped="OnItemTapped">
@@ -44,11 +44,10 @@
       </ListView.ItemTemplate>
     </ListView>
 
-    <Label x:Name="lblWeb" Text="Click here for more information about Colours Health."
-       Grid.Column="1" Grid.Row="5" FontSize="13" HorizontalTextAlignment="Center">
-      <Label.GestureRecognizers>
-        <TapGestureRecognizer Tapped="lblClicked"/>
-      </Label.GestureRecognizers>
-    </Label>
+    <Image x:Name="imgLogo" Grid.Column="1" Grid.Row="5" Source="iyc_logo.png">
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer Tapped="logoClicked"/>
+      </Image.GestureRecognizers>
+    </Image>
   </Grid>
 </ContentPage>

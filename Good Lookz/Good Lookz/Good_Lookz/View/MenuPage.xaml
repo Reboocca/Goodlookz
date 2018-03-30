@@ -43,7 +43,7 @@
       <Button Grid.Row="2"
               Grid.Column="0"
               Clicked="ColoursClicked"
-              Text="Colours Health"
+              Text="In Your Colour"
               TextColor="Red"
               BorderWidth="1"
               BorderRadius="4"
