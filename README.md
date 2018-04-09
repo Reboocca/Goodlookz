@@ -1,43 +1,21 @@
 # Goodlookz
-
-README van F. Demirci:
-
-Bevat 4 mappen: 
-
-* WEB-API
-* Good-Lookz
-* Documentatie
-* Database
-
----------------- WEB-API ----------------
-
-Hier bevat een backup van de WEB-API. Ook staat de WEB-API in htdocs:
-C:\xampp\htdocs\WebAPI
-
-De WEB-API bestaat uit meerdere mappen maar de map API word gebruikt voor het WEB-API.
+Algemene informatie over de GoodLookz
 
 
----------------- Good-Lookz ----------------
+#### Documentatie
+De documentatie van de applicatie is te vinden in de map "docs", hierin staat ook de documentatie van de vorige versie.
 
-Hier bevat een backup van Good-Lookz. Ook staat de applicatie in:
-C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz
+| Titel                           | Versie | Datum            |
+| ------------------------------- | ------ | ---------------- |
+| Testrapport begin applicatie    | v1.00  | 03 februari 2018 |
+| Plan van aanpak                 | v1.00  | 13 maart 2018    |
+| Functioneel ontwerp             | v1.00  | 14 maart 2018    |
+| Technisch ontwerp               | v1.01  | 03 april 2018    |
 
-Good-Lookz structuur en hoe het werkt staat beschreven in het documentatie.
+(nog meer toevoegen)
 
-Visual Studio met xamarin word gebruikt om het app te creeren. 
-Verwijder geen bestanden of programmas anders krijg je fout meldingen.
-Xamarin is heel gevoelig.
+#### Trello
+De meeste voortgang is overigens ook opgeslagen op de Trello pagina in de vorm van verschillende checklisten. Even aan Jeroen vragen of je hier aan toegevoegd kan worden. Er staat algemene informatie op van de functionaliteiten wat handig kan zijn!
 
-
----------------- Documentatie ----------------
-
-Hier bevindt zich de documentatie over Good-Lookz en WEB-API. Alles is hier terug te vinden van functionaliteit 
-tot technische aspecten.
-
----------------- Database ----------------
-
-Hier bevindt zich 2 backups van het database. 
-In SQL en in JSON. 
-
-Database staat online gebruik dit alleen in nood. 
-
+#### Web API
+De vorige programmeur maakte gebruik van een WEB API die JSON resultaten weer liet zien aan de applicatie om zo database functionaliteiten uit te voeren.
