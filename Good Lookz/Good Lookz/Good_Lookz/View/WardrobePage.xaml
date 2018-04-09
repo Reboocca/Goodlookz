@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="Good_Lookz.View.WardrobePage"
+             Title="Wardrobe"
+             BackgroundColor="White">
+<!-- CarouselView weergave word hiervoor gebruikt. Dit is een plugin dat ervoor zorgt dat je de items van links naar rechts kan schuiven. -->
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="3"/>
+      <RowDefinition Height="11*"/>
+      <RowDefinition Height="100*"/>
+      <RowDefinition Height="11*"/>
+      <RowDefinition Height="11*"/>
+      <RowDefinition Height="3"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="3"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="3"/>
+    </Grid.ColumnDefinitions>
+
+    <Button Grid.Row="1" Grid.Column="1" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Friends" Clicked="Friends_Clicked" />
+    <Button Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Lend" Clicked="Lending_Clicked" />
+    <Button Grid.Row="1" Grid.Column="3" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Sell" Clicked="Selling_Clicked" />
+
+    <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" VerticalOptions="FillAndExpand" Padding="10">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="50" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="50" />
+      </Grid.ColumnDefinitions>
+      <ActivityIndicator Grid.Row="0" Grid.ColumnSpan="2" x:Name="loadingHead" />
+      <Image Grid.Row="0" Grid.Column="0" Source="arrow_left.png" HeightRequest="20" />
+      <forms:CarouselView Grid.Row="0" Grid.Column="1" x:Name="CarouselViewHead" ItemSelected="CarouselViewHead_Selected" >
+        <forms:CarouselView.ItemTemplate>
+          <DataTemplate>
+            <Image>
+              <Image.Source>
+                <UriImageSource CachingEnabled="False" Uri="{Binding picture}" />
+              </Image.Source>
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="headTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+          </DataTemplate>
+        </forms:CarouselView.ItemTemplate>
+      </forms:CarouselView>
+      <Image Grid.Row="0" Grid.Column="2" Source="arrow_right.png" WidthRequest="50" />
+      <Image Grid.Row="1" Grid.Column="0" Source="arrow_left.png" WidthRequest="50" />
+      <ActivityIndicator Grid.Row="1" Grid.ColumnSpan="2" x:Name="loadingTop" />
+      <forms:CarouselView Grid.Row="1" Grid.Column="1" x:Name="CarouselViewTop" ItemSelected="CarouselViewTop_Selected" >
+        <forms:CarouselView.ItemTemplate>
+          <DataTemplate>
+            <Image>
+              <Image.Source>
+                <UriImageSource CachingEnabled="False" Uri="{Binding picture}" />
+              </Image.Source>
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="topTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+          </DataTemplate>
+        </forms:CarouselView.ItemTemplate>
+      </forms:CarouselView>
+      <Image Grid.Row="1" Grid.Column="2" Source="arrow_right.png" WidthRequest="50" />
+      <Image Grid.Row="2" Grid.Column="0" Source="arrow_left.png" WidthRequest="50" />
+      <ActivityIndicator Grid.Row="2" Grid.ColumnSpan="2" x:Name="loadingBottom" />
+      <forms:CarouselView Grid.Row="2" Grid.Column="1" x:Name="CarouselViewBottom" ItemSelected="CarouselViewBottom_Selected" >
+        <forms:CarouselView.ItemTemplate>
+          <DataTemplate>
+            <Image>
+              <Image.Source>
+                <UriImageSource CachingEnabled="False" Uri="{Binding picture}" />
+              </Image.Source>
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="bottomTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+          </DataTemplate>
+        </forms:CarouselView.ItemTemplate>
+      </forms:CarouselView>
+      <Image Grid.Row="2" Grid.Column="2" Source="arrow_right.png" WidthRequest="50" />
+      <Image Grid.Row="3" Grid.Column="0" Source="arrow_left.png" WidthRequest="50" />
+      <ActivityIndicator Grid.Row="3" Grid.ColumnSpan="2" x:Name="loadingFeet" />
+      <forms:CarouselView Grid.Row="3" Grid.Column="1" x:Name="CarouselViewFeet" ItemSelected="CarouselViewFeet_Selected" >
+        <forms:CarouselView.ItemTemplate>
+          <DataTemplate>
+            <Image>
+              <Image.Source>
+                <UriImageSource CachingEnabled="False" Uri="{Binding picture}" />
+              </Image.Source>
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="feetTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+          </DataTemplate>
+        </forms:CarouselView.ItemTemplate>
+      </forms:CarouselView>
+      <Image Grid.Row="3" Grid.Column="2" Source="arrow_right.png" WidthRequest="50" />
+    </Grid>
+    
+    <Button Grid.Row="3" Grid.Column="1" BackgroundColor="White" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Add" Clicked="Add_Clicked"/>
+    <Button Grid.Row="3" Grid.Column="2" BackgroundColor="White" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Save Set" Clicked="SetSave_Clicked"/>
+    <Button Grid.Row="3" Grid.Column="3" BackgroundColor="White" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Sets" Clicked="Sets_Clicked"/>
+
+    <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="White" FontSize="15" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Filter wardrobe" Clicked="btnFilter_Clicked"/>
+  </Grid>
+</ContentPage>

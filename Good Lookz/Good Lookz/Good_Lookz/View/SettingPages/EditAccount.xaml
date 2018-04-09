@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.SettingPages.EditAccount"
+             Title="My account"
+             BackgroundColor="White">
+  <ContentPage.Content>
+    <ListView x:Name="lvAccSettings" RowHeight="50" ItemTapped="OnItemTapped">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout VerticalOptions="Center">
+                <Label FontSize="17" Text="{Binding title}" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage.Content>
+</ContentPage>

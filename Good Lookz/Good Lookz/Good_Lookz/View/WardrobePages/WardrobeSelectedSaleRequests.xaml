@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeSelectedSaleRequests"
+             Title="Selected request">
+  <Grid Padding="5" >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="20*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="2" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="3"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="10*"/>
+      <ColumnDefinition Width="3"/>
+    </Grid.ColumnDefinitions>
+    
+    <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center" >
+      <Label x:Name="lbBidderUsername" FontSize="15" FontAttributes="Bold"/>
+      <Label FontSize="15" Text="made an offer" />
+    </StackLayout>
+    <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="imageItem"  Aspect="AspectFill"/>
+    <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" >
+      <Label Text="Own price:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblPrice" FontSize="15"/>
+    </StackLayout>
+    <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalOptions="End" >
+      <Label Text="Bidding:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblBidding" FontSize="15"/>
+    </StackLayout>
+    <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Vertical" >
+      <Label Text="Message:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblComments" FontSize="15"  />
+    </StackLayout>
+    <StackLayout Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" >
+      <Label x:Name="lblUsrname_buyer" FontSize="15" FontAttributes="Bold"/>
+      <Label FontSize="14" Text="Has bid on your item, want to contact them? Click the button below to provide them your contact information." />
+    </StackLayout>
+    <Button x:Name="btnContact" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnContact_Clicked" />
+  </Grid>
+</ContentPage>

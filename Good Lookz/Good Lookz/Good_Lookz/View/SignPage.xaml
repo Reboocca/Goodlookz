@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Good_Lookz.MarkupExtensions;"
+             x:Class="Good_Lookz.View.SignPage"
+             Title="Good Lookz"
+             BackgroundColor="White">
+
+  <StackLayout Padding="20, 20, 20, 5" BackgroundColor="White" >
+    <StackLayout VerticalOptions="Start" Padding="0, 80, 0, 0">
+      <Image Source="goodlookz.png" Aspect="AspectFit"/>
+    </StackLayout>
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+      <!-- middle controls -->
+    </StackLayout>
+
+    <StackLayout VerticalOptions="End">
+      <Label Text="Login or create account"
+           TextColor="#bd0926"
+           FontSize="20"
+           HorizontalOptions="Center" />
+
+      <Button Text="Login"
+              TextColor="Red"
+              BorderWidth="1"
+              BorderRadius="4"
+              BorderColor="Red"
+              BackgroundColor="White"
+              HeightRequest="40"
+              HorizontalOptions="Fill"
+              Clicked="LoginClicked" />
+      <Button Text="Create account"
+              TextColor="Red"
+              BorderWidth="1"
+              BorderRadius="4"
+              BorderColor="Red"
+              BackgroundColor="White"
+              HeightRequest="40"
+              HorizontalOptions="Fill"
+              Clicked="CreateClicked"/>
+      <StackLayout Padding="0, 10, 0, 0">
+        <Label Text="2017 4People Communications" TextColor="Red" HorizontalTextAlignment="Center" />
+      </StackLayout>
+    </StackLayout>
+    
+    <!--
+    <StackLayout VerticalOptions="Center" >
+      <Image Source="goodlookz.png"/>
+    </StackLayout>
+    
+    <StackLayout VerticalOptions="End" >
+      <Label Text="Login or create account"
+           TextColor="#bd0926"
+           FontSize="20"
+           HorizontalOptions="Center" />
+
+      <Button Text="Login"
+              TextColor="Red"
+              BorderWidth="1"
+              BorderRadius="4"
+              BorderColor="Red"
+              BackgroundColor="White"
+              HeightRequest="40"
+              HorizontalOptions="Fill"
+              Clicked="LoginClicked" />
+      <Button Text="Create account"
+              TextColor="Red"
+              BorderWidth="1"
+              BorderRadius="4"
+              BorderColor="Red"
+              BackgroundColor="White"
+              HeightRequest="40"
+              HorizontalOptions="Fill"
+              Clicked="CreateClicked"/>
+    </StackLayout>
+    -->
+  </StackLayout>
+</ContentPage>

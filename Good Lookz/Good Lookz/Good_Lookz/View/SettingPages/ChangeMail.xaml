@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.SettingPages.ChangeMail"
+             xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
+             Title="Change e-mail">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="10*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="30*"/>
+      <ColumnDefinition Width="1*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="1" Grid.Column="1" FontSize="17" Text="To change your e-mail, simply fill in a new e-mail and hit the save button."/>
+
+    <Label Grid.Row="3" Grid.Column="1" FontSize="15" Text="Your current e-mail address is listed below:" FontAttributes="Bold"/>
+    <Entry x:Name="newMail" Grid.Row="4" Grid.Column="1" FontSize="17" Keyboard="Email">
+      <Entry.Behaviors>
+        <behavior:EmailEntry/>
+      </Entry.Behaviors>
+    </Entry>
+
+    <Label Grid.Row="6" Grid.Column="1" FontSize="15" Text="Fill in your password:" FontAttributes="Bold"/>
+    <Entry x:Name="cPwd" Grid.Row="7" Grid.Column="1" FontSize="17" IsPassword="True" Placeholder="Password"/>
+
+    <Button Clicked="changeMail" Grid.Row="9" Grid.Column="1" Text="Change e-mail" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40"/>
+
+  </Grid>
+</ContentPage>

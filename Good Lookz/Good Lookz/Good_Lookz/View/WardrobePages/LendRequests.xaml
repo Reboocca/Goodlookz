@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.LendRequests"
+             Title="Lend requests">
+  <StackLayout Padding="10" >
+    <StackLayout Padding="0, 5, 0, 0" Orientation="Horizontal" HorizontalOptions="Center" >
+      <Label x:Name="lblRequests" FontSize="15" FontAttributes="Bold" />
+    </StackLayout>
+    <ListView x:Name="lendRequests" ItemTapped="Lend_Tapped" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.ContextActions>
+              <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding lend_id}" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Orientation="Horizontal" Padding="10">
+              <Image Source="{Binding picture}" />
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                  <Label FontSize="15" FontAttributes="Bold" Text="{Binding username}" HorizontalTextAlignment="End" />
+                  <Label FontSize="15" Text="wants to borrow" HorizontalTextAlignment="End" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                  <Label FontSize="12" Text="On" HorizontalTextAlignment="End" />
+                  <Label FontSize="12" FontAttributes="Bold" Text="{Binding date}" HorizontalTextAlignment="End"/>
+                </StackLayout>
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

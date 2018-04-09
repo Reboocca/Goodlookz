@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20, 10, 20, 10"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.MenuPage"
+             Title="Good Lookz"
+             BackgroundColor="White">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name="lblNotif" Activated="NotificationClicked"/>
+    <ToolbarItem Icon="notification.png" Text="Notificatons" Activated="NotificationClicked"/>
+  </ContentPage.ToolbarItems>
+    <Grid>
+      <Button Grid.Row="0"
+              Grid.Column="0"
+              Clicked="MirrorClicked"
+              Text="Mirror"
+              TextColor="Red"
+              BorderWidth="1" 
+              BorderRadius="4" 
+              BorderColor="Red"
+              BackgroundColor="#efefef"
+              FontSize="15"
+              FontAttributes="Bold" />
+      <Image Grid.Row="0" 
+             Grid.Column="1"
+             Source="mirror.png"/>
+      
+      <Button Grid.Row="1"
+              Grid.Column="1"
+              Clicked="WardrobeClicked"
+              Text="Wardrobe"
+              TextColor="Red"
+              BorderWidth="1" 
+              BorderRadius="4" 
+              BorderColor="Red"
+              BackgroundColor="#efefef"
+              FontSize="15"
+              FontAttributes="Bold" />
+      <Image Grid.Row="1"
+             Grid.Column="0"
+             Source="wardrobe.png"/>
+      
+      <Button Grid.Row="2"
+              Grid.Column="0"
+              Clicked="ColoursClicked"
+              Text="In Your Colour"
+              TextColor="Red"
+              BorderWidth="1"
+              BorderRadius="4"
+              BorderColor="Red"
+              BackgroundColor="#efefef"
+              FontSize="15"
+              FontAttributes="Bold" />
+      <Image Grid.Row="2"
+             Grid.Column="1"
+             Source="friends.png"/>
+      
+      <Button Grid.Row="3"
+              Grid.Column="1"
+              Clicked="ShopClicked"
+              Text="Shop"
+              TextColor="Red"
+              BorderWidth="1" 
+              BorderRadius="4" 
+              BorderColor="Red"
+              BackgroundColor="#efefef"
+              FontSize="15"
+              FontAttributes="Bold" />
+      <Image Grid.Row="3"
+             Grid.Column="0"
+             Source="shop.png"/>
+      
+      <Button x:Name="friendsBtn"
+              Grid.Row="4"
+              Grid.Column="0"
+              Clicked="FriendsClicked"
+              Text="Friends"
+              TextColor="Red"
+              BorderWidth="1"
+              BorderRadius="4"
+              BorderColor="Red"
+              BackgroundColor="#efefef"
+              FontSize="15"
+              FontAttributes="Bold" />
+      <Image Grid.Row="4"
+             Grid.Column="1"
+             Source="friends.png"/>
+
+      <Button Grid.Row="5"
+              Grid.Column="1"
+              Clicked="SettingsClicked"
+              Text="Settings"
+              TextColor="Red"
+              BorderWidth="1" 
+              BorderRadius="4" 
+              BorderColor="Red"
+              BackgroundColor="#efefef"
+              FontSize="15"
+              FontAttributes="Bold" />
+      <Image Grid.Row="5"
+             Grid.Column="0"
+             Source="settings.png"/>
+    </Grid>
+</ContentPage>

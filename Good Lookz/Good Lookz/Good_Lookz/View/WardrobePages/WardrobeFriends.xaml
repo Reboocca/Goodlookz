@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Good_Lookz.View.WardrobePages.WardrobeFriends"
+             Title="Friends">
+  <StackLayout Padding="20">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+      <Label x:Name="lblRequests" FontSize="15" FontAttributes="Bold" />
+    </StackLayout>
+    <ListView x:Name="friendsList" ItemTapped="FriendsList_Tapped" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="10">
+              <Image Source="friends.png" />
+              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
+                <Label FontSize="15" Text="{Binding fullName}" />
+                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
