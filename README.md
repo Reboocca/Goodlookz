@@ -1,7 +1,8 @@
 # Goodlookz
 Algemene informatie over de GoodLookz
 
----
+___
+
 #### Documentatie
 De documentatie van de applicatie is te vinden in de map "docs", hierin staat ook de documentatie van de vorige versie.
 
@@ -13,10 +14,11 @@ De documentatie van de applicatie is te vinden in de map "docs", hierin staat oo
 | Technisch ontwerp               | v1.01  | 03 april 2018    |
 
 (nog meer toevoegen)
----
+___
+
 #### Trello
 De meeste voortgang is overigens ook opgeslagen op de Trello pagina in de vorm van verschillende checklisten. Even aan Jeroen vragen of je hier aan toegevoegd kan worden. Er staat algemene informatie op van de functionaliteiten wat handig kan zijn!
----
+___
+
 #### Web API
 De vorige programmeur maakte gebruik van een WEB API die JSON resultaten weer liet zien aan de applicatie om zo database functionaliteiten uit te voeren.
----
