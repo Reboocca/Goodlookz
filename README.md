@@ -1,7 +1,9 @@
 # Goodlookz
 Algemene informatie over de GoodLookz
 
-___
+
+
+
 
 #### Documentatie
 De documentatie van de applicatie is te vinden in de map "docs", hierin staat ook de documentatie van de vorige versie.
