@@ -8,7 +8,7 @@
 
   <StackLayout Padding="20, 20, 20, 5" BackgroundColor="White" >
     <StackLayout VerticalOptions="Start" Padding="0, 80, 0, 0">
-      <Image Source="goodlookz.png"/>
+      <Image Source="goodlookz.png" Aspect="AspectFit"/>
     </StackLayout>
 
     <StackLayout VerticalOptions="CenterAndExpand">

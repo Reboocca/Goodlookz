@@ -46,5 +46,18 @@ namespace Good_Lookz.Models
 			public static int notifyborrow { get; set; }
 			public static int notifybid { get; set; }
 		}
+
+		public class ResetPWD
+		{
+			public static string mail { get; set; }
+			public static string users_id { get; set; }
+
+			public class JSONresponse
+			{
+				public string status { get; set; }
+				public int tries_left { get; set; }
+				public string users_id { get; set; }
+			}
+		}
 	}
 }

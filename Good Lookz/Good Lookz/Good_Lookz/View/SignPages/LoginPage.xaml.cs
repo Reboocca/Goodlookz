@@ -1,4 +1,5 @@
-﻿using ModernHttpClient;
+﻿using Good_Lookz.MarkupExtensions;
+using ModernHttpClient;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace Good_Lookz.View.SignPages
 			password.Text = "123";
         }
 
-        async void LoginClicked(object sender, EventArgs e)
+	async void LoginClicked(object sender, EventArgs e)
         {
             btnLogin.IsVisible = false;
             loadingLogin.IsVisible = true;
@@ -132,5 +133,10 @@ namespace Good_Lookz.View.SignPages
             }
         }
 
+
+		private void forgotPWD(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new View.SignPages.ForgotPassword(), true);
+		}
     }
 }

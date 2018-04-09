@@ -20,7 +20,7 @@ namespace Good_Lookz.View.SettingPages
 		{
 			if(string.IsNullOrEmpty(cPwd.Text) || string.IsNullOrEmpty(nPwd.Text) || string.IsNullOrEmpty(rPwd.Text))
 			{
-				await DisplayAlert("Warning", "Please make sure all boxes are filled before changing your password", "Ok");
+				await DisplayAlert("Warning", "Please make sure all boxes are filled before changing your password.", "Ok");
 			}
 			else
 			{
@@ -67,7 +67,7 @@ namespace Good_Lookz.View.SettingPages
 
 			if (result == "Success")
 			{
-				await DisplayAlert("Succes", "Your password has been changed", "OK");
+				await DisplayAlert("Succes", "Your password has been changed.", "OK");
 				await this.Navigation.PopAsync();
 			}
 			else if (result == "Failed")

@@ -128,6 +128,9 @@
     <Compile Include="View\FriendsPages\FriendsAdd.xaml.cs">
       <DependentUpon>FriendsAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SignPages\ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SignPages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,12 @@
     </Compile>
     <Compile Include="View\SignPage.xaml.cs">
       <DependentUpon>SignPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignPages\ResetCode.xaml.cs">
+      <DependentUpon>ResetCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignPages\ResetPassword.xaml.cs">
+      <DependentUpon>ResetPassword.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TermsConditionsPage.xaml.cs">
       <DependentUpon>TermsConditionsPage.xaml</DependentUpon>
@@ -620,6 +629,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\InYourColourWebview.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SignPages\ForgotPassword.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SignPages\ResetPassword.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SignPages\ResetCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
