@@ -1,15 +1,12 @@
 # Goodlookz
-Algemene informatie over de GoodLookz
-
-
-
+Algemene informatie over de uitbreidingen van Good Lookz is beneden omschreven. Tijdens het realiseren van het product is gebruik gemaakt van een privé Github.
 
 
 #### Documentatie
 De documentatie van de applicatie is te vinden in de map "docs", hierin staat ook de documentatie van de vorige versie.
 
 | Titel                           | Versie | Datum            |
-| ------------------------------- | ------ | ---------------- |
+| ------------------------------- | :----: | ---------------: |
 | Testrapport begin applicatie    | v1.00  | 03 februari 2018 |
 | Plan van aanpak                 | v1.00  | 13 maart 2018    |
 | Functioneel ontwerp             | v1.00  | 14 maart 2018    |
@@ -23,4 +20,8 @@ De meeste voortgang is overigens ook opgeslagen op de Trello pagina in de vorm v
 ___
 
 #### Web API
-De vorige programmeur maakte gebruik van een WEB API die JSON resultaten weer liet zien aan de applicatie om zo database functionaliteiten uit te voeren.
+De vorige programmeur maakte gebruik van een WEB API die JSON resultaten weer liet zien aan de applicatie om zo database functionaliteiten uit te voeren. Via JSON kon de applicatie gemakkelijk de gegevens converteren en gebruiken voor andere functionaliteiten. 
+___
+
+### Mappenstructuur
+Als zowel bij de applicatie als de web api is er een mappenstructuur opgebouwd. In het **technisch ontwerp** wordt hier meer informatie over vrijgegeven, dus het is aangeraden om deze door te nemen. (enige aanpassingen in mappen structuur zal binnen de **technische documentatie** omschreven staan.
