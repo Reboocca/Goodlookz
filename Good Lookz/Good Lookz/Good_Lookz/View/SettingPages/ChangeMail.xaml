@@ -26,7 +26,7 @@
 
     <Label Grid.Row="1" Grid.Column="1" FontSize="17" Text="To change your e-mail, simply fill in a new e-mail and hit the save button."/>
 
-    <Label Grid.Row="3" Grid.Column="1" FontSize="15" Text="Your current e-mail address is listed below:" FontAttributes="Bold"/>
+    <Label Grid.Row="3" Grid.Column="1" FontSize="15" Text="Change the e-mail below:" FontAttributes="Bold"/>
     <Entry x:Name="newMail" Grid.Row="4" Grid.Column="1" FontSize="17" Keyboard="Email">
       <Entry.Behaviors>
         <behavior:EmailEntry/>

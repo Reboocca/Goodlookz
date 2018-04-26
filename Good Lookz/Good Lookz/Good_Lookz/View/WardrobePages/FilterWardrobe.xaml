@@ -8,13 +8,13 @@
     <Grid.RowDefinitions>
       <RowDefinition Height="10*"/>
       <RowDefinition Height="3*"/>
-      <RowDefinition Height="2"/>
+      <RowDefinition Height="2"/>   
       <RowDefinition Height="3*"/>
       <RowDefinition Height="2"/>
       <RowDefinition Height="3*"/>
       <RowDefinition Height="12*"/>
       <RowDefinition Height="3*"/>
-      <RowDefinition Height="3*"/>
+      <RowDefinition Height="2*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="1*"/>
@@ -22,11 +22,11 @@
       <ColumnDefinition Width="1*"/>
     </Grid.ColumnDefinitions>
     
-    <Picker x:Name="pType" Grid.Column="1" Grid.Row="2" Title="Choose a type of clothing" SelectedIndexChanged="pType_SelectedIndexChanged"/>
-    <Picker x:Name="pColour" Grid.Column="1" Grid.Row="4" Title="Choose a colour"/>
+    <Picker x:Name="pType" Grid.Column="1" Grid.Row="1" Title="Choose a type of clothing" SelectedIndexChanged="pType_SelectedIndexChanged"/>
+    <Picker x:Name="pColour" Grid.Column="1" Grid.Row="3" Title="Choose a colour"/>
 
-    <Button Grid.Column="1" Grid.Row="6" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Filter" Clicked="btnFilter_Clicked"/>
+    <Button Grid.Column="1" Grid.Row="5" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Filter" Clicked="btnFilter_Clicked"/>
     
-    <Button Grid.Column="1" Grid.Row="8" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Reset Filters" Clicked="btnReset_CLicked"/>
+    <Button Grid.Column="1" Grid.Row="7" BackgroundColor="White" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" Text="Reset Filters" Clicked="btnReset_CLicked"/>
   </Grid>
     </ContentPage>

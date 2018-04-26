@@ -324,6 +324,7 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\G
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.pdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.pdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\FormsViewGroup.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\ModernHttpClient.dll.mdb
@@ -391,7 +392,6 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\G
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\R.cs.flag
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\uploadflags.txt
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll.mdb
-C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Java.Interop.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Microsoft.CSharp.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Mono.Android.dll.mdb
