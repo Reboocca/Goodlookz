@@ -2,6 +2,14 @@ Good_Lookz.Droid.FlatButtonRenderer, Good Lookz;md50991baa95b31de0ec78349c132baf
 Good_Lookz.Droid.FlatButtonRenderer, Good Lookz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50991baa95b31de0ec78349c132baf892.FlatButtonRenderer
 Good_Lookz.Droid.FlatButtonRenderer;md50991baa95b31de0ec78349c132baf892.FlatButtonRenderer
 good_lookz.droid.FlatButtonRenderer;md50991baa95b31de0ec78349c132baf892.FlatButtonRenderer
+Good_Lookz.Droid.CameraPreview, Good Lookz;md50991baa95b31de0ec78349c132baf892.CameraPreview
+Good_Lookz.Droid.CameraPreview, Good Lookz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50991baa95b31de0ec78349c132baf892.CameraPreview
+Good_Lookz.Droid.CameraPreview;md50991baa95b31de0ec78349c132baf892.CameraPreview
+good_lookz.droid.CameraPreview;md50991baa95b31de0ec78349c132baf892.CameraPreview
+Good_Lookz.Droid.CameraPreviewRenderer, Good Lookz;md50991baa95b31de0ec78349c132baf892.CameraPreviewRenderer
+Good_Lookz.Droid.CameraPreviewRenderer, Good Lookz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50991baa95b31de0ec78349c132baf892.CameraPreviewRenderer
+Good_Lookz.Droid.CameraPreviewRenderer;md50991baa95b31de0ec78349c132baf892.CameraPreviewRenderer
+good_lookz.droid.CameraPreviewRenderer;md50991baa95b31de0ec78349c132baf892.CameraPreviewRenderer
 Good_Lookz.Droid.MainActivity, Good Lookz;md50991baa95b31de0ec78349c132baf892.MainActivity
 Good_Lookz.Droid.MainActivity, Good Lookz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50991baa95b31de0ec78349c132baf892.MainActivity
 Good_Lookz.Droid.MainActivity;md50991baa95b31de0ec78349c132baf892.MainActivity

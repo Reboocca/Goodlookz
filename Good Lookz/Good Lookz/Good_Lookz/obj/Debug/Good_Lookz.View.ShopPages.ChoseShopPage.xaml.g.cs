@@ -11,8 +11,8 @@
 namespace Good_Lookz.View.ShopPages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Documents\\GitHub\\Good-Lookz\\Goodlookz\\Good Lookz\\Good Lookz\\Go" +
-        "od_Lookz\\View\\ShopPages\\ChoseShopPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Desktop\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\ShopPa" +
+        "ges\\ChoseShopPage.xaml")]
     public partial class ChoseShopPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

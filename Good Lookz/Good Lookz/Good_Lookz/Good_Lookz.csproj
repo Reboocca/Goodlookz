@@ -41,6 +41,8 @@
     <Compile Include="Behavior\CompareValidationBehavior.cs" />
     <Compile Include="Behavior\EmailEntry.cs" />
     <Compile Include="Behavior\NumberEntry.cs" />
+    <Compile Include="CustomRenderer\CameraOptions.cs" />
+    <Compile Include="CustomRenderer\CameraPreview.cs" />
     <Compile Include="Models\CreateAccount.cs" />
     <Compile Include="Models\FriendsCredentials.cs" />
     <Compile Include="Models\GetShops.cs" />

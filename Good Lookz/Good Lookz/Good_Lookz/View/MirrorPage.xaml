@@ -1,25 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:Good_Lookz.CustomRenderer;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.MirrorPage"
              Title="Mirror"
              BackgroundColor="Black">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="1*"/>
-      <RowDefinition Height="20*"/>
-      <RowDefinition Height="1*"/>
+      <RowDefinition Height="15*"/>
+      <RowDefinition Height="10"/>
       <RowDefinition Height="40"/>
       <RowDefinition Height="1*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*"/>
-      <ColumnDefinition Width="10*"/>
-      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="2*"/>
+      <ColumnDefinition Width="20*"/>
+      <ColumnDefinition Width="2*"/>
     </Grid.ColumnDefinitions>
     <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="5" x:Name="bvLight" Color="White"/>
-    <Label Grid.Column="1" Grid.Row="1" Text="Camera"/>
-    <BoxView Grid.Column="1" Grid.Row="1" Color="Green"/>
+    <custom:CameraPreview Grid.Column="1" Grid.Row="1" Camera="Front"/>
+    <BoxView Grid.Column="1" Grid.Row="1"/>
     <Button x:Name="btnAdjust" Grid.Column="1" Grid.Row="3" Text="Adjust Lighting" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnAdjust_Clicked"/>
 
   </Grid>
