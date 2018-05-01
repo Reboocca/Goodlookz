@@ -99,9 +99,9 @@ namespace Good_Lookz.View.WardrobePages
 
 			try
 			{
-				string webadres = "http://www.good-lookz.com/API/sale/saleDelete.php?sale_id=" + sale_id;
-				HttpClient connect = new HttpClient();
-				HttpResponseMessage deleteItemSale = await connect.GetAsync(webadres);
+				string webadres                     = "http://www.good-lookz.com/API/sale/saleDelete.php?sale_id=" + sale_id;
+				HttpClient connect                  = new HttpClient();
+				HttpResponseMessage deleteItemSale  = await connect.GetAsync(webadres);
 				deleteItemSale.EnsureSuccessStatusCode();
 
 				string result = await deleteItemSale.Content.ReadAsStringAsync();

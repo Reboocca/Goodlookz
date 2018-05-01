@@ -26,12 +26,14 @@ namespace Good_Lookz.View.WardrobePages
 
 		private void getInfo()
 		{
+            //Haal de gegevens op
 			lbUsername.Text = Models.SelectedLend.username;
 			lbDate.Text		= Models.SelectedLend.date;
 			lbDays.Text		= Models.SelectedLend.days;
 			lbName.Text		= Models.SelectedLend.name;
 			img.Source		= Models.SelectedLend.picture;
 
+            //Check of het momenteel lening al geaccepteerd is
 			if(Models.SelectedLend.lending == "0")
 			{
 				btnContact.IsVisible	= false;
@@ -52,15 +54,17 @@ namespace Good_Lookz.View.WardrobePages
 
 		private async void btnAccept_Clicked(object sender, EventArgs e)
 		{
-			string webadres = "http://good-lookz.com/API/lend/lendAccept.php?";
-			string parameters = "lend_id=" + Models.SelectedLend.lend_id+ "&accepted=true";
+            //Accepteer de lening
+			string webadres     = "http://good-lookz.com/API/lend/lendAccept.php?";
+			string parameters   = "lend_id=" + Models.SelectedLend.lend_id+ "&accepted=true";
 
-			HttpClient connect = new HttpClient();
-			HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+			HttpClient connect          = new HttpClient();
+			HttpResponseMessage insert  = await connect.GetAsync(webadres + parameters);
 			insert.EnsureSuccessStatusCode();
 
 			string result = await insert.Content.ReadAsStringAsync();
 
+            //Check het resultaat
 			if (result == "Success")
 			{
 				await DisplayAlert("Success", "Lend request has been accepted.", "OK");
@@ -77,18 +81,20 @@ namespace Good_Lookz.View.WardrobePages
 
 		private async void btnDecline_Clicked(object sender, EventArgs e)
 		{
+            //Annuleer de lening
 			var requestResponse = await DisplayAlert("Warning", "Do you really want to delete the lend request?", "Yes", "No");
 			if (requestResponse)
 			{
-				string webadres = "http://good-lookz.com/API/lend/lendAccept.php?";
-				string parameters = "lend_id=" + Models.SelectedLend.lend_id + "&accepted=false";
+				string webadres     = "http://good-lookz.com/API/lend/lendAccept.php?";
+				string parameters   = "lend_id=" + Models.SelectedLend.lend_id + "&accepted=false";
 
-				HttpClient connect = new HttpClient();
-				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+				HttpClient connect          = new HttpClient();
+				HttpResponseMessage insert  = await connect.GetAsync(webadres + parameters);
 				insert.EnsureSuccessStatusCode();
 
 				string result = await insert.Content.ReadAsStringAsync();
 
+                //Check het resultaat
 				if (result == "Success")
 				{
 					await DisplayAlert("Success", "Lend request has been deleted.", "OK");
@@ -108,6 +114,7 @@ namespace Good_Lookz.View.WardrobePages
 
 		private async void btnContact_Clicked(object sender, EventArgs e)
 		{
+            //Contactpagina openen
 			Models.PreviousPage.page = "SelectedLend";
 			await Navigation.PushAsync(new WardrobeContact(), true);
 		}

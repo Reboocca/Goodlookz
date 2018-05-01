@@ -35,6 +35,7 @@ namespace Good_Lookz.View.WardrobePages
 		List<Models.Sizes.AllSizes> lstSizes = new List<Models.Sizes.AllSizes>();
 		Models.UserSizes uSize = new Models.UserSizes();
 
+        //Standaard waardes
 		string _Region = "EU";
 		string _Gender = "F";
 
@@ -58,22 +59,22 @@ namespace Good_Lookz.View.WardrobePages
 		private async void getUserSize()
 		{
 			string users_id = Models.LoginCredentials.loginId;
-			string url = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
+			string url      = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
 
-			HttpClient get = new HttpClient();
+			HttpClient get              = new HttpClient();
 			HttpResponseMessage respons = await get.GetAsync(url);
 
 			if (respons.IsSuccessStatusCode)
 			{
-				string responsecontent = await respons.Content.ReadAsStringAsync();
-				var myobjList = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
-				var myObj = myobjList[0];
+				string responsecontent  = await respons.Content.ReadAsStringAsync();
+				var myobjList           = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
+				var myObj               = myobjList[0];
 
-				uSize.region = myObj.region;
-				uSize.gender = myObj.gender;
-				uSize.topnr = myObj.topnr;
-				uSize.botnr = myObj.botnr;
-				uSize.feetnr = myObj.feetnr;
+				uSize.region    = myObj.region;
+				uSize.gender    = myObj.gender;
+				uSize.topnr     = myObj.topnr;
+				uSize.botnr     = myObj.botnr;
+				uSize.feetnr    = myObj.feetnr;
 			}
 
 			//Zet de pickers op de goede waardes
@@ -154,12 +155,12 @@ namespace Good_Lookz.View.WardrobePages
 
 			if (!CrossMedia.Current.IsPickPhotoSupported)
 			{
-				await DisplayAlert("No PickPhoto", "no PickPhoto availabe", "OK");
+				await DisplayAlert("No PickPhoto", "No PickPhoto availabe", "OK");
 				return;
 			}
 
-			loadingPic.IsRunning = true;
-			_mediaFile = await CrossMedia.Current.PickPhotoAsync();
+			loadingPic.IsRunning    = true;
+			_mediaFile              = await CrossMedia.Current.PickPhotoAsync();
 
 			if (_mediaFile == null)
 			{
@@ -187,11 +188,11 @@ namespace Good_Lookz.View.WardrobePages
 				return;
 			}
 
-			loadingPic.IsRunning = true;
-			_mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+			loadingPic.IsRunning    = true;
+			_mediaFile              = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
 			{
-				Directory = "Sample",
-				Name = "myImage.jpg"
+				Directory   = "Sample",
+				Name        = "myImage.jpg"
 			});
 
 			if (_mediaFile == null)
@@ -214,27 +215,27 @@ namespace Good_Lookz.View.WardrobePages
 			switch (selected)
 			{
 				case 0:
-					feetSize.IsVisible = false;
-					bottomSize.IsVisible = false;
-					topSize.IsVisible = false;
+					feetSize.IsVisible      = false;
+					bottomSize.IsVisible    = false;
+					topSize.IsVisible       = false;
 					break;
 				case 1:
-					feetSize.IsVisible = false;
-					bottomSize.IsVisible = false;
+					feetSize.IsVisible      = false;
+					bottomSize.IsVisible    = false;
 
-					topSize.IsVisible = true;
+					topSize.IsVisible       = true;
 					break;
 				case 2:
-					topSize.IsVisible = false;
-					feetSize.IsVisible = false;
+					topSize.IsVisible       = false;
+					feetSize.IsVisible      = false;
 
-					bottomSize.IsVisible = true;
+					bottomSize.IsVisible    = true;
 					break;
 				case 3:
-					topSize.IsVisible = false;
-					bottomSize.IsVisible = false;
+					topSize.IsVisible       = false;
+					bottomSize.IsVisible    = false;
 
-					feetSize.IsVisible = true;
+					feetSize.IsVisible      = true;
 					break;
 				default:
 					break;
@@ -251,19 +252,19 @@ namespace Good_Lookz.View.WardrobePages
 					break;
 				case 0:
 					colorSelected.Color = Color.Red;
-					color = "red";
+					color               = "red";
 					break;
 				case 1:
 					colorSelected.Color = Color.Green;
-					color = "green";
+					color               = "green";
 					break;
 				case 2:
 					colorSelected.Color = Color.Blue;
-					color = "blue";
+					color               = "blue";
 					break;
 				case 3:
 					colorSelected.Color = Color.Black;
-					color = "black";
+					color               = "black";
 					break;
 				case 4:
 					colorSelected.Color = Color.Gray;
@@ -284,10 +285,10 @@ namespace Good_Lookz.View.WardrobePages
 				loadingPic.IsVisible = true;
 				loadingPic.IsRunning = true;
 
-				var selectedType = wardorbeItem.SelectedIndex;
-				var users_id = Models.LoginCredentials.loginId;
+				var selectedType     = wardorbeItem.SelectedIndex;
+				var users_id         = Models.LoginCredentials.loginId;
 
-				var content = new MultipartFormDataContent();
+				var content          = new MultipartFormDataContent();
 
 				content.Add(new StreamContent(_mediaFile.GetStream()),
 						"\"fileToUpload\"",
@@ -301,8 +302,7 @@ namespace Good_Lookz.View.WardrobePages
 				switch (selectedType)
 				{
 					case -1:
-						//await DisplayAlert("Warning", "Please chose cloth type!", "OK");
-						await DisplayAlert("Warning", "Please a choose clothing type!", "OK");
+						await DisplayAlert("Warning", "Please a choose a clothing type!", "OK");
 						break;
 					case 0:
 						URL = "http://good-lookz.com/API/wardrobe/head/headUpload.php";
@@ -319,7 +319,7 @@ namespace Good_Lookz.View.WardrobePages
 
 						if (topSize.SelectedIndex == -1)
 						{
-							await DisplayAlert("Warning", "Please choose a size", "OK");
+							await DisplayAlert("Warning", "Please choose a size.", "OK");
 						}
 						else
 						{
@@ -339,8 +339,8 @@ namespace Good_Lookz.View.WardrobePages
 							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(top.sNr))), "nr");
 
 							var ResponseMessage_top = await client.PostAsync(URL, content);
-							var sometext_top = await ResponseMessage_top.Content.ReadAsStringAsync();
-							var response_top = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_top);
+							var sometext_top        = await ResponseMessage_top.Content.ReadAsStringAsync();
+							var response_top        = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_top);
 							
 							await Application.Current.MainPage.Navigation.PopAsync();
 						}
@@ -350,7 +350,7 @@ namespace Good_Lookz.View.WardrobePages
 
 						if (bottomSize.SelectedIndex == -1)
 						{
-							await DisplayAlert("Warning", "Please choose a size", "OK");
+							await DisplayAlert("Warning", "Please choose a size.", "OK");
 						}
 						else
 						{
@@ -369,9 +369,9 @@ namespace Good_Lookz.View.WardrobePages
 							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sGender))), "gender");
 							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(bot.sNr))), "nr");
 
-							var ResponseMessage_bottom = await client.PostAsync(URL, content);
-							var sometext_bottom = await ResponseMessage_bottom.Content.ReadAsStringAsync();
-							var response_bottom = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_bottom);
+							var ResponseMessage_bottom  = await client.PostAsync(URL, content);
+							var sometext_bottom         = await ResponseMessage_bottom.Content.ReadAsStringAsync();
+							var response_bottom         = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_bottom);
 							
 							await Application.Current.MainPage.Navigation.PopAsync();
 						}
@@ -381,7 +381,7 @@ namespace Good_Lookz.View.WardrobePages
 
 						if (feetSize.SelectedIndex == -1)
 						{
-							await DisplayAlert("Warning", "Please choose a size", "OK");
+							await DisplayAlert("Warning", "Please choose a size.", "OK");
 						}
 						else
 						{
@@ -400,9 +400,9 @@ namespace Good_Lookz.View.WardrobePages
 							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sGender))), "gender");
 							content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(feet.sNr))), "nr");
 
-							var ResponseMessage_feet = await client.PostAsync(URL, content);
-							var sometext_feet = await ResponseMessage_feet.Content.ReadAsStringAsync();
-							var response_feet = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_feet);
+							var ResponseMessage_feet    = await client.PostAsync(URL, content);
+							var sometext_feet           = await ResponseMessage_feet.Content.ReadAsStringAsync();
+							var response_feet           = JsonConvert.DeserializeObject<List<imageUpload>>(sometext_feet);
 							
 							await Application.Current.MainPage.Navigation.PopAsync();
 						}

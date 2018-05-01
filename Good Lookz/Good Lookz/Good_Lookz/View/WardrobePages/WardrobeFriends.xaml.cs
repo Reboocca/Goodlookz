@@ -17,8 +17,8 @@ namespace Good_Lookz.View.WardrobePages
     /// </summary>
     public partial class WardrobeFriends : ContentPage
     {
-        private const string url = "http://www.good-lookz.com/API/friends/friendsCheck.php?users_id={0}";
-        HttpClient client = new HttpClient(new NativeMessageHandler());
+        private const string url    = "http://www.good-lookz.com/API/friends/friendsCheck.php?users_id={0}";
+        HttpClient client           = new HttpClient(new NativeMessageHandler());
         private ObservableCollection<Models.FriendsCredentials> _gets;
 
         /// <summary>
@@ -35,11 +35,9 @@ namespace Good_Lookz.View.WardrobePages
         protected override async void OnAppearing()
         {
             string data = Models.LoginCredentials.loginId;
-
-            string URL = string.Format(url, data);
-
+            string URL  = string.Format(url, data);
             var content = await client.GetStringAsync(URL);
-            response = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
+            response    = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
 
             if (response[0].id != null)
             {
@@ -51,20 +49,15 @@ namespace Good_Lookz.View.WardrobePages
             {
                 lblRequests.Text = "No friends";
             }
-
         }
 
         async void FriendsList_Tapped(object sender, ItemTappedEventArgs e)
         {
             Models.FriendsCredentials item = (Models.FriendsCredentials)e.Item;
 
-            var _id = item.id;
-            var _fullName = item.fullName;
-            var _friends_id = item.friends_id;
-
-            Models.SelectedFriendsCredentials.id = _id;
-            Models.SelectedFriendsCredentials.fullName = _fullName;
-            Models.SelectedFriendsCredentials.friends_id = _friends_id;
+            Models.SelectedFriendsCredentials.id            = item.id;
+            Models.SelectedFriendsCredentials.fullName      = item.fullName;
+            Models.SelectedFriendsCredentials.friends_id    = item.friends_id;
 
             await Navigation.PushAsync(new WardrobeFriendSelected(), true);
         }

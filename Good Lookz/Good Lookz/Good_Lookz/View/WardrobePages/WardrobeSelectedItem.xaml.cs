@@ -46,13 +46,13 @@ namespace Good_Lookz.View.WardrobePages
         }
 
 
-		int typeCloth = selectedType.typeCloth;
-		int id = 0;
-		string picture = "";
-		string color = "";
-		string date = "";
-		string size = "";
-		string type = "";
+		int typeCloth   = selectedType.typeCloth;
+		int id          = 0;
+		string picture  = "";
+		string color    = "";
+		string date     = "";
+		string size     = "";
+		string type     = "";
 
 
 		protected override void OnAppearing()
@@ -60,60 +60,60 @@ namespace Good_Lookz.View.WardrobePages
             switch (typeCloth)
             {
                 case 1:
-                    id = Int32.Parse(Models.SelectedHead.head_id);
+                    id      = Int32.Parse(Models.SelectedHead.head_id);
                     picture = Models.SelectedHead.picture;
-                    color = Models.SelectedHead.color;
-                    date = Models.SelectedHead.date;
-					type = "head";
+                    color   = Models.SelectedHead.color;
+                    date    = Models.SelectedHead.date;
+					type    = "head";
                     break;
 
                 case 2:
-                    id = Int32.Parse(Models.SelectedTop.top_id);
+                    id      = Int32.Parse(Models.SelectedTop.top_id);
                     picture = Models.SelectedTop.picture;
-                    color = Models.SelectedTop.color;
-                    date = Models.SelectedTop.date;
-                    size = Models.SelectedTop.size;
-					type = "top";
+                    color   = Models.SelectedTop.color;
+                    date    = Models.SelectedTop.date;
+                    size    = Models.SelectedTop.size;
+					type    = "top";
 					break;
 
                 case 3:
-                    id = Int32.Parse(Models.SelectedBottom.bottom_id);
+                    id      = Int32.Parse(Models.SelectedBottom.bottom_id);
                     picture = Models.SelectedBottom.picture;
-                    color = Models.SelectedBottom.color;
-                    date = Models.SelectedBottom.date;
-                    size = Models.SelectedBottom.size.ToString();
-					type = "bottom";
+                    color   = Models.SelectedBottom.color;
+                    date    = Models.SelectedBottom.date;
+                    size    = Models.SelectedBottom.size.ToString();
+					type    = "bottom";
 					break;
 
                 case 4:
-                    id = Int32.Parse(Models.SelectedFeet.feet_id);
+                    id      = Int32.Parse(Models.SelectedFeet.feet_id);
                     picture = Models.SelectedFeet.picture;
-                    color = Models.SelectedFeet.color;
-                    date = Models.SelectedFeet.date;
-                    size = Models.SelectedFeet.size.ToString();
-					type = "feet";
+                    color   = Models.SelectedFeet.color;
+                    date    = Models.SelectedFeet.date;
+                    size    = Models.SelectedFeet.size.ToString();
+					type    = "feet";
 					break;
 
                 default:
                     break;
             }
 
-            selectedCloth.Source = picture;
-            lblClothDate.Text = "Upload date: " + date;
-            lblSize.Text = size;
-            lblColor.Text = color;
+            selectedCloth.Source    = picture;
+            lblClothDate.Text       = "Upload date: " + date;
+            lblSize.Text            = size;
+            lblColor.Text           = color;
 
             base.OnAppearing();
         }
 
         async void SetSale_Clicked(object sender, EventArgs e)
         {
-            var price = entryPrice.Text;
-            var desc = editorDesc.Text;
+            var price   = entryPrice.Text;
+            var desc    = editorDesc.Text;
 
             if (((price == null) || (price == "")) || ((desc == null) || (desc == "")) || ((entryCity.Text == null) || (entryCity.Text == "")))
             {
-                await DisplayAlert("Error", "Please fill in the pric, city and description!", "OK");
+                await DisplayAlert("Warning", "Please fill in the price, city and description.", "OK");
             }
             else
             {
@@ -122,13 +122,13 @@ namespace Good_Lookz.View.WardrobePages
 				if (setSaleAgreed)
 				{
 					var typeCloth = selectedType.typeCloth;
-					var users_id = Models.LoginCredentials.loginId;
-					var username = Models.LoginCredentials.loginUsername;
+					var users_id  = Models.LoginCredentials.loginId;
+					var username  = Models.LoginCredentials.loginUsername;
 
 					try {
-						string webadres = "http://good-lookz.com/API/sale/saleUpload.php?user_id=" + users_id + "&item_id=" + id + "&type=" + type + "&size=" + size + "&price=" + price + "&desc=" + desc + "&city=" + entryCity.Text;
-						HttpClient connect = new HttpClient();
-						HttpResponseMessage uploadToSale = await connect.GetAsync(webadres);
+						string webadres                     = "http://good-lookz.com/API/sale/saleUpload.php?user_id=" + users_id + "&item_id=" + id + "&type=" + type + "&size=" + size + "&price=" + price + "&desc=" + desc + "&city=" + entryCity.Text;
+						HttpClient connect                  = new HttpClient();
+						HttpResponseMessage uploadToSale    = await connect.GetAsync(webadres);
 						uploadToSale.EnsureSuccessStatusCode();
 
 						string result = await uploadToSale.Content.ReadAsStringAsync();
@@ -139,8 +139,8 @@ namespace Good_Lookz.View.WardrobePages
 							switch (typeCloth)
 							{
 								case 1:
-									var head_id = Models.SelectedHead.head_id.ToString();
-									var url_head = "http://www.good-lookz.com/API/sale/type/head/headUpload.php";
+									var head_id     = Models.SelectedHead.head_id.ToString();
+									var url_head    = "http://www.good-lookz.com/API/sale/type/head/headUpload.php";
 									var values_head = new Dictionary<string, string>
 									{
 										{ "users_id", users_id },
@@ -150,18 +150,18 @@ namespace Good_Lookz.View.WardrobePages
 										{ "desc", desc }
 									};
 
-									var content_head = new FormUrlEncodedContent(values_head);
-									var response_head = await _client.PostAsync(url_head, content_head);
+									var content_head        = new FormUrlEncodedContent(values_head);
+									var response_head       = await _client.PostAsync(url_head, content_head);
 									var responseString_head = await response_head.Content.ReadAsStringAsync();
-									var postMethod_head = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_head);
+									var postMethod_head     = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_head);
 
-									await DisplayAlert("Message", "Set for sale: " + postMethod_head[0].sale_update.ToString(), "OK");
+									await DisplayAlert("Message", "Item has been set to sale. ", "OK");
 									break;
 
 								case 2:
-									var top_id = Models.SelectedTop.top_id.ToString();
-									var size_top = Models.SelectedTop.size;
-									var url_top = "http://www.good-lookz.com/API/sale/type/top/topUpload.php";
+									var top_id      = Models.SelectedTop.top_id.ToString();
+									var size_top    = Models.SelectedTop.size;
+									var url_top     = "http://www.good-lookz.com/API/sale/type/top/topUpload.php";
 
 									var values_top = new Dictionary<string, string>
 									{
@@ -173,18 +173,18 @@ namespace Good_Lookz.View.WardrobePages
 										{ "desc", desc }
 									};
 
-									var content_top = new FormUrlEncodedContent(values_top);
-									var response_top = await _client.PostAsync(url_top, content_top);
-									var responseString_top = await response_top.Content.ReadAsStringAsync();
-									var postMethod_top = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_top);
+									var content_top         = new FormUrlEncodedContent(values_top);
+									var response_top        = await _client.PostAsync(url_top, content_top);
+									var responseString_top  = await response_top.Content.ReadAsStringAsync();
+									var postMethod_top      = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_top);
 
-									await DisplayAlert("Message", "Set for sale: " + postMethod_top[0].sale_update.ToString(), "OK");
-									break;
+                                    await DisplayAlert("Message", "Item has been set to sale. ", "OK");
+                                    break;
 
 								case 3:
-									var bottom_id = Models.SelectedBottom.bottom_id.ToString();
+									var bottom_id   = Models.SelectedBottom.bottom_id.ToString();
 									var size_bottom = Models.SelectedBottom.size.ToString();
-									var url_bottom = "http://www.good-lookz.com/API/sale/type/bottom/bottomUpload.php";
+									var url_bottom  = "http://www.good-lookz.com/API/sale/type/bottom/bottomUpload.php";
 
 									var values_bottom = new Dictionary<string, string>
 									{
@@ -196,18 +196,18 @@ namespace Good_Lookz.View.WardrobePages
 										{ "desc", desc }
 									};
 
-									var content_bottom = new FormUrlEncodedContent(values_bottom);
-									var response_bottom = await _client.PostAsync(url_bottom, content_bottom);
-									var responseString_bottom = await response_bottom.Content.ReadAsStringAsync();
-									var postMethod_bottom = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_bottom);
+									var content_bottom          = new FormUrlEncodedContent(values_bottom);
+									var response_bottom         = await _client.PostAsync(url_bottom, content_bottom);
+									var responseString_bottom   = await response_bottom.Content.ReadAsStringAsync();
+									var postMethod_bottom       = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_bottom);
 
-									await DisplayAlert("Message", "Set for sale: " + postMethod_bottom[0].sale_update.ToString(), "OK");
-									break;
+                                    await DisplayAlert("Message", "Item has been set to sale. ", "OK");
+                                    break;
 
 								case 4:
-									var feet_id = Models.SelectedFeet.feet_id.ToString();
-									var size_feet = Models.SelectedFeet.size.ToString();
-									var url_feet = "http://www.good-lookz.com/API/sale/type/feet/feetUpload.php";
+									var feet_id     = Models.SelectedFeet.feet_id.ToString();
+									var size_feet   = Models.SelectedFeet.size.ToString();
+									var url_feet    = "http://www.good-lookz.com/API/sale/type/feet/feetUpload.php";
 
 									var values_feet = new Dictionary<string, string>
 									{
@@ -219,12 +219,12 @@ namespace Good_Lookz.View.WardrobePages
 										{ "desc", desc }
 									};
 
-									var content_feet = new FormUrlEncodedContent(values_feet);
-									var response_feet = await _client.PostAsync(url_feet, content_feet);
+									var content_feet        = new FormUrlEncodedContent(values_feet);
+									var response_feet       = await _client.PostAsync(url_feet, content_feet);
 									var responseString_feet = await response_feet.Content.ReadAsStringAsync();
-									var postMethod_feet = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_feet);
+									var postMethod_feet     = JsonConvert.DeserializeObject<List<saleUpload>>(responseString_feet);
 
-									await DisplayAlert("Message", "Set for sale: " + postMethod_feet[0].sale_update.ToString(), "OK");
+									await DisplayAlert("Message", "Item has been set to sale. ", "OK");
 									break;
 
 								default:
@@ -253,80 +253,76 @@ namespace Good_Lookz.View.WardrobePages
         {
             var typeCloth = selectedType.typeCloth;
 
-            var head_id = "";
-            var top_id = "";
-            var bottom_id = "";
-            var feet_id = "";
+            var head_id     = "";
+            var top_id      = "";
+            var bottom_id   = "";
+            var feet_id     = "";
 
             switch (typeCloth)
             {
                 case 1:
-                    head_id = Models.SelectedHead.head_id.ToString();
-                    var url_Head = "http://www.good-lookz.com/API/wardrobe/head/img/delete.php";
-
+                    head_id         = Models.SelectedHead.head_id.ToString();
+                    var url_Head    = "http://www.good-lookz.com/API/wardrobe/head/img/delete.php";
                     var values_Head = new Dictionary<string, string>
                     {
                         { "head_id", head_id }
                     };
 
-                    var content_Head = new FormUrlEncodedContent(values_Head);
-                    var response_Head = await _client.PostAsync(url_Head, content_Head);
+                    var content_Head        = new FormUrlEncodedContent(values_Head);
+                    var response_Head       = await _client.PostAsync(url_Head, content_Head);
                     var responseString_Head = await response_Head.Content.ReadAsStringAsync();
-                    var postMethod_Head = JsonConvert.DeserializeObject<List<Models.headDelete>>(responseString_Head);
+                    var postMethod_Head     = JsonConvert.DeserializeObject<List<Models.headDelete>>(responseString_Head);
 
                     await DisplayAlert("Message", "Deleted successfully!", "OK");
                     await Application.Current.MainPage.Navigation.PopAsync();
 
                     break;
                 case 2:
-                    top_id = Models.SelectedTop.top_id.ToString();
-                    var url_Top = "http://www.good-lookz.com/API/wardrobe/top/img/delete.php";
-
+                    top_id          = Models.SelectedTop.top_id.ToString();
+                    var url_Top     = "http://www.good-lookz.com/API/wardrobe/top/img/delete.php";
                     var values_Top = new Dictionary<string, string>
                     {
                         { "top_id", top_id }
                     };
 
-                    var content_Top = new FormUrlEncodedContent(values_Top);
-                    var response_Top = await _client.PostAsync(url_Top, content_Top);
-                    var responseString_Top = await response_Top.Content.ReadAsStringAsync();
-                    var postMethod_Top = JsonConvert.DeserializeObject<List<Models.topDelete>>(responseString_Top);
+                    var content_Top         = new FormUrlEncodedContent(values_Top);
+                    var response_Top        = await _client.PostAsync(url_Top, content_Top);
+                    var responseString_Top  = await response_Top.Content.ReadAsStringAsync();
+                    var postMethod_Top      = JsonConvert.DeserializeObject<List<Models.topDelete>>(responseString_Top);
 
                     await DisplayAlert("Message", "Deleted successfully!", "OK");
                     await Application.Current.MainPage.Navigation.PopAsync();
 
                     break;
                 case 3:
-                    bottom_id = Models.SelectedBottom.bottom_id.ToString();
-                    var url_Bottom = "http://www.good-lookz.com/API/wardrobe/bottom/img/delete.php";
-
-                    var values_Bottom = new Dictionary<string, string>
+                    bottom_id           = Models.SelectedBottom.bottom_id.ToString();
+                    var url_Bottom      = "http://www.good-lookz.com/API/wardrobe/bottom/img/delete.php";
+                    var values_Bottom   = new Dictionary<string, string>
                     {
                         { "bottom_id", bottom_id }
                     };
 
-                    var content_Bottom = new FormUrlEncodedContent(values_Bottom);
-                    var response_Bottom = await _client.PostAsync(url_Bottom, content_Bottom);
-                    var responseString_Bottom = await response_Bottom.Content.ReadAsStringAsync();
-                    var postMethod_Bottom = JsonConvert.DeserializeObject<List<Models.bottomDelete>>(responseString_Bottom);
+                    var content_Bottom          = new FormUrlEncodedContent(values_Bottom);
+                    var response_Bottom         = await _client.PostAsync(url_Bottom, content_Bottom);
+                    var responseString_Bottom   = await response_Bottom.Content.ReadAsStringAsync();
+                    var postMethod_Bottom       = JsonConvert.DeserializeObject<List<Models.bottomDelete>>(responseString_Bottom);
 
                     await DisplayAlert("Message", "Deleted successfully!", "OK");
                     await Application.Current.MainPage.Navigation.PopAsync();
 
                     break;
                 case 4:
-                    feet_id = Models.SelectedFeet.feet_id.ToString();
-                    var url_Feet = "http://www.good-lookz.com/API/wardrobe/feet/img/delete.php";
-
+                    feet_id         = Models.SelectedFeet.feet_id.ToString();
+                    var url_Feet    = "http://www.good-lookz.com/API/wardrobe/feet/img/delete.php";
                     var values_Feet = new Dictionary<string, string>
                     {
                         { "feet_id", feet_id }
                     };
 
-                    var content_Feet = new FormUrlEncodedContent(values_Feet);
-                    var response_Feet = await _client.PostAsync(url_Feet, content_Feet);
+                    var content_Feet        = new FormUrlEncodedContent(values_Feet);
+                    var response_Feet       = await _client.PostAsync(url_Feet, content_Feet);
                     var responseString_Feet = await response_Feet.Content.ReadAsStringAsync();
-                    var postMethod_Feet = JsonConvert.DeserializeObject<List<Models.feetDelete>>(responseString_Feet);
+                    var postMethod_Feet     = JsonConvert.DeserializeObject<List<Models.feetDelete>>(responseString_Feet);
 
                     await DisplayAlert("Message", "Deleted successfully!", "OK");
                     await Application.Current.MainPage.Navigation.PopAsync();

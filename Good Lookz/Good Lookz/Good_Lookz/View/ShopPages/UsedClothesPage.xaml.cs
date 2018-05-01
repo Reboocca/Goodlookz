@@ -29,15 +29,15 @@ namespace Good_Lookz.View.ShopPages
         private ObservableCollection<Models.BottomSale> _obsrv_bottom;
         private ObservableCollection<Models.FeetSale> _obsrv_feet;
 
-        List<Models.HeadSale> gets_Head = new List<Models.HeadSale>();
-        List<Models.TopSale> gets_Top = new List<Models.TopSale>();
+        List<Models.HeadSale> gets_Head     = new List<Models.HeadSale>();
+        List<Models.TopSale> gets_Top       = new List<Models.TopSale>();
         List<Models.BottomSale> gets_Bottom = new List<Models.BottomSale>();
-        List<Models.FeetSale> gets_Feet = new List<Models.FeetSale>();
-        List<distanceUser> gets_id = new List<distanceUser>();
+        List<Models.FeetSale> gets_Feet     = new List<Models.FeetSale>();
+        List<distanceUser> gets_id          = new List<distanceUser>();
 
-        string latitude_full = "";
-        string longitude_full = "";
-        string distance = "30";      
+        string latitude_full    = "";
+        string longitude_full   = "";
+        string distance         = "30";      
 
         public UsedClothesPage()
         {
@@ -49,10 +49,9 @@ namespace Good_Lookz.View.ShopPages
 
         protected override async void OnAppearing()
         {
-            CarouselviewGrid.IsVisible = false;
-            //btnSpecific.IsVisible = false;
-            loadingPage.IsEnabled = true;
-            loadingPage.IsRunning = true;
+            CarouselviewGrid.IsVisible  = false;
+            loadingPage.IsEnabled       = true;
+            loadingPage.IsRunning       = true;
 
             try
             {
@@ -63,58 +62,57 @@ namespace Good_Lookz.View.ShopPages
                 if (position == null)
                     return;
 
-                var latitude = position.Latitude.ToString();
-                var longitude = position.Longitude.ToString();
+                var latitude    = position.Latitude.ToString();
+                var longitude   = position.Longitude.ToString();
 
-                latitude_full = latitude.Replace(",", ".");
-                longitude_full = longitude.Replace(",", ".");
+                latitude_full   = latitude.Replace(",", ".");
+                longitude_full  = longitude.Replace(",", ".");
 
-                loadingPage.IsRunning = false;
-                loadingPage.IsEnabled = false;
-                CarouselviewGrid.IsVisible = true;
-                //btnSpecific.IsVisible = true;
+                loadingPage.IsRunning       = false;
+                loadingPage.IsEnabled       = false;
+                CarouselviewGrid.IsVisible  = true;
             }
             catch
             {
                 loadingPage.IsRunning = false;
                 loadingPage.IsEnabled = false;
-                await DisplayAlert("Error", "Couldnt get location", "OK");
+                await DisplayAlert("Error", "Could not get the location", "OK");
                 return;
             }
 
-            var users_id = Models.LoginCredentials.loginId;
+            var users_id    = Models.LoginCredentials.loginId;
             var full_url_id = string.Format(url_id, latitude_full, longitude_full, distance, users_id);
 
-            var content_id = await client.GetStringAsync(full_url_id);
+            var content_id  = await client.GetStringAsync(full_url_id);
             gets_id = JsonConvert.DeserializeObject<List<distanceUser>>(content_id);
 
             if (gets_id.Count == 0)
             {
-                await DisplayAlert("Message", "No users found within your chosen range.", "OK");
+                await DisplayAlert("Message", "No users found within range.", "OK");
                 App.Current.MainPage = new NavigationPage(new MenuPage());
                 return;
             }
 
-            _obsrv_head = new ObservableCollection<Models.HeadSale>(gets_Head);
-            _obsrv_top = new ObservableCollection<Models.TopSale>(gets_Top);
-            _obsrv_bottom = new ObservableCollection<Models.BottomSale>(gets_Bottom);
-            _obsrv_feet = new ObservableCollection<Models.FeetSale>(gets_Feet);
+            _obsrv_head     = new ObservableCollection<Models.HeadSale>(gets_Head);
+            _obsrv_top      = new ObservableCollection<Models.TopSale>(gets_Top);
+            _obsrv_bottom   = new ObservableCollection<Models.BottomSale>(gets_Bottom);
+            _obsrv_feet     = new ObservableCollection<Models.FeetSale>(gets_Feet);
 
             foreach (var id in gets_id)
             {
                 var userID = id.users_id;
 
-                loadingHead.IsRunning = true;
-                loadingTop.IsRunning = true;
+                loadingHead.IsRunning   = true;
+                loadingTop.IsRunning    = true;
                 loadingBottom.IsRunning = true;
-                loadingFeet.IsRunning = true;
+                loadingFeet.IsRunning   = true;
 
                 string Url_Head = "http://www.good-lookz.com/API/sale/type/head/headDownload.php?users_id={0}";
 
                 string urlFilled_Head = string.Format(Url_Head, userID);
 
-                var content_Head = await client.GetStringAsync(urlFilled_Head);
-                gets_Head = JsonConvert.DeserializeObject<List<Models.HeadSale>>(content_Head);
+                var content_Head    = await client.GetStringAsync(urlFilled_Head);
+                gets_Head           = JsonConvert.DeserializeObject<List<Models.HeadSale>>(content_Head);
 
                 foreach (var item in gets_Head)
                 {
@@ -137,7 +135,7 @@ namespace Good_Lookz.View.ShopPages
 
                 // ---------------------------
 
-                string Url_Top = "http://www.good-lookz.com/API/sale/type/top/topDownload.php?users_id={0}&size={1}";
+                string Url_Top  = "http://www.good-lookz.com/API/sale/type/top/topDownload.php?users_id={0}&size={1}";
 
                 string data_Top = Models.LoginCredentials.loginId;
                 string size_Top = "";
@@ -199,7 +197,7 @@ namespace Good_Lookz.View.ShopPages
 
                 // ---------------------------
 
-                string Url_Feet = "http://www.good-lookz.com/API/sale/type/feet/feetDownload.php?users_id={0}&size={1}";
+                string Url_Feet  = "http://www.good-lookz.com/API/sale/type/feet/feetDownload.php?users_id={0}&size={1}";
 
                 string data_Feet = Models.LoginCredentials.loginId;
                 string size_Feet = "";
@@ -232,7 +230,7 @@ namespace Good_Lookz.View.ShopPages
             }
             if ((gets_Head.Count == 0) && (gets_Top.Count == 0) && (gets_Bottom.Count == 0) && (gets_Feet.Count == 0))
             {
-                await DisplayAlert("Message", "Seems like the users within your chosen range have no items for sale.", "OK");
+                await DisplayAlert("Message", "There are no items available within your range.", "OK");
                 App.Current.MainPage = new NavigationPage(new MenuPage());
                 return;
             }
@@ -307,32 +305,32 @@ namespace Good_Lookz.View.ShopPages
 
         async void headTapped(object sender, EventArgs e)
         {
-            var _typeCloth = 1;
-            selectedItemType.typeCloth = _typeCloth;
+            var _typeCloth              = 1;
+            selectedItemType.typeCloth  = _typeCloth;
 
             await Navigation.PushAsync(new SelectedSaleItemPage(), true);
         }
 
         async void topTapped(object sender, EventArgs e)
         {
-            var _typeCloth = 2;
-            selectedItemType.typeCloth = _typeCloth;
+            var _typeCloth              = 2;
+            selectedItemType.typeCloth  = _typeCloth;
 
             await Navigation.PushAsync(new SelectedSaleItemPage(), true);
         }
 
         async void bottomTapped(object sender, EventArgs e)
         {
-            var _typeCloth = 3;
-            selectedItemType.typeCloth = _typeCloth;
+            var _typeCloth              = 3;
+            selectedItemType.typeCloth  = _typeCloth;
 
             await Navigation.PushAsync(new SelectedSaleItemPage(), true);
         }
 
         async void feetTapped(object sender, EventArgs e)
         {
-            var _typeCloth = 4;
-            selectedItemType.typeCloth = _typeCloth;
+            var _typeCloth              = 4;
+            selectedItemType.typeCloth  = _typeCloth;
 
             await Navigation.PushAsync(new SelectedSaleItemPage(), true);
         }

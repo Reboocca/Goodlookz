@@ -84,7 +84,7 @@ namespace Good_Lookz.View.WardrobePages
 									string result2 = await insert.Content.ReadAsStringAsync();
 								}
 
-								await DisplayAlert("Success", "The mail has been sent to " + name, "OK");
+								await DisplayAlert("Success", "The mail has been sent to " + name + ".", "OK");
 								await this.Navigation.PopAsync();
 							}
 							else if (result == "Failed " | result == "Couldnt insert to database")
@@ -118,7 +118,7 @@ namespace Good_Lookz.View.WardrobePages
 					type = "Sale";
 					break;
 			}
-			lbText.Text = "Make sure you atleast provide your phone number or email-address so " + name + " can contact you.";
+			lbText.Text = "Make sure you atleast provide your phone number or email address so " + name + " can contact you.";
 		}
 	}
 }

@@ -47,15 +47,16 @@ namespace Good_Lookz.View.WardrobePages
 		bool is_own_feet	= false;
 
 		//Vrienden check
-		private const string url_friends = "http://www.good-lookz.com/API/friends/friendsCheck.php?users_id={0}";
-		HttpClient check_friends = new HttpClient(new NativeMessageHandler());
+		private const string url_friends    = "http://www.good-lookz.com/API/friends/friendsCheck.php?users_id={0}";
+		HttpClient check_friends            = new HttpClient(new NativeMessageHandler());
 		private ObservableCollection<Models.FriendsCredentials> _gets;
 		List<Models.FriendsCredentials> response = new List<Models.FriendsCredentials>();
 
 		//User size
-		List<Models.Sizes.AllSizes> lstSizes = new List<Models.Sizes.AllSizes>();
-		Models.UserSizes uSize = new Models.UserSizes();
+		List<Models.Sizes.AllSizes> lstSizes    = new List<Models.Sizes.AllSizes>();
+		Models.UserSizes uSize                  = new Models.UserSizes();
 		#endregion
+
 		public WardrobeAllClothes()
         {
             InitializeComponent();
@@ -86,26 +87,23 @@ namespace Good_Lookz.View.WardrobePages
 			string URL = string.Format(url_friends, data);
 
 			var content = await check_friends.GetStringAsync(URL);
-			response = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
+			response    = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
 
 			if (response[0].id != null)
 			{
-				loadingHead.IsRunning = true;
-				loadingTop.IsRunning = true;
+				loadingHead.IsRunning   = true;
+				loadingTop.IsRunning    = true;
 				loadingBottom.IsRunning = true;
-				loadingFeet.IsRunning = true;
+				loadingFeet.IsRunning   = true;
 
-				string Url_Head = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=0";
+				string Url_Head         = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=0";
+				string data_Head        = Models.LoginCredentials.loginId;
+				string urlFilled_Head   = string.Format(Url_Head, data_Head);
+				var content_Head        = await _client.GetStringAsync(urlFilled_Head);
 
-				string data_Head = Models.LoginCredentials.loginId;
-
-				string urlFilled_Head = string.Format(Url_Head, data_Head);
-
-				var content_Head = await _client.GetStringAsync(urlFilled_Head);
 				if (content_Head != "[]0 results")
 				{
-					gets_Head = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
-
+					gets_Head   = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
 					_obsrv_head = new ObservableCollection<Models.WardrobeHeadAll>(gets_Head);
 
 					loadingHead.IsRunning = false;
@@ -129,20 +127,15 @@ namespace Good_Lookz.View.WardrobePages
 
 				// ---------------------------
 
-				string Url_Top = "http://www.good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=0&size=" + uSize.topnr;
-
-				string data_Top = Models.LoginCredentials.loginId;
-				//string size_Top = "";
-
-				string urlFilled_Top = string.Format(Url_Top, data_Top);
-
-				var content_Top = await _client.GetStringAsync(urlFilled_Top);
+				string Url_Top          = "http://www.good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=0&size=" + uSize.topnr;
+				string data_Top         = Models.LoginCredentials.loginId;
+				string urlFilled_Top    = string.Format(Url_Top, data_Top);
+				var content_Top         = await _client.GetStringAsync(urlFilled_Top);
 
 				if (content_Top != "[]0 results")
 				{
-					gets_Top = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
-
-					_obsrv_top = new ObservableCollection<Models.WardrobeTopAll>(gets_Top);
+					gets_Top    = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
+					_obsrv_top  = new ObservableCollection<Models.WardrobeTopAll>(gets_Top);
 
 					loadingTop.IsRunning = false;
 					loadingTop.IsVisible = false;
@@ -165,20 +158,15 @@ namespace Good_Lookz.View.WardrobePages
 
 				// ---------------------------
 
-				string Url_Bottom = "http://www.good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=0&size=" + uSize.botnr;
-
-				string data_Bottom = Models.LoginCredentials.loginId;
-				//string size_Bottom = "";
-
+				string Url_Bottom       = "http://www.good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=0&size=" + uSize.botnr;
+				string data_Bottom      = Models.LoginCredentials.loginId;
 				string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom);
-
-				var content_Bottom = await _client.GetStringAsync(urlFilled_Bottom);
+				var content_Bottom      = await _client.GetStringAsync(urlFilled_Bottom);
 
 				if (content_Bottom != "[]0 results")
 				{
-					gets_Bottom = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
-
-					_obsrv_bottom = new ObservableCollection<Models.WardrobeBottomAll>(gets_Bottom);
+					gets_Bottom     = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
+					_obsrv_bottom   = new ObservableCollection<Models.WardrobeBottomAll>(gets_Bottom);
 
 					loadingBottom.IsRunning = false;
 					loadingBottom.IsVisible = false;
@@ -197,24 +185,18 @@ namespace Good_Lookz.View.WardrobePages
 				{
 					loadingBottom.IsVisible = false;
 				}
-
-
+                
 
 				// ---------------------------
 
-				string Url_Feet = "http://www.good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=0&size=" + uSize.feetnr;
-
-				string data_Feet = Models.LoginCredentials.loginId;
-				//string size_Feet = "";
-
-				string urlFilled_Feet = string.Format(Url_Feet, data_Feet);
-
-				var content_Feet = await _client.GetStringAsync(urlFilled_Feet);
+				string Url_Feet         = "http://www.good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=0&size=" + uSize.feetnr;
+				string data_Feet        = Models.LoginCredentials.loginId;
+				string urlFilled_Feet   = string.Format(Url_Feet, data_Feet);
+				var content_Feet        = await _client.GetStringAsync(urlFilled_Feet);
 
 				if (content_Feet != "[]0 results")
 				{
-					gets_Feet = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
-
+					gets_Feet   = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
 					_obsrv_feet = new ObservableCollection<Models.WardrobeFeetAll>(gets_Feet);
 
 					loadingFeet.IsRunning = false;
@@ -247,12 +229,10 @@ namespace Good_Lookz.View.WardrobePages
 
 		async void getOwnClothes()
 		{
-			string Url_Head = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=1";
-
-			string data_Head = Models.LoginCredentials.loginId;
-			string urlFilled_Head = string.Format(Url_Head, data_Head);
-
-			var content_Head = await _client.GetStringAsync(urlFilled_Head);
+			string Url_Head         = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=1";
+			string data_Head        = Models.LoginCredentials.loginId;
+			string urlFilled_Head   = string.Format(Url_Head, data_Head);
+			var content_Head        = await _client.GetStringAsync(urlFilled_Head);
 
 			if (content_Head != "[]0 results")
 			{
@@ -281,14 +261,11 @@ namespace Good_Lookz.View.WardrobePages
 
 			// ---------------------------
 
-			string Url_Top = "http://www.good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=1&size=";
-
-			string data_Top = Models.LoginCredentials.loginId;
-			string size_Top = "";
-
-			string urlFilled_Top = string.Format(Url_Top, data_Top, size_Top);
-
-			var content_Top = await _client.GetStringAsync(urlFilled_Top);
+			string Url_Top          = "http://www.good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=1&size=";
+			string data_Top         = Models.LoginCredentials.loginId;
+			string size_Top         = "";
+			string urlFilled_Top    = string.Format(Url_Top, data_Top, size_Top);
+			var content_Top         = await _client.GetStringAsync(urlFilled_Top);
 
 			if (content_Top != "[]0 results")
 			{
@@ -316,14 +293,11 @@ namespace Good_Lookz.View.WardrobePages
 
 			// ---------------------------
 
-			string Url_Bottom = "http://www.good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=1&size=";
-
-			string data_Bottom = Models.LoginCredentials.loginId;
-			string size_Bottom = "";
-
+			string Url_Bottom       = "http://www.good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=1&size=";
+			string data_Bottom      = Models.LoginCredentials.loginId;
+			string size_Bottom      = "";
 			string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom, size_Bottom);
-
-			var content_Bottom = await _client.GetStringAsync(urlFilled_Bottom);
+			var content_Bottom      = await _client.GetStringAsync(urlFilled_Bottom);
 
 			if (content_Bottom != "[]0 results")
 			{
@@ -351,14 +325,11 @@ namespace Good_Lookz.View.WardrobePages
 
 			// ---------------------------
 
-			string Url_Feet = "http://www.good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=1&size=";
-
-			string data_Feet = Models.LoginCredentials.loginId;
-			string size_Feet = "";
-
-			string urlFilled_Feet = string.Format(Url_Feet, data_Feet, size_Feet);
-
-			var content_Feet = await _client.GetStringAsync(urlFilled_Feet);
+			string Url_Feet         = "http://www.good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=1&size=";
+			string data_Feet        = Models.LoginCredentials.loginId;
+			string size_Feet        = "";
+			string urlFilled_Feet   = string.Format(Url_Feet, data_Feet, size_Feet);
+			var content_Feet        = await _client.GetStringAsync(urlFilled_Feet);
 
 			if (content_Feet != "[]0 results")
 			{
@@ -541,22 +512,22 @@ namespace Good_Lookz.View.WardrobePages
 		private async void getUserSize()
 		{
 			string users_id = Models.LoginCredentials.loginId;
-			string url = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
+			string url      = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
 
-			HttpClient get = new HttpClient();
+			HttpClient get              = new HttpClient();
 			HttpResponseMessage respons = await get.GetAsync(url);
 
 			if (respons.IsSuccessStatusCode)
 			{
-				string responsecontent = await respons.Content.ReadAsStringAsync();
-				var myobjList = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
-				var myObj = myobjList[0];
+				string responsecontent  = await respons.Content.ReadAsStringAsync();
+				var myobjList           = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
+				var myObj               = myobjList[0];
 
-				uSize.region = myObj.region;
-				uSize.gender = myObj.gender;
-				uSize.topnr = myObj.topnr;
-				uSize.botnr = myObj.botnr;
-				uSize.feetnr = myObj.feetnr;
+				uSize.region    = myObj.region;
+				uSize.gender    = myObj.gender;
+				uSize.topnr     = myObj.topnr;
+				uSize.botnr     = myObj.botnr;
+				uSize.feetnr    = myObj.feetnr;
 			}
 		}
 
@@ -569,9 +540,9 @@ namespace Good_Lookz.View.WardrobePages
         {
 			if (!is_own_head)
 			{
-				var _typeCloth = 1;
-				selectedTypeLend.typeCloth = _typeCloth;
-				Models.PreviousPage.page = "WardrobeAllClothes";
+				var _typeCloth              = 1;
+				selectedTypeLend.typeCloth  = _typeCloth;
+				Models.PreviousPage.page    = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}            
@@ -581,9 +552,9 @@ namespace Good_Lookz.View.WardrobePages
         {
 			if (!is_own_top)
 			{
-				var _typeCloth = 2;
-				selectedTypeLend.typeCloth = _typeCloth;
-				Models.PreviousPage.page = "WardrobeAllClothes";
+				var _typeCloth              = 2;
+				selectedTypeLend.typeCloth  = _typeCloth;
+				Models.PreviousPage.page    = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}
@@ -593,9 +564,9 @@ namespace Good_Lookz.View.WardrobePages
         {
 			if (!is_own_bottom)
 			{
-				var _typeCloth = 3;
-				selectedTypeLend.typeCloth = _typeCloth;
-				Models.PreviousPage.page = "WardrobeAllClothes";
+				var _typeCloth              = 3;
+				selectedTypeLend.typeCloth  = _typeCloth;
+				Models.PreviousPage.page    = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}
@@ -605,9 +576,9 @@ namespace Good_Lookz.View.WardrobePages
         {
 			if (!is_own_feet)
 			{
-				var _typeCloth = 4;
-				selectedTypeLend.typeCloth = _typeCloth;
-				Models.PreviousPage.page = "WardrobeAllClothes";
+				var _typeCloth              = 4;
+				selectedTypeLend.typeCloth  = _typeCloth;
+				Models.PreviousPage.page    = "WardrobeAllClothes";
 
 				await Navigation.PushAsync(new WardrobePreview(), true);
 			}

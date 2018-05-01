@@ -382,7 +382,7 @@ namespace Good_Lookz.View
         {
             if (wardrobeItems.noItems == true)
             {
-                await DisplayAlert("Wait!", "Add atleast one clothing so you can continue.", "OK");
+                await DisplayAlert("Wait!", "Make sure to add atleast a single piece of clothing before saving a set.", "OK");
             }
             else
             {

@@ -34,16 +34,12 @@ namespace Good_Lookz.View.ShopPages
 
         protected override async void OnAppearing()
         {
-            string data = Models.LoginCredentials.loginId;
-
-            string URL = string.Format(url, data);
-
-            var content = await client.GetStringAsync(URL);
-            response = JsonConvert.DeserializeObject<List<Models.SaleList>>(content);
-
-            _gets = new ObservableCollection<Models.SaleList>(response);
-
-            sales.ItemsSource = _gets;
+            string data         = Models.LoginCredentials.loginId;
+            string URL          = string.Format(url, data);
+            var content         = await client.GetStringAsync(URL);
+            response            = JsonConvert.DeserializeObject<List<Models.SaleList>>(content);
+            _gets               = new ObservableCollection<Models.SaleList>(response);
+            sales.ItemsSource   = _gets;
         }
 
         async void Sales_Tapped(object sender, ItemTappedEventArgs e)

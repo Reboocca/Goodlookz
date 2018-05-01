@@ -20,11 +20,10 @@
               <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding friends_id}" IsDestructive="True" />
             </ViewCell.ContextActions>
             <StackLayout Orientation="Horizontal" Padding="10">
-              <Image Source="friends.png" />
+              <Image Source="default_pfp.png" />
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
                 <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
                 <Label FontSize="15" Text="{Binding fullName}" />
-                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
               </StackLayout>
             </StackLayout>
           </ViewCell>

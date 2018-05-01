@@ -22,15 +22,15 @@ namespace Good_Lookz.View.SignPages
 		{
 			if(enMail.TextColor == Color.Red)
 			{
-				DisplayAlert("Warning", "Invalid e-mail address.", "Ok");
+				DisplayAlert("Warning", "Invalid email address.", "Ok");
 			}
 			else if (string.IsNullOrEmpty(enMail.Text))
 			{
-				DisplayAlert("Warning", "Please provide your e-mail before proceeding.", "Ok");
+				DisplayAlert("Warning", "Please provide your email before proceeding.", "Ok");
 			}
 			else
 			{
-				//Sla email op in static class voor het volgende form
+				//Sla email op in static class voor de volgende pagina
 				Models.Settings.ResetPWD.mail = enMail.Text;
 
 				//Verstuur de mail
@@ -41,11 +41,13 @@ namespace Good_Lookz.View.SignPages
 
 		private async void CodeClicked(object sender, EventArgs e)
 		{
+            //Ga naar de volgende pagina
 			await Navigation.PushAsync(new View.SignPages.ResetCode(), true);
 		}
 
 		private async void sendMail()
 		{
+            //Verstuur de mail via de web server en check het resultaat
 			try
 			{
 				string users_id = Models.LoginCredentials.loginId;
@@ -69,6 +71,7 @@ namespace Good_Lookz.View.SignPages
 			}
 			catch (Exception)
 			{
+                //catch enige fouten
 				await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
 				throw;
 			}

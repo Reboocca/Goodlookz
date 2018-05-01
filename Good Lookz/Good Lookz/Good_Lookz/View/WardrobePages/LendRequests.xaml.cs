@@ -43,15 +43,12 @@ namespace Good_Lookz.View.WardrobePages
         {
             try
             {
-                var id = Models.LoginCredentials.loginId;
-
-                var Url = "http://www.good-lookz.com/API/lend/lendDownload.php?users_id={0}&active=0";
-                var Url_Full = string.Format(Url, id);
-
-                var content = await _client.GetStringAsync(Url_Full);
-                response = JsonConvert.DeserializeObject<List<Models.LendList>>(content);
-
-                _gets = new ObservableCollection<Models.LendList>(response);
+                var id          = Models.LoginCredentials.loginId;
+                var Url         = "http://www.good-lookz.com/API/lend/lendDownload.php?users_id={0}&active=0";
+                var Url_Full    = string.Format(Url, id);
+                var content     = await _client.GetStringAsync(Url_Full);
+                response        = JsonConvert.DeserializeObject<List<Models.LendList>>(content);
+                _gets           = new ObservableCollection<Models.LendList>(response);
 
                 lendRequests.ItemsSource = _gets;
             }
@@ -63,6 +60,7 @@ namespace Good_Lookz.View.WardrobePages
 
         async void Lend_Tapped(object sender, ItemTappedEventArgs e)
         {
+            //Sla item gegevens op en navigeer naar de volgende pagina
 			Models.LendList items = (Models.LendList)e.Item;
 
 			Models.SelectedLend.lend_id			= items.lend_id;
@@ -83,17 +81,17 @@ namespace Good_Lookz.View.WardrobePages
 
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            var item = ((MenuItem)sender);
+            var item    = ((MenuItem)sender);
             var lend_id = item.CommandParameter.ToString();
 
 			var requestResponse = await DisplayAlert("Warning", "Do you really want to delete the lend request?", "Yes", "No");
 			if (requestResponse)
 			{
-				string webadres = "http://good-lookz.com/API/lend/lendAccept.php?";
-				string parameters = "lend_id=" + lend_id + "&accepted=false";
+				string webadres             = "http://good-lookz.com/API/lend/lendAccept.php?";
+				string parameters           = "lend_id=" + lend_id + "&accepted=false";
 
-				HttpClient connect = new HttpClient();
-				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+				HttpClient connect          = new HttpClient();
+				HttpResponseMessage insert  = await connect.GetAsync(webadres + parameters);
 				insert.EnsureSuccessStatusCode();
 
 				string result = await insert.Content.ReadAsStringAsync();

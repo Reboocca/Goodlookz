@@ -107,7 +107,7 @@ namespace Good_Lookz.View.WardrobePages
                 }
             }
 
-            await DisplayAlert("Message", "Deleted: " + postMethod[0].requests_deleted, "OK");
+            await DisplayAlert("Message", "Request has been deleted.", "OK");
         }
 
         protected override void OnDisappearing()

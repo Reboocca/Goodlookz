@@ -98,7 +98,7 @@ namespace Good_Lookz.View.WardrobePages
             var responseString = await response.Content.ReadAsStringAsync();
             var postMethod = JsonConvert.DeserializeObject<List<Models.WardrobeSetDelete>>(responseString);
 
-            await DisplayAlert("Succesfull", "Deleted", "OK");
+            await DisplayAlert("Success", "Deleted", "OK");
 
             // Delete item van ObservableCollection
             foreach (var items in _posts.ToList())

@@ -53,57 +53,61 @@ namespace Good_Lookz.View.WardrobePages
             switch (clothName)
             {
                 case "Head":
-                    string Url_Head = "http://good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=1";
-                    string data_Head = Models.SelectedFriendsCredentials.id;
-                    string urlFilled_Head = string.Format(Url_Head, data_Head);
+                    string Url_Head         = "http://good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=1";
+                    string data_Head        = Models.SelectedFriendsCredentials.id;
+                    string urlFilled_Head   = string.Format(Url_Head, data_Head);
 
-                    var content_Head = await _client.GetStringAsync(urlFilled_Head);
+                    var content_Head        = await _client.GetStringAsync(urlFilled_Head);
 
 					if (content_Head != "[]0 results")
 					{
-						gets_Head = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
-						Cloths.ItemsSource = gets_Head;
+						gets_Head           = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
+						Cloths.ItemsSource  = gets_Head;
 					}
                     break;
-                case "Top":
-                    string Url_Top = "http://good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=1";
-                    string data_Top = Models.SelectedFriendsCredentials.id;
-                    string urlFilled_Top = string.Format(Url_Top, data_Top);
 
-                    var content_Top = await _client.GetStringAsync(urlFilled_Top);
+                case "Top":
+                    string Url_Top          = "http://good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=1";
+                    string data_Top         = Models.SelectedFriendsCredentials.id;
+                    string urlFilled_Top    = string.Format(Url_Top, data_Top);
+
+                    var content_Top         = await _client.GetStringAsync(urlFilled_Top);
 
 					if (content_Top != "[]0 results")
 					{
-						gets_Top = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
-						Cloths.ItemsSource = gets_Top;
+						gets_Top            = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
+						Cloths.ItemsSource  = gets_Top;
 					}
 					break;
+
                 case "Bottom":
-                    string Url_Bottom = "http://good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=1";
-                    string data_Bottom = Models.SelectedFriendsCredentials.id;
+                    string Url_Bottom       = "http://good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=1";
+                    string data_Bottom      = Models.SelectedFriendsCredentials.id;
                     string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom);
 
-                    var content_Bottom = await _client.GetStringAsync(urlFilled_Bottom);
+                    var content_Bottom      = await _client.GetStringAsync(urlFilled_Bottom);
 
 					if (content_Bottom != "[]0 results")
 					{
-						gets_Bottom = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
-						Cloths.ItemsSource = gets_Bottom;
+						gets_Bottom         = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
+						Cloths.ItemsSource  = gets_Bottom;
 					}
                     break;
-                case "Feet":
-                    string Url_Feet = "http://good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=1";
-                    string data_Feet = Models.SelectedFriendsCredentials.id;
-                    string urlFilled_Feet = string.Format(Url_Feet, data_Feet);
 
-                    var content_Feet = await _client.GetStringAsync(urlFilled_Feet);
+                case "Feet":
+                    string Url_Feet         = "http://good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=1";
+                    string data_Feet        = Models.SelectedFriendsCredentials.id;
+                    string urlFilled_Feet   = string.Format(Url_Feet, data_Feet);
+
+                    var content_Feet        = await _client.GetStringAsync(urlFilled_Feet);
 
 					if (content_Feet != "[]0 results")
 					{
-						gets_Feet = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
-						Cloths.ItemsSource = gets_Feet;
+						gets_Feet           = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
+						Cloths.ItemsSource  = gets_Feet;
 					}
                     break;
+
                 default:
                     break;
             }
@@ -113,7 +117,7 @@ namespace Good_Lookz.View.WardrobePages
 
         async void Cloths_Tapped(object sender, ItemTappedEventArgs e)
         {
-
+            //Sla item gegevens op a.d.h.v. het soort item en navigeer naar de volgende pagina
 			switch (clothType.clothName)
 			{
 				case "Head":

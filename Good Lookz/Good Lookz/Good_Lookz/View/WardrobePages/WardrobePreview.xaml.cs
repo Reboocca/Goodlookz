@@ -11,6 +11,7 @@ using Xamarin.Forms;
 
 namespace Good_Lookz.View.WardrobePages
 {
+    #region classes
     class selectedTypeLend
 	{
 		private static int _typeCloth;
@@ -93,11 +94,13 @@ namespace Good_Lookz.View.WardrobePages
             set { _friends_id = value; }
         }
     }
+    #endregion
 
     public partial class WardrobePreview : ContentPage
     {
         private HttpClient _client = new HttpClient(new NativeMessageHandler());
-        int id = 0;
+
+        int id          = 0;
         string picture	= "";
         string date		= "";
 		string size		= "";
@@ -115,6 +118,7 @@ namespace Good_Lookz.View.WardrobePages
 			dpDate.MinimumDate = DateTime.Now;
 			dpDate.MaximumDate = DateTime.Now.AddMonths(6);
 
+            //Sla gegevens op in strings
 			var typeCloth = selectedTypeLend.typeCloth;
             switch (typeCloth)
             {
@@ -156,6 +160,7 @@ namespace Good_Lookz.View.WardrobePages
                     break;
             }
 
+            //Vul de image
             selectedCloth.Source = picture;
 
 			//Vul de labels
@@ -213,8 +218,8 @@ namespace Good_Lookz.View.WardrobePages
 				string webadres		= "http://good-lookz.com/API/lend/lendUpload.php?";
 				string parameters	= "users_id=" + Models.LoginCredentials.loginId + "&owner_id=" + owner_id + "&username=" + Models.LoginCredentials.loginUsername + "&type=" + type + "&item_id=" + item_id + "&date=" + dpDate.Date.ToString("yyyy-MM-dd") + "&days=" + enDays.Text + "&message=" + message;
 
-				HttpClient connect = new HttpClient();
-				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+				HttpClient connect          = new HttpClient();
+				HttpResponseMessage insert  = await connect.GetAsync(webadres + parameters);
 				insert.EnsureSuccessStatusCode();
 
 				string result = await insert.Content.ReadAsStringAsync();

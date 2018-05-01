@@ -584,5 +584,6 @@ C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\Good Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawable\default_pfp.png
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\Good Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll.mdb

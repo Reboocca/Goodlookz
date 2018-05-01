@@ -30,30 +30,30 @@ namespace Good_Lookz.View.WardrobePages
         {
             InitializeComponent();
 
-            ImageHead.Source = Models.SelectedHead.picture;
-            ImageTop.Source = Models.SelectedTop.picture;
-            ImageBottom.Source = Models.SelectedBottom.picture;
-            ImageFeet.Source = Models.SelectedFeet.picture;
+            ImageHead.Source    = Models.SelectedHead.picture;
+            ImageTop.Source     = Models.SelectedTop.picture;
+            ImageBottom.Source  = Models.SelectedBottom.picture;
+            ImageFeet.Source    = Models.SelectedFeet.picture;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(setName.Text) || setName.Text[0].ToString() == " ")
             {
-                await DisplayAlert("Warning", "Please give a name for your set. \nDont leave empty and no white space as your first character.", "OK");
+                await DisplayAlert("Warning", "Please give a name for your set. \nDo not leave it empty.", "OK");
             }
             else
             {
-                var users_id = Models.LoginCredentials.loginId;
-                var name = setName.Text;
-                var head_id = Models.SelectedHead.head_id.ToString();
-                var top_id = Models.SelectedTop.top_id.ToString();
-                var bottom_id = Models.SelectedBottom.bottom_id.ToString();
-                var feet_id = Models.SelectedFeet.feet_id.ToString();
+                var users_id    = Models.LoginCredentials.loginId;
+                var name        = setName.Text;
+                var head_id     = Models.SelectedHead.head_id.ToString();
+                var top_id      = Models.SelectedTop.top_id.ToString();
+                var bottom_id   = Models.SelectedBottom.bottom_id.ToString();
+                var feet_id     = Models.SelectedFeet.feet_id.ToString();
 
                 if (name == null)
                 {
-                    await DisplayAlert("Error", "Don't leave name empty!", "OK");
+                    await DisplayAlert("Error", "Do not leave the name empty!", "OK");
                 }
                 else
                 {
@@ -76,12 +76,12 @@ namespace Good_Lookz.View.WardrobePages
 
                         if (postMethod[0].set_upload == true)
                         {
-                            await DisplayAlert("Gelukt", "Geupload", "OK");
+                            await DisplayAlert("Success", "Set has been saved.", "OK");
                             await Application.Current.MainPage.Navigation.PopAsync();
                         }
                         else
                         {
-                            await DisplayAlert("Mislukt", postMethod[0].set_upload.ToString(), "OK");
+                            await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
                         }
                     }
                 }

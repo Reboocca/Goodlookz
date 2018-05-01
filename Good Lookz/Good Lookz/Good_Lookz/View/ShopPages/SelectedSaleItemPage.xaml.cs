@@ -97,20 +97,20 @@ namespace Good_Lookz.View.ShopPages
             switch (typeCloth)
             {
                 case 1:
-                    sale_id = Models.headSaleSelected.head_sale_id;
-                    users_id2 = Models.headSaleSelected.users_id;
+                    sale_id     = Models.headSaleSelected.head_sale_id;
+                    users_id2   = Models.headSaleSelected.users_id;
                     break;
                 case 2:
-                    sale_id = Models.topSaleSelected.top_sale_id;
-                    users_id2 = Models.topSaleSelected.users_id;
+                    sale_id     = Models.topSaleSelected.top_sale_id;
+                    users_id2   = Models.topSaleSelected.users_id;
                     break;
                 case 3:
-                    sale_id = Models.bottomSaleSelected.bottom_sale_id;
-                    users_id2 = Models.bottomSaleSelected.users_id;
+                    sale_id     = Models.bottomSaleSelected.bottom_sale_id;
+                    users_id2   = Models.bottomSaleSelected.users_id;
                     break;
                 case 4:
-                    sale_id = Models.feetSaleSelected.feet_sale_id;
-                    users_id2 = Models.feetSaleSelected.users_id;
+                    sale_id     = Models.feetSaleSelected.feet_sale_id;
+                    users_id2   = Models.feetSaleSelected.users_id;
                     break;
                 default:
                     break;
@@ -122,7 +122,7 @@ namespace Good_Lookz.View.ShopPages
 
 			if (string.IsNullOrEmpty(editorComments.Text))
 			{
-				comments = "No message added.";
+				comments    = "No message added.";
 			}
 
 			var values = new Dictionary<string, string>
@@ -136,10 +136,10 @@ namespace Good_Lookz.View.ShopPages
 				{ "comments", comments }
 			};
 
-            var content = new FormUrlEncodedContent(values);
-            var response = await _client.PostAsync(url, content);
-            var responseString = await response.Content.ReadAsStringAsync();
-            var postMethod = JsonConvert.DeserializeObject<List<saleRequestUpload>>(responseString);
+            var content         = new FormUrlEncodedContent(values);
+            var response        = await _client.PostAsync(url, content);
+            var responseString  = await response.Content.ReadAsStringAsync();
+            var postMethod      = JsonConvert.DeserializeObject<List<saleRequestUpload>>(responseString);
 
 			if (postMethod[0].sale_request)
 			{

@@ -27,32 +27,32 @@ namespace Good_Lookz.View.SignPages
 
         async void Create_button(object sender, EventArgs e)
         {
-            btnCreate.IsVisible = false;
+            btnCreate.IsVisible     = false;
             loadingCreate.IsVisible = true;
             loadingCreate.IsRunning = true;
 
-            var acceptedTerms = termsConditions.IsToggled;
-            var Username = username.Text;
-            var Password = password.Text;
-            var First_name = first_name.Text;
-            var Last_name = last_name.Text;
-            var Email = email.Text;
+            var acceptedTerms   = termsConditions.IsToggled;
+            var Username        = username.Text;
+            var Password        = password.Text;
+            var First_name      = first_name.Text;
+            var Last_name       = last_name.Text;
+            var Email           = email.Text;
 
             if ((Username == "") || (Password == "") || (First_name == "") || (Last_name == "") || (Email == ""))
             {
                 loadingCreate.IsRunning = false;
                 loadingCreate.IsVisible = false;
-                btnCreate.IsVisible = true;
+                btnCreate.IsVisible     = true;
 
-                await DisplayAlert("Not Filled", "Don't leave empty!", "OK");
+                await DisplayAlert("Warning", "Please make sure to fill in all fields.", "OK");
             }
 			else if (email.TextColor == Color.Red)
 			{
 				loadingCreate.IsRunning = false;
 				loadingCreate.IsVisible = false;
-				btnCreate.IsVisible = true;
+				btnCreate.IsVisible     = true;
 
-				await DisplayAlert("Error", "Invalid email address", "OK");
+				await DisplayAlert("Error", "Invalid email address.", "OK");
 			}
             else
             {
@@ -60,9 +60,9 @@ namespace Good_Lookz.View.SignPages
                 {
                     loadingCreate.IsRunning = false;
                     loadingCreate.IsVisible = false;
-                    btnCreate.IsVisible = true;
+                    btnCreate.IsVisible     = true;
 
-                    await DisplayAlert("Message", "Please accept the Terms of Conditions and Privacy Policy", "OK");
+                    await DisplayAlert("Warning", "Please accept the Terms of Conditions and Privacy Policy.", "OK");
                     return;
                 }
 
@@ -88,7 +88,7 @@ namespace Good_Lookz.View.SignPages
 
                     if (postMethod[0].created == null)
                     {
-                        await DisplayAlert("Exists", "Username or Email already exists.", "OK");
+                        await DisplayAlert("warning", "Username or Email already exists.", "OK");
                     }
                     else
                     {

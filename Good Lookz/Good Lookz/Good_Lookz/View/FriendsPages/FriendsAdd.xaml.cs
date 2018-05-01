@@ -134,7 +134,7 @@ namespace Good_Lookz.View.FriendsPages
                         var responseString = await response.Content.ReadAsStringAsync();
                         var postMethod = JsonConvert.DeserializeObject<List<friendSend>>(responseString);
 
-                        await DisplayAlert("Message", "Friend request send!", "OK");
+                        await DisplayAlert("Message", "Friend has been sent!", "OK");
                     }
                 }
             }

@@ -89,7 +89,7 @@ namespace Good_Lookz.View
                 { "friends_id", friends_id }
             };
 
-            var requestDelete = await DisplayAlert("Warning", "Delete friend?", "Yes", "No");
+            var requestDelete = await DisplayAlert("Warning", "Are you sure you want to delete this friend?", "Yes", "No");
 
             if (requestDelete)
             {

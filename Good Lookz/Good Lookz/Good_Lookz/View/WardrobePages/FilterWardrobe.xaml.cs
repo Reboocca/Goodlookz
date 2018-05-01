@@ -73,6 +73,7 @@ namespace Good_Lookz.View.WardrobePages
 
 		private async void getColours(string type, string id)
 		{
+            //Haal de opgeslagen kleuren op van het geselecteerde type
 			string webadres = "http://good-lookz.com/API/wardrobe/getFilterOptions.php?";
 			string parameters = "users_id=" + id + "&function=colours&item=" + type;
 			HttpClient connect = new HttpClient();
@@ -82,6 +83,7 @@ namespace Good_Lookz.View.WardrobePages
 			string result = await get.Content.ReadAsStringAsync();
 			string[] colours = result.Split(',');
 
+            //Stop de kleuren in de picker
 			foreach (var colour in colours)
 			{
 				pColour.Items.Add(colour);
@@ -102,12 +104,14 @@ namespace Good_Lookz.View.WardrobePages
 
 		private async void btnFilter_Clicked(object sender, EventArgs e)
 		{
+            //Check of er een item in beide pickers geselecteerd zijn
 			if(pType.SelectedIndex == -1 || pColour.SelectedIndex == -1)
 			{
 				await DisplayAlert("Warning", "Please select a type and colour before you continue.", "OK");
 			}
 			else
 			{
+                //Sla de filtergegevens op a.d.h.v. wat er gekozen is
 				switch (pType.Items[pType.SelectedIndex])
 				{
 					case "Head":
@@ -130,11 +134,13 @@ namespace Good_Lookz.View.WardrobePages
 						Models.Settings.Filter.filterFeet.colour	 = pColour.Items[pColour.SelectedIndex];
 						break;
 				}
+                //Terug naar de wardrobe pagina
 				await this.Navigation.PopAsync();
 			}
 			
 		}
 
+        //Reset alle filters
 		private async void btnReset_CLicked(object sender, EventArgs e)
 		{
 			Models.Settings.Filter.filterHead.filteron		= false;
@@ -142,6 +148,7 @@ namespace Good_Lookz.View.WardrobePages
 			Models.Settings.Filter.filterBottom.filteron	= false;
 			Models.Settings.Filter.filterFeet.filteron		= false;
 
+            //Terug naar wardrobe pagina
 			await this.Navigation.PopAsync();
 		}
 	}

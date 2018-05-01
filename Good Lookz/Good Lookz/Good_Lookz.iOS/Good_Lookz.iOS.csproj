@@ -223,6 +223,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\iyc_logo_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\default_pfp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

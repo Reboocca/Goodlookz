@@ -34,7 +34,7 @@ namespace Good_Lookz.View.ShopPages
         {
             InitializeComponent();
 
-            DisplayAlert("Hello there!", "Looks like this is your first time!\n\nChose your shops you prefer in order to continue.\nSwipe to your left!\n\n(You can only chose one per row.)", "OK");
+            DisplayAlert("Hello there!", "Looks like this is your first time!\n\nChose your shops you prefer in order to continue.\nSwipe to your left!\n\n(You can only choose one per row.)", "OK");
         }
 
         protected override async void OnAppearing()
@@ -132,7 +132,7 @@ namespace Good_Lookz.View.ShopPages
             var responseString_Accessories = await response_Accessories.Content.ReadAsStringAsync();
             var postMethod_Accessories = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Accessories);
 
-            await DisplayAlert("Info", "Shop preferences updated!" + "\nUpdated: " + "\nCare: " + postMethod_Care[0].uploaded + "\nFashion: " + postMethod_Fashion[0].uploaded + "\nAccessories: " + postMethod_Accessories[0].uploaded, "OK");
+            await DisplayAlert("Success", "Your shop preferences have been saved.", "OK");
 
             var _id = 1;
             fromPage.id = _id;

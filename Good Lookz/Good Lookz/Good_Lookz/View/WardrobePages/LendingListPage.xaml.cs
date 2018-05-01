@@ -41,60 +41,27 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override async void OnAppearing()
         {
+            //Haal items op
             try
             {
-                var id = Models.LoginCredentials.loginId;
-
-                var Url = "http://www.good-lookz.com/API/lend/lendDownload.php?users_id={0}&active=1";
-                var Url_Full = string.Format(Url, id);
-
-                var content = await _client.GetStringAsync(Url_Full);
-                response = JsonConvert.DeserializeObject<List<Models.LendList>>(content);
-
-                _gets = new ObservableCollection<Models.LendList>(response);
+                var id          = Models.LoginCredentials.loginId;
+                var Url         = "http://www.good-lookz.com/API/lend/lendDownload.php?users_id={0}&active=1";
+                var Url_Full    = string.Format(Url, id);
+                var content     = await _client.GetStringAsync(Url_Full);
+                response        = JsonConvert.DeserializeObject<List<Models.LendList>>(content);
+                _gets           = new ObservableCollection<Models.LendList>(response);
 
                 lendingList.ItemsSource = _gets;
             }
             catch
             {
-                lblLending.Text = "No lending";
+                lblLending.Text = "No items lending";
             }
         }
 
         async void Lend_Tapped(object sender, ItemTappedEventArgs e)
         {
-			#region old
-			//Models.LendList item = (Models.LendList)e.Item;
-			//var lend_id = item.lend_id;
-
-			//var requestResponse = await DisplayAlert("Delete?", "Delete lending?", "Yes", "No");
-
-			//if (requestResponse)
-			//{
-			//    var url = "http://www.good-lookz.com/API/lend/lendDelete.php";
-
-			//    var values = new Dictionary<string, string>
-			//    {
-			//        { "lend_id", lend_id }
-			//    };
-
-			//    var content = new FormUrlEncodedContent(values);
-			//    var response = await _client.PostAsync(url, content);
-			//    var responseString = await response.Content.ReadAsStringAsync();
-			//    var postMethod = JsonConvert.DeserializeObject<List<lendDelete>>(responseString);
-
-			//    await DisplayAlert("Message", "Succesfully deleted!", "OK");
-
-			//    // Delete item van ObservableCollection
-			//    foreach (var items in _gets.ToList())
-			//    {
-			//        if (items.lend_id == lend_id)
-			//        {
-			//            _gets.Remove(items);
-			//        }
-			//    }
-			//}
-			#endregion
+            //Sla gegevens van het geselecteerde leen item op in een class
 			Models.LendList items = (Models.LendList)e.Item;
 
 			Models.SelectedLend.lend_id			= items.lend_id;
@@ -110,29 +77,30 @@ namespace Good_Lookz.View.WardrobePages
 			Models.SelectedLend.picture			= items.picture;
 			Models.SelectedLend.comments		= items.comments;
 
-			await Navigation.PushAsync(new SelectedLend(), true);
+            //Navigeer naar de volgende pagina
+            await Navigation.PushAsync(new SelectedLend(), true);
 		}
 
 		async void Delete_Clicked(object sender, EventArgs e)
 		{
-			var item = ((MenuItem)sender);
+			var item    = ((MenuItem)sender);
 			var lend_id = item.CommandParameter.ToString();
 
 			var requestResponse = await DisplayAlert("Warning", "Do you really want to delete this lend?", "Yes", "No");
 			if (requestResponse)
 			{
-				string webadres = "http://good-lookz.com/API/lend/lendAccept.php?";
-				string parameters = "lend_id=" + lend_id + "&accepted=false";
+				string webadres     = "http://good-lookz.com/API/lend/lendAccept.php?";
+				string parameters   = "lend_id=" + lend_id + "&accepted=false";
 
-				HttpClient connect = new HttpClient();
-				HttpResponseMessage insert = await connect.GetAsync(webadres + parameters);
+				HttpClient connect          = new HttpClient();
+				HttpResponseMessage insert  = await connect.GetAsync(webadres + parameters);
 				insert.EnsureSuccessStatusCode();
 
 				string result = await insert.Content.ReadAsStringAsync();
 
 				if (result == "Success")
 				{
-					await DisplayAlert("Success", "The lend has been deleted.", "OK");
+					await DisplayAlert("Success", "Lend has been deleted.", "OK");
 					// Delete item van ObserveAbleCollection
 					foreach (var items in _gets.ToList())
 					{

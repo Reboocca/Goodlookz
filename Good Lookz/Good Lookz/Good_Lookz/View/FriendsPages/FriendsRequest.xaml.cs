@@ -63,7 +63,7 @@ namespace Good_Lookz.View.FriendsPages
             }
             else
             {
-                lblRequests.Text = "No friends request.";
+                lblRequests.Text = "No friend requests.";
             }
         }
 
