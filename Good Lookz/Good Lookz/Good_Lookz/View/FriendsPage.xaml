@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:Good_Lookz.CustomRenderer;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.FriendsPage"
              Title="Friends">
   <StackLayout>
@@ -20,10 +21,10 @@
               <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding friends_id}" IsDestructive="True" />
             </ViewCell.ContextActions>
             <StackLayout Orientation="Horizontal" Padding="10">
-              <Image Source="default_pfp.png" />
+              <custom:CircleImage Source="{Binding picture}"/>
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
-                <Label FontSize="15" Text="{Binding fullName}" />
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" HorizontalTextAlignment="End"/>
+                <Label FontSize="15" Text="{Binding fullName}" HorizontalTextAlignment="End"/>
               </StackLayout>
             </StackLayout>
           </ViewCell>

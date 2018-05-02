@@ -59,5 +59,11 @@ namespace Good_Lookz.Models
 				public string users_id { get; set; }
 			}
 		}
+
+        public class Profile
+        {
+            public string picture { get; set; }
+            public string description { get; set; }
+        }
 	}
 }

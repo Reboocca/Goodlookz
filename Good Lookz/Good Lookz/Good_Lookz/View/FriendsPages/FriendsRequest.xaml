@@ -18,8 +18,8 @@
             <StackLayout Orientation="Horizontal" Padding="10">
               <Image Source="friends.png" />
               <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" />
-                <Label FontSize="15" Text="{Binding fullName}" />
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" HorizontalTextAlignment="End"/>
+                <Label FontSize="15" Text="{Binding fullName}" HorizontalTextAlignment="End"/>
                 <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
               </StackLayout>
             </StackLayout>

@@ -69,33 +69,6 @@
       <Picker x:Name="bottomSize" Grid.Column="1" Title="Bottom size"/>
       <Picker x:Name="feetSize"   Grid.Column="2" Title="Feet size"/>
     </Grid>
-    <!--<StackLayout Grid.Row="1" Grid.Column="1">
-      <Label Text="Choose your gender and region:" FontSize="15" />
-      <Picker x:Name="cbGender" Title="Choose your gender" SelectedIndex="{Binding cdGender}" SelectedIndexChanged="cbGender_SelectedIndexChanged" >
-        <Picker.Items>
-          <x:String>Female</x:String>
-          <x:String>Male</x:String>
-        </Picker.Items>
-      </Picker>
-      <Picker x:Name="cbRegion" Title="Choose your region" SelectedIndex="{Binding cbRegion}" SelectedIndexChanged="cbRegion_SelectedIndexChanged" >
-        <Picker.Items>
-          <x:String>EU</x:String>
-          <x:String>US</x:String>
-          <x:String>UK</x:String>
-        </Picker.Items>
-      </Picker>
-    </StackLayout>
-    <StackLayout Grid.Row="3" Grid.Column="1">
-      <Label Text="Please choose your sizes below:" FontSize="15" />
-      <Picker x:Name="topSize" Title="Choose your top size" SelectedIndex="{Binding sizeTop}">
-      </Picker>
-
-      <Picker x:Name="bottomSize" Title="Choose your bottom size" SelectedIndex="{Binding bottomSize}" >
-      </Picker>
-
-      <Picker x:Name="feetSize" Title="Choose your feet size" SelectedIndex="{Binding feetSize}" >
-      </Picker>
-    </StackLayout>-->
     <Button x:Name="btnSave" Clicked="UpdateUserInfo" Grid.Row="18" Grid.Column="1" Text="Save" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40"/>
   </Grid>
 </ContentPage>

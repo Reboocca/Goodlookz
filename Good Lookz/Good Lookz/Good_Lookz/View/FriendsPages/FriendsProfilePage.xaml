@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:Good_Lookz.CustomRenderer;assembly=Good_Lookz"
+             x:Class="Good_Lookz.View.FriendsPages.FriendsProfilePage" 
+             Title="Profile">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="10"/>
+      <RowDefinition Height="15*"/>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="10*"/>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="40"/>
+      <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="2*"/>
+      <ColumnDefinition Width="20*"/>
+      <ColumnDefinition Width="2*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label x:Name="lblUsername" Grid.Column="1" Grid.Row="1" FontSize="17" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+    <custom:CircleImage x:Name="imPicture" Grid.Column="1" Grid.Row="3"/>
+
+    <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Vertical">
+      <Label Text="Description:" FontSize="15" FontAttributes="Bold"/>
+      <Label x:Name="lblDesc" FontSize="15"/>
+    </StackLayout>
+    
+    <Button x:Name="btnView" Grid.Column="1" Grid.Row="8" Clicked="View_Clicked" Text="View clothes" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40"/>
+
+  </Grid>
+</ContentPage>

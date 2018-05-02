@@ -43,6 +43,7 @@
     <Compile Include="Behavior\NumberEntry.cs" />
     <Compile Include="CustomRenderer\CameraOptions.cs" />
     <Compile Include="CustomRenderer\CameraPreview.cs" />
+    <Compile Include="CustomRenderer\CircleImage.cs" />
     <Compile Include="Models\CreateAccount.cs" />
     <Compile Include="Models\FriendsCredentials.cs" />
     <Compile Include="Models\GetShops.cs" />
@@ -67,6 +68,9 @@
     <Compile Include="View\AdjustLighting.xaml.cs">
       <DependentUpon>AdjustLighting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FriendsPages\FriendsProfilePage.xaml.cs">
+      <DependentUpon>FriendsProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FriendsPages\FriendsRequest.xaml.cs">
       <DependentUpon>FriendsRequest.xaml</DependentUpon>
     </Compile>
@@ -79,6 +83,9 @@
     <Compile Include="View\NotificationPage.xaml.cs">
       <DependentUpon>NotificationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SaveProfile.xaml.cs">
+      <DependentUpon>SaveProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SaveSizePage.xaml.cs">
       <DependentUpon>SaveSizePage.xaml</DependentUpon>
     </Compile>
@@ -90,6 +97,9 @@
     </Compile>
     <Compile Include="View\SettingPages\ChangePassword.xaml.cs">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPages\ChangeProfile.xaml.cs">
+      <DependentUpon>ChangeProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SettingPages\EditAccount.xaml.cs">
       <DependentUpon>EditAccount.xaml</DependentUpon>
@@ -654,7 +664,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="View\FriendsPages\FriendsProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Images\default_pfp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SaveProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\SettingPages\ChangeProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

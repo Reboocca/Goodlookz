@@ -28,9 +28,10 @@ namespace Good_Lookz.View.SettingPages
 
 		//Vul de listview met settings
 		private void getSettings()
-		{
-			lstSetting.Add(new AccountSetting { title = "Personal information", id = 1 });
-			lstSetting.Add(new AccountSetting { title = "Change password",		id = 2 });
+        {
+            lstSetting.Add(new AccountSetting { title = "Edit your profile",    id = 0 });
+            lstSetting.Add(new AccountSetting { title = "Personal information", id = 1 });
+            lstSetting.Add(new AccountSetting { title = "Change password",		id = 2 });
 			lstSetting.Add(new AccountSetting { title = "Change e-mail",		id = 3 });
 
 			lvAccSettings.ItemsSource = lstSetting;
@@ -42,6 +43,9 @@ namespace Good_Lookz.View.SettingPages
 			//Check waar de gebruiker op heeft geklikt en voer de juiste actie uit
 			switch (((AccountSetting)(lvAccSettings.SelectedItem)).id)
 			{
+                case 0:
+                    editProfile();
+                    break;
 				case 1:
 					editPersonal();
 					break;
@@ -59,7 +63,13 @@ namespace Good_Lookz.View.SettingPages
 			((ListView)sender).SelectedItem = null;
 		}
 
-		private async void editPersonal()
+        private async void editProfile()
+        {
+            //Stuur de gebruiker door naar de profiel pagina
+            await Navigation.PushAsync(new View.SettingPages.ChangeProfile(), true);
+        }
+
+        private async void editPersonal()
 		{
 			//Stuur de gebruiker door naar de persoonlijke gegevens pagina
 			await Navigation.PushAsync(new View.SettingPages.ChangeInfo(), true);
