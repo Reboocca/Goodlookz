@@ -37,6 +37,13 @@ namespace Good_Lookz.View.ShopPages
             DisplayAlert("Hello there!", "Looks like this is your first time!\n\nChose your shops you prefer in order to continue.\nSwipe to your left!\n\n(You can only choose one per row.)", "OK");
         }
 
+        //code van: https://stackoverflow.com/questions/32163471/confirmation-dialog-on-back-button-press-event-xamarin-forms voor terugknop
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () => { await this.DisplayAlert("Message", "Please save your favourite shops before proceeding", "OK"); });
+            return true;
+        }
+
         protected override async void OnAppearing()
         {
             string url_Care = "http://www.good-lookz.com/API/shops/shopsDownload.php?rubric_id=1";

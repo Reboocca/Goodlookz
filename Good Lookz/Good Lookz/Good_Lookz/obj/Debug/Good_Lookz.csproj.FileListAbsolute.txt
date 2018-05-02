@@ -400,5 +400,8 @@ C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.FriendsPages.FriendsProfilePage.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SaveProfile.xaml.g.cs
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.SettingPages.ChangeProfile.xaml.g.cs
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll.mdb
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll.mdb

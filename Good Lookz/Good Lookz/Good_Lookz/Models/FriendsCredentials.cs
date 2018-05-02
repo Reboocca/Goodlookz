@@ -17,6 +17,8 @@ namespace Good_Lookz.Models
         public string last_name { get; set; }
         public string friends_id { get; set; }
         public string fullName { get { return first_name + " " + last_name; } }
+        public string picture { get; set; }
+        public string description { get; set; }
     }
     
     /// <summary>
@@ -27,6 +29,10 @@ namespace Good_Lookz.Models
         private static string _id;
         private static string _friends_id;
         private static string _fullName;
+
+        public static string picture;
+        public static string username;
+        public static string description;
 
         public static string id
         {

@@ -121,7 +121,16 @@ namespace Good_Lookz.View
 
         void FriendsList_Tapped(object sender, ItemTappedEventArgs e)
         {
-            // Possible to add some functionalty later
+            Models.FriendsCredentials item = (Models.FriendsCredentials)e.Item;
+
+            Models.SelectedFriendsCredentials.id            = item.id;
+            Models.SelectedFriendsCredentials.picture       = item.picture;
+            Models.SelectedFriendsCredentials.username      = item.username;
+            Models.SelectedFriendsCredentials.description   = item.description;
+            Models.SelectedFriendsCredentials.fullName      = item.fullName;
+            Models.SelectedFriendsCredentials.friends_id    = item.friends_id;
+
+            Navigation.PushAsync(new FriendsPages.FriendsProfilePage(), true);
         }
 
         protected override void OnDisappearing()

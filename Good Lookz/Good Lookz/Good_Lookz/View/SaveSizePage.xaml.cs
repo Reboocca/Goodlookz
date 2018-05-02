@@ -159,7 +159,7 @@ namespace Good_Lookz.View
 					if (result == "Success")
 					{
 						await DisplayAlert("Success", "Your sizes have been saved! You can always change your size in settings.", "OK");
-						App.Current.MainPage = new NavigationPage(new MenuPage());
+						App.Current.MainPage = new NavigationPage(new SaveProfile());
 					}
 					//Is het resultaat failed
 					else if (result == "Failed")

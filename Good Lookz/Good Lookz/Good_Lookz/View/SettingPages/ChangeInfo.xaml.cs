@@ -192,9 +192,9 @@ namespace Good_Lookz.View.SettingPages
 					{
 						//Haal vereisten gegevens op
 						var users_id = Models.LoginCredentials.loginId;
-						Models.Sizes.AllSizes top = new Models.Sizes.AllSizes();
-						Models.Sizes.AllSizes bot = new Models.Sizes.AllSizes();
-						Models.Sizes.AllSizes feet = new Models.Sizes.AllSizes();
+						Models.Sizes.AllSizes top   = new Models.Sizes.AllSizes();
+						Models.Sizes.AllSizes bot   = new Models.Sizes.AllSizes();
+						Models.Sizes.AllSizes feet  = new Models.Sizes.AllSizes();
 
 						foreach (Models.Sizes.AllSizes i in lstSizes)
 						{
@@ -218,13 +218,13 @@ namespace Good_Lookz.View.SettingPages
 							}
 						}
 
-						string webadres = "http://good-lookz.com/API/account/updateUserInfo.php?";
-						string parameters = "users_id=" + Models.LoginCredentials.loginId + "&fname=" + fName.Text + "&lname=" + lName.Text + "&region=" + feet.sRegion + "&gender=" + feet.sGender + "&topsize=" + top.sNr + "&botsize=" + bot.sNr + "&feetsize=" + feet.sNr;
+						string webadres     = "http://good-lookz.com/API/account/updateUserInfo.php?";
+						string parameters   = "users_id=" + Models.LoginCredentials.loginId + "&fname=" + fName.Text + "&lname=" + lName.Text + "&region=" + feet.sRegion + "&gender=" + feet.sGender + "&topsize=" + top.sNr + "&botsize=" + bot.sNr + "&feetsize=" + feet.sNr;
 
-						HttpClient connect = new HttpClient();
-						HttpResponseMessage update = await connect.GetAsync(webadres + parameters);
+						HttpClient connect          = new HttpClient();
+						HttpResponseMessage update  = await connect.GetAsync(webadres + parameters);
 						update.EnsureSuccessStatusCode();
-						string result = await update.Content.ReadAsStringAsync();
+						string result               = await update.Content.ReadAsStringAsync();
 
 						if (result == "Success")
 						{
