@@ -11,9 +11,9 @@ De documentatie van de applicatie is te vinden in de map "docs", hierin staat oo
 | Plan van aanpak                 | v1.00  | 13 maart 2018    |
 | Functioneel ontwerp             | v1.00  | 14 maart 2018    |
 | Technisch ontwerp               | v1.01  | 03 april 2018    |
-| Testplan                        | v0.03  | 26 april 2018    |
-| Testrapport                     | v0.03  | 26 april 2018    |
-| Technische documentatie         | v0.02  | 26 april 2018    |
+| Testplan                        | v0.03  | 24 april 2018    |
+| Testrapport                     | v0.04  | 02 maart 2018    |
+| Technische documentatie         | v0.04  | 03 maart 2018    |
 
 (nog meer toevoegen)
 
@@ -27,4 +27,7 @@ De vorige programmeur maakte gebruik van een WEB API die JSON resultaten weer li
 
 
 ### Mappenstructuur
-Als zowel bij de applicatie als de web api is er een mappenstructuur opgebouwd. In het **technisch ontwerp** wordt hier meer informatie over vrijgegeven, dus het is aangeraden om deze door te nemen. (enige aanpassingen in mappen structuur zal binnen de **technische documentatie** en **technische documentatie** omschreven staan.
+Als zowel bij de applicatie als de web api is er een mappenstructuur opgebouwd. In het **technisch ontwerp** wordt hier meer informatie over vrijgegeven, dus het is aangeraden om deze door te nemen. Enige aanpassingen in mappen structuur zal binnen de **technische documentatie** omschreven staan.
+
+### Aanpassingen
+Daarnaast is het van belang dat de **technische documentatie** bij de hand wordt gehouden wanneer andere documenten gelezen worden. Hierin staan alle toegevoegde functionaliteiten omschreven met zowel een omschrijving, flowcharts, datamodel en GUI afbeeldingen.
