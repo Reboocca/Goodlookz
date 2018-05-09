@@ -117,32 +117,39 @@ namespace Good_Lookz.View.SettingPages
 			}
 			else
 			{
-				//Check of het wachtwoord correct is
-				if (await validPwd())
-				{
-					//Check of de mail uniek is
-					if (await checkMail())
-					{
-						if(await updateMail())
-						{
-							await DisplayAlert("Success", "Changes have been saved!", "ok");
-							await this.Navigation.PopAsync();
-						}
-						else
-						{
-							await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
-						}
-					}
-					else
-					{
-						await DisplayAlert("Error", "E-mail address is already being used", "ok");
-					}
-				}
-				else
-				{
-					await DisplayAlert("Error", "Password invalid.", "OK");
-				}
-			}	
-		}
+                if(newMail.TextColor == Color.Red)
+                {
+                    await DisplayAlert("Warning", "Make sure your e-mail adress is valid, otherwise we won't be able to update you.", "OK");
+                }
+                else
+                {
+                    //Check of het wachtwoord correct is
+                    if (await validPwd())
+                    {
+                        //Check of de mail uniek is
+                        if (await checkMail())
+                        {
+                            if (await updateMail())
+                            {
+                                await DisplayAlert("Success", "Changes have been saved!", "ok");
+                                await this.Navigation.PopAsync();
+                            }
+                            else
+                            {
+                                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
+                            }
+                        }
+                        else
+                        {
+                            await DisplayAlert("Error", "E-mail address is already being used", "ok");
+                        }
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "Password invalid.", "OK");
+                    }
+                }
+            }
+        }
 	}
 }

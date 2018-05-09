@@ -29,6 +29,7 @@ namespace Good_Lookz.View.SettingPages
         #region Global
         private MediaFile _mediaFile;
         Models.Settings.Profile pf = new Models.Settings.Profile();
+        bool picChanged = false;
         #endregion
 
         private async void getProfile()
@@ -78,8 +79,9 @@ namespace Good_Lookz.View.SettingPages
                 return _mediaFile.GetStream();
             });
 
+            picChanged           = true;
             loadingPic.IsRunning = false;
-            imPicture.IsVisible = true;
+            imPicture.IsVisible  = true;
         }
 
         private async void TakePhoto_Clicked(object sender, EventArgs e)
@@ -103,7 +105,7 @@ namespace Good_Lookz.View.SettingPages
             if (_mediaFile == null)
             {
                 loadingPic.IsRunning = false;
-                imPicture.IsVisible = true;
+                imPicture.IsVisible  = true;
                 return;
             }
 
@@ -112,8 +114,9 @@ namespace Good_Lookz.View.SettingPages
                 return _mediaFile.GetStream();
             });
 
+            picChanged           = true;
             loadingPic.IsRunning = false;
-            imPicture.IsVisible = true;
+            imPicture.IsVisible  = true;
         }
 
         private async void uploadToDBS(object sender, EventArgs e)
@@ -126,32 +129,63 @@ namespace Good_Lookz.View.SettingPages
                 desc = "No description added.";
             }
 
-            var content = new MultipartFormDataContent();
-
-            //Stop de file in de content
-            content.Add(new StreamContent(_mediaFile.GetStream()),
-                        "\"fileToUpload\"",
-                        $"\"{_mediaFile.Path}\"");
-
-
-            var users_id = Models.LoginCredentials.loginId;
-
-            content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(users_id))), "users_id");
-            content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
-
-            HttpClient client = new HttpClient(new NativeMessageHandler());
-            var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/updateProfile.php", content);
-            string result = await ResponseMessage.Content.ReadAsStringAsync();
-
-            if (result == "Success")
+            if (!picChanged)
             {
-                await DisplayAlert("Success", "You changes have been saved", "Ok");
-                await this.Navigation.PopAsync();
+                try
+                {
+                    string webadres = "http://good-lookz.com/API/account/updateProfile.php?";
+                    string parameters = "description=" + desc + "&users_id=" + Models.LoginCredentials.loginId;
+                    HttpClient connect = new HttpClient();
+                    HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+                    get.EnsureSuccessStatusCode();
+
+                    string result = await get.Content.ReadAsStringAsync();
+
+                    if (result == "Success")
+                    {
+                        await DisplayAlert("Success", "You changes have been saved", "Ok");
+                        await this.Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again", "ok");
+                    }
+                }
+                catch (Exception)
+                {
+                    await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again", "ok");
+                }
+                
             }
             else
             {
-                btnSave.IsEnabled = true;
-                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again", "ok");
+                var content = new MultipartFormDataContent();
+
+                //Stop de file in de content
+                content.Add(new StreamContent(_mediaFile.GetStream()),
+                            "\"fileToUpload\"",
+                            $"\"{_mediaFile.Path}\"");
+
+
+                var users_id = Models.LoginCredentials.loginId;
+
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(users_id))), "users_id");
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
+
+                HttpClient client = new HttpClient(new NativeMessageHandler());
+                var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/updateProfile.php", content);
+                string result = await ResponseMessage.Content.ReadAsStringAsync();
+
+                if (result == "Success")
+                {
+                    await DisplayAlert("Success", "You changes have been saved", "Ok");
+                    await this.Navigation.PopAsync();
+                }
+                else
+                {
+                    btnSave.IsEnabled = true;
+                    await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again", "ok");
+                }
             }
         }
     }
