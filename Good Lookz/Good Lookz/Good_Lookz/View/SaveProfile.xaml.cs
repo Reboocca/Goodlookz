@@ -19,8 +19,8 @@ namespace Good_Lookz.View
         public SaveProfile()
         {
             InitializeComponent();
-
-            imPicture.Source = "http://good-lookz.com/img/default_pfp.png";
+            
+            imPicture.Source = "http://good-lookz.com/img/default_pfp.jpg";
             loadingPic.IsRunning = false;
         }
 
