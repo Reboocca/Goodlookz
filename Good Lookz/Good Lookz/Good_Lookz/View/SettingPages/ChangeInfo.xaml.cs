@@ -25,9 +25,11 @@ namespace Good_Lookz.View.SettingPages
 
 		#region Global
 		List<Models.Sizes.AllSizes> lstSizes = new List<Models.Sizes.AllSizes>();
-		Models.UserSizes uSize = new Models.UserSizes();
-		string _Gender = "F";
-		string _Region = "EU";
+
+        Models.UserSizes uSize = new Models.UserSizes();
+
+        string _Gender  = "F";
+		string _Region  = "EU";
 		#endregion
 
 		//Sla de opgehaalde gebruiker gegevens op in het object
@@ -126,9 +128,9 @@ namespace Good_Lookz.View.SettingPages
 			}
 
 			//Selecteer de juiste maten
-			topSize.SelectedIndex = Int32.Parse(uSize.topnr) - 1;
-			bottomSize.SelectedIndex = Int32.Parse(uSize.botnr) - 1;
-			feetSize.SelectedIndex = Int32.Parse(uSize.feetnr) - 1;
+			topSize.SelectedIndex       = Int32.Parse(uSize.topnr) - 1;
+			bottomSize.SelectedIndex    = Int32.Parse(uSize.botnr) - 1;
+			feetSize.SelectedIndex      = Int32.Parse(uSize.feetnr) - 1;
 
 		}
 

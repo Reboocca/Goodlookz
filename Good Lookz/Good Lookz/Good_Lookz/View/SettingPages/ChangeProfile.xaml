@@ -35,7 +35,7 @@
     <Button Grid.Column="2" Grid.Row="5" Clicked="TakePhoto_Clicked" Text="Take a picture" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40"/>
 
     <StackLayout Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7" Orientation="Vertical">
-      <Label Text="Description:" FontSize="15" FontAttributes="Bold"/>
+      <Label Text="About me:" FontSize="15" FontAttributes="Bold"/>
       <Editor x:Name="editorDesc" HeightRequest="120" />
     </StackLayout>
 

@@ -44,23 +44,35 @@ namespace Good_Lookz.View
 			//Get notification settings van de gebruiker
 			getNotifySettings();
 
-			// Request checker
-			var data = Models.LoginCredentials.loginId;
-            string URL = string.Format(url, data);
 
-            var content = await client.GetStringAsync(URL);
-            var response = JsonConvert.DeserializeObject<List<Models.FriendsRequestCount>>(content);
 
-            if (response[0].count == 0)
+            var data = Models.LoginCredentials.loginId;
+
+            // Request checker
+            try
             {
-                friendsBtn.Text = "Friends";
+                string URL = string.Format(url, data);
+
+                var content = await client.GetStringAsync(URL);
+                var response = JsonConvert.DeserializeObject<List<Models.FriendsRequestCount>>(content);
+
+                if (response[0].count == 0)
+                {
+                    friendsBtn.Text = "Friends";
+                }
+                else
+                {
+                    var friendsText = "Friends({0})";
+                    var dataText = response[0].count;
+                    friendsBtn.Text = string.Format(friendsText, dataText);
+                }
             }
-            else
+            catch (Exception)
             {
-                var friendsText = "Friends({0})";
-                var dataText = response[0].count;
-                friendsBtn.Text = string.Format(friendsText, dataText);
+                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
+                throw;
             }
+           
 
             try
             {
@@ -88,7 +100,8 @@ namespace Good_Lookz.View
             }
             catch
             {
-                await DisplayAlert("Message", "Unable to get location", "OK");
+                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
+                throw;
             }
         }
 
@@ -101,7 +114,6 @@ namespace Good_Lookz.View
 
 		private async void getNotifySettings()
 		{
-
 			try
 			{
 				//Stuur verzoek naar web API om de json op te halen
@@ -125,8 +137,9 @@ namespace Good_Lookz.View
 			}
 			catch (Exception)
 			{
-				throw;
-			}
+                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
+                throw;
+            }
 		}
 
 		private async void getNotifCount()
@@ -153,8 +166,9 @@ namespace Good_Lookz.View
 			}
 			catch (Exception)
 			{
-
-			}
+                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
+                throw;
+            }
 
 		}
 

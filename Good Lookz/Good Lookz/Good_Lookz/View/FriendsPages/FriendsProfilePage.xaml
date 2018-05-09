@@ -28,7 +28,7 @@
     <custom:CircleImage x:Name="imPicture" Grid.Column="1" Grid.Row="3"/>
 
     <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Vertical">
-      <Label Text="Description:" FontSize="15" FontAttributes="Bold"/>
+      <Label Text="About me:" FontSize="15" FontAttributes="Bold"/>
       <Label x:Name="lblDesc" FontSize="15"/>
     </StackLayout>
     

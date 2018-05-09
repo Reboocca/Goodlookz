@@ -44,6 +44,7 @@ namespace Good_Lookz.View.WardrobePages
             //Haal items op
             try
             {
+                lblLending.Text = "No items lending";
                 var id          = Models.LoginCredentials.loginId;
                 var Url         = "http://www.good-lookz.com/API/lend/lendDownload.php?users_id={0}&active=1";
                 var Url_Full    = string.Format(Url, id);
@@ -51,6 +52,7 @@ namespace Good_Lookz.View.WardrobePages
                 response        = JsonConvert.DeserializeObject<List<Models.LendList>>(content);
                 _gets           = new ObservableCollection<Models.LendList>(response);
 
+                lblLending.Text = "";
                 lendingList.ItemsSource = _gets;
             }
             catch
