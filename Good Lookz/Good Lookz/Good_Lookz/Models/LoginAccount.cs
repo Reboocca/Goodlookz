@@ -21,5 +21,6 @@ namespace Good_Lookz.Models
         public string gender { get; set; }
         public string offline { get; set; }
         public string active { get; set; }
+        public bool blocked { get; set; }
     }
 }

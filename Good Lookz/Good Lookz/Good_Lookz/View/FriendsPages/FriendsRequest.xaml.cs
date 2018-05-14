@@ -42,36 +42,53 @@ namespace Good_Lookz.View.FriendsPages
 
         protected override async void OnAppearing()
         {
-            loadingFriends.IsVisible = true;
-            loadingFriends.IsRunning = true;
-
-            string data = Models.LoginCredentials.loginId;
-            //string fastData = "41";
-            string URL = string.Format(url, data);
-
-            var content = await client.GetStringAsync(URL);
-            response = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
-
-            loadingFriends.IsRunning = false;
-            loadingFriends.IsVisible = false;
-
-            if (response[0].id != null)
+            try
             {
-                _gets = new ObservableCollection<Models.FriendsCredentials>(response);
+                loadingFriends.IsVisible = true;
+                loadingFriends.IsRunning = true;
 
-                requests.ItemsSource = _gets;
+                string data = Models.LoginCredentials.loginId;
+                //string fastData = "41";
+                string URL = string.Format(url, data);
+
+                var content = await client.GetStringAsync(URL);
+                response = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
+
+                loadingFriends.IsRunning = false;
+                loadingFriends.IsVisible = false;
+
+                if (response[0].id != null)
+                {
+                    _gets = new ObservableCollection<Models.FriendsCredentials>(response);
+
+                    requests.ItemsSource = _gets;
+                }
+                else
+                {
+                    lblRequests.Text = "No friend requests.";
+                }
             }
-            else
+            catch (Exception)
             {
+
                 lblRequests.Text = "No friend requests.";
             }
+            
         }
 
-        async void Requests_Tapped(object sender, ItemTappedEventArgs e)
+        async private void friendAccept(object sender, EventArgs e)
         {
-            Models.FriendsCredentials item = (Models.FriendsCredentials)e.Item;
+            var button = sender as Button;
+            Models.FriendsCredentials item = new Models.FriendsCredentials();
 
-            var requestResponse = await DisplayAlert("Accept?", "Accept friend request from " + item.username + "?", "Yes", "No");
+            foreach(Models.FriendsCredentials i in requests.ItemsSource)
+            {
+                if(button.CommandParameter == i.username)
+                {
+                    item = i;
+                }
+            }
+
             string url_accepted = "http://www.good-lookz.com/API/friends/friendsAcceptReq.php";
             var friends_id = item.friends_id;
 
@@ -81,55 +98,75 @@ namespace Good_Lookz.View.FriendsPages
                     { "friends_id", friends_id }
                 };
 
-            if (requestResponse)
+            var content         = new FormUrlEncodedContent(values);
+            var response        = await client.PostAsync(url_accepted, content);
+            var responseString  = await response.Content.ReadAsStringAsync();
+            var postMethod      = JsonConvert.DeserializeObject<List<accepted>>(responseString);
+            
+            foreach (var items in _gets.ToList())
             {
-                var content = new FormUrlEncodedContent(values);
-                var response = await client.PostAsync(url_accepted, content);
-                var responseString = await response.Content.ReadAsStringAsync();
-                var postMethod = JsonConvert.DeserializeObject<List<accepted>>(responseString);
-
-                await DisplayAlert("Request", "Accepted", "OK");
-
-                foreach (var items in _gets.ToList())
+                if (items.friends_id == friends_id)
                 {
-                    if (items.friends_id == friends_id)
-                    {
-                        _gets.Remove(items);
-                    }
+                    _gets.Remove(items);
                 }
             }
         }
 
-        async void Delete_Clicked(object sender, EventArgs e)
+        async private void friendDecline(object sender, EventArgs e)
         {
-            var item = ((MenuItem)sender);
-            var friends_id = item.CommandParameter.ToString();
+            var button = sender as Button;
+            Models.FriendsCredentials item = new Models.FriendsCredentials();
 
-            var requestResponse = await DisplayAlert("Delete?", "Delete friend request?", "Yes", "No");
-
-            if (requestResponse)
+            foreach (Models.FriendsCredentials i in requests.ItemsSource)
             {
-                string url_accepted = "http://www.good-lookz.com/API/friends/friendsAcceptReq.php";
+                if (button.CommandParameter == i.username)
+                {
+                    item = i;
+                }
+            }
 
-                var values = new Dictionary<string, string>
+            var result = await DisplayAlert("Message", "Do you want to report this person for spam?", "Yes", "No");
+
+            if (result)
+            {
+                //Voeg het spamalert toe
+                try
+                {
+                    string webadres = "http://good-lookz.com/API/friends/friendReportSpam.php?";
+                    string parameters = "friend_id=" + item.id;
+                    HttpClient connect = new HttpClient();
+                    HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+                    get.EnsureSuccessStatusCode();
+
+                    string resultspam = await get.Content.ReadAsStringAsync();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
+            //Verwijder het verzoek alsnog
+            string url_accepted = "http://www.good-lookz.com/API/friends/friendsAcceptReq.php";
+
+            var values = new Dictionary<string, string>
                 {
                     { "accepted", "false" },
-                    { "friends_id", friends_id }
+                    { "friends_id", item.friends_id }
                 };
 
-                var content = new FormUrlEncodedContent(values);
-                var response = await client.PostAsync(url_accepted, content);
-                var responseString = await response.Content.ReadAsStringAsync();
-                var postMethod = JsonConvert.DeserializeObject<List<accepted>>(responseString);
+            var content = new FormUrlEncodedContent(values);
+            var responseDel = await client.PostAsync(url_accepted, content);
+            var responseString = await responseDel.Content.ReadAsStringAsync();
+            var postMethod = JsonConvert.DeserializeObject<List<accepted>>(responseString);
 
-                foreach (var items in _gets.ToList())
+            foreach (var items in _gets.ToList())
+            {
+                if (items.friends_id == item.friends_id)
                 {
-                    if (items.friends_id == friends_id)
-                    {
-                        _gets.Remove(items);
-                    }
+                    _gets.Remove(items);
                 }
-            }           
+            }
         }
 
         protected override void OnDisappearing()

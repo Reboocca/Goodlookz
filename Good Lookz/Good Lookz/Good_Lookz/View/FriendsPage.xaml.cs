@@ -25,7 +25,7 @@ namespace Good_Lookz.View
         private const string url = "http://www.good-lookz.com/API/friends/friendsCheck.php?users_id={0}";
         HttpClient client = new HttpClient(new NativeMessageHandler());
         private ObservableCollection<Models.FriendsCredentials> _gets;
-
+        
         List<Models.FriendsRequestCount> response_notification = new List<Models.FriendsRequestCount>();
         List<Models.FriendsCredentials> response = new List<Models.FriendsCredentials>();
 
@@ -63,12 +63,15 @@ namespace Good_Lookz.View
             var content = await client.GetStringAsync(URL);
             response = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
 
+            response.Sort(new Models.friendsList(true, "Username"));
+
             loadingFriends.IsRunning = false;
             loadingFriends.IsVisible = false;
 
             if (response[0].id != null)
             {
                 _gets = new ObservableCollection<Models.FriendsCredentials>(response);
+                
 
                 friendsList.ItemsSource = _gets;
             }

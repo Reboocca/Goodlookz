@@ -8,19 +8,18 @@
       <Label x:Name="lblRequests" FontSize="15" FontAttributes="Bold" />
     </StackLayout>
     <ActivityIndicator IsVisible="False" x:Name="loadingFriends" Color="Red" />
-    <ListView x:Name="requests" ItemTapped="Requests_Tapped" RowHeight="100">
+    <ListView x:Name="requests" RowHeight="100">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <ViewCell.ContextActions>
-              <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding friends_id}" IsDestructive="True" />
-            </ViewCell.ContextActions>
             <StackLayout Orientation="Horizontal" Padding="10">
-              <Image Source="friends.png" />
-              <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" HorizontalTextAlignment="End"/>
-                <Label FontSize="15" Text="{Binding fullName}" HorizontalTextAlignment="End"/>
-                <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
+              <StackLayout HorizontalOptions="StartAndExpand" Padding="10">
+                <Label FontAttributes="Bold" FontSize="20" Text="{Binding username}" HorizontalTextAlignment="Start"/>
+                <Label FontSize="15" Text="{Binding fullName}" HorizontalTextAlignment="Start"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End">
+                <Button Text="Decline" CommandParameter="{Binding username}" Clicked="friendDecline" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40"/>
+                <Button Text="Accept"  CommandParameter="{Binding username}" Clicked="friendAccept"  TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40"/>
               </StackLayout>
             </StackLayout>
           </ViewCell>

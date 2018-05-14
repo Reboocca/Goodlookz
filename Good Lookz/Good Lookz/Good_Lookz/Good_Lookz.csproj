@@ -48,6 +48,7 @@
     <Compile Include="Models\FriendsCredentials.cs" />
     <Compile Include="Models\GetShops.cs" />
     <Compile Include="Models\LendList.cs" />
+    <Compile Include="Models\friendsList.cs" />
     <Compile Include="Models\LoginAccount.cs" />
     <Compile Include="Models\LoginCredentials.cs" />
     <Compile Include="Models\Notifications.cs" />

@@ -49,46 +49,38 @@ namespace Good_Lookz.View.SignPages
                     var responseString = await response.Content.ReadAsStringAsync();
                     var postMethod = JsonConvert.DeserializeObject<List<Models.LoginAccount>>(responseString);
 
-                    var _loginId = postMethod[0].id;
-                    var _loginUsername = postMethod[0].username;
-                    var _loginPassword = postMethod[0].password;
-                    var _loginFirstname = postMethod[0].first_name;
-                    var _loginLastname = postMethod[0].last_name;
-                    var _loginEmail = postMethod[0].email;
-                    var _loginDate = postMethod[0].date;
-                    var _loginGender = postMethod[0].gender;
-                    var _loginOffline = postMethod[0].offline;
-                    var _loginActive = postMethod[0].active;
+                    Models.LoginCredentials.loginId         = postMethod[0].id;
+                    Models.LoginCredentials.loginUsername   = postMethod[0].username;
+                    Models.LoginCredentials.loginFirstname  = postMethod[0].first_name;
+                    Models.LoginCredentials.loginLastname   = postMethod[0].last_name;
+                    Models.LoginCredentials.loginEmail      = postMethod[0].email;
+                    Models.LoginCredentials.loginDate       = postMethod[0].date;
+                    Models.LoginCredentials.loginOffline    = postMethod[0].offline;
+                    Models.LoginCredentials.loginActive     = postMethod[0].active;
 
-                    Models.LoginCredentials.loginId = _loginId;
-                    Models.LoginCredentials.loginUsername = _loginUsername;
-                    Models.LoginCredentials.loginPassword = _loginPassword;
-                    Models.LoginCredentials.loginFirstname = _loginFirstname;
-                    Models.LoginCredentials.loginLastname = _loginLastname;
-                    Models.LoginCredentials.loginEmail = _loginEmail;
-                    Models.LoginCredentials.loginDate = _loginDate;
-                    Models.LoginCredentials.loginGender = _loginGender;
-                    Models.LoginCredentials.loginOffline = _loginOffline;
-                    Models.LoginCredentials.loginActive = _loginActive;
-
-                    Application.Current.Properties["loginId"] = _loginId;
-                    Application.Current.Properties["loginUsername"] = _loginUsername;
-                    Application.Current.Properties["loginPassword"] = _loginPassword;
-                    Application.Current.Properties["loginFirstname"] = _loginFirstname;
-                    Application.Current.Properties["loginLastname"] = _loginLastname;
-                    Application.Current.Properties["loginEmail"] = _loginEmail;
-                    Application.Current.Properties["loginDate"] = _loginDate;
-                    Application.Current.Properties["loginGender"] = _loginGender;
-                    Application.Current.Properties["loginOffline"] = _loginOffline;
-                    Application.Current.Properties["loginActive"] = _loginActive;
+                    Application.Current.Properties["loginId"]           = postMethod[0].id;
+                    Application.Current.Properties["loginUsername"]     = postMethod[0].username;
+                    Application.Current.Properties["loginFirstname"]    = postMethod[0].first_name;
+                    Application.Current.Properties["loginLastname"]     = postMethod[0].last_name;
+                    Application.Current.Properties["loginEmail"]        = postMethod[0].email;
+                    Application.Current.Properties["loginDate"]         = postMethod[0].date;
+                    Application.Current.Properties["loginOffline"]      = postMethod[0].offline;
+                    Application.Current.Properties["loginActive"]       = postMethod[0].active;
 
                     if (postMethod[0].username == null)
                     {
                         loadingLogin.IsRunning = false;
                         loadingLogin.IsVisible = false;
-                        btnLogin.IsVisible = true;
+                        btnLogin.IsVisible     = true;
 
-                        await DisplayAlert("Failed", "The given login credentials are incorrect", "OK");
+                        if (postMethod[0].blocked)
+                        {
+                            await DisplayAlert("Error", "Your account has been blocked, please contact our support for more information.", "OK");
+                        }
+                        else{
+                            await DisplayAlert("Failed", "The given login credentials are incorrect", "OK");
+                        }
+
                     }
                     else
                     {

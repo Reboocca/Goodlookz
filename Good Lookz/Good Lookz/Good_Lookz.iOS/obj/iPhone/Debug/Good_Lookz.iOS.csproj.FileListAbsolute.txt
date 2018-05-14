@@ -81,8 +81,6 @@ C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\G
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.csproj.Good_Lookz.iOS.exe.config
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.exe
 C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.pdb
-C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.exe.mdb
-C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.iOS.exe.mdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.iOS.exe.config
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.iOS.exe
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.iOS.pdb
@@ -168,3 +166,6 @@ C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iP
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.pdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.exe.mdb
 C:\Users\4PEOPLE-3\Desktop\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.iOS.exe.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.dll.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\obj\iPhone\Debug\Good_Lookz.iOS.exe.mdb
+C:\Users\4PEOPLE-3\Documents\GitHub\Good-Lookz\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.iOS\bin\iPhone\Debug\Good_Lookz.iOS.exe.mdb

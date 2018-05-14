@@ -21,7 +21,7 @@ namespace Good_Lookz.Models
         private static string _loginGender;
         private static string _loginOffline;
         private static string _loginActive;
-
+        
         public static string loginId
         {
             get { return _loginId; }
