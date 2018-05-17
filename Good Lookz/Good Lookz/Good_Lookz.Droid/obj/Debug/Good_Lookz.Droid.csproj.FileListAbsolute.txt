@@ -765,6 +765,8 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\ass
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.Linq.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll
+D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll
+D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Good Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Good_Lookz.dll.mdb

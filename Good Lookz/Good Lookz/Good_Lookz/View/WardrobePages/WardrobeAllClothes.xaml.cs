@@ -536,6 +536,14 @@ namespace Good_Lookz.View.WardrobePages
             await Navigation.PushAsync(new WardrobeSaveSet(), true);
         }
 
+        private async void btnFilter_Clicked(object sender, EventArgs e)
+        {
+            //Set previous page so filterpage knows
+            Models.PreviousPage.page = "friends";
+
+            await Navigation.PushAsync(new WardrobePages.FilterWardrobe(), true);
+        }
+
         async void headTapped(object sender, EventArgs e)
         {
 			if (!is_own_head)

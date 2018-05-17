@@ -375,6 +375,9 @@ namespace Good_Lookz.View
 
 		private async void btnFilter_Clicked(object sender, EventArgs e)
 		{
+            //Set previous page so filterpage knows
+            Models.PreviousPage.page = "wardrobe";
+
 			await Navigation.PushAsync(new WardrobePages.FilterWardrobe(), true);
 		}
 		

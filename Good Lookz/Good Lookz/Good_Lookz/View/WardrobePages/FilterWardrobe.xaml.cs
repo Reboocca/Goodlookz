@@ -28,8 +28,16 @@ namespace Good_Lookz.View.WardrobePages
 
 		protected override void OnAppearing()
 		{
-			getTypes(Models.LoginCredentials.loginId);
-		}
+            if(Models.PreviousPage.page == "wardrobe")
+            {
+                //Haal de types op vanuit de dbs voor in de picker
+                getTypes(Models.LoginCredentials.loginId);
+            }
+            else
+            {
+                //CODE VOOR FRIENDS
+            }
+        }
 
 		private async void getTypes(string id)
 		{
@@ -74,14 +82,14 @@ namespace Good_Lookz.View.WardrobePages
 		private async void getColours(string type, string id)
 		{
             //Haal de opgeslagen kleuren op van het geselecteerde type
-			string webadres = "http://good-lookz.com/API/wardrobe/getFilterOptions.php?";
-			string parameters = "users_id=" + id + "&function=colours&item=" + type;
-			HttpClient connect = new HttpClient();
+			string webadres     = "http://good-lookz.com/API/wardrobe/getFilterOptions.php?";
+			string parameters   = "users_id=" + id + "&function=colours&item=" + type;
+			HttpClient connect  = new HttpClient();
 			HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
 			get.EnsureSuccessStatusCode();
 
-			string result = await get.Content.ReadAsStringAsync();
-			string[] colours = result.Split(',');
+			string result       = await get.Content.ReadAsStringAsync();
+			string[] colours    = result.Split(',');
 
             //Stop de kleuren in de picker
 			foreach (var colour in colours)
@@ -92,14 +100,21 @@ namespace Good_Lookz.View.WardrobePages
 
 		private void pType_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			//Als er al items in de colour picker staan, zorg dat deze leeg gemaakt worden
-			if(pColour.Items.Count > 0)
-			{
-				pColour.Items.Clear();
-			}
+            if(Models.PreviousPage.page == "wardobe")
+            {
+                //Als er al items in de colour picker staan, zorg dat deze leeg gemaakt worden
+                if (pColour.Items.Count > 0)
+                {
+                    pColour.Items.Clear();
+                }
 
-			//Roep de functie aan om items aan de colour picker toe te voegen
-			getColours(pType.Items[pType.SelectedIndex], Models.LoginCredentials.loginId);
+                //Roep de functie aan om items aan de colour picker toe te voegen
+                getColours(pType.Items[pType.SelectedIndex], Models.LoginCredentials.loginId);
+            }
+            else
+            {
+                //CODE VOOR FRIENDS
+            }
 		}
 
 		private async void btnFilter_Clicked(object sender, EventArgs e)
@@ -111,45 +126,59 @@ namespace Good_Lookz.View.WardrobePages
 			}
 			else
 			{
-                //Sla de filtergegevens op a.d.h.v. wat er gekozen is
-				switch (pType.Items[pType.SelectedIndex])
-				{
-					case "Head":
-						Models.Settings.Filter.filterHead.filteron	 = true;
-						Models.Settings.Filter.filterHead.colour	 = pColour.Items[pColour.SelectedIndex];
-						break;
+                if(Models.PreviousPage.page == "wardrobe")
+                {
+                    //Sla de filtergegevens op a.d.h.v. wat er gekozen is
+                    switch (pType.Items[pType.SelectedIndex])
+                    {
+                        case "Head":
+                            Models.Settings.Filter.filterHead.filteron  = true;
+                            Models.Settings.Filter.filterHead.colour    = pColour.Items[pColour.SelectedIndex];
+                            break;
 
-					case "Top":
-						Models.Settings.Filter.filterTop.filteron	 = true;
-						Models.Settings.Filter.filterTop.colour		 = pColour.Items[pColour.SelectedIndex];
-						break;
+                        case "Top":
+                            Models.Settings.Filter.filterTop.filteron   = true;
+                            Models.Settings.Filter.filterTop.colour     = pColour.Items[pColour.SelectedIndex];
+                            break;
 
-					case "Bottom":
-						Models.Settings.Filter.filterBottom.filteron = true;
-						Models.Settings.Filter.filterBottom.colour	 = pColour.Items[pColour.SelectedIndex];
-						break;
+                        case "Bottom":
+                            Models.Settings.Filter.filterBottom.filteron = true;
+                            Models.Settings.Filter.filterBottom.colour   = pColour.Items[pColour.SelectedIndex];
+                            break;
 
-					case "Feet":
-						Models.Settings.Filter.filterFeet.filteron	 = true;
-						Models.Settings.Filter.filterFeet.colour	 = pColour.Items[pColour.SelectedIndex];
-						break;
-				}
-                //Terug naar de wardrobe pagina
-				await this.Navigation.PopAsync();
+                        case "Feet":
+                            Models.Settings.Filter.filterFeet.filteron  = true;
+                            Models.Settings.Filter.filterFeet.colour    = pColour.Items[pColour.SelectedIndex];
+                            break;
+                    }
+                    //Terug naar de wardrobe pagina
+                    await this.Navigation.PopAsync();
+                }
+                else
+                {
+                    //CODE VOOR FRIENDS
+                }
 			}
-			
 		}
 
         //Reset alle filters
 		private async void btnReset_CLicked(object sender, EventArgs e)
 		{
-			Models.Settings.Filter.filterHead.filteron		= false;
-			Models.Settings.Filter.filterTop.filteron		= false;
-			Models.Settings.Filter.filterBottom.filteron	= false;
-			Models.Settings.Filter.filterFeet.filteron		= false;
+            if(Models.PreviousPage.page == "wardrobe")
+            {
+                //Zet de filters uit
+                Models.Settings.Filter.filterHead.filteron      = false;
+                Models.Settings.Filter.filterTop.filteron       = false;
+                Models.Settings.Filter.filterBottom.filteron    = false;
+                Models.Settings.Filter.filterFeet.filteron      = false;
 
-            //Terug naar wardrobe pagina
-			await this.Navigation.PopAsync();
+                //Terug naar wardrobe pagina
+                await this.Navigation.PopAsync();
+            }
+            else
+            {
+
+            }
 		}
 	}
 }
