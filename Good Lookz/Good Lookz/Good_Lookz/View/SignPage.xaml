@@ -15,13 +15,13 @@
       <!-- middle controls -->
     </StackLayout>
 
-    <StackLayout VerticalOptions="End">
-      <Label Text="Login or create account"
+        <StackLayout VerticalOptions="End">
+            <Label Text="Login or create account"
            TextColor="#bd0926"
            FontSize="20"
            HorizontalOptions="Center" />
 
-      <Button Text="Login"
+            <Button Text="Login"
               TextColor="Red"
               BorderWidth="1"
               BorderRadius="4"
@@ -30,7 +30,7 @@
               HeightRequest="40"
               HorizontalOptions="Fill"
               Clicked="LoginClicked" />
-      <Button Text="Create account"
+            <Button Text="Create account"
               TextColor="Red"
               BorderWidth="1"
               BorderRadius="4"
@@ -39,41 +39,9 @@
               HeightRequest="40"
               HorizontalOptions="Fill"
               Clicked="CreateClicked"/>
-      <StackLayout Padding="0, 10, 0, 0">
-        <Label Text="2017 4People Communications" TextColor="Red" HorizontalTextAlignment="Center" />
-      </StackLayout>
+            <StackLayout Padding="0, 10, 0, 0">
+                <Label Text="2017 4People Communications" TextColor="Red" HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
-    
-    <!--
-    <StackLayout VerticalOptions="Center" >
-      <Image Source="goodlookz.png"/>
-    </StackLayout>
-    
-    <StackLayout VerticalOptions="End" >
-      <Label Text="Login or create account"
-           TextColor="#bd0926"
-           FontSize="20"
-           HorizontalOptions="Center" />
-
-      <Button Text="Login"
-              TextColor="Red"
-              BorderWidth="1"
-              BorderRadius="4"
-              BorderColor="Red"
-              BackgroundColor="White"
-              HeightRequest="40"
-              HorizontalOptions="Fill"
-              Clicked="LoginClicked" />
-      <Button Text="Create account"
-              TextColor="Red"
-              BorderWidth="1"
-              BorderRadius="4"
-              BorderColor="Red"
-              BackgroundColor="White"
-              HeightRequest="40"
-              HorizontalOptions="Fill"
-              Clicked="CreateClicked"/>
-    </StackLayout>
-    -->
-  </StackLayout>
 </ContentPage>
