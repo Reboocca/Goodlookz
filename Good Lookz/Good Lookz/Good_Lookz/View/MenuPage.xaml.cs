@@ -70,7 +70,6 @@ namespace Good_Lookz.View
             catch (Exception)
             {
                 await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
-                throw;
             }
            
 
@@ -101,7 +100,6 @@ namespace Good_Lookz.View
             catch
             {
                 await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
-                throw;
             }
         }
 
@@ -167,7 +165,6 @@ namespace Good_Lookz.View
 			catch (Exception)
 			{
                 await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
-                throw;
             }
 
 		}

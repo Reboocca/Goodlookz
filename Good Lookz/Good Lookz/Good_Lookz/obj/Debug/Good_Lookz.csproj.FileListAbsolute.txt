@@ -459,6 +459,7 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Mono.Security.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Mono.Security.xml
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Xml.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\System.Xml.xml
+D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojAssemblyReference.cache
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csproj.CoreCompileInputs.cache
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.MainPage.xaml.g.cs
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.App.xaml.g.cs
@@ -522,4 +523,3 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.View.S
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csproj.CopyComplete
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\obj\Debug\Good_Lookz.csprojAssemblyReference.cache

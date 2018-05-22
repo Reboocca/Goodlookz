@@ -40,7 +40,33 @@ namespace Good_Lookz.Models
 			}
 		}
 
-		public class NotifySettings
+        public class FilterFriend
+        {
+            public class filterHead
+            {
+                public static bool filteron = false;
+                public static string colour { get; set; }
+            }
+
+            public class filterTop
+            {
+                public static bool filteron = false;
+                public static string colour { get; set; }
+            }
+
+            public class filterBottom
+            {
+                public static bool filteron = false;
+                public static string colour { get; set; }
+            }
+
+            public class filterFeet
+            {
+                public static bool filteron = false;
+                public static string colour { get; set; }
+            }
+        }
+        public class NotifySettings
 		{
 			public static int notifyfriend { get; set; }
 			public static int notifyborrow { get; set; }

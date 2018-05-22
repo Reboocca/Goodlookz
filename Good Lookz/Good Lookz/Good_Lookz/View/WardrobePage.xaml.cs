@@ -289,64 +289,44 @@ namespace Good_Lookz.View
         {
             Models.WardrobeHead SelectedHead = (Models.WardrobeHead)e.SelectedItem;
 
-            var _head_id = SelectedHead.head_id;
-            var _users_id = SelectedHead.users_id;
-            var _picture = SelectedHead.picture;
-            var _color = SelectedHead.color;
-            var _date = SelectedHead.date;
-
-            Models.SelectedHead.head_id		= _head_id.ToString();
-            Models.SelectedHead.users_id	= _users_id.ToString();
-            Models.SelectedHead.picture		= _picture;
-            Models.SelectedHead.color		= _color;
-            Models.SelectedHead.date		= _date;
+            Models.SelectedHead.head_id		= SelectedHead.head_id.ToString();
+            Models.SelectedHead.users_id	= SelectedHead.users_id.ToString();
+            Models.SelectedHead.picture		= SelectedHead.picture;
+            Models.SelectedHead.color		= SelectedHead.color;
+            Models.SelectedHead.date		= SelectedHead.date;
         }
         void CarouselViewTop_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.WardrobeTop SelectedTop = (Models.WardrobeTop)e.SelectedItem;
 
-            var _top_id = SelectedTop.top_id;
-            var _users_id = SelectedTop.users_id;
-            var _picture = SelectedTop.picture;
-            var _color = SelectedTop.color;
-            var _date = SelectedTop.date;
-            var _size = SelectedTop.size;
-
-            Models.SelectedTop.top_id		= _top_id.ToString();
-            Models.SelectedTop.users_id		= _users_id.ToString();
-            Models.SelectedTop.picture		= _picture;
-            Models.SelectedTop.color		= _color;
-            Models.SelectedTop.date			= _date;
-            Models.SelectedTop.size			= _size;
+            Models.SelectedTop.top_id		= SelectedTop.top_id.ToString();
+            Models.SelectedTop.users_id		= SelectedTop.users_id.ToString();
+            Models.SelectedTop.picture		= SelectedTop.picture;
+            Models.SelectedTop.color		= SelectedTop.color;
+            Models.SelectedTop.date			= SelectedTop.date;
+            Models.SelectedTop.size			= SelectedTop.size;
         }
         void CarouselViewBottom_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.WardrobeBottom SelectedBottom = (Models.WardrobeBottom)e.SelectedItem;
 
-            var _bottom_id = SelectedBottom.bottom_id;
-            var _users_id = SelectedBottom.users_id;
-            var _picture = SelectedBottom.picture;
-            var _color = SelectedBottom.color;
-            var _date = SelectedBottom.date;
-            var _size = SelectedBottom.size;
-
-            Models.SelectedBottom.bottom_id = _bottom_id.ToString();
-            Models.SelectedBottom.users_id	= _users_id.ToString();
-            Models.SelectedBottom.picture	= _picture;
-            Models.SelectedBottom.color		= _color;
-            Models.SelectedBottom.date		= _date;
-            Models.SelectedBottom.size		= _size;
+            Models.SelectedBottom.bottom_id = SelectedBottom.bottom_id.ToString();
+            Models.SelectedBottom.users_id	= SelectedBottom.users_id.ToString();
+            Models.SelectedBottom.picture	= SelectedBottom.picture;
+            Models.SelectedBottom.color		= SelectedBottom.color;
+            Models.SelectedBottom.date		= SelectedBottom.date;
+            Models.SelectedBottom.size		= SelectedBottom.size;
         }
         void CarouselViewFeet_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             Models.WardrobeFeet SelectedFeet = (Models.WardrobeFeet)e.SelectedItem;
 
-            var _feet_id = SelectedFeet.feet_id;
-            var _users_id = SelectedFeet.users_id;
-            var _picture = SelectedFeet.picture;
-            var _color = SelectedFeet.color;
-            var _date = SelectedFeet.date;
-            var _size = SelectedFeet.size;
+            var _feet_id    = SelectedFeet.feet_id;
+            var _users_id   = SelectedFeet.users_id;
+            var _picture    = SelectedFeet.picture;
+            var _color      = SelectedFeet.color;
+            var _date       = SelectedFeet.date;
+            var _size       = SelectedFeet.size;
 
             Models.SelectedFeet.feet_id		= _feet_id.ToString();
             Models.SelectedFeet.users_id	= _users_id.ToString();

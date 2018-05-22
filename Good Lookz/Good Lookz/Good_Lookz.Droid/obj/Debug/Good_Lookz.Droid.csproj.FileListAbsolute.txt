@@ -690,20 +690,6 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\res\drawabl
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\R.cs.flag
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\R.txt
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\uploadflags.txt
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Microsoft.CSharp.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Mono.Android.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\mscorlib.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Core.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.IO.Compression.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Net.Http.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Xml.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Xml.Linq.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.ComponentModel.Composition.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Runtime.Serialization.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.ServiceModel.Internals.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\System.Numerics.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Mono.Security.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Microsoft.CSharp.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Mono.Android.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\mscorlib.pdb
@@ -718,7 +704,6 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Sys
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\System.ServiceModel.Internals.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\System.Numerics.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Mono.Security.pdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Good Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Good_Lookz.dll.mdb
@@ -734,7 +719,6 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Plu
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Xamarin.Forms.Core.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\linksrc\Xamarin.Forms.Xaml.dll.mdb
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\FormsViewGroup.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Good_Lookz.dll.mdb
@@ -764,6 +748,8 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\ass
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.Linq.pdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.pdb
+D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
+D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll.mdb
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good Lookz.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz\bin\Debug\Good_Lookz.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\bin\Debug\Good_Lookz.dll.mdb
