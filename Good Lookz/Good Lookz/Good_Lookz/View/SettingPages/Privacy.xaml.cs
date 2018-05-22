@@ -14,8 +14,12 @@ namespace Good_Lookz.View.SettingPages
 		{
 			InitializeComponent();
 
-			//Vul de list met settings
-			getSettings();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            //Vul de list met settings
+            getSettings();
 		}
 
 		#region Global

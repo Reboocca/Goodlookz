@@ -37,10 +37,10 @@ namespace Good_Lookz.View
         /// List maken voor de 4 type clothes en later pas invullen met data.
         /// Dit moet op deze manier zodat er dan de Clear functie uitgevoerd kan worden.
         /// </summary>
-        List<Models.WardrobeHead> gets_Head = new List<Models.WardrobeHead>();
-        List<Models.WardrobeTop> gets_Top = new List<Models.WardrobeTop>();
+        List<Models.WardrobeHead> gets_Head     = new List<Models.WardrobeHead>();
+        List<Models.WardrobeTop> gets_Top       = new List<Models.WardrobeTop>();
         List<Models.WardrobeBottom> gets_Bottom = new List<Models.WardrobeBottom>();
-        List<Models.WardrobeFeet> gets_Feet = new List<Models.WardrobeFeet>();
+        List<Models.WardrobeFeet> gets_Feet     = new List<Models.WardrobeFeet>();
 
         public WardrobePage()
         {
@@ -49,7 +49,11 @@ namespace Good_Lookz.View
 
         protected override async void OnAppearing()
         {
-			emptySelectedClothing();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            emptySelectedClothing();
 
             loadingHead.IsRunning	= true;
             loadingTop.IsRunning	= true;

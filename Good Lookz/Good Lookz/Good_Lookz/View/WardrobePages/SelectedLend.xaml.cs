@@ -21,7 +21,11 @@ namespace Good_Lookz.View.WardrobePages
 
 		protected override void OnAppearing()
 		{
-			getInfo();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getInfo();
 		}
 
 		private void getInfo()

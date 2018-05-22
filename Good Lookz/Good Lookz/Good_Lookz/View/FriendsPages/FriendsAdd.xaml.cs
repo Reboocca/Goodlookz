@@ -50,6 +50,10 @@ namespace Good_Lookz.View.FriendsPages
         public FriendsAdd()
         {
             InitializeComponent();
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
         }
 
         async void Username_TextChanged(object sender, TextChangedEventArgs e)

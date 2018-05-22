@@ -42,6 +42,10 @@ namespace Good_Lookz.View.FriendsPages
 
         protected override async void OnAppearing()
         {
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
             try
             {
                 loadingFriends.IsVisible = true;

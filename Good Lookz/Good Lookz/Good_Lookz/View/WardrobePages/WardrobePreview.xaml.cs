@@ -114,8 +114,12 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override void OnAppearing()
 		{
-			//Geef een min en max datum aan de date picker
-			dpDate.MinimumDate = DateTime.Now;
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            //Geef een min en max datum aan de date picker
+            dpDate.MinimumDate = DateTime.Now;
 			dpDate.MaximumDate = DateTime.Now.AddMonths(6);
 
             //Sla gegevens op in strings

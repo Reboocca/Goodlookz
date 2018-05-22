@@ -14,8 +14,12 @@ namespace Good_Lookz.View
 		public NotificationPage()
 		{
 			InitializeComponent();
-		
-			getNotifs();
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getNotifs();
 		}
 
 

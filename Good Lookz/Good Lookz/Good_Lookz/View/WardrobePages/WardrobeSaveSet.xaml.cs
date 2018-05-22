@@ -30,6 +30,10 @@ namespace Good_Lookz.View.WardrobePages
         {
             InitializeComponent();
 
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
             ImageHead.Source    = Models.SelectedHead.picture;
             ImageTop.Source     = Models.SelectedTop.picture;
             ImageBottom.Source  = Models.SelectedBottom.picture;

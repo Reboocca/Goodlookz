@@ -16,7 +16,11 @@ namespace Good_Lookz.View.SettingPages
 		{
 			InitializeComponent();
 
-			toggleSwitches();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            toggleSwitches();
 		}
 
 

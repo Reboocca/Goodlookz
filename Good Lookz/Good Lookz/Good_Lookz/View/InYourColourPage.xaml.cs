@@ -16,8 +16,12 @@ namespace Good_Lookz.View
 		public InYourColourPage()
 		{
 			InitializeComponent();
-			
-			getFeelings();
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getFeelings();
 		}
 
 		class Feeling

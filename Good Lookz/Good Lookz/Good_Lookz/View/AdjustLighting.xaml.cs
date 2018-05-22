@@ -17,7 +17,11 @@ namespace Good_Lookz.View
 
 		protected override void OnAppearing()
 		{
-			mySlider.Value			= Models.Settings.Mirror.adjust_lighting;
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            mySlider.Value			= Models.Settings.Mirror.adjust_lighting;
 			bvLight.Opacity			= Models.Settings.Mirror.adjust_lighting;
 			btnSave.BackgroundColor = Color.Transparent;
 

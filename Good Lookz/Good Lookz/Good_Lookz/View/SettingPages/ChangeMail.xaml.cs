@@ -15,8 +15,12 @@ namespace Good_Lookz.View.SettingPages
 		{
 			InitializeComponent();
 
-			//Vul de placeholder van de email entry
-			getCurrentMail();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            //Vul de placeholder van de email entry
+            getCurrentMail();
 		}
 
 		private void getCurrentMail()

@@ -17,6 +17,10 @@ namespace Good_Lookz.View.FriendsPages
 
         protected override async void OnAppearing()
         {
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
             lblUsername.Text    = Models.SelectedFriendsCredentials.username;
             lblDesc.Text        = Models.SelectedFriendsCredentials.description;
             imPicture.Source    = Models.SelectedFriendsCredentials.picture;

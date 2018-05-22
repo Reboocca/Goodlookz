@@ -64,7 +64,11 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override void OnAppearing()
         {
-			getUserSize();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getUserSize();
 			FillCarousel();
 			emptySelectedClothing();
 

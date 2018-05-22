@@ -23,16 +23,10 @@ namespace Good_Lookz.View
     /// </summary>
     public partial class MenuPage : ContentPage
     {
-        const string url = "http://www.good-lookz.com/API/notifications/friendsRequests.php?users_id={0}";
-        const string locationUrl = "http://good-lookz.com/API/location/uploadLocation.php";
-        HttpClient client = new HttpClient(new NativeMessageHandler());
-        //private static int _hasChosen;
+        const string url            = "http://www.good-lookz.com/API/notifications/friendsRequests.php?users_id={0}";
+        const string locationUrl    = "http://good-lookz.com/API/location/uploadLocation.php";
+        HttpClient client           = new HttpClient(new NativeMessageHandler());
 
-        //public static int hasChosen
-        //{
-        //    get { return _hasChosen; }
-        //    set { _hasChosen = value; }
-        //}
 
         public MenuPage()
         {
@@ -41,10 +35,12 @@ namespace Good_Lookz.View
 
         protected override async void OnAppearing()
         {
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
 			//Get notification settings van de gebruiker
 			getNotifySettings();
-
-
 
             var data = Models.LoginCredentials.loginId;
 
@@ -110,7 +106,7 @@ namespace Good_Lookz.View
 			public int notifybid { get; set; }
 		}
 
-		private async void getNotifySettings()
+        private async void getNotifySettings()
 		{
 			try
 			{
@@ -135,8 +131,7 @@ namespace Good_Lookz.View
 			}
 			catch (Exception)
 			{
-                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
-                throw;
+            
             }
 		}
 
@@ -164,7 +159,7 @@ namespace Good_Lookz.View
 			}
 			catch (Exception)
 			{
-                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "ok");
+               
             }
 
 		}

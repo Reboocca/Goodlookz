@@ -17,7 +17,11 @@ namespace Good_Lookz.View
 
 		protected override void OnAppearing()
 		{
-			btnAdjust.BackgroundColor = Color.Transparent;
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            btnAdjust.BackgroundColor = Color.Transparent;
 			changeLightIntensitivity(Models.Settings.Mirror.adjust_lighting);
 		}
 

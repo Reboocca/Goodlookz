@@ -20,6 +20,10 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override void OnAppearing()
         {
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
             fullNameLbl.Text = Models.SelectedFriendsCredentials.fullName;
         }
 

@@ -13,7 +13,12 @@ namespace Good_Lookz.View.SettingPages
 		public PP()
 		{
 			InitializeComponent();
-			wvWeb.Source = "http://www.good-lookz.com/articles/privacy-policy.php";
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            wvWeb.Source = "http://www.good-lookz.com/articles/privacy-policy.php";
 		}
 	}
 }

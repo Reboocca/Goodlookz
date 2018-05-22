@@ -16,8 +16,12 @@ namespace Good_Lookz.View.SettingPages
 		{
 			InitializeComponent();
 
-			//Sla alle verschillende maten op in de list die boven is aangemaakt
-			lstSizes = Models.Sizes.getAllSizesList();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            //Sla alle verschillende maten op in de list die boven is aangemaakt
+            lstSizes = Models.Sizes.getAllSizesList();
 
 			//Haal gebruiker gegevens op en vul deze in
 			getUserSize();

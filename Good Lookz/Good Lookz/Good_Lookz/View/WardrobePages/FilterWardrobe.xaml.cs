@@ -36,7 +36,11 @@ namespace Good_Lookz.View.WardrobePages
 
 		protected override void OnAppearing()
 		{
-            if(Models.PreviousPage.page == "wardrobe")
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            if (Models.PreviousPage.page == "wardrobe")
             {
                 //Haal de types op vanuit de dbs voor in de picker
                 getTypes(Models.LoginCredentials.loginId);

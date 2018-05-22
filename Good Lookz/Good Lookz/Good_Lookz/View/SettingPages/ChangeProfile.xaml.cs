@@ -20,6 +20,10 @@ namespace Good_Lookz.View.SettingPages
         {
             InitializeComponent();
 
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
             imPicture.Source     = "http://good-lookz.com/img/default_pfp.jpg";
             loadingPic.IsRunning = false;
 

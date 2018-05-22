@@ -35,52 +35,56 @@ namespace Good_Lookz.View
 
         protected override async void OnAppearing()
         {
-            imageCareLoader.IsRunning = true;
-            imageFashionLoader.IsRunning = true;
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            imageCareLoader.IsRunning        = true;
+            imageFashionLoader.IsRunning     = true;
             imageAccessoriesLoader.IsRunning = true;
-            imageForSellLoader.IsRunning = true;
+            imageForSellLoader.IsRunning     = true;
 
-            string shops1_id = Models.ShopsChosenSaved.shops1_id.ToString();
-            string url_Care = string.Format(url, shops1_id);
+            string shops1_id    = Models.ShopsChosenSaved.shops1_id.ToString();
+            string url_Care     = string.Format(url, shops1_id);
 
-            var content_Care = await _client.GetStringAsync(url_Care);
-            gets_Care = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Care);
+            var content_Care    = await _client.GetStringAsync(url_Care);
+            gets_Care           = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Care);
 
             // ---------------------- //
 
-            string shops2_id = Models.ShopsChosenSaved.shops2_id.ToString();
-            string url_Fashion = string.Format(url, shops2_id);
+            string shops2_id    = Models.ShopsChosenSaved.shops2_id.ToString();
+            string url_Fashion  = string.Format(url, shops2_id);
 
             var content_Fashion = await _client.GetStringAsync(url_Fashion);
-            gets_Fashion = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Fashion);
+            gets_Fashion        = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Fashion);
 
             // ---------------------- //
 
-            string shops3_id = Models.ShopsChosenSaved.shops3_id.ToString();
-            string url_Accessories = string.Format(url, shops3_id);
+            string shops3_id        = Models.ShopsChosenSaved.shops3_id.ToString();
+            string url_Accessories  = string.Format(url, shops3_id);
 
             var content_Accessories = await _client.GetStringAsync(url_Accessories);
-            gets_Accessories = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Accessories);
+            gets_Accessories        = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Accessories);
 
             // ---------------------- //
 
-            imageCare.Source = gets_Care[0].picture;
-            imageCareLoader.IsRunning = false;
-            imageFashion.Source = gets_Fashion[0].picture;
-            imageFashionLoader.IsRunning = false;
-            imageAccessories.Source = gets_Accessories[0].picture;
-            imageAccessoriesLoader.IsRunning = false;
-            imageForSell.Source = "fashion.png";
-            imageForSellLoader.IsRunning = false;
+            imageCare.Source                    = gets_Care[0].picture;
+            imageCareLoader.IsRunning           = false;
+            imageFashion.Source                 = gets_Fashion[0].picture;
+            imageFashionLoader.IsRunning        = false;
+            imageAccessories.Source             = gets_Accessories[0].picture;
+            imageAccessoriesLoader.IsRunning    = false;
+            imageForSell.Source                 = "fashion.png";
+            imageForSellLoader.IsRunning        = false;
 
-            imageCare.BindingContext = gets_Care[0].url;
-            imageFashion.BindingContext = gets_Fashion[0].url;
+            imageCare.BindingContext        = gets_Care[0].url;
+            imageFashion.BindingContext     = gets_Fashion[0].url;
             imageAccessories.BindingContext = gets_Accessories[0].url;
 
-            lblCare.Text = gets_Care[0].name;
-            lblFashion.Text = gets_Fashion[0].name;
+            lblCare.Text        = gets_Care[0].name;
+            lblFashion.Text     = gets_Fashion[0].name;
             lblAccessories.Text = gets_Accessories[0].name;
-            lblForSell.Text = "Used Clothes";
+            lblForSell.Text     = "Used Clothes";
 
             base.OnAppearing();
         }
