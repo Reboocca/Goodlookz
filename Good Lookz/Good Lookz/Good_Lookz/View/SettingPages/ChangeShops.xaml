@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="Good_Lookz.View.SettingPages.ChangeShops"
+             Title="Change shops"
+             BackgroundColor="White">
+    <StackLayout Padding="5">
+            <Label Text=" Care" FontAttributes="Bold" BackgroundColor="#ffaa01" TextColor="White" FontSize="25"/>
+            <forms:CarouselView x:Name="cvCare" ItemSelected="cvCare_ItemSelected">
+                <forms:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+                            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+                                <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </forms:CarouselView.ItemTemplate>
+            </forms:CarouselView>
+
+            <Label Text=" Fashion" FontAttributes="Bold" BackgroundColor="#ab7197" TextColor="White" FontSize="25"/>
+            <forms:CarouselView x:Name="cvFashion" ItemSelected="cvFashion_ItemSelected">
+                <forms:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+                            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+                                <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </forms:CarouselView.ItemTemplate>
+            </forms:CarouselView>
+
+            <Label Text=" Accessories" FontAttributes="Bold" BackgroundColor="#2b8cad" TextColor="White" FontSize="25"/>
+        <forms:CarouselView x:Name="cvAccessories" ItemSelected="cvAccessories_ItemSelected">
+            <forms:CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+                        <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+                            <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </forms:CarouselView.ItemTemplate>
+        </forms:CarouselView>
+        
+        <Button HorizontalOptions="Center" Text="Save Changes" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="btnSave_Clicked"/>
+        </StackLayout>
+</ContentPage>

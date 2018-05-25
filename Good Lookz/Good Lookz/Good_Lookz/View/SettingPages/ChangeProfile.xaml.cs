@@ -175,6 +175,7 @@ namespace Good_Lookz.View.SettingPages
 
                 content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(users_id))), "users_id");
                 content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(pf.picture))), "picture");
 
                 HttpClient client = new HttpClient(new NativeMessageHandler());
                 var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/updateProfile.php", content);

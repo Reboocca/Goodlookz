@@ -8,7 +8,8 @@ http://motzcod.es/post/162402194007/plugins-for-xamarin-go-dotnet-standard
 
 **IMPORTANT**
 Android:
-You must set your app to compile against API 25 or higher. It is required that you add the following override to any Activity that you will be requesting permissions from:
+You must set your app to compile against API 25 or higher. It is required that you add the following override to any Activity that you will be requesting 
+permissions from:
 
 public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
 {

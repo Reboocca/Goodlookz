@@ -51,6 +51,7 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\ass
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Text.RegularExpressions.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Linq.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Text.Encoding.dll
+D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Threading.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Reflection.Primitives.dll
@@ -68,6 +69,5 @@ D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\ass
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.ComponentModel.TypeConverter.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Runtime.Serialization.Formatters.dll
-D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\System.Text.Encoding.Extensions.dll
 D:\Github\Goodlookz\Good Lookz\Good Lookz\Good_Lookz.Droid\obj\Debug\android\assets\Mono.Security.dll

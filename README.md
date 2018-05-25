@@ -11,11 +11,9 @@ De documentatie van de applicatie is te vinden in de map "docs", hierin staat oo
 | Plan van aanpak                 | v1.00  | 13 maart 2018    |
 | Functioneel ontwerp             | v1.00  | 14 maart 2018    |
 | Technisch ontwerp               | v1.01  | 03 april 2018    |
-| Testplan                        | v0.03  | 24 april 2018    |
-| Testrapport                     | v0.04  | 02 maart 2018    |
-| Technische documentatie         | v0.04  | 03 maart 2018    |
-
-(nog meer toevoegen)
+| Testplan                        | v0.03  | 22 maart 2018    |
+| Testrapport                     | v0.04  | 22 maart 2018    |
+| Technische documentatie         | v0.04  | 22 maart 2018    |
 
 
 #### Trello

@@ -39,13 +39,13 @@ namespace Good_Lookz.View
 		//Haal de gevoelens op vanuit de database en stop deze in de lijst en listview
 		private async void getFeelings()
 		{
-			string webadres = "http://good-lookz.com/API/inyourcolour/getcolours.php";
-			HttpClient connect = new HttpClient();
+			string webadres         = "http://good-lookz.com/API/inyourcolour/getcolours.php";
+			HttpClient connect      = new HttpClient();
 			HttpResponseMessage get = await connect.GetAsync(webadres);
 			get.EnsureSuccessStatusCode();
 
-			string result = await get.Content.ReadAsStringAsync();
-			var jsonresult = JsonConvert.DeserializeObject<List<Feeling>>(result);
+			string result   = await get.Content.ReadAsStringAsync();
+			var jsonresult  = JsonConvert.DeserializeObject<List<Feeling>>(result);
 
 			foreach (Feeling f in jsonresult)
 			{
