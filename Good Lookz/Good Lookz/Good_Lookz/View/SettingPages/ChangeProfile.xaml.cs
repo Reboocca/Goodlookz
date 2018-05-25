@@ -147,7 +147,7 @@ namespace Good_Lookz.View.SettingPages
 
                     if (result == "Success")
                     {
-                        await DisplayAlert("Success", "You changes have been saved", "Ok");
+                        await DisplayAlert("Success", "Your changes have been saved", "Ok");
                         await this.Navigation.PopAsync();
                     }
                     else
@@ -183,7 +183,7 @@ namespace Good_Lookz.View.SettingPages
 
                 if (result == "Success")
                 {
-                    await DisplayAlert("Success", "You changes have been saved", "Ok");
+                    await DisplayAlert("Success", "Your changes have been saved", "Ok");
                     await this.Navigation.PopAsync();
                 }
                 else
