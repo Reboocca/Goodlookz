@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.SettingPages.ChangeMail"
              xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
-             Title="Change e-mail">
+             Title="Change e-mail"
+             BackgroundColor="White">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="1*" />

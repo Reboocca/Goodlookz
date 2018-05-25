@@ -119,13 +119,13 @@
     </Grid>
 
     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5">
-            <Label Text="Show own clothes" />
-      <Switch x:Name="ownCloths" Toggled="ownClothes_Toggled"/>
+        <Label Text="Show own clothes" />
+        <Switch x:Name="ownCloths" Toggled="ownClothes_Toggled"/>
     </StackLayout>
       
     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
-            <Button TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Save Set" Clicked="SetSave_Clicked"/>
-            <Button TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Filter wardrobe" Clicked="btnFilter_Clicked" />
+        <Button TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Save Set" Clicked="SetSave_Clicked"/>
+        <Button TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" Text="Filter wardrobe" Clicked="btnFilter_Clicked" />
     </StackLayout>
   </StackLayout>
 </ContentPage>
