@@ -21,8 +21,7 @@ namespace Good_Lookz.View
 		{
             //Haal permissie op voor de camera functie
             getPermission();
-
-
+            
             //Check of de gebruiker geblokkeerd is
             Models.Settings.Blocked blocked = new Models.Settings.Blocked();
             blocked.checkBlockedAsync();

@@ -26,8 +26,8 @@ namespace Good_Lookz.View
         HttpClient client = new HttpClient(new NativeMessageHandler());
         private ObservableCollection<Models.FriendsCredentials> _gets;
         
-        List<Models.FriendsRequestCount> response_notification = new List<Models.FriendsRequestCount>();
-        List<Models.FriendsCredentials> response = new List<Models.FriendsCredentials>();
+        List<Models.FriendsRequestCount> response_notification  = new List<Models.FriendsRequestCount>();
+        List<Models.FriendsCredentials> response                = new List<Models.FriendsCredentials>();
 
         public FriendsPage()
         {
@@ -44,11 +44,11 @@ namespace Good_Lookz.View
             loadingFriends.IsRunning = true;
 
             string url_notification = "http://www.good-lookz.com/API/notifications/friendsRequests.php?users_id={0}";
-            string data = Models.LoginCredentials.loginId;
+            string data             = Models.LoginCredentials.loginId;
             string URL_notification = string.Format(url_notification, data);
 
-            var content_notification = await client.GetStringAsync(URL_notification);
-            response_notification = JsonConvert.DeserializeObject<List<Models.FriendsRequestCount>>(content_notification);
+            var content_notification    = await client.GetStringAsync(URL_notification);
+            response_notification       = JsonConvert.DeserializeObject<List<Models.FriendsRequestCount>>(content_notification);
 
             if (response_notification[0].count == 0)
             {
@@ -57,15 +57,15 @@ namespace Good_Lookz.View
             else
             {
                 var requestsBtnText = "Friends Requests({0})";
-                var data_requests = response_notification[0].count;
-                requestsBtn.Text = string.Format(requestsBtnText, data_requests);
+                var data_requests   = response_notification[0].count;
+                requestsBtn.Text    = string.Format(requestsBtnText, data_requests);
             }
 
             //string fastData = "41";
             string URL = string.Format(url, data);
 
             var content = await client.GetStringAsync(URL);
-            response = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
+            response    = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
 
             response.Sort(new Models.friendsList(true, "Username"));
 
@@ -87,9 +87,9 @@ namespace Good_Lookz.View
 
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            var item = ((MenuItem)sender);
-            var friends_id = item.CommandParameter.ToString();
-            var url = "http://www.good-lookz.com/API/friends/friendsDelete.php";
+            var item        = ((MenuItem)sender);
+            var friends_id  = item.CommandParameter.ToString();
+            var url         = "http://www.good-lookz.com/API/friends/friendsDelete.php";
 
             var values = new Dictionary<string, string>
             {
@@ -100,10 +100,10 @@ namespace Good_Lookz.View
 
             if (requestDelete)
             {
-                var content = new FormUrlEncodedContent(values);
-                var response = await client.PostAsync(url, content);
-                var responseString = await response.Content.ReadAsStringAsync();
-                var postMethod = JsonConvert.DeserializeObject<List<Deleted>>(responseString);
+                var content         = new FormUrlEncodedContent(values);
+                var response        = await client.PostAsync(url, content);
+                var responseString  = await response.Content.ReadAsStringAsync();
+                var postMethod      = JsonConvert.DeserializeObject<List<Deleted>>(responseString);
 
                 // Delete van items in het ObservableCollection
                 foreach (var items in _gets.ToList())

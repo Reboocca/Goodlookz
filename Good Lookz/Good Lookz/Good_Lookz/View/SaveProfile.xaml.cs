@@ -77,8 +77,8 @@ namespace Good_Lookz.View
             loadingPic.IsRunning = true;
             _mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
-                Directory = "Sample",
-                Name = "myImage.jpg"
+                Directory   = "Sample",
+                Name        = "myImage.jpg"
             });
 
             if (_mediaFile == null)

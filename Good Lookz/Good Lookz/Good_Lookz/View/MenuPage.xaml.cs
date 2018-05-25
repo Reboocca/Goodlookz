@@ -47,10 +47,9 @@ namespace Good_Lookz.View
             // Request checker
             try
             {
-                string URL = string.Format(url, data);
-
-                var content = await client.GetStringAsync(URL);
-                var response = JsonConvert.DeserializeObject<List<Models.FriendsRequestCount>>(content);
+                string URL      = string.Format(url, data);
+                var content     = await client.GetStringAsync(URL);
+                var response    = JsonConvert.DeserializeObject<List<Models.FriendsRequestCount>>(content);
 
                 if (response[0].count == 0)
                 {
@@ -59,7 +58,7 @@ namespace Good_Lookz.View
                 else
                 {
                     var friendsText = "Friends({0})";
-                    var dataText = response[0].count;
+                    var dataText    = response[0].count;
                     friendsBtn.Text = string.Format(friendsText, dataText);
                 }
             }
@@ -78,8 +77,8 @@ namespace Good_Lookz.View
                 if (position == null)
                     return;
 
-                var latitude = position.Latitude.ToString();
-                var longitude = position.Longitude.ToString();
+                var latitude    = position.Latitude.ToString();
+                var longitude   = position.Longitude.ToString();
 
                 var values = new Dictionary<string, string>
                 {
@@ -88,10 +87,10 @@ namespace Good_Lookz.View
                     { "longitude", longitude}
                 };
 
-                var content_location = new FormUrlEncodedContent(values);
-                var response_location = await client.PostAsync(locationUrl, content_location);
-                var responseString = await response_location.Content.ReadAsStringAsync();
-                var postMethod = JsonConvert.DeserializeObject<List<uploadLocation>>(responseString);
+                var content_location    = new FormUrlEncodedContent(values);
+                var response_location   = await client.PostAsync(locationUrl, content_location);
+                var responseString      = await response_location.Content.ReadAsStringAsync();
+                var postMethod          = JsonConvert.DeserializeObject<List<uploadLocation>>(responseString);
             }
             catch
             {
@@ -111,20 +110,20 @@ namespace Good_Lookz.View
 			try
 			{
 				//Stuur verzoek naar web API om de json op te halen
-				string webadres = "http://good-lookz.com/API/account/getNotifySettings.php?";
-				string parameters = "users_id=" + Models.LoginCredentials.loginId;
-				HttpClient connect = new HttpClient();
+				string webadres         = "http://good-lookz.com/API/account/getNotifySettings.php?";
+				string parameters       = "users_id=" + Models.LoginCredentials.loginId;
+				HttpClient connect      = new HttpClient();
 				HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
 				get.EnsureSuccessStatusCode();
 
 				//Sla het resultaat van de JSON op
-				string result = await get.Content.ReadAsStringAsync();
-				var jsonresult = JsonConvert.DeserializeObject<List<jsonResultNotification>>(result);
+				string result   = await get.Content.ReadAsStringAsync();
+				var jsonresult  = JsonConvert.DeserializeObject<List<jsonResultNotification>>(result);
 
 				//Stop JSON resultaat in de class met static variabelen
 				Models.Settings.NotifySettings.notifyfriend = jsonresult[0].notifyfriend;
 				Models.Settings.NotifySettings.notifyborrow = jsonresult[0].notifyborrow;
-				Models.Settings.NotifySettings.notifybid = jsonresult[0].notifybid;
+				Models.Settings.NotifySettings.notifybid    = jsonresult[0].notifybid;
 
 				//Check of de user notitifcaties heeft
 				getNotifCount();

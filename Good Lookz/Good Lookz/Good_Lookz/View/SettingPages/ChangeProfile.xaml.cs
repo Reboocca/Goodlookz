@@ -98,8 +98,8 @@ namespace Good_Lookz.View.SettingPages
                 return;
             }
 
-            imPicture.IsVisible = false;
-            loadingPic.IsRunning = true;
+            imPicture.IsVisible     = false;
+            loadingPic.IsRunning    = true;
             _mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 Directory = "Sample",
@@ -137,9 +137,9 @@ namespace Good_Lookz.View.SettingPages
             {
                 try
                 {
-                    string webadres = "http://good-lookz.com/API/account/updateProfile.php?";
-                    string parameters = "description=" + desc + "&users_id=" + Models.LoginCredentials.loginId;
-                    HttpClient connect = new HttpClient();
+                    string webadres         = "http://good-lookz.com/API/account/updateProfile.php?";
+                    string parameters       = "description=" + desc + "&users_id=" + Models.LoginCredentials.loginId;
+                    HttpClient connect      = new HttpClient();
                     HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
                     get.EnsureSuccessStatusCode();
 
@@ -177,9 +177,9 @@ namespace Good_Lookz.View.SettingPages
                 content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
                 content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(pf.picture))), "picture");
 
-                HttpClient client = new HttpClient(new NativeMessageHandler());
+                HttpClient client   = new HttpClient(new NativeMessageHandler());
                 var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/updateProfile.php", content);
-                string result = await ResponseMessage.Content.ReadAsStringAsync();
+                string result       = await ResponseMessage.Content.ReadAsStringAsync();
 
                 if (result == "Success")
                 {

@@ -98,7 +98,6 @@ namespace Good_Lookz.View.SettingPages
                         }
                         break;
                 }
-
             }
             catch (Exception)
             {
