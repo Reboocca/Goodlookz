@@ -23,7 +23,11 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override void OnAppearing()
         {
-			lbBidderUsername.Text	= Models.SelectedSaleRequests.username;
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            lbBidderUsername.Text	= Models.SelectedSaleRequests.username;
             imageItem.Source		= Models.SelectedSaleRequests.picture;
             lblPrice.Text			= Models.SelectedSaleRequests.price;
 			lblBidding.Text			= Models.SelectedSaleRequests.bidding;

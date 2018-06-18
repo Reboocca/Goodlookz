@@ -14,7 +14,11 @@ namespace Good_Lookz.View.SettingPages
 		{
 			InitializeComponent();
 
-			getSettings();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getSettings();
 		}
 
 		#region Global
@@ -32,9 +36,10 @@ namespace Good_Lookz.View.SettingPages
             lstSetting.Add(new AccountSetting { title = "Edit your profile",    id = 0 });
             lstSetting.Add(new AccountSetting { title = "Personal information", id = 1 });
             lstSetting.Add(new AccountSetting { title = "Change password",		id = 2 });
-			lstSetting.Add(new AccountSetting { title = "Change e-mail",		id = 3 });
+            lstSetting.Add(new AccountSetting { title = "Change e-mail",        id = 3 });
+            lstSetting.Add(new AccountSetting { title = "Edit prefered shops",  id = 4 });
 
-			lvAccSettings.ItemsSource = lstSetting;
+            lvAccSettings.ItemsSource = lstSetting;
 		}
 
 		//Wanneer iemand op een setting klikt
@@ -52,10 +57,13 @@ namespace Good_Lookz.View.SettingPages
 				case 2:
 					editPwd();
 					break;
-				case 3:
-					editMail();
-					break;
-			}
+                case 3:
+                    editMail();
+                    break;
+                case 4:
+                    editShops();
+                    break;
+            }
 
 			//Code van: https://forums.xamarin.com/discussion/30328/listview-item-selected-disable
 			//Zorg ervoor dat een item niet geselecteerd kan worden
@@ -77,14 +85,20 @@ namespace Good_Lookz.View.SettingPages
 
 		private async void editPwd()
 		{
-			//Stuur de gebruiker door naar de persoonlijke gegevens pagina
+			//Stuur de gebruiker door naar de wachtwoord wijzigen pagina
 			await Navigation.PushAsync(new View.SettingPages.ChangePassword(), true);
 		}
 
 		private async void editMail()
 		{
-			//Stuur de gebruiker door naar de persoonlijke gegevens pagina
+			//Stuur de gebruiker door naar de email wijzigen pagina
 			await Navigation.PushAsync(new View.SettingPages.ChangeMail(), true);
 		}
-	}
+
+        private async void editShops()
+        {
+            //Stuur de gebruiker door naar de winkel voorkeuren wijzigen pagina
+            await Navigation.PushAsync(new View.SettingPages.ChangeShops(), true);
+        }
+    }
 }

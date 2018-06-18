@@ -14,8 +14,12 @@ namespace Good_Lookz.View
 		public NotificationPage()
 		{
 			InitializeComponent();
-		
-			getNotifs();
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getNotifs();
 		}
 
 
@@ -82,12 +86,12 @@ namespace Good_Lookz.View
 				var item = ((MenuItem)sender);
 				var selected_notif_id = item.CommandParameter.ToString();
 
-				string webadres = "http://good-lookz.com/API/notifications/deleteNotifFromApp.php?id=" + selected_notif_id;
-				HttpClient connect = new HttpClient();
+				string webadres         = "http://good-lookz.com/API/notifications/deleteNotifFromApp.php?id=" + selected_notif_id;
+				HttpClient connect      = new HttpClient();
 				HttpResponseMessage get = await connect.GetAsync(webadres);
 				get.EnsureSuccessStatusCode();
 
-				string result = await get.Content.ReadAsStringAsync();
+				string result           = await get.Content.ReadAsStringAsync();
 
 				lstNotifs.Clear();
 				lvNotifications.ItemsSource = null;

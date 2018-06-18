@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.WardrobePages.WardrobeSelectedSaleItem" 
-             Title="Edit sale item">
+             Title="Edit sale item"
+             BackgroundColor="White">
   <Grid ColumnSpacing="5" Padding="10" >
     <Grid.RowDefinitions>
       <RowDefinition Height="50*" />

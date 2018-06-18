@@ -13,6 +13,10 @@ namespace Good_Lookz.View.WardrobePages
         public WardrobeChoose()
         {
             InitializeComponent();
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
         }
 
         async void AllClothes_Clicked(object sender, EventArgs e)

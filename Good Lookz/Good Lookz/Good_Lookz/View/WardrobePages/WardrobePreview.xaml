@@ -4,7 +4,8 @@
              x:Class="Good_Lookz.View.WardrobePages.WardrobePreview"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"             
              xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
-             Title="Selected item">
+             Title="Selected item"
+             BackgroundColor="White">
   <Grid ColumnSpacing="5" Padding="10" >
     <Grid.RowDefinitions>
       <RowDefinition Height="*" />

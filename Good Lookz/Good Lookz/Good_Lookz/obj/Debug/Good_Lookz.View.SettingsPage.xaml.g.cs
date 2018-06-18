@@ -11,8 +11,7 @@
 namespace Good_Lookz.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Desktop\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\Settin" +
-        "gsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Github\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\SettingsPage.xaml")]
     public partial class SettingsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

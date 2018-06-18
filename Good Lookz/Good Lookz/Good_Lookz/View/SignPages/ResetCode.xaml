@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.SignPages.ResetCode"
              xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
-             Title="Reset password">
+             Title="Reset password"
+             BackgroundColor="White">
   <Grid>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="1*"/>

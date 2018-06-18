@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.InYourColourWebview"             
-             Title="In Your Colour">
+             Title="In Your Colour"
+             BackgroundColor="White">
   <StackLayout>
     <WebView x:Name="wvWebView" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" />
   </StackLayout>

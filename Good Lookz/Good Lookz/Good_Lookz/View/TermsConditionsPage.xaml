@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.TermsConditionsPage"
-             Title="Terms and Conditions">
+             Title="Terms and Conditions"
+             BackgroundColor="White">
   <StackLayout>
     <WebView
       x:Name="webViewTest"

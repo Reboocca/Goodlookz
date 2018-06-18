@@ -20,6 +20,10 @@ namespace Good_Lookz.View.SettingPages
         {
             InitializeComponent();
 
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
             imPicture.Source     = "http://good-lookz.com/img/default_pfp.jpg";
             loadingPic.IsRunning = false;
 
@@ -94,8 +98,8 @@ namespace Good_Lookz.View.SettingPages
                 return;
             }
 
-            imPicture.IsVisible = false;
-            loadingPic.IsRunning = true;
+            imPicture.IsVisible     = false;
+            loadingPic.IsRunning    = true;
             _mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 Directory = "Sample",
@@ -133,9 +137,9 @@ namespace Good_Lookz.View.SettingPages
             {
                 try
                 {
-                    string webadres = "http://good-lookz.com/API/account/updateProfile.php?";
-                    string parameters = "description=" + desc + "&users_id=" + Models.LoginCredentials.loginId;
-                    HttpClient connect = new HttpClient();
+                    string webadres         = "http://good-lookz.com/API/account/updateProfile.php?";
+                    string parameters       = "description=" + desc + "&users_id=" + Models.LoginCredentials.loginId;
+                    HttpClient connect      = new HttpClient();
                     HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
                     get.EnsureSuccessStatusCode();
 
@@ -143,7 +147,7 @@ namespace Good_Lookz.View.SettingPages
 
                     if (result == "Success")
                     {
-                        await DisplayAlert("Success", "You changes have been saved", "Ok");
+                        await DisplayAlert("Success", "Your changes have been saved", "Ok");
                         await this.Navigation.PopAsync();
                     }
                     else
@@ -171,14 +175,15 @@ namespace Good_Lookz.View.SettingPages
 
                 content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(users_id))), "users_id");
                 content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(pf.picture))), "picture");
 
-                HttpClient client = new HttpClient(new NativeMessageHandler());
+                HttpClient client   = new HttpClient(new NativeMessageHandler());
                 var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/updateProfile.php", content);
-                string result = await ResponseMessage.Content.ReadAsStringAsync();
+                string result       = await ResponseMessage.Content.ReadAsStringAsync();
 
                 if (result == "Success")
                 {
-                    await DisplayAlert("Success", "You changes have been saved", "Ok");
+                    await DisplayAlert("Success", "Your changes have been saved", "Ok");
                     await this.Navigation.PopAsync();
                 }
                 else

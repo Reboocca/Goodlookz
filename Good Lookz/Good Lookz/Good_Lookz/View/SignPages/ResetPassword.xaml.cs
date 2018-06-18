@@ -41,11 +41,11 @@ namespace Good_Lookz.View.SignPages
 		private async void saveNewPwd()
 		{
             //Verander het wachtwoord met de hulp van de webserver
-			string webadres = "http://good-lookz.com/API/account/updatePwd.php?";
-			string parameters = "users_id=" + Models.Settings.ResetPWD.users_id + "&pwd=" + nPwd.Text + "&reset=1";
+			string webadres     = "http://good-lookz.com/API/account/updatePwd.php?";
+			string parameters   = "users_id=" + Models.Settings.ResetPWD.users_id + "&pwd=" + nPwd.Text + "&reset=1";
 
-			HttpClient connect = new HttpClient();
-			HttpResponseMessage update = await connect.GetAsync(webadres + parameters);
+			HttpClient connect          = new HttpClient();
+			HttpResponseMessage update  = await connect.GetAsync(webadres + parameters);
 			update.EnsureSuccessStatusCode();
 			string result = await update.Content.ReadAsStringAsync();
 

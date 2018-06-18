@@ -22,10 +22,6 @@ namespace Good_Lookz.View.SignPages
         public LoginPage()
         {
             InitializeComponent();
-
-			//REMOVE LATER
-			usrOrMail.Text  = "rebecca";
-			password.Text   = "123";
         }
 
         async void LoginClicked(object sender, EventArgs e)

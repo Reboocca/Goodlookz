@@ -64,7 +64,11 @@ namespace Good_Lookz.View.WardrobePages
 
         protected override void OnAppearing()
         {
-			getUserSize();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            getUserSize();
 			FillCarousel();
 			emptySelectedClothing();
 
@@ -83,142 +87,22 @@ namespace Good_Lookz.View.WardrobePages
 		async void FillCarousel()
 		{
 			string data = Models.LoginCredentials.loginId;
-
-			string URL = string.Format(url_friends, data);
-
+			string URL  = string.Format(url_friends, data);
 			var content = await check_friends.GetStringAsync(URL);
 			response    = JsonConvert.DeserializeObject<List<Models.FriendsCredentials>>(content);
 
 			if (response[0].id != null)
 			{
-				loadingHead.IsRunning   = true;
-				loadingTop.IsRunning    = true;
-				loadingBottom.IsRunning = true;
-				loadingFeet.IsRunning   = true;
+                loadingHead.IsRunning   = true;
+                loadingTop.IsRunning    = true;
+                loadingBottom.IsRunning = true;
+                loadingFeet.IsRunning   = true;
 
-				string Url_Head         = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=0";
-				string data_Head        = Models.LoginCredentials.loginId;
-				string urlFilled_Head   = string.Format(Url_Head, data_Head);
-				var content_Head        = await _client.GetStringAsync(urlFilled_Head);
-
-				if (content_Head != "[]0 results")
-				{
-					gets_Head   = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
-					_obsrv_head = new ObservableCollection<Models.WardrobeHeadAll>(gets_Head);
-
-					loadingHead.IsRunning = false;
-					loadingHead.IsVisible = false;
-
-					try
-					{
-						// List vullen met de opgehaalde data
-						CarouselViewHead.ItemsSource = _obsrv_head;
-					}
-					catch
-					{
-
-					}
-				}
-				else
-				{
-					loadingHead.IsVisible = false;
-				}
-
-
-				// ---------------------------
-
-				string Url_Top          = "http://www.good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=0&size=" + uSize.topnr;
-				string data_Top         = Models.LoginCredentials.loginId;
-				string urlFilled_Top    = string.Format(Url_Top, data_Top);
-				var content_Top         = await _client.GetStringAsync(urlFilled_Top);
-
-				if (content_Top != "[]0 results")
-				{
-					gets_Top    = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
-					_obsrv_top  = new ObservableCollection<Models.WardrobeTopAll>(gets_Top);
-
-					loadingTop.IsRunning = false;
-					loadingTop.IsVisible = false;
-
-					try
-					{
-						// List vullen met de opgehaalde data
-						CarouselViewTop.ItemsSource = _obsrv_top;
-					}
-					catch
-					{
-
-					}
-				}
-				else
-				{
-					loadingTop.IsVisible = false;
-				}
-
-
-				// ---------------------------
-
-				string Url_Bottom       = "http://www.good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=0&size=" + uSize.botnr;
-				string data_Bottom      = Models.LoginCredentials.loginId;
-				string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom);
-				var content_Bottom      = await _client.GetStringAsync(urlFilled_Bottom);
-
-				if (content_Bottom != "[]0 results")
-				{
-					gets_Bottom     = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
-					_obsrv_bottom   = new ObservableCollection<Models.WardrobeBottomAll>(gets_Bottom);
-
-					loadingBottom.IsRunning = false;
-					loadingBottom.IsVisible = false;
-
-					try
-					{
-						// List vullen met de opgehaalde data
-						CarouselViewBottom.ItemsSource = _obsrv_bottom;
-					}
-					catch
-					{
-
-					}
-				}
-				else
-				{
-					loadingBottom.IsVisible = false;
-				}
-                
-
-				// ---------------------------
-
-				string Url_Feet         = "http://www.good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=0&size=" + uSize.feetnr;
-				string data_Feet        = Models.LoginCredentials.loginId;
-				string urlFilled_Feet   = string.Format(Url_Feet, data_Feet);
-				var content_Feet        = await _client.GetStringAsync(urlFilled_Feet);
-
-				if (content_Feet != "[]0 results")
-				{
-					gets_Feet   = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
-					_obsrv_feet = new ObservableCollection<Models.WardrobeFeetAll>(gets_Feet);
-
-					loadingFeet.IsRunning = false;
-					loadingFeet.IsVisible = false;
-
-					try
-					{
-						// List vullen met de opgehaalde data
-						CarouselViewFeet.ItemsSource = _obsrv_feet;
-					}
-					catch
-					{
-
-					}
-				}
-				else
-				{
-					loadingFeet.IsVisible = false;
-				}
-
-				// ---------------------------
-			}
+                await getHeads();
+                await getTops();
+                await getBottoms();
+                await getFeet();
+            }
 			else
 			{
 				//Gebruiker heeft geen vrienden, navigeer terug naar vorige pagina
@@ -227,7 +111,226 @@ namespace Good_Lookz.View.WardrobePages
 			}
 		}
 
-		async void getOwnClothes()
+        private async Task getHeads()
+        {
+            if (Models.Settings.FilterFriend.filterHead.filteron)
+            {
+                string url          = "http://good-lookz.com/API/wardrobeFriends/getFilterFriendResults.php?users_id=" + Models.LoginCredentials.loginId + "&type=Head&colour=" + Models.Settings.FilterFriend.filterHead.colour;
+                var content_Head    = await _client.GetStringAsync(url);
+                gets_Head           = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
+
+                loadingHead.IsRunning = false;
+                loadingHead.IsVisible = false;
+
+                try
+                {
+                    // List vullen met de opgehaalde data
+                    CarouselViewHead.ItemsSource = gets_Head;
+                }
+                catch
+                {
+
+                }
+            }
+            else
+            {
+
+
+                string Url_Head         = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=0";
+                string data_Head        = Models.LoginCredentials.loginId;
+                string urlFilled_Head   = string.Format(Url_Head, data_Head);
+                var content_Head        = await _client.GetStringAsync(urlFilled_Head);
+
+                if (content_Head != "[]0 results")
+                {
+                    gets_Head = JsonConvert.DeserializeObject<List<Models.WardrobeHeadAll>>(content_Head);
+                    _obsrv_head = new ObservableCollection<Models.WardrobeHeadAll>(gets_Head);
+
+                    loadingHead.IsRunning = false;
+                    loadingHead.IsVisible = false;
+
+                    try
+                    {
+                        // List vullen met de opgehaalde data
+                        CarouselViewHead.ItemsSource = _obsrv_head;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                else
+                {
+                    loadingHead.IsVisible = false;
+                }
+
+            }
+
+        }
+
+        private async Task getTops()
+        {
+            if (Models.Settings.FilterFriend.filterTop.filteron)
+            {
+                string url      = "http://good-lookz.com/API/wardrobeFriends/getFilterFriendResults.php?users_id=" + Models.LoginCredentials.loginId + "&type=Top&colour=" + Models.Settings.FilterFriend.filterTop.colour + "&size=" + uSize.topnr;
+                var content_Top = await _client.GetStringAsync(url);
+                gets_Top        = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
+
+                loadingTop.IsRunning = false;
+                loadingTop.IsVisible = false;
+
+                try
+                {
+                    // List vullen met de opgehaalde data
+                    CarouselViewTop.ItemsSource = gets_Top;
+                }
+                catch
+                {
+
+                }
+
+            }
+            else
+            {
+                string Url_Top          = "http://www.good-lookz.com/API/wardrobeFriends/topDownload.php?users_id={0}&ownCloth=0&size=" + uSize.topnr;
+                string data_Top         = Models.LoginCredentials.loginId;
+                string urlFilled_Top    = string.Format(Url_Top, data_Top);
+                var content_Top         = await _client.GetStringAsync(urlFilled_Top);
+
+                if (content_Top != "[]0 results")
+                {
+                    gets_Top    = JsonConvert.DeserializeObject<List<Models.WardrobeTopAll>>(content_Top);
+                    _obsrv_top  = new ObservableCollection<Models.WardrobeTopAll>(gets_Top);
+
+                    loadingTop.IsRunning = false;
+                    loadingTop.IsVisible = false;
+
+                    try
+                    {
+                        // List vullen met de opgehaalde data
+                        CarouselViewTop.ItemsSource = _obsrv_top;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                else
+                {
+                    loadingTop.IsVisible = false;
+                }
+            }
+        }
+
+        private async Task getBottoms()
+        {
+            if (Models.Settings.FilterFriend.filterBottom.filteron)
+            {
+                string url          = "http://good-lookz.com/API/wardrobeFriends/getFilterFriendResults.php?users_id=" + Models.LoginCredentials.loginId + "&type=Bottom&colour=" + Models.Settings.FilterFriend.filterBottom.colour + "&size=" + uSize.botnr;
+                var content_Bottom  = await _client.GetStringAsync(url);
+                gets_Bottom         = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
+
+                loadingBottom.IsRunning = false;
+                loadingBottom.IsVisible = false;
+
+                try
+                {
+                    // List vullen met de opgehaalde data
+                    CarouselViewBottom.ItemsSource = gets_Bottom;
+                }
+                catch
+                {
+
+                }
+            }
+            else
+            {
+                string Url_Bottom       = "http://www.good-lookz.com/API/wardrobeFriends/bottomDownload.php?users_id={0}&ownCloth=0&size=" + uSize.botnr;
+                string data_Bottom      = Models.LoginCredentials.loginId;
+                string urlFilled_Bottom = string.Format(Url_Bottom, data_Bottom);
+                var content_Bottom      = await _client.GetStringAsync(urlFilled_Bottom);
+
+                if (content_Bottom != "[]0 results")
+                {
+                    gets_Bottom     = JsonConvert.DeserializeObject<List<Models.WardrobeBottomAll>>(content_Bottom);
+                    _obsrv_bottom   = new ObservableCollection<Models.WardrobeBottomAll>(gets_Bottom);
+
+                    loadingBottom.IsRunning = false;
+                    loadingBottom.IsVisible = false;
+
+                    try
+                    {
+                        // List vullen met de opgehaalde data
+                        CarouselViewBottom.ItemsSource = _obsrv_bottom;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                else
+                {
+                    loadingBottom.IsVisible = false;
+                }
+            }
+
+        }
+
+        private async Task getFeet()
+        {
+            if (Models.Settings.FilterFriend.filterFeet.filteron)
+            {
+                string url = "http://good-lookz.com/API/wardrobeFriends/getFilterFriendResults.php?users_id=" + Models.LoginCredentials.loginId + "&type=Feet&colour=" + Models.Settings.FilterFriend.filterFeet.colour + "&size=" + uSize.feetnr;
+
+                var content_Feet = await _client.GetStringAsync(url);
+                gets_Feet = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
+
+                loadingFeet.IsRunning = false;
+                loadingFeet.IsVisible = false;
+
+                try
+                {
+                    // List vullen met de opgehaalde data
+                    CarouselViewFeet.ItemsSource = gets_Feet;
+                }
+                catch
+                {
+
+                }
+            }
+            else
+            {
+                string Url_Feet         = "http://www.good-lookz.com/API/wardrobeFriends/feetDownload.php?users_id={0}&ownCloth=0&size=" + uSize.feetnr;
+                string data_Feet        = Models.LoginCredentials.loginId;
+                string urlFilled_Feet   = string.Format(Url_Feet, data_Feet);
+                var content_Feet        = await _client.GetStringAsync(urlFilled_Feet);
+
+                if (content_Feet != "[]0 results")
+                {
+                    gets_Feet   = JsonConvert.DeserializeObject<List<Models.WardrobeFeetAll>>(content_Feet);
+                    _obsrv_feet = new ObservableCollection<Models.WardrobeFeetAll>(gets_Feet);
+
+                    loadingFeet.IsRunning = false;
+                    loadingFeet.IsVisible = false;
+
+                    try
+                    {
+                        // List vullen met de opgehaalde data
+                        CarouselViewFeet.ItemsSource = _obsrv_feet;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                else
+                {
+                    loadingFeet.IsVisible = false;
+                }
+            }
+        }
+
+        async void getOwnClothes()
 		{
 			string Url_Head         = "http://www.good-lookz.com/API/wardrobeFriends/headDownload.php?users_id={0}&ownCloth=1";
 			string data_Head        = Models.LoginCredentials.loginId;
@@ -534,6 +637,14 @@ namespace Good_Lookz.View.WardrobePages
 		async void SetSave_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new WardrobeSaveSet(), true);
+        }
+
+        private async void btnFilter_Clicked(object sender, EventArgs e)
+        {
+            //Set previous page so filterpage knows
+            Models.PreviousPage.page = "friends";
+
+            await Navigation.PushAsync(new WardrobePages.FilterWardrobe(), true);
         }
 
         async void headTapped(object sender, EventArgs e)

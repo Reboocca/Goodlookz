@@ -38,7 +38,7 @@ namespace Good_Lookz.View.FriendsPages
     public partial class FriendsAdd : ContentPage
     {
         private const string url_friendSend = "http://www.good-lookz.com/API/friends/friendsSendReq.php";
-        HttpClient client = new HttpClient(new NativeMessageHandler());
+        HttpClient client                   = new HttpClient(new NativeMessageHandler());
         private ObservableCollection<checkuser> _gets;
 
         /// <summary>
@@ -50,6 +50,10 @@ namespace Good_Lookz.View.FriendsPages
         public FriendsAdd()
         {
             InitializeComponent();
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
         }
 
         async void Username_TextChanged(object sender, TextChangedEventArgs e)
@@ -60,12 +64,12 @@ namespace Good_Lookz.View.FriendsPages
 				loadingFriends.IsVisible = true;
 				loadingFriends.IsRunning = true;
 
-				string url = "http://www.good-lookz.com/API/account/CheckUser.php?username={0}";
+				string url      = "http://www.good-lookz.com/API/account/CheckUser.php?username={0}";
 				string username = e.NewTextValue;
 				string url_Full = string.Format(url, username);
 
 				var content = await client.GetStringAsync(url_Full);
-				response = JsonConvert.DeserializeObject<List<checkuser>>(content);
+				response    = JsonConvert.DeserializeObject<List<checkuser>>(content);
 
 				_gets = new ObservableCollection<checkuser>(response);
 
@@ -85,9 +89,9 @@ namespace Good_Lookz.View.FriendsPages
             }
             else
             {
-                string url_friendCheck = "http://www.good-lookz.com/API/friends/friendsCheck.php";
-                var users_id = Models.LoginCredentials.loginId;
-                var username = item.username;
+                string url_friendCheck  = "http://www.good-lookz.com/API/friends/friendsCheck.php";
+                var users_id            = Models.LoginCredentials.loginId;
+                var username            = item.username;
 
                 var values = new Dictionary<string, string>
                 {
@@ -95,18 +99,18 @@ namespace Good_Lookz.View.FriendsPages
                     { "usrOrMail", username }
                 };
 
-                var content_friendsCheck = new FormUrlEncodedContent(values);
-                var response_friendsCheck = await client.PostAsync(url_friendCheck, content_friendsCheck);
+                var content_friendsCheck        = new FormUrlEncodedContent(values);
+                var response_friendsCheck       = await client.PostAsync(url_friendCheck, content_friendsCheck);
                 var responseString_friendsCheck = await response_friendsCheck.Content.ReadAsStringAsync();
-                var postMethod_friendsCheck = JsonConvert.DeserializeObject<List<friendCheck>>(responseString_friendsCheck);
+                var postMethod_friendsCheck     = JsonConvert.DeserializeObject<List<friendCheck>>(responseString_friendsCheck);
 
-                var alreadyBinded = false;
+                var alreadyBinded       = false;
                 var friendcheckUsername = "";
                 foreach (var friendCheckId in postMethod_friendsCheck)
                 {
                     if (item.id == friendCheckId.id)
                     {
-                        alreadyBinded = true;
+                        alreadyBinded       = true;
                         friendcheckUsername = friendCheckId.username;
                         break;
                     }
@@ -129,12 +133,12 @@ namespace Good_Lookz.View.FriendsPages
 							{ "postusername", Models.LoginCredentials.loginUsername }
 						};
 
-						var content = new FormUrlEncodedContent(valuesrequest);
-                        var response = await client.PostAsync(url_friendSend, content);
-                        var responseString = await response.Content.ReadAsStringAsync();
-                        var postMethod = JsonConvert.DeserializeObject<List<friendSend>>(responseString);
+						var content         = new FormUrlEncodedContent(valuesrequest);
+                        var response        = await client.PostAsync(url_friendSend, content);
+                        var responseString  = await response.Content.ReadAsStringAsync();
+                        var postMethod      = JsonConvert.DeserializeObject<List<friendSend>>(responseString);
 
-                        await DisplayAlert("Message", "Friend has been sent!", "OK");
+                        await DisplayAlert("Message", "Friendrequest has been sent!", "OK");
                     }
                 }
             }

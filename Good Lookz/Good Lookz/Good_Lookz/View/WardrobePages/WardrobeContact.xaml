@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.WardrobePages.WardrobeContact"
              xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
-             Title="Send your contact info">
+             Title="Send your contact info"
+             BackgroundColor="White">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="5*" />

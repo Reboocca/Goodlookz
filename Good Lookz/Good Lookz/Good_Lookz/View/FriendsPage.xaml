@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:custom="clr-namespace:Good_Lookz.CustomRenderer;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.FriendsPage"
-             Title="Friends">
+             Title="Friends"
+             BackgroundColor="White">
   <StackLayout>
     <StackLayout Padding="0, 5, 0, 5" Orientation="Horizontal" HorizontalOptions="Center">
       <Button Text="Add friend" Clicked="AddFriend_Clicked" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" />

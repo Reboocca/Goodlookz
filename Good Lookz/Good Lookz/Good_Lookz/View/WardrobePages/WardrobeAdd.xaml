@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:behavior="clr-namespace:Good_Lookz.Behavior;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.WardrobePages.WardrobeAdd"
-             Title="Add clothing">
+             Title="Add clothing"
+             BackgroundColor="White">
   
   <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="10">
     <Label Text="Choose your gender and region below:" FontSize="15" />
@@ -22,27 +23,9 @@
           </Picker.Items>
         </Picker>
     </StackLayout>
-    <Button Text="Pick Photo"
-            TextColor="Red" 
-            BorderWidth="1" 
-            BorderRadius="4" 
-            BorderColor="Red" 
-            BackgroundColor="White" 
-            HeightRequest="40"
-            FontSize="20"
-            Clicked="PickPhoto_Clicked" />
-
-    <Button Text="Take Photo"
-            TextColor="Red" 
-            BorderWidth="1" 
-            BorderRadius="4" 
-            BorderColor="Red" 
-            BackgroundColor="White" 
-            HeightRequest="40"
-            FontSize="20"
-            Clicked="TakePhoto_Clicked" />
-
-    <StackLayout Orientation="Horizontal" >
+        <Button Text="Pick Photo" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" FontSize="20" Clicked="PickPhoto_Clicked"/>
+        <Button Text="Take Photo" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" FontSize="20" Clicked="TakePhoto_Clicked"/>
+        <StackLayout Orientation="Horizontal" >
       <Grid>
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="*" />
@@ -79,18 +62,7 @@
     </Picker>
 
     <ActivityIndicator x:Name="loadingPic"/>
-    <Image x:Name="FileImage"
-           WidthRequest="400"
-           HeightRequest="220" />
-
-    <Button Text="Upload Photo"
-            TextColor="Red" 
-            BorderWidth="1" 
-            BorderRadius="4" 
-            BorderColor="Red" 
-            BackgroundColor="White" 
-            HeightRequest="40"
-            FontSize="20"
-            Clicked="UploadFile_Clicked" />
+    <Image x:Name="FileImage" WidthRequest="400" HeightRequest="220"/>
+    <Button Text="Upload Photo" TextColor="Red" BorderWidth="1" BorderRadius="4" BorderColor="Red" BackgroundColor="White" HeightRequest="40" FontSize="20" Clicked="UploadFile_Clicked"/>
   </StackLayout>
 </ContentPage>

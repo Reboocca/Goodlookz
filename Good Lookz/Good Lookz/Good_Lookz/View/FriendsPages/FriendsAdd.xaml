@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Good_Lookz.View.FriendsPages.FriendsAdd"
-             Title="Add friends">
+             Title="Add friends"
+             BackgroundColor="White">
   <StackLayout>
     <Entry x:Name="ent_Username" TextChanged="Username_TextChanged" />
     <StackLayout VerticalOptions="FillAndExpand">
@@ -13,10 +14,9 @@
             <ViewCell>
               <StackLayout Orientation="Horizontal" Padding="10">
                 <Image Source="friends.png" />
-                <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
-                  <Label FontAttributes="Bold" FontSize="15" Text="{Binding username}" />
-                  <!-- <Label Text="{Binding url}" TextColor="Gray" /> -->
-                </StackLayout>
+                  <StackLayout HorizontalOptions="EndAndExpand" Padding="10">
+                      <Label FontAttributes="Bold" FontSize="15" Text="{Binding username}" />
+                  </StackLayout>
               </StackLayout>
             </ViewCell>
           </DataTemplate>

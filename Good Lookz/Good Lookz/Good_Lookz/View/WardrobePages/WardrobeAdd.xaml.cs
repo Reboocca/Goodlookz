@@ -43,7 +43,11 @@ namespace Good_Lookz.View.WardrobePages
 		{
 			InitializeComponent();
 
-			loadingPic.IsVisible = false;
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            loadingPic.IsVisible = false;
 			topSize.IsVisible = false;
 			bottomSize.IsVisible = false;
 			feetSize.IsVisible = false;

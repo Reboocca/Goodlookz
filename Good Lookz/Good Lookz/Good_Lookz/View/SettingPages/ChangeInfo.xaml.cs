@@ -16,8 +16,12 @@ namespace Good_Lookz.View.SettingPages
 		{
 			InitializeComponent();
 
-			//Sla alle verschillende maten op in de list die boven is aangemaakt
-			lstSizes = Models.Sizes.getAllSizesList();
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            //Sla alle verschillende maten op in de list die boven is aangemaakt
+            lstSizes = Models.Sizes.getAllSizesList();
 
 			//Haal gebruiker gegevens op en vul deze in
 			getUserSize();
@@ -36,15 +40,15 @@ namespace Good_Lookz.View.SettingPages
 		private async void getUserSize()
 		{
 			string users_id = Models.LoginCredentials.loginId;
-			string url = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
+			string url      = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
 
-			HttpClient get = new HttpClient();
+			HttpClient get              = new HttpClient();
 			HttpResponseMessage respons = await get.GetAsync(url);
 
 			if (respons.IsSuccessStatusCode)
 			{
-				string responsecontent = await respons.Content.ReadAsStringAsync();
-				var myobjList = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
+				string responsecontent  = await respons.Content.ReadAsStringAsync();
+				var myobjList           = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
 
 				uSize.region = myobjList[0].region;
 				uSize.gender = myobjList[0].gender;

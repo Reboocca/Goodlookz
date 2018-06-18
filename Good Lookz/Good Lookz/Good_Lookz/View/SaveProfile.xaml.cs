@@ -19,13 +19,14 @@ namespace Good_Lookz.View
         public SaveProfile()
         {
             InitializeComponent();
-            
+
             imPicture.Source = "http://good-lookz.com/img/default_pfp.jpg";
             loadingPic.IsRunning = false;
         }
 
         #region Global
         private MediaFile _mediaFile;
+        bool picChanged = false;
         #endregion
 
         //code van: https://stackoverflow.com/questions/32163471/confirmation-dialog-on-back-button-press-event-xamarin-forms voor terugknop
@@ -45,8 +46,8 @@ namespace Good_Lookz.View
                 return;
             }
 
-            loadingPic.IsRunning = true;
-            _mediaFile = await CrossMedia.Current.PickPhotoAsync();
+            loadingPic.IsRunning    = true;
+            _mediaFile              = await CrossMedia.Current.PickPhotoAsync();
 
             if (_mediaFile == null)
             {
@@ -58,7 +59,9 @@ namespace Good_Lookz.View
             {
                 return _mediaFile.GetStream();
             });
-            loadingPic.IsRunning = false;
+
+            picChanged              = true;
+            loadingPic.IsRunning    = false;
         }
 
         private async void TakePhoto_Clicked(object sender, EventArgs e)
@@ -74,8 +77,8 @@ namespace Good_Lookz.View
             loadingPic.IsRunning = true;
             _mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
-                Directory = "Sample",
-                Name = "myImage.jpg"
+                Directory   = "Sample",
+                Name        = "myImage.jpg"
             });
 
             if (_mediaFile == null)
@@ -88,7 +91,9 @@ namespace Good_Lookz.View
             {
                 return _mediaFile.GetStream();
             });
-            loadingPic.IsRunning = false;
+
+            picChanged              = true;
+            loadingPic.IsRunning    = false;
         }
 
         private async void uploadToDBS(object sender, EventArgs e)
@@ -100,34 +105,74 @@ namespace Good_Lookz.View
                 desc = "No description added.";
             }
 
-            var content     = new MultipartFormDataContent();
-
-            //Stop de file in de content
-            content.Add(new StreamContent(_mediaFile.GetStream()),
-                        "\"fileToUpload\"",
-                        $"\"{_mediaFile.Path}\"");
-            
-
-            var users_id = Models.LoginCredentials.loginId;
-            var username = Models.LoginCredentials.loginUsername;
-            
-            content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(users_id))), "users_id");
-            content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(username))), "username");
-            content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
-            
-            HttpClient client   = new HttpClient(new NativeMessageHandler());
-            var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/saveProfile.php", content);
-            string result = await ResponseMessage.Content.ReadAsStringAsync();
-
-            if(result == "Success")
+            //Check of de afbeelding gewijzigd is
+            if (!picChanged)
             {
-                await DisplayAlert("Success", "Profile has been saved", "Ok");
-                App.Current.MainPage = new NavigationPage(new MenuPage());
+                //Sla de gegevens op in de dbs
+                try
+                {
+                    //Haal vereisten gegevens op
+                    string users_id = Models.LoginCredentials.loginId;
+                    string username = Models.LoginCredentials.loginUsername;
+
+                    string webadres = "http://good-lookz.com/API/account/saveProfile.php?";
+                    string parameters = "users_id=" + users_id + "&description=" + desc + "&username=" + username;
+                    HttpClient connect = new HttpClient();
+                    HttpResponseMessage uploadToSale = await connect.GetAsync(webadres + parameters);
+                    uploadToSale.EnsureSuccessStatusCode();
+
+                    string result = await uploadToSale.Content.ReadAsStringAsync();
+
+                    //Is het resultaat succes
+                    if (result == "Success")
+                    {
+                        await DisplayAlert("Success", "Profile has been saved", "Ok");
+                        App.Current.MainPage = new NavigationPage(new MenuPage());
+                    }
+                    //Is het resultaat failed
+                    else if (result == "Failed")
+                    {
+                        await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+                    }
+
+                }
+                catch (Exception)
+                {
+                    await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+                    throw;
+                }
+
             }
             else
             {
-                btnSave.IsEnabled = true;
-                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again", "ok");
+                var content = new MultipartFormDataContent();
+
+                //Stop de file in de content
+                content.Add(new StreamContent(_mediaFile.GetStream()),
+                            "\"fileToUpload\"",
+                            $"\"{_mediaFile.Path}\"");
+
+                var users_id = Models.LoginCredentials.loginId;
+                var username = Models.LoginCredentials.loginUsername;
+
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(users_id))), "users_id");
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(username))), "username");
+                content.Add(new StreamContent(new MemoryStream(Encoding.UTF8.GetBytes(desc))), "description");
+
+                HttpClient client = new HttpClient(new NativeMessageHandler());
+                var ResponseMessage = await client.PostAsync("http://good-lookz.com/API/account/saveProfile.php", content);
+                string result = await ResponseMessage.Content.ReadAsStringAsync();
+
+                if (result == "Success")
+                {
+                    await DisplayAlert("Success", "Profile has been saved", "Ok");
+                    App.Current.MainPage = new NavigationPage(new MenuPage());
+                }
+                else
+                {
+                    btnSave.IsEnabled = true;
+                    await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again", "ok");
+                }
             }
         }
 

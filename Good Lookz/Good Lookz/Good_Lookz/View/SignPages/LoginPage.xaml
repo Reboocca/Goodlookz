@@ -28,7 +28,7 @@
     <Entry x:Name="usrOrMail" Grid.Column="1" Grid.Row="3" Placeholder="Username or Email"/>
     <Entry x:Name="password"  Grid.Column="1" Grid.Row="4" Placeholder="Password" IsPassword="True"/>
 
-    <Label Grid.Column="1" Grid.Row="5" Text="Forgot password? Click here!" HorizontalTextAlignment="Center" FontSize="14" TextColor="#BD0926">
+    <Label Grid.Column="1" Grid.Row="5" Text="Forgot your password? Click here!" HorizontalTextAlignment="Center" FontSize="14" TextColor="#BD0926">
       <Label.GestureRecognizers>
         <TapGestureRecognizer Tapped="forgotPWD"/>
       </Label.GestureRecognizers>

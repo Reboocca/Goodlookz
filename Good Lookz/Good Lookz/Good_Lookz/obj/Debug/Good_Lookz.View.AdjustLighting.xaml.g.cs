@@ -11,8 +11,7 @@
 namespace Good_Lookz.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Desktop\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\Adjust" +
-        "Lighting.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Github\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\AdjustLighting.xaml")]
     public partial class AdjustLighting : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

@@ -11,8 +11,8 @@
 namespace Good_Lookz.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\4PEOPLE-3\\Desktop\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\TermsC" +
-        "onditionsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Github\\Goodlookz\\Good Lookz\\Good Lookz\\Good_Lookz\\View\\TermsConditionsPage.xam" +
+        "l")]
     public partial class TermsConditionsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

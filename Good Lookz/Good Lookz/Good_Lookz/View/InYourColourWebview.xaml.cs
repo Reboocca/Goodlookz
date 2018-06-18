@@ -13,7 +13,12 @@ namespace Good_Lookz.View
 		public InYourColourWebview()
 		{
 			InitializeComponent();
-			wvWebView.Source = "http://www.inyourcolour.com";
+
+            //Check of de gebruiker geblokkeerd is
+            Models.Settings.Blocked blocked = new Models.Settings.Blocked();
+            blocked.checkBlockedAsync();
+
+            wvWebView.Source = "http://www.inyourcolour.com";
 		}
 	}
 }

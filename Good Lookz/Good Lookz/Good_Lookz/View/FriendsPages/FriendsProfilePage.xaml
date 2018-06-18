@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:custom="clr-namespace:Good_Lookz.CustomRenderer;assembly=Good_Lookz"
              x:Class="Good_Lookz.View.FriendsPages.FriendsProfilePage" 
-             Title="Profile">
+             Title="Profile"
+             BackgroundColor="White">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="2*"/>
@@ -27,7 +28,7 @@
 
     <custom:CircleImage x:Name="imPicture" Grid.Column="1" Grid.Row="3"/>
 
-    <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Vertical">
+    <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Vertical" VerticalOptions="StartAndExpand">
       <Label Text="About me:" FontSize="15" FontAttributes="Bold"/>
       <Label x:Name="lblDesc" FontSize="15"/>
     </StackLayout>

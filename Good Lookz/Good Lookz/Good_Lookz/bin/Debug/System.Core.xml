@@ -35,6 +35,12 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="C:Microsoft.Win32.SafeHandles.SafeNCryptHandle(System.IntPtr,System.Runtime.InteropServices.SafeHandle)">
+            <param name="handle">To be added.</param>
+            <param name="parentHandle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:Microsoft.Win32.SafeHandles.SafeNCryptHandle.IsInvalid">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -55,6 +61,12 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="C:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle(System.IntPtr,System.Runtime.InteropServices.SafeHandle)">
+            <param name="handle">To be added.</param>
+            <param name="parentHandle">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -603,8 +615,19 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="C:System.Collections.Generic.HashSet`1(`0System`0.`0Int32`0)">
+            <param name="capacity">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="C:System.Collections.Generic.HashSet`1(`0System`0.`0Collections`0.`0Generic`0.`0IEnumerable`0{`0T`0},`0System`0.`0Collections`0.`0Generic`0.`0IEqualityComparer`0{`0T`0})">
             <param name="collection">To be added.</param>
+            <param name="comparer">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.Collections.Generic.HashSet`1(`0System`0.`0Int32`0,`0System`0.`0Collections`0.`0Generic`0.`0IEqualityComparer`0{`0T`0})">
+            <param name="capacity">To be added.</param>
             <param name="comparer">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
@@ -765,6 +788,13 @@
         </member>
         <member name="M:System.Collections.Generic.HashSet`1.TrimExcess">
             <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Collections.Generic.HashSet`1.TryGetValue(`0T`0,`0T`0@)">
+            <param name="equalValue">To be added.</param>
+            <param name="actualValue">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Collections.Generic.HashSet`1.UnionWith(`0System`0.`0Collections`0.`0Generic`0.`0IEnumerable`0{`0T`0})">
@@ -2267,6 +2297,14 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="C:System.IO.Pipes.AnonymousPipeServerStream(System.IO.Pipes.PipeDirection,System.IO.HandleInheritability,System.Int32,System.IO.Pipes.PipeSecurity)">
+            <param name="direction">To be added.</param>
+            <param name="inheritability">To be added.</param>
+            <param name="bufferSize">To be added.</param>
+            <param name="pipeSecurity">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.IO.Pipes.AnonymousPipeServerStream.ClientSafePipeHandle">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -2342,6 +2380,16 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="C:System.IO.Pipes.NamedPipeClientStream(System.String,System.String,System.IO.Pipes.PipeAccessRights,System.IO.Pipes.PipeOptions,System.Security.Principal.TokenImpersonationLevel,System.IO.HandleInheritability)">
+            <param name="serverName">To be added.</param>
+            <param name="pipeName">To be added.</param>
+            <param name="desiredAccessRights">To be added.</param>
+            <param name="options">To be added.</param>
+            <param name="impersonationLevel">To be added.</param>
+            <param name="inheritability">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="C:System.IO.Pipes.NamedPipeClientStream(System.String,System.String,System.IO.Pipes.PipeDirection,System.IO.Pipes.PipeOptions,System.Security.Principal.TokenImpersonationLevel,System.IO.HandleInheritability)">
             <param name="serverName">To be added.</param>
             <param name="pipeName">To be added.</param>
@@ -2349,6 +2397,10 @@
             <param name="options">To be added.</param>
             <param name="impersonationLevel">To be added.</param>
             <param name="inheritability">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.NamedPipeClientStream.CheckPipePropertyOperations">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -2452,7 +2504,58 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="C:System.IO.Pipes.NamedPipeServerStream(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32,System.IO.Pipes.PipeSecurity)">
+            <param name="pipeName">To be added.</param>
+            <param name="direction">To be added.</param>
+            <param name="maxNumberOfServerInstances">To be added.</param>
+            <param name="transmissionMode">To be added.</param>
+            <param name="options">To be added.</param>
+            <param name="inBufferSize">To be added.</param>
+            <param name="outBufferSize">To be added.</param>
+            <param name="pipeSecurity">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.IO.Pipes.NamedPipeServerStream(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32,System.IO.Pipes.PipeSecurity,System.IO.HandleInheritability)">
+            <param name="pipeName">To be added.</param>
+            <param name="direction">To be added.</param>
+            <param name="maxNumberOfServerInstances">To be added.</param>
+            <param name="transmissionMode">To be added.</param>
+            <param name="options">To be added.</param>
+            <param name="inBufferSize">To be added.</param>
+            <param name="outBufferSize">To be added.</param>
+            <param name="pipeSecurity">To be added.</param>
+            <param name="inheritability">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.IO.Pipes.NamedPipeServerStream(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32,System.IO.Pipes.PipeSecurity,System.IO.HandleInheritability,System.IO.Pipes.PipeAccessRights)">
+            <param name="pipeName">To be added.</param>
+            <param name="direction">To be added.</param>
+            <param name="maxNumberOfServerInstances">To be added.</param>
+            <param name="transmissionMode">To be added.</param>
+            <param name="options">To be added.</param>
+            <param name="inBufferSize">To be added.</param>
+            <param name="outBufferSize">To be added.</param>
+            <param name="pipeSecurity">To be added.</param>
+            <param name="inheritability">To be added.</param>
+            <param name="additionalAccessRights">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.NamedPipeServerStream.BeginWaitForConnection(System.AsyncCallback,System.Object)">
+            <param name="callback">To be added.</param>
+            <param name="state">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.IO.Pipes.NamedPipeServerStream.Disconnect">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.NamedPipeServerStream.EndWaitForConnection(System.IAsyncResult)">
+            <param name="asyncResult">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -2466,6 +2569,11 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.NamedPipeServerStream.RunAsClient(System.IO.Pipes.PipeStreamImpersonationWorker)">
+            <param name="impersonationWorker">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -2735,6 +2843,26 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.IO.Pipes.PipeStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)">
+            <param name="buffer">To be added.</param>
+            <param name="offset">To be added.</param>
+            <param name="count">To be added.</param>
+            <param name="callback">To be added.</param>
+            <param name="state">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)">
+            <param name="buffer">To be added.</param>
+            <param name="offset">To be added.</param>
+            <param name="count">To be added.</param>
+            <param name="callback">To be added.</param>
+            <param name="state">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.IO.Pipes.PipeStream.CanRead">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -2750,8 +2878,31 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.IO.Pipes.PipeStream.CheckPipePropertyOperations">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.CheckReadOperations">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.CheckWriteOperations">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.IO.Pipes.PipeStream.Dispose(System.Boolean)">
             <param name="disposing">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.EndRead(System.IAsyncResult)">
+            <param name="asyncResult">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.EndWrite(System.IAsyncResult)">
+            <param name="asyncResult">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -2759,9 +2910,21 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.IO.Pipes.PipeStream.GetAccessControl">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.IO.Pipes.PipeStream.InBufferSize">
             <summary>To be added.</summary>
             <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.InitializeHandle(Microsoft.Win32.SafeHandles.SafePipeHandle,System.Boolean,System.Boolean)">
+            <param name="handle">To be added.</param>
+            <param name="isExposed">To be added.</param>
+            <param name="isAsync">To be added.</param>
+            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.IO.Pipes.PipeStream.IsAsync">
@@ -2770,6 +2933,11 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.IO.Pipes.PipeStream.IsConnected">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.IO.Pipes.PipeStream.IsHandleExposed">
             <summary>To be added.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
@@ -2822,6 +2990,11 @@
             <param name="origin">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.IO.Pipes.PipeStream.SetAccessControl(System.IO.Pipes.PipeSecurity)">
+            <param name="pipeSecurity">To be added.</param>
+            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.IO.Pipes.PipeStream.SetLength(System.Int64)">
@@ -3934,6 +4107,14 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Linq.Enumerable.SkipLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <param name="count">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.Linq.Enumerable.SkipWhile``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
             <typeparam name="TSource">To be added.</typeparam>
             <param name="source">To be added.</param>
@@ -4098,6 +4279,14 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Linq.Enumerable.TakeLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <param name="count">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.Linq.Enumerable.TakeWhile``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
             <typeparam name="TSource">To be added.</typeparam>
             <param name="source">To be added.</param>
@@ -4196,6 +4385,21 @@
             <param name="source">To be added.</param>
             <param name="keySelector">To be added.</param>
             <param name="elementSelector">To be added.</param>
+            <param name="comparer">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Linq.Enumerable.ToHashSet``1(System.Collections.Generic.IEnumerable{``0})">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Linq.Enumerable.ToHashSet``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
             <param name="comparer">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
@@ -4367,7 +4571,7 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Linq.EnumerableQuery`1.System#Linq#IQueryProvider#CreateQuery``1(`0System`0.`0Linq`0.`0Expressions`0.`0Expression`0)">
-            <typeparam name="S">To be added.</typeparam>
+            <typeparam name="TElement">To be added.</typeparam>
             <param name="expression">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
@@ -4380,7 +4584,7 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Linq.EnumerableQuery`1.System#Linq#IQueryProvider#Execute``1(`0System`0.`0Linq`0.`0Expressions`0.`0Expression`0)">
-            <typeparam name="S">To be added.</typeparam>
+            <typeparam name="TElement">To be added.</typeparam>
             <param name="expression">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
@@ -4430,7 +4634,7 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable``1(`0System`0.`0Func`0{`0TElement`0,`0TKey`0},`0System`0.`0Collections`0.`0Generic`0.`0IComparer`0{`0TKey`0},`0System`0.`0Boolean`0)">
+        <member name="M:System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable``1(System.Func{TElement,``0},System.Collections.Generic.IComparer{``0},System.Boolean)">
             <typeparam name="TKey">To be added.</typeparam>
             <param name="keySelector">To be added.</param>
             <param name="comparer">To be added.</param>
@@ -6325,6 +6529,14 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Linq.Queryable.Append``1(System.Linq.IQueryable{``0},``0)">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <param name="element">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.Linq.Queryable.AsQueryable(System.Collections.IEnumerable)">
             <param name="source">To be added.</param>
             <summary>To be added.</summary>
@@ -6907,6 +7119,14 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Linq.Queryable.Prepend``1(System.Linq.IQueryable{``0},``0)">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <param name="element">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.Linq.Queryable.Reverse``1(System.Linq.IQueryable{``0})">
             <typeparam name="TSource">To be added.</typeparam>
             <param name="source">To be added.</param>
@@ -7020,6 +7240,14 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Linq.Queryable.Skip``1(System.Linq.IQueryable{``0},System.Int32)">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <param name="count">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Linq.Queryable.SkipLast``1(System.Linq.IQueryable{``0},System.Int32)">
             <typeparam name="TSource">To be added.</typeparam>
             <param name="source">To be added.</param>
             <param name="count">To be added.</param>
@@ -7184,6 +7412,14 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Linq.Queryable.Take``1(System.Linq.IQueryable{``0},System.Int32)">
+            <typeparam name="TSource">To be added.</typeparam>
+            <param name="source">To be added.</param>
+            <param name="count">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Linq.Queryable.TakeLast``1(System.Linq.IQueryable{``0},System.Int32)">
             <typeparam name="TSource">To be added.</typeparam>
             <param name="source">To be added.</param>
             <param name="count">To be added.</param>
@@ -7584,6 +7820,11 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="P:System.Linq.Expressions.DynamicExpression.CanReduce">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.DynamicExpression.DelegateType">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -7702,6 +7943,11 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Linq.Expressions.DynamicExpression.Reduce">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.DynamicExpression.System#Linq#Expressions#IArgumentProvider#ArgumentCount">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -7758,17 +8004,17 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="P:System.Linq.Expressions.ElementInit.ArgumentCount">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.ElementInit.Arguments">
             <summary>To be added.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="P:System.Linq.Expressions.ElementInit.System#Linq#Expressions#IArgumentProvider#ArgumentCount">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Linq.Expressions.ElementInit.System#Linq#Expressions#IArgumentProvider#GetArgument(System.Int32)">
+        <member name="M:System.Linq.Expressions.ElementInit.GetArgument(System.Int32)">
             <param name="index">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
@@ -10818,9 +11064,20 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="P:System.Linq.Expressions.IndexExpression.ArgumentCount">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.IndexExpression.Arguments">
             <summary>To be added.</summary>
             <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Linq.Expressions.IndexExpression.GetArgument(System.Int32)">
+            <param name="index">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.Linq.Expressions.IndexExpression.Indexer">
@@ -10836,17 +11093,6 @@
         <member name="P:System.Linq.Expressions.IndexExpression.Object">
             <summary>To be added.</summary>
             <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:System.Linq.Expressions.IndexExpression.System#Linq#Expressions#IArgumentProvider#ArgumentCount">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Linq.Expressions.IndexExpression.System#Linq#Expressions#IArgumentProvider#GetArgument(System.Int32)">
-            <param name="index">To be added.</param>
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.Linq.Expressions.IndexExpression.Type">
@@ -10871,6 +11117,11 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="P:System.Linq.Expressions.InvocationExpression.ArgumentCount">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.InvocationExpression.Arguments">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -10881,20 +11132,15 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="P:System.Linq.Expressions.InvocationExpression.NodeType">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:System.Linq.Expressions.InvocationExpression.System#Linq#Expressions#IArgumentProvider#ArgumentCount">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Linq.Expressions.InvocationExpression.System#Linq#Expressions#IArgumentProvider#GetArgument(System.Int32)">
+        <member name="M:System.Linq.Expressions.InvocationExpression.GetArgument(System.Int32)">
             <param name="index">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.Linq.Expressions.InvocationExpression.NodeType">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.Linq.Expressions.InvocationExpression.Type">
@@ -11293,9 +11539,20 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="P:System.Linq.Expressions.MethodCallExpression.ArgumentCount">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.MethodCallExpression.Arguments">
             <summary>To be added.</summary>
             <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Linq.Expressions.MethodCallExpression.GetArgument(System.Int32)">
+            <param name="index">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.Linq.Expressions.MethodCallExpression.Method">
@@ -11311,17 +11568,6 @@
         <member name="P:System.Linq.Expressions.MethodCallExpression.Object">
             <summary>To be added.</summary>
             <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:System.Linq.Expressions.MethodCallExpression.System#Linq#Expressions#IArgumentProvider#ArgumentCount">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Linq.Expressions.MethodCallExpression.System#Linq#Expressions#IArgumentProvider#GetArgument(System.Int32)">
-            <param name="index">To be added.</param>
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.Linq.Expressions.MethodCallExpression.Type">
@@ -11372,6 +11618,11 @@
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="P:System.Linq.Expressions.NewExpression.ArgumentCount">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.NewExpression.Arguments">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -11382,6 +11633,12 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Linq.Expressions.NewExpression.GetArgument(System.Int32)">
+            <param name="index">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Linq.Expressions.NewExpression.Members">
             <summary>To be added.</summary>
             <value>To be added.</value>
@@ -11390,17 +11647,6 @@
         <member name="P:System.Linq.Expressions.NewExpression.NodeType">
             <summary>To be added.</summary>
             <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:System.Linq.Expressions.NewExpression.System#Linq#Expressions#IArgumentProvider#ArgumentCount">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Linq.Expressions.NewExpression.System#Linq#Expressions#IArgumentProvider#GetArgument(System.Int32)">
-            <param name="index">To be added.</param>
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:System.Linq.Expressions.NewExpression.Type">
@@ -11901,6 +12147,11 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.Runtime.CompilerServices.DebugInfoGenerator.MarkSequencePoint(System.Linq.Expressions.LambdaExpression,System.Int32,System.Linq.Expressions.DebugInfoExpression)">
             <param name="method">To be added.</param>
             <param name="ilOffset">To be added.</param>
@@ -12266,6 +12517,86 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="T:System.Runtime.InteropServices.ComAwareEventInfo">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.Runtime.InteropServices.ComAwareEventInfo(System.Type,System.String)">
+            <param name="type">To be added.</param>
+            <param name="eventName">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.AddEventHandler(System.Object,System.Delegate)">
+            <param name="target">To be added.</param>
+            <param name="handler">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.Runtime.InteropServices.ComAwareEventInfo.Attributes">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.Runtime.InteropServices.ComAwareEventInfo.DeclaringType">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.GetAddMethod(System.Boolean)">
+            <param name="nonPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributes(System.Boolean)">
+            <param name="inherit">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributes(System.Type,System.Boolean)">
+            <param name="attributeType">To be added.</param>
+            <param name="inherit">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.GetRaiseMethod(System.Boolean)">
+            <param name="nonPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.GetRemoveMethod(System.Boolean)">
+            <param name="nonPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.IsDefined(System.Type,System.Boolean)">
+            <param name="attributeType">To be added.</param>
+            <param name="inherit">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.Runtime.InteropServices.ComAwareEventInfo.Name">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.Runtime.InteropServices.ComAwareEventInfo.ReflectedType">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Runtime.InteropServices.ComAwareEventInfo.RemoveEventHandler(System.Object,System.Delegate)">
+            <param name="target">To be added.</param>
+            <param name="handler">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="T:System.Security.Cryptography.AesCng">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
@@ -12353,8 +12684,8 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor(System.Byte[],System.Byte[])">
-            <param name="rgbKey">To be added.</param>
-            <param name="rgbIV">To be added.</param>
+            <param name="key">To be added.</param>
+            <param name="iv">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
@@ -12365,8 +12696,8 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Security.Cryptography.AesCryptoServiceProvider.CreateEncryptor(System.Byte[],System.Byte[])">
-            <param name="rgbKey">To be added.</param>
-            <param name="rgbIV">To be added.</param>
+            <param name="key">To be added.</param>
+            <param name="iv">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
@@ -13511,6 +13842,10 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="C:System.Security.Cryptography.ECDiffieHellmanPublicKey">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="C:System.Security.Cryptography.ECDiffieHellmanPublicKey(System.Byte[])">
             <param name="keyBlob">To be added.</param>
             <summary>To be added.</summary>
@@ -13523,6 +13858,16 @@
         <member name="M:System.Security.Cryptography.ECDiffieHellmanPublicKey.Dispose(System.Boolean)">
             <param name="disposing">To be added.</param>
             <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDiffieHellmanPublicKey.ExportExplicitParameters">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDiffieHellmanPublicKey.ExportParameters">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:System.Security.Cryptography.ECDiffieHellmanPublicKey.ToByteArray">
@@ -13699,13 +14044,73 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.FromXmlString(System.String,System.Security.Cryptography.ECKeyXmlFormat)">
+            <param name="xml">To be added.</param>
+            <param name="format">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:System.Security.Cryptography.ECDsaCng.HashAlgorithm">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:System.Security.Cryptography.ECDsaCng.Key">
             <summary>To be added.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.SignData(System.Byte[])">
+            <param name="data">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.SignData(System.IO.Stream)">
+            <param name="data">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.SignData(System.Byte[],System.Int32,System.Int32)">
+            <param name="data">To be added.</param>
+            <param name="offset">To be added.</param>
+            <param name="count">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:System.Security.Cryptography.ECDsaCng.SignHash(System.Byte[])">
             <param name="hash">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.ToXmlString(System.Security.Cryptography.ECKeyXmlFormat)">
+            <param name="format">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.Byte[],System.Byte[])">
+            <param name="data">To be added.</param>
+            <param name="signature">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.IO.Stream,System.Byte[])">
+            <param name="data">To be added.</param>
+            <param name="signature">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.Byte[],System.Int32,System.Int32,System.Byte[])">
+            <param name="data">To be added.</param>
+            <param name="offset">To be added.</param>
+            <param name="count">To be added.</param>
+            <param name="signature">To be added.</param>
             <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
@@ -13716,6 +14121,13 @@
             <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
+        </member>
+        <member name="T:System.Security.Cryptography.ECKeyXmlFormat">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:System.Security.Cryptography.ECKeyXmlFormat.Rfc4050">
+            <summary>To be added.</summary>
         </member>
         <member name="T:System.Security.Cryptography.ECParameters">
             <summary>To be added.</summary>
@@ -13747,49 +14159,6 @@
         </member>
         <member name="F:System.Security.Cryptography.ECPoint.Y">
             <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:System.Security.Cryptography.IncrementalHash">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:System.Security.Cryptography.IncrementalHash.AlgorithmName">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])">
-            <param name="data">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[],System.Int32,System.Int32)">
-            <param name="data">To be added.</param>
-            <param name="offset">To be added.</param>
-            <param name="count">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName)">
-            <param name="hashAlgorithm">To be added.</param>
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Security.Cryptography.IncrementalHash.CreateHMAC(System.Security.Cryptography.HashAlgorithmName,System.Byte[])">
-            <param name="hashAlgorithm">To be added.</param>
-            <param name="key">To be added.</param>
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Security.Cryptography.IncrementalHash.Dispose">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:System.Security.Cryptography.IncrementalHash.GetHashAndReset">
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:System.Security.Cryptography.RSACng">
@@ -13824,6 +14193,93 @@
         <member name="P:System.Security.Cryptography.RSACng.Key">
             <summary>To be added.</summary>
             <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:System.Security.Cryptography.SHA256CryptoServiceProvider">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.Security.Cryptography.SHA256CryptoServiceProvider">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA256CryptoServiceProvider.Dispose(System.Boolean)">
+            <param name="disposing">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA256CryptoServiceProvider.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <param name="array">To be added.</param>
+            <param name="ibStart">To be added.</param>
+            <param name="cbSize">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA256CryptoServiceProvider.HashFinal">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA256CryptoServiceProvider.Initialize">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:System.Security.Cryptography.SHA384CryptoServiceProvider">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.Security.Cryptography.SHA384CryptoServiceProvider">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA384CryptoServiceProvider.Dispose(System.Boolean)">
+            <param name="disposing">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA384CryptoServiceProvider.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <param name="array">To be added.</param>
+            <param name="ibStart">To be added.</param>
+            <param name="cbSize">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA384CryptoServiceProvider.HashFinal">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA384CryptoServiceProvider.Initialize">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:System.Security.Cryptography.SHA512CryptoServiceProvider">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:System.Security.Cryptography.SHA512CryptoServiceProvider">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA512CryptoServiceProvider.Dispose(System.Boolean)">
+            <param name="disposing">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA512CryptoServiceProvider.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <param name="array">To be added.</param>
+            <param name="ibStart">To be added.</param>
+            <param name="cbSize">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA512CryptoServiceProvider.HashFinal">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:System.Security.Cryptography.SHA512CryptoServiceProvider.Initialize">
+            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:System.Security.Cryptography.TripleDESCng">
@@ -13930,6 +14386,22 @@
             <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
+        </member>
+        <member name="T:System.Security.Cryptography.X509Certificates.TrustStatus">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:System.Security.Cryptography.X509Certificates.TrustStatus.KnownIdentity">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:System.Security.Cryptography.X509Certificates.TrustStatus.Trusted">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:System.Security.Cryptography.X509Certificates.TrustStatus.UnknownIdentity">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:System.Security.Cryptography.X509Certificates.TrustStatus.Untrusted">
+            <summary>To be added.</summary>
         </member>
         <member name="T:System.Threading.LockRecursionPolicy">
             <summary>To be added.</summary>
