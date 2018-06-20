@@ -14,6 +14,7 @@ De documentatie van de applicatie is te vinden in de map "docs", hierin staat oo
 | Testplan                        | v1.00  | 22 maart 2018    |
 | Testrapport                     | v1.00  | 22 maart 2018    |
 | Technische documentatie         | v1.00  | 22 maart 2018    |
+| CMS documentatie                | v1.00  | 20 juni 2018     |
 
 
 #### Trello
@@ -29,3 +30,6 @@ Als zowel bij de applicatie als de web api is er een mappenstructuur opgebouwd. 
 
 ### Aanpassingen
 Daarnaast is het van belang dat de **technische documentatie** bij de hand wordt gehouden wanneer andere documenten gelezen worden. Hierin staan alle toegevoegde functionaliteiten omschreven met zowel een omschrijving, flowcharts, datamodel en GUI afbeeldingen.
+
+### CMS
+De CMS-applicatie voor de app is op 28 mei 2018 opgestart en is aan het einde van de stage afgerond. Hierdoor is er een andere ontwikkelmethode gebruikt dan bij het uitbreiden van de Good Lookz app. Verdere informatie over de CMS-applicatie is te vinden in **CMS_documentatie.docx** waarbij er uitgelegd wordt hei de CMS ongeveer in elkaar zit. Het is aan te raden om dit document door te nemen wanneer er aanpassingen worden gemaakt op de CMS.
