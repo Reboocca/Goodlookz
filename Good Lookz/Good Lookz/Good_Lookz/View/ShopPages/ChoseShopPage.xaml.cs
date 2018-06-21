@@ -25,10 +25,8 @@ namespace Good_Lookz.View.ShopPages
     /// </summary>
     public partial class ChoseShopPage : ContentPage
     {
-        private HttpClient _client = new HttpClient(new NativeMessageHandler());
-        private ObservableCollection<Models.GetShops> _gets_Care;
-        private ObservableCollection<Models.GetShops> _gets_Fashion;
-        private ObservableCollection<Models.GetShops> _gets_Accessories;
+        private HttpClient _client  = new HttpClient(new NativeMessageHandler());
+        Models.UserSizes uSize      = new Models.UserSizes();
 
         public ChoseShopPage()
         {
@@ -46,28 +44,76 @@ namespace Good_Lookz.View.ShopPages
 
         protected override async void OnAppearing()
         {
-            string url_Care = "http://www.good-lookz.com/API/shops/shopsDownload.php?rubric_id=1";
-            string url_Fashion = "http://www.good-lookz.com/API/shops/shopsDownload.php?rubric_id=2";
-            string url_Accessories = "http://www.good-lookz.com/API/shops/shopsDownload.php?rubric_id=3";
+            //Get saved region
+            await getUserSize();
 
-            var content_Care = await _client.GetStringAsync(url_Care);
-            var content_Fashion = await _client.GetStringAsync(url_Fashion);
-            var content_Accessories = await _client.GetStringAsync(url_Accessories);
-
-            var response_Care = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Care);
-            var response_Fashion = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Fashion);
-            var response_Accessories = JsonConvert.DeserializeObject<List<Models.GetShops>>(content_Accessories);
-
-            _gets_Care = new ObservableCollection<Models.GetShops>(response_Care);
-            _gets_Fashion = new ObservableCollection<Models.GetShops>(response_Fashion);
-            _gets_Accessories = new ObservableCollection<Models.GetShops>(response_Accessories);
-
-            carouselViewCare.ItemsSource = _gets_Care;
-            carouselViewFashion.ItemsSource = _gets_Fashion;
-            carouselViewAccessories.ItemsSource = _gets_Accessories;
+            //Get shops
+            getShops("1");
+            getShops("2");
+            getShops("3");
 
             base.OnAppearing();
         }
+
+        async private void getShops(string rubric)
+        {
+            try
+            {
+                string webadres = "http://good-lookz.com/API/shops/getShopsChoose.php?";
+                string parameters = "rubric_id=" + rubric + "&region=" + uSize.region;
+                HttpClient connect = new HttpClient();
+                HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+                get.EnsureSuccessStatusCode();
+                
+                string result = await get.Content.ReadAsStringAsync();
+                var jsonresult = JsonConvert.DeserializeObject<List<Models.GetShops>>(result);
+
+                switch (rubric)
+                {
+                    case "1":
+                        carouselViewCare.ItemsSource        = new ObservableCollection<Models.GetShops>(jsonresult);
+                        break;
+
+                    case "2":
+                        carouselViewFashion.ItemsSource     = new ObservableCollection<Models.GetShops>(jsonresult);
+                        break;
+                    case "3":
+                        carouselViewAccessories.ItemsSource = new ObservableCollection<Models.GetShops>(jsonresult);
+                        break;
+
+                }
+
+            }
+            catch (Exception)
+            {
+                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+                throw;
+            }
+        }
+
+        //Haal region op
+        private async Task getUserSize()
+        {
+            string users_id = Models.LoginCredentials.loginId;
+            string url      = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
+
+            HttpClient get = new HttpClient();
+            HttpResponseMessage respons = await get.GetAsync(url);
+
+            if (respons.IsSuccessStatusCode)
+            {
+                string responsecontent = await respons.Content.ReadAsStringAsync();
+                var myobjList = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
+                var myObj = myobjList[0];
+
+                uSize.region = myObj.region;
+            }
+            else
+            {
+                uSize.region = "EU";
+            }
+        }
+
 
         void CarouselViewCare_Selected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -124,26 +170,27 @@ namespace Good_Lookz.View.ShopPages
                 { "shops_id", shops3_id }
             };
 
-            var content_Care = new FormUrlEncodedContent(value_Care);
-            var response_Care = await _client.PostAsync(url, content_Care);
+            var content_Care        = new FormUrlEncodedContent(value_Care);
+            var response_Care       = await _client.PostAsync(url, content_Care);
             var responseString_Care = await response_Care.Content.ReadAsStringAsync();
-            var postMethod_Care = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Care);
+            var postMethod_Care     = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Care);
 
-            var content_Fashion = new FormUrlEncodedContent(value_Fashion);
-            var response_Fashion = await _client.PostAsync(url, content_Fashion);
-            var responseString_Fashion = await response_Fashion.Content.ReadAsStringAsync();
-            var postMethod_Fashion = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Fashion);
+            var content_Fashion         = new FormUrlEncodedContent(value_Fashion);
+            var response_Fashion        = await _client.PostAsync(url, content_Fashion);
+            var responseString_Fashion  = await response_Fashion.Content.ReadAsStringAsync();
+            var postMethod_Fashion      = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Fashion);
 
-            var content_Accessories = new FormUrlEncodedContent(value_Accessories);
-            var response_Accessories = await _client.PostAsync(url, content_Accessories);
-            var responseString_Accessories = await response_Accessories.Content.ReadAsStringAsync();
-            var postMethod_Accessories = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Accessories);
+            var content_Accessories         = new FormUrlEncodedContent(value_Accessories);
+            var response_Accessories        = await _client.PostAsync(url, content_Accessories);
+            var responseString_Accessories  = await response_Accessories.Content.ReadAsStringAsync();
+            var postMethod_Accessories      = JsonConvert.DeserializeObject<List<shopsUploaded>>(responseString_Accessories);
 
             await DisplayAlert("Success", "Your shop preferences have been saved.", "OK");
 
-            var _id = 1;
+            var _id     = 1;
             fromPage.id = _id;
-			App.Current.MainPage = new SaveSizePage();
-		}
+
+            App.Current.MainPage = new NavigationPage(new SaveProfile());
+        }
     }
 }

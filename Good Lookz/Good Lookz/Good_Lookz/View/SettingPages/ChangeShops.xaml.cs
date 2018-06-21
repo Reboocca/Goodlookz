@@ -30,12 +30,19 @@ namespace Good_Lookz.View.SettingPages
             public int position { get; set; }
         }
 
-        protected override void OnAppearing()
+        #region Global
+        Models.UserSizes uSize = new Models.UserSizes();
+        #endregion
+
+        protected override async void OnAppearing()
         {
             //Check of de gebruiker geblokkeerd is
             Models.Settings.Blocked blocked = new Models.Settings.Blocked();
             blocked.checkBlockedAsync();
-            
+
+            //Haal region op
+            await getUserSize();
+
             //Haal shops op en stop ze in de carouselviews
             getShopsAsync("1");
             getShopsAsync("2");
@@ -46,8 +53,8 @@ namespace Good_Lookz.View.SettingPages
         {
             try
             {
-                string webadres         = "http://www.good-lookz.com/API/shops/getShops.php?";
-                string parameters       = "rubric_id=" + id;
+                string webadres         = "http://www.good-lookz.com/API/shops/getShopsChange.php?";
+                string parameters       = "rubric_id=" + id + "&region=" + uSize.region;
                 HttpClient connect      = new HttpClient();
                 HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
                 get.EnsureSuccessStatusCode();
@@ -59,8 +66,8 @@ namespace Good_Lookz.View.SettingPages
                 switch (id)
                 {
                     case "1":
-                        cvCare.ItemsSource          = new ObservableCollection<Shops>(jsonresult);
-                        shop                        = await getShopSaved("1");
+                        cvCare.ItemsSource  = new ObservableCollection<Shops>(jsonresult);
+                        shop                = await getShopSaved("1");
 
                         //Selecteer de juiste Fashion Shop
                         foreach (Shops s in jsonresult)
@@ -72,8 +79,8 @@ namespace Good_Lookz.View.SettingPages
                         }
                         break;
                     case "2":
-                        cvFashion.ItemsSource       = new ObservableCollection<Shops>(jsonresult);
-                        shop                        = await getShopSaved("2");
+                        cvFashion.ItemsSource   = new ObservableCollection<Shops>(jsonresult);
+                        shop                    = await getShopSaved("2");
 
                         //Selecteer de juiste Fashion Shop
                         foreach (Shops s in jsonresult)
@@ -103,6 +110,29 @@ namespace Good_Lookz.View.SettingPages
             {
                
             }
+        }
+
+        private async Task getUserSize()
+        {
+            string users_id = Models.LoginCredentials.loginId;
+            string url      = "http://good-lookz.com/API/account/getSizes.php?users_id=" + users_id;
+
+            HttpClient get = new HttpClient();
+            HttpResponseMessage response = await get.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responsecontent = await response.Content.ReadAsStringAsync();
+                var results = JsonConvert.DeserializeObject<List<Models.UserSizes>>(responsecontent);
+                var result = results[0];
+
+                uSize.region = result.region;
+            }
+            else
+            {
+                uSize.region = "EU";
+            }
+
         }
 
         private async Task<string> getShopSaved(string id)

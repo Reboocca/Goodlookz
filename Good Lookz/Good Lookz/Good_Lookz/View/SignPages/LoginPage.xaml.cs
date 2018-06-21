@@ -114,7 +114,7 @@ namespace Good_Lookz.View.SignPages
                         }
                         else
                         {
-                            App.Current.MainPage = new ShopPages.ChoseShopPage();
+                            App.Current.MainPage = new SaveSizePage();
                         }
                     }
                 }
