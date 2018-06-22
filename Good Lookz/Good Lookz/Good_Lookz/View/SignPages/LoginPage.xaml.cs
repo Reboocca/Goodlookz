@@ -98,23 +98,13 @@ namespace Good_Lookz.View.SignPages
 
                         if (setupcomplete)
                         {
-                            var _shops1_id = gets_shopsChosen[0].shops_id;
-                            var _shops2_id = gets_shopsChosen[1].shops_id;
-                            var _shops3_id = gets_shopsChosen[2].shops_id;
-
-                            Models.ShopsChosenSaved.shops1_id = _shops1_id;
-                            Models.ShopsChosenSaved.shops2_id = _shops2_id;
-                            Models.ShopsChosenSaved.shops3_id = _shops3_id;
-
-                            Application.Current.Properties["shops1_id"] = _shops1_id;
-                            Application.Current.Properties["shops2_id"] = _shops2_id;
-                            Application.Current.Properties["shops3_id"] = _shops3_id;
+                           
 
                             App.Current.MainPage = new NavigationPage(new MenuPage());
                         }
                         else
                         {
-                            App.Current.MainPage = new ShopPages.ChoseShopPage();
+                            App.Current.MainPage = new SaveSizePage();
                         }
                     }
                 }

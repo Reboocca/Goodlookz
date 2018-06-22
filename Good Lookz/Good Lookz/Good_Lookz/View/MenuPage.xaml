@@ -53,7 +53,7 @@
               FontAttributes="Bold" />
       <Image Grid.Row="2"
              Grid.Column="1"
-             Source="friends.png"/>
+             Source="iyc.png"/>
       
       <Button Grid.Row="3"
               Grid.Column="1"

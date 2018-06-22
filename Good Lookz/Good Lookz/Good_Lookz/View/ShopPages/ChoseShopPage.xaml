@@ -15,7 +15,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+                        <Image Grid.RowSpan="2" Source="{Binding picture}" Aspect="AspectFill"/>
                         <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
                             <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
@@ -32,7 +32,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+                        <Image Grid.RowSpan="2" Source="{Binding picture}" Aspect="AspectFill"/>
                         <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
                             <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
@@ -49,7 +49,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Image Grid.RowSpan="2" Source="{Binding picture}"/>
+                        <Image Grid.RowSpan="2" Source="{Binding picture}"  Aspect="AspectFill"/>
                         <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
                             <Label TextColor="White" Text="{Binding name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
@@ -60,3 +60,4 @@
         <Button HorizontalOptions="Center" Text="Save shops" TextColor="Red" BackgroundColor="White" HeightRequest="40" Clicked="SaveShop_Clicked"/>
     </StackLayout>
 </ContentPage>
+    

@@ -27,7 +27,7 @@
     <Label Grid.Row="1" Grid.Column="0" x:Name="lblCare" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
     <Label Grid.Row="2" Grid.ColumnSpan="2" Text=" Fashion " FontAttributes="Bold" BackgroundColor="#ab7197" TextColor="White" FontSize="25"/>
     <ActivityIndicator x:Name="imageFashionLoader" Grid.Row="3" Grid.Column="1" />
-    <Image Grid.Row="3" Grid.Column="1" x:Name="imageFashion">
+      <Image Grid.Row="3" Grid.Column="1" x:Name="imageFashion">
       <Image.GestureRecognizers>
         <TapGestureRecognizer
                 Tapped="imageFashion_Tapped"
