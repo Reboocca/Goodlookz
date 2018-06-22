@@ -209,7 +209,7 @@ namespace Good_Lookz.View.WardrobePages
 
         private void pType_SelectedIndexChanged(object sender, EventArgs e)
 		{
-            if(Models.PreviousPage.page == "wardobe")
+            if(Models.PreviousPage.page == "wardrobe")
             {
                 //Als er al items in de colour picker staan, zorg dat deze leeg gemaakt worden
                 if (pColour.Items.Count > 0)

@@ -36,17 +36,17 @@ namespace Good_Lookz.View
             return true;
         }
 
-        void Understood_Clicked(object sender, EventArgs e)
+        private async void Understood_Clicked(object sender, EventArgs e)
         {
             var pageID = fromPage.id;
 
             switch (pageID)
             {
                 case 0:
-                    App.Current.MainPage = new NavigationPage(new SignPage());
+                    await this.Navigation.PopAsync();
                     break;
                 case 1:
-                    App.Current.MainPage = new NavigationPage(new MenuPage());
+                    await this.Navigation.PopAsync();
                     break;
                 default:
                     break;

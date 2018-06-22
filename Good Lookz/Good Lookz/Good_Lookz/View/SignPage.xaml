@@ -40,7 +40,7 @@
               HorizontalOptions="Fill"
               Clicked="CreateClicked"/>
             <StackLayout Padding="0, 10, 0, 0">
-                <Label Text="2017 4People Communications" TextColor="Red" HorizontalTextAlignment="Center" />
+                <Label x:Name="lblFooter" TextColor="Red" HorizontalTextAlignment="Center" />
             </StackLayout>
         </StackLayout>
     </StackLayout>

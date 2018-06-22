@@ -19,7 +19,11 @@ namespace Good_Lookz.View
         protected override void OnAppearing()
         {
             NavigationPage.SetHasNavigationBar(this, false);
-		}
+
+            DateTime dt = DateTime.Now;
+            lblFooter.Text = dt.Year + " © 4People Communications";
+
+        }
 
             async void LoginClicked(object sender, EventArgs e)
         {
