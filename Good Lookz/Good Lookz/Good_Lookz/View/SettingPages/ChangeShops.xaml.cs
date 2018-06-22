@@ -27,7 +27,7 @@ namespace Good_Lookz.View.SettingPages
             public string picture { get; set; }
             public string url { get; set; }
             public string active { get; set; }
-            public int position { get; set; }
+            public int position = 0;
         }
 
         #region Global
@@ -43,10 +43,91 @@ namespace Good_Lookz.View.SettingPages
             //Haal region op
             await getUserSize();
 
-            //Haal shops op en stop ze in de carouselviews
-            getShopsAsync("1");
-            getShopsAsync("2");
-            getShopsAsync("3");
+            //Check of de shops niet verwijdert zijn
+            string care         = await checkShop("1");
+            string fashion      = await checkShop("2");
+            string accessories  = await checkShop("3");
+
+            if (care == "false" || fashion == "false" || accessories == "false")
+            {
+                if(care == "false")
+                {
+                    getShopMissing("1");
+                    getShopsAsync("2");
+                    getShopsAsync("3");
+                }
+                else if(fashion == "false")
+                {
+                    getShopsAsync("1");
+                    getShopMissing("2");
+                    getShopsAsync("3");
+                }
+                else
+                {
+                    getShopsAsync("1");
+                    getShopsAsync("2");
+                    getShopMissing("3");
+
+                }
+            }
+            else
+            {
+                //Haal shops op en stop ze in de carouselviews
+                getShopsAsync("1");
+                getShopsAsync("2");
+                getShopsAsync("3");
+            }
+
+            
+        }
+
+        private async Task<string> checkShop(string r)
+        {
+            string webadres = "http://good-lookz.com/API/shops/checkShops.php";
+            string parameters = "?users_id=" + Models.LoginCredentials.loginId + "&rubric=" + r;
+            HttpClient connect = new HttpClient();
+            HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+            get.EnsureSuccessStatusCode();
+
+            string result = await get.Content.ReadAsStringAsync();
+            return result;
+        }
+
+        private async void getShopMissing(string r)
+        {
+            try
+            {
+                string webadres = "http://good-lookz.com/API/shops/getShopsChoose.php?";
+                string parameters = "rubric_id=" + r + "&region=" + uSize.region;
+                HttpClient connect = new HttpClient();
+                HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+                get.EnsureSuccessStatusCode();
+
+                string result = await get.Content.ReadAsStringAsync();
+                var jsonresult = JsonConvert.DeserializeObject<List<Shops>>(result);
+
+                switch (r)
+                {
+                    case "1":
+                        cvCare.ItemsSource = new ObservableCollection<Shops>(jsonresult);
+                        break;
+
+                    case "2":
+                        cvFashion.ItemsSource = new ObservableCollection<Shops>(jsonresult);
+                        break;
+                    case "3":
+                        cvAccessories.ItemsSource = new ObservableCollection<Shops>(jsonresult);
+                        break;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                await DisplayAlert("Error", "Something went wrong, please check your internet connection and try again.", "OK");
+                throw;
+            }
         }
 
         private async void getShopsAsync(string id)

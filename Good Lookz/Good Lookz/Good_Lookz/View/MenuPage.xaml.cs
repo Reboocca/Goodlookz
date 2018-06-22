@@ -179,7 +179,35 @@ namespace Good_Lookz.View
 
         async void ShopClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new View.ShopPage(), true);
+            //Check of de shops niet verwijdert zijn
+            string care         = await checkShop("1");
+            string fashion      = await checkShop("2");
+            string accessories  = await checkShop("3");
+
+            if(care == "false" || fashion == "false" || accessories == "false")
+            {
+                await DisplayAlert("Warning", "Looks like one of your prefered shops has left the app, let's choose a new one!", "ok");
+                await Navigation.PushAsync(new SettingPages.ChangeShops(), true);
+            }
+            else
+            {
+                Models.ShopsChosenSaved.shops1_id = Int32.Parse(care);
+                Models.ShopsChosenSaved.shops2_id = Int32.Parse(fashion);
+                Models.ShopsChosenSaved.shops3_id = Int32.Parse(accessories);
+
+                await Navigation.PushAsync(new View.ShopPage(), true);
+            }
+        }
+
+        private async Task<string> checkShop(string r) {
+            string webadres     = "http://good-lookz.com/API/shops/checkShops.php";
+            string parameters   = "?users_id=" + Models.LoginCredentials.loginId + "&rubric=" + r;
+            HttpClient connect  = new HttpClient();
+            HttpResponseMessage get = await connect.GetAsync(webadres + parameters);
+            get.EnsureSuccessStatusCode();
+
+            string result = await get.Content.ReadAsStringAsync();
+            return result;
         }
 
         async void SettingsClicked(object sender, EventArgs e)

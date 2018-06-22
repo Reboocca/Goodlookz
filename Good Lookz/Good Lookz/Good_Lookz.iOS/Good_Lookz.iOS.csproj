@@ -217,9 +217,6 @@
     <BundleResource Include="Resources\friends.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\fashion.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\notification.png" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +227,12 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\default_pfp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iyc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fashion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
